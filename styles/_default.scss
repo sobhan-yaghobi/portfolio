@@ -1,0 +1,22 @@
+$light-color: #fff;
+$dark-color: #111;
+
+html[data-lang="en"] {
+    text-align: left;
+    direction: ltr;
+}
+
+html[data-lang="fa"] {
+    text-align: right;
+    direction: rtl;
+}
+
+html[data-theme="dark"] {
+    --text-color: #{$light-color};
+    --bg-color: #{$dark-color};
+}
+
+html[data-theme="light"] {
+    --text-color: #{$dark-color};
+    --bg-color: #{$light-color};
+}

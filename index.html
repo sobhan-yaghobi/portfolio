@@ -1,14 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html data-theme="light" data-lang="fa">
     <head>
-        <meta charset="UTF-8" />
-        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Portfolio | Sobhan Yaghobi</title>
-        <link rel="stylesheet" href="styles/style.scss" />
+
+        <!-- //# META START -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- //# META END -->
+
+        <!-- //^ LINKS START -->
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <link rel="stylesheet" href="styles/main.scss" />
+        <link rel="stylesheet" href="styles/index.scss" />
+        <!-- //^ LINKS END -->
+
+        <!-- //> SCRIPTS START -->
+        <script type="module" type="module" defer src="/js/main.js"></script>
+        <!-- //> SCRIPTS END -->
     </head>
+    <!-- //& ELEMENT CODES START -->
     <body>
-        <div id="app"></div>
-        <script type="module" src="/js/main.js"></script>
+        <menu id="menu">
+            <div>
+                <div id="menuItemWrapper"></div>
+            </div>
+            <div class="menu__icon-wrapper">
+                <button id="language"></button>
+                <button id="theme"></button>
+            </div>
+        </menu>
+        <!-- <section class="hero-section">
+            <div class="hero-section__right">right</div>
+            <div class="hero-section__left">left</div>
+        </section> -->
     </body>
+    <!-- //& ELEMENT CODES END -->
 </html>
