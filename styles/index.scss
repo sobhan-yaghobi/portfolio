@@ -10,11 +10,107 @@ body {
 #menu {
     width: 100%;
     height: 4rem;
-    background-color: $orange-color;
+    padding: 0 $xl9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10;
+
+    & > div,
+    ul {
+        display: flex;
+    }
+
+    .menu-list {
+        .menu-list__item {
+            margin-left: $xl4;
+        }
+        .menu-list__item_link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-flow: row-reverse;
+            position: relative;
+
+            &:hover .menu-list__item_svg {
+                &:is(.stroke):not(.fill) {
+                    stroke: $green-color !important;
+                }
+                &:is(.fill) {
+                    fill: $green-color !important;
+                }
+            }
+        }
+        .menu-list__item_text {
+            margin-right: $s05;
+        }
+        .menu-list__item_svg {
+        }
+    }
+
+    .menu-quick_access {
+        .menu-quick_access__contact_me_svg {
+            stroke: $light-color;
+            margin-right: $s05;
+        }
+
+        .menu-quick_access__language {
+            margin-right: $s05;
+            position: relative;
+
+            .menu-quick_access__language__text {
+                cursor: default;
+                margin-left: $s05;
+            }
+
+            .menu-quick_access__language__list {
+                position: absolute;
+                margin-top: $s05;
+                width: 100%;
+                height: fit-content;
+                border: 1px solid rgba(209, 213, 219, 0.3);
+                border-radius: 12px;
+                clip-path: inset(0% 50% 100% 50% round 10px);
+                backdrop-filter: blur(16px) saturate(180%);
+                -webkit-backdrop-filter: blur(16px) saturate(180%);
+                background-color: rgba(255, 255, 255, 0.75);
+                overflow: hidden;
+                display: flex;
+                flex-flow: column;
+
+                li {
+                    cursor: pointer;
+                    margin-bottom: $s01;
+                    padding: $s02 $s05;
+                    &:hover {
+                        color: $light-color;
+                        background-color: $green-color;
+                    }
+                    &:last-child {
+                        margin-bottom: unset !important;
+                    }
+                }
+            }
+            .menu-quick_access__language_button:is(.active) + .menu-quick_access__language__list {
+                clip-path: inset(0% 0% 0% 0% round 0px);
+            }
+        }
+    }
+
+    html[data-lang="en"] & {
+        .menu-list .menu-list__item {
+            margin-left: unset !important;
+            margin-right: $s09;
+        }
+    }
 }
 
 #landing {
     width: 100%;
+    margin-top: 4rem;
     height: calc(100vh - 4rem);
     background-color: $light-color;
     overflow: hidden;
@@ -92,7 +188,7 @@ body {
             color: $light-orange-color;
             padding: $s03 $s05;
             border-radius: $base;
-            box-shadow: 0 $s03 $s03 $orange-color;
+            box-shadow: 0 $s02 $s03 $orange-color;
             background-color: $orange-color;
         }
         .landing__right--wrapper-title {
@@ -121,12 +217,8 @@ body {
             text-align: justify;
         }
         .landing__right--go-to-skills {
-            color: $light-color;
-            background-color: $green-color;
-            border-color: $green-color;
-            box-shadow: 0 $s02 $s02 $green-color;
-            background-color: $green-color;
-            transition: all 300ms cubic-bezier(0.19, 1, 0.22, 1);
+            box-shadow: 0 $s02 $s03 $green-color;
+
             &:hover {
                 box-shadow: 0 $s02 $s05 $green-color;
             }
