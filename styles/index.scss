@@ -36,6 +36,7 @@ body {
             position: relative;
 
             &:hover .menu-list__item_svg {
+                transform: translateY(-$s01);
                 &:is(.stroke):not(.fill) {
                     stroke: $green-color !important;
                 }
@@ -45,9 +46,10 @@ body {
             }
         }
         .menu-list__item_text {
-            margin-right: $s05;
+            margin-right: $s03;
         }
         .menu-list__item_svg {
+            padding: $s01;
         }
     }
 
