@@ -15,24 +15,87 @@
         <!-- //^ LINKS END -->
 
         <!-- //> SCRIPTS START -->
-        <script type="module" type="module" defer src="/js/main.js"></script>
+        <!-- <script type="module" type="module" defer src="/js/main.js"></script> -->
         <!-- //> SCRIPTS END -->
     </head>
     <!-- //& ELEMENT CODES START -->
     <body>
-        <menu id="menu">
-            <div>
-                <div id="menuItemWrapper"></div>
+        <menu id="menu" class="menu"></menu>
+        <section id="landing" class="landing">
+            <div class="landing__right">
+                <img class="landing__right--svg circle-svg" style="--i: 2" src="/images/heroSectionCircle.svg" alt="" />
+                <img class="landing__right--svg circle-svg" style="--i: 4" src="/images/heroSectionCircle.svg" alt="" />
+                <img class="landing__right--svg circle-svg" style="--i: 6" src="/images/heroSectionCircle.svg" alt="" />
+                <img class="landing__right--svg circle-svg" style="--i: 8" src="/images/heroSectionCircle.svg" alt="" />
+                <img
+                    class="landing__right--svg circle-svg"
+                    style="--i: 9.9"
+                    src="/images/heroSectionCircle.svg"
+                    alt=""
+                />
+                <img
+                    class="landing__right--svg polygon-svg"
+                    style="--i: 1"
+                    src="/images/heroSectionPolygon.svg"
+                    alt=""
+                />
+                <img
+                    class="landing__right--svg polygon-svg"
+                    style="--i: 8"
+                    src="/images/heroSectionPolygon.svg"
+                    alt=""
+                />
+                <img class="landing__right--svg plus-svg" src="/images/heroSectionPlus.svg" alt="" />
+                <p class="landing__right--info-card">یک متن تستی</p>
+                <div class="landing__right--wrapper-title">
+                    <img class="landing__right--wrapper-title__svg" src="/images/heroSectionDiamond.svg" alt="" />
+                    <h1 class="landing__right--title">
+                        بهترین راه حل و <br />
+                        <span class="hightlight"
+                            ><span class="hightlight__title">تجارت خود</span>
+                            <div class="hightlight__dot-1"></div>
+                            <div class="hightlight__dot-2"></div>
+                            <div class="hightlight__dot-3"></div>
+                            <div class="hightlight__dot-4"></div
+                        ></span>
+                        را آسانتر <br />
+                        از همیشه رشد دهید
+                    </h1>
+                </div>
+                <p class="landing__right--desc">
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاد، و جوابگوی سوالات پیوسته اهل
+                    دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+                </p>
+                <button class="button landing__right--go-to-skills">برو به مهارت ها</button>
+                <div class="landing__right--scroll-down-wrapper">
+                    <p class="landing__right--scroll-down-text">به پایین اسکرول کنید</p>
+                    <svg
+                        class="landing__right--scroll-down-svg"
+                        width="44"
+                        height="87"
+                        viewBox="0 0 44 87"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M13.2874 2.26001C12.6597 12.6506 11.4674 31.213 15.2229 41.2223C17.9033 48.3663 22.8972 56.6058 28.6833 61.6659C32.5092 65.0118 39.2406 64.4714 41.352 59.2918C45.4504 49.2374 29.0339 44.8318 22.261 47.3334C10.4645 51.6907 11.636 74.1478 11 84"
+                            stroke="#1C7972"
+                            stroke-width="3"
+                            stroke-linecap="round"
+                        />
+                        <path
+                            d="M2 72C6.37365 73.6182 9.12869 79.496 10.8235 83.6248C11.8377 86.0955 11.9741 84.8718 12.6618 82.8206C13.689 79.7563 15.0545 77.6004 17 75.0707"
+                            stroke="#1C7972"
+                            stroke-width="3"
+                            stroke-linecap="round"
+                        />
+                    </svg>
+                </div>
             </div>
-            <div class="menu__icon-wrapper">
-                <button id="language"></button>
-                <button id="theme"></button>
+            <div class="landing__left">
+                <img class="flip-horizental" src="/images/heroSectionImg.png" alt="" />
             </div>
-        </menu>
-        <!-- <section class="hero-section">
-            <div class="hero-section__right">right</div>
-            <div class="hero-section__left">left</div>
-        </section> -->
+        </section>
     </body>
     <!-- //& ELEMENT CODES END -->
 </html>

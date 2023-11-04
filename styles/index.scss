@@ -1,58 +1,155 @@
 @import "default";
+@import "animation";
 
 body {
     color: var(--text-color);
     background-color: var(--bg-color);
+    position: relative;
 }
 
 #menu {
     width: 100%;
-    height: 5rem;
-    background: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    #menuItemWrapper {
-        display: flex;
-
-        li {
-            margin-inline: 0.4rem;
-        }
-    }
-    .menu__icon-wrapper {
-        display: flex;
-        align-items: center;
-
-        #theme {
-            background: #000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        #language {
-            // background: #000;
-        }
-    }
+    height: 4rem;
+    background-color: $orange-color;
 }
 
-.hero-section {
+#landing {
     width: 100%;
-    height: 100vh;
-    background-color: var(--bg-color);
+    height: calc(100vh - 4rem);
+    background-color: $light-color;
+    overflow: hidden;
     display: flex;
 
-    .hero-section__left,
-    .hero-section__right {
+    & > div {
         width: 50%;
         height: 100%;
     }
 
-    .hero-section__right {
-        background-color: lightblue;
+    .landing__left {
+        text-align: center;
+        padding: 0 $base;
     }
 
-    .hero-section__left {
-        background-color: lightgreen;
+    .landing__right {
+        padding-right: $xl9;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        gap: $s08;
+        position: relative;
+        background-color: transparent;
+        z-index: 1;
+
+        .landing__right--svg {
+            position: absolute;
+            max-width: $xl5;
+            max-height: $xl5;
+            z-index: -1;
+        }
+
+        .landing__right--svg:nth-child(1) {
+            top: 1%;
+            right: 30%;
+        }
+        .landing__right--svg:nth-child(2) {
+            width: $xl3;
+            height: $xl3;
+            top: 20%;
+            right: 5%;
+        }
+        .landing__right--svg:nth-child(3) {
+            top: 45%;
+            right: 10%;
+        }
+        .landing__right--svg:nth-child(4) {
+            width: $xl3;
+            height: $xl3;
+            top: 10%;
+            right: 90%;
+        }
+        .landing__right--svg:nth-child(5) {
+            top: 80%;
+            right: 90%;
+        }
+        .landing__right--svg:nth-child(6) {
+            width: $xl;
+            height: $xl;
+            top: 10%;
+            right: 15%;
+        }
+        .landing__right--svg:nth-child(7) {
+            top: 45%;
+            right: 100%;
+        }
+        .landing__right--svg:nth-child(8) {
+            top: 90%;
+            right: 40%;
+        }
+
+        .landing__right--info-card {
+            width: fit-content;
+            font-size: $xs;
+            color: $light-orange-color;
+            padding: $s03 $s05;
+            border-radius: $base;
+            box-shadow: 0 $s03 $s03 $orange-color;
+            background-color: $orange-color;
+        }
+        .landing__right--wrapper-title {
+            position: relative;
+            .landing__right--wrapper-title__svg {
+                width: $xl8;
+                height: $xl8;
+                position: absolute;
+                top: -12%;
+                left: 23%;
+
+                :has(.flip-horizental) & {
+                    @extend .flip-horizental;
+                }
+            }
+
+            .landing__right--title {
+                font-size: $xl6;
+                white-space: nowrap;
+                line-height: $xl7;
+            }
+        }
+        .landing__right--desc {
+            font-size: $s08;
+            text-align: justify;
+        }
+        .landing__right--go-to-skills {
+            color: $light-color;
+            background-color: $green-color;
+            border-color: $green-color;
+            box-shadow: 0 $s02 $s02 $green-color;
+            background-color: $green-color;
+            transition: all 300ms cubic-bezier(0.19, 1, 0.22, 1);
+            &:hover {
+                box-shadow: 0 $s02 $s05 $green-color;
+            }
+        }
+        .landing__right--scroll-down-wrapper {
+            cursor: default;
+            position: absolute;
+            bottom: 0;
+            right: 100%;
+            text-align: center;
+
+            .landing__right--scroll-down-svg {
+                padding: $s05;
+            }
+
+            .landing__right--scroll-down-text {
+                font-weight: 600;
+                white-space: nowrap;
+                font-size: $s07;
+            }
+        }
+    }
+
+    img {
+        height: 100%;
     }
 }

@@ -1,22 +1,109 @@
-$light-color: #fff;
-$dark-color: #111;
+$white-color: #fdfcfa;
+$dark-color: #121212;
+$light-color: #f5f7f2;
+$orange-color: #f98043;
+$light-orange-color: #fbe3ce;
+$green-color: #1c7972;
+
+//
+$s01: 0.1rem;
+$s02: 0.2rem;
+$s03: 0.3rem;
+$s04: 0.4rem;
+$s05: 0.5rem;
+$s06: 0.6rem;
+$s07: 0.7rem;
+$s08: 0.8rem;
+$s09: 0.9rem;
+
+$xs: 0.75rem;
+$sm: 0.875rem;
+$base: 1rem;
+$lg: 1.125rem;
+$xl: 1.25rem;
+$xl2: 1.5rem;
+$xl3: 1.875rem;
+$xl4: 2.25rem;
+$xl5: 3rem;
+$xl6: 3.75rem;
+$xl7: 4.5rem;
+$xl8: 6rem;
+$xl9: 8rem;
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 html[data-lang="en"] {
     text-align: left;
     direction: ltr;
 }
-
 html[data-lang="fa"] {
     text-align: right;
     direction: rtl;
 }
 
 html[data-theme="dark"] {
-    --text-color: #{$light-color};
+    --text-color: #{$white-color};
     --bg-color: #{$dark-color};
 }
 
 html[data-theme="light"] {
     --text-color: #{$dark-color};
-    --bg-color: #{$light-color};
+    --bg-color: #{$white-color};
+}
+
+.flip-horizental {
+    transform: scalex(-1);
+}
+
+.hightlight {
+    width: fit-content;
+    padding: $s05;
+    border: $s02 dashed $orange-color;
+    background-color: $light-orange-color;
+    display: inline-block;
+    position: relative;
+
+    & > div {
+        content: "";
+        width: $s06;
+        height: $s06;
+        border-radius: 50%;
+        background-color: $orange-color;
+        position: absolute;
+    }
+    .hightlight__dot-1 {
+        top: -$s04;
+        right: -$s04;
+    }
+    .hightlight__dot-2 {
+        bottom: -$s04;
+        left: -$s04;
+    }
+    .hightlight__dot-3 {
+        top: -$s04;
+        left: -$s04;
+    }
+    .hightlight__dot-4 {
+        bottom: -$s04;
+        right: -$s04;
+    }
+}
+
+.button {
+    cursor: pointer;
+    width: fit-content;
+    padding: $s05 $base;
+    border: 1px solid;
+    border-radius: $s05;
 }

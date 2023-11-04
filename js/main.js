@@ -1,7 +1,7 @@
 import { changeThemeAction, language, theme, fa, en, dark, light, changeLangAction } from "./utils";
 import { menuItem } from "./data";
 
-const menuItemWrapper = document.querySelector("#menuItemWrapper");
+const menu_bar = document.querySelector("#menu_bar");
 const themeElem = document.querySelector("#theme");
 const languageElem = document.querySelector("#language");
 
@@ -14,7 +14,7 @@ const renderMenu = () => {
     </li>
     `
     );
-    menuItemWrapper.innerHTML = items.join(" ");
+    menu_bar.innerHTML = items.join(" ");
 
     themeElem.innerHTML = `${
         theme() === light

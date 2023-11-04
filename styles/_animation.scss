@@ -1,0 +1,33 @@
+@import "default";
+
+.landing__right--svg:is(.circle-svg) {
+    animation: AnimateUpAndDown linear calc(60s / var(--i)) infinite alternate-reverse;
+}
+
+.landing__right--svg:is(.polygon-svg) {
+    animation: AnimateRotate linear calc(100s / var(--i)) infinite alternate-reverse;
+}
+
+@keyframes AnimateUpAndDown {
+    0% {
+        transform: translateY($s05);
+    }
+    40% {
+        transform: translateY(-$s05) translateX($s03);
+    }
+    60% {
+        transform: translateY($s06) translateX(-$s03);
+    }
+    100% {
+        transform: translateY(-$s09);
+    }
+}
+
+@keyframes AnimateRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(200deg);
+    }
+}
