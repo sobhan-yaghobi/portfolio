@@ -27,6 +27,13 @@ body {
     .menu-list {
         .menu-list__item {
             margin-left: $xl4;
+
+            @media only screen and (max-width: $largeDevice) {
+                margin-left: $lg;
+            }
+            @media only screen and (max-width: $mediumDevice) {
+                margin-left: $sm;
+            }
         }
         .menu-list__item_link {
             display: flex;
@@ -50,6 +57,56 @@ body {
         }
         .menu-list__item_svg {
             padding: $s01;
+        }
+    }
+
+    .menu-list.mobile {
+        opacity: 0;
+        visibility: hidden;
+
+        .menu-list__dropdown_wrapper {
+            width: 94%;
+            display: grid;
+            grid-template-rows: 0fr;
+            overflow: hidden;
+            position: absolute;
+            top: calc(100% + $s05);
+            left: 50%;
+            transform: translate(-50%, 0%);
+        }
+
+        .menu-list__dropdown {
+            padding: unset;
+            border: unset;
+            min-height: 0;
+            border-radius: 12px;
+            backdrop-filter: blur(16px) saturate(180%);
+            -webkit-backdrop-filter: blur(16px) saturate(180%);
+            background-color: rgba(255, 255, 255, 0.75);
+            flex-flow: column;
+            align-items: flex-start;
+        }
+
+        .menu-list__item.active {
+            .menu-list__svg-menu {
+                display: none;
+            }
+            & + .menu-list__dropdown_wrapper {
+                grid-template-rows: 1fr !important;
+                .menu-list__dropdown {
+                    padding: $s06;
+                    border: $s01 solid $gray-color;
+                }
+            }
+        }
+        .menu-list__item:not(.active) {
+            .menu-list__svg-close {
+                display: none;
+            }
+        }
+
+        .menu-list__item {
+            margin: $s05 0;
         }
     }
 
@@ -106,6 +163,20 @@ body {
         .menu-list .menu-list__item {
             margin-left: unset !important;
             margin-right: $s09;
+        }
+    }
+
+    @media only screen and (max-width: $largeDevice) {
+        padding: 0 $xl5;
+    }
+    @media only screen and (max-width: $mediumDevice) {
+        padding: 0 $xl;
+        .menu-list.desktop {
+            display: none;
+        }
+        .menu-list.mobile {
+            opacity: 1;
+            visibility: visible;
         }
     }
 }

@@ -26,3 +26,16 @@ export const changeLangAction = (lang) => {
         htmlDoc().setAttribute("data-lang", language() === en ? fa : en);
     }
 };
+
+export const toggleActiveButton = (elemName) => {
+    const mainElem = document.querySelector(elemName);
+    console.log("mainElem", mainElem);
+    if (typeof mainElem !== "undefined") {
+        mainElem.addEventListener("click", () => {
+            console.log("click");
+            mainElem.classList.contains("active")
+                ? mainElem.classList.remove("active")
+                : mainElem.classList.add("active");
+        });
+    }
+};

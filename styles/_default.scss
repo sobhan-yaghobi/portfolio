@@ -5,8 +5,9 @@ $orange-color: #f98043;
 $light-orange-color: #fbe3ce;
 $green-color: #1c7972;
 $purple-color: #787ff6;
+$gray-color: #dbddd8;
 
-//
+// Spaces
 $s01: 0.1rem;
 $s02: 0.2rem;
 $s03: 0.3rem;
@@ -16,7 +17,7 @@ $s06: 0.6rem;
 $s07: 0.7rem;
 $s08: 0.8rem;
 $s09: 0.9rem;
-
+//% ===
 $xs: 0.75rem;
 $sm: 0.875rem;
 $base: 1rem;
@@ -30,19 +31,10 @@ $xl6: 3.75rem;
 $xl7: 4.5rem;
 $xl8: 6rem;
 $xl9: 8rem;
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+//% ===
+$largeDevice: 992px;
+$mediumDevice: 768px;
+$smallDevice: 600px;
 
 html[data-lang="en"] {
     text-align: left;
