@@ -10,7 +10,7 @@ import {
     toggleActiveButton,
     removeClassName,
 } from "./utils";
-import { menu } from "./data";
+import { menu, landing } from "./data";
 const languageList = document.querySelector(".menu-quick_access__language__list");
 
 const renderMenu = () => {
@@ -36,6 +36,20 @@ const renderMenu = () => {
     contactMeButton.innerHTML = `${menu[language()].quickAccess.contactMe} ${menu[language()].quickAccess.icon}`;
 };
 
+const renderLanding = () => {
+    const landingInfoCard = document.querySelector(".landing__right--info-card");
+    const landingTitle = document.querySelector(".landing__right--title");
+    const landingDesc = document.querySelector(".landing__right--desc");
+    const goSkillsButton = document.querySelector(".landing__right--go-to-skills");
+    const scrollDownText = document.querySelector(".landing__right--scroll-down-text");
+
+    landingInfoCard.innerHTML = landing[language()].infoCard;
+    landingTitle.innerHTML = landing[language()].title;
+    landingDesc.innerHTML = landing[language()].desc;
+    goSkillsButton.innerHTML = landing[language()].goToSkillsButton;
+    scrollDownText.innerHTML = landing[language()].scrollDown;
+};
+
 //% --- Events
 
 toggleActiveButton("#toggle-menu-mobile");
@@ -45,8 +59,10 @@ languageList.addEventListener("click", (e) => {
         ? changeLangAction(e.target.dataset.type)
         : changeLangAction("en");
     renderMenu();
+    renderLanding();
 });
 
 window.addEventListener("DOMContentLoaded", () => {
     renderMenu();
+    renderLanding();
 });

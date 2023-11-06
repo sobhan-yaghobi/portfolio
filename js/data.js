@@ -196,3 +196,42 @@ export const menu = {
         },
     },
 };
+
+export const landing = {
+    fa: {
+        infoCard: "لورم ایپسوم",
+        title: `
+             بهترین راه حل و <br />
+            <span class="hightlight"
+                ><span class="hightlight__title">تجارت خود</span>
+                <div class="hightlight__dot-1"></div>
+                <div class="hightlight__dot-2"></div>
+                <div class="hightlight__dot-3"></div>
+                <div class="hightlight__dot-4"></div
+            ></span>
+            را آسانتر <br />
+            از همیشه رشد دهید
+        `,
+        desc: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاد، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.",
+        goToSkillsButton: "برو به مهارت ها",
+        scrollDown: "به پایین اسکرول کنید",
+    },
+    en: {
+        infoCard: "lorem ipsum",
+        title: `
+            best solution and <br />
+            grow <span class="hightlight"
+                ><span class="hightlight__title">your business</span>
+                <div class="hightlight__dot-1"></div>
+                <div class="hightlight__dot-2"></div>
+                <div class="hightlight__dot-3"></div>
+                <div class="hightlight__dot-4"></div
+            ></span>
+            <br />
+            easier then ever
+        `,
+        desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate natus, aspernatur voluptate modi accusantium officiis? Repellendus alias similique pariatur sequi esse voluptate.",
+        goToSkillsButton: "go to skills",
+        scrollDown: "scroll down",
+    },
+};
