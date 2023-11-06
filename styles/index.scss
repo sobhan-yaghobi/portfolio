@@ -127,7 +127,6 @@ body {
             position: relative;
 
             .menu-quick_access__language__text {
-                cursor: default;
                 margin-left: $s05;
             }
 
@@ -207,6 +206,7 @@ body {
     width: 100%;
     margin-top: 4rem;
     height: calc(100dvh - 4rem);
+    max-height: 100vh;
     background-color: $light-color;
     display: flex;
 
@@ -218,6 +218,12 @@ body {
     .landing__left {
         text-align: center;
         padding: 0 $base;
+
+        img {
+            :has(.flip-horizental__active) & {
+                @extend .flip-horizental;
+            }
+        }
     }
 
     .landing__right {
@@ -294,7 +300,7 @@ body {
                 top: -12%;
                 left: 23%;
 
-                :has(.flip-horizental) & {
+                :has(.flip-horizental__active) & {
                     @extend .flip-horizental;
                 }
             }
@@ -341,6 +347,26 @@ body {
         height: 95%;
     }
 
+    html[data-lang="en"] & {
+        .landing__right {
+            padding-right: unset;
+            padding-left: $xl9;
+
+            .landing__right--scroll-down-wrapper {
+                right: 0;
+            }
+            .landing__right--title {
+                line-height: $xl6;
+            }
+            .landing__right--wrapper-title {
+                .landing__right--wrapper-title__svg {
+                    top: -22%;
+                    left: 72%;
+                }
+            }
+        }
+    }
+
     @media only screen and (max-width: $largeDevice) {
         .landing__right {
             padding-right: $xl5;
@@ -365,13 +391,13 @@ body {
         .landing__left {
             height: 40%;
             display: flex;
-            align-items: center;
             justify-content: center;
         }
 
         .landing__right {
             height: 60%;
-            padding: $lg;
+            padding: $lg !important;
+            justify-content: space-around;
             align-items: center;
             text-align: center;
             overflow: hidden;
@@ -384,7 +410,12 @@ body {
             .landing__right--wrapper-title {
                 .landing__right--title {
                     font-size: $xl4;
-                    line-height: $xl5;
+                    html[data-lang="en"] & {
+                        line-height: $xl4;
+                    }
+                    html[data-lang="fa"] & {
+                        line-height: $xl5;
+                    }
                 }
                 .landing__right--wrapper-title__svg {
                     top: -20%;

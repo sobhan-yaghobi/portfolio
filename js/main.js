@@ -18,7 +18,6 @@ const renderMenu = () => {
     const contactMeButton = document.querySelector("button.menu-quick_access__contact_me");
     menuLists.forEach((menuList) => {
         if (!menuList.classList.contains("mobile")) {
-            console.log("menu[language()]", menu[language()]);
             const items =
                 typeof menu[language()] !== "undefined"
                     ? menu[language()].menu.map(
@@ -37,17 +36,16 @@ const renderMenu = () => {
 };
 
 const renderLanding = () => {
-    const landingInfoCard = document.querySelector(".landing__right--info-card");
-    const landingTitle = document.querySelector(".landing__right--title");
-    const landingDesc = document.querySelector(".landing__right--desc");
-    const goSkillsButton = document.querySelector(".landing__right--go-to-skills");
-    const scrollDownText = document.querySelector(".landing__right--scroll-down-text");
+    const landingElm = document.querySelector("#landing");
+    language() === fa
+        ? landingElm.classList.add("flip-horizental__active")
+        : landingElm.classList.remove("flip-horizental__active");
 
-    landingInfoCard.innerHTML = landing[language()].infoCard;
-    landingTitle.innerHTML = landing[language()].title;
-    landingDesc.innerHTML = landing[language()].desc;
-    goSkillsButton.innerHTML = landing[language()].goToSkillsButton;
-    scrollDownText.innerHTML = landing[language()].scrollDown;
+    document.querySelector(".landing__right--info-card").innerHTML = landing[language()].infoCard;
+    document.querySelector(".landing__right--title").innerHTML = landing[language()].title;
+    document.querySelector(".landing__right--desc").innerHTML = landing[language()].desc;
+    document.querySelector(".landing__right--go-to-skills").innerHTML = landing[language()].goToSkillsButton;
+    document.querySelector(".landing__right--scroll-down-text").innerHTML = landing[language()].scrollDown;
 };
 
 //% --- Events
