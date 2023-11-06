@@ -340,8 +340,6 @@ body {
     img {
         height: 95%;
     }
-    html[data-lang="en"] & {
-    }
 
     @media only screen and (max-width: $largeDevice) {
         .landing__right {
@@ -373,8 +371,7 @@ body {
 
         .landing__right {
             height: 60%;
-            padding-right: unset;
-            padding-bottom: $xl;
+            padding: $lg;
             align-items: center;
             text-align: center;
             overflow: hidden;
@@ -396,15 +393,19 @@ body {
             }
 
             .landing__right--desc {
+                width: 100%;
                 text-align: inherit;
             }
             .landing__right--go-to-skills {
-                width: unset;
+                padding: $lg 0;
+                width: 100%;
+            }
+            .landing__right--scroll-down-wrapper {
+                display: none;
             }
         }
         img {
-            width: 80%;
-            height: auto;
+            height: 100%;
         }
     }
 }
