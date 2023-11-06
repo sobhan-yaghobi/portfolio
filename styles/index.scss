@@ -167,6 +167,22 @@ body {
             margin-left: unset !important;
             margin-right: $s09;
         }
+        .menu-quick_access__contact_me_svg {
+            margin-right: unset !important;
+            margin-left: $s05;
+        }
+        .menu-quick_access__language {
+            margin-right: unset;
+            margin-left: $s05;
+        }
+        .menu-quick_access__language__text {
+            margin-left: unset;
+            margin-right: $s05;
+        }
+        .menu-list__item_text {
+            margin-right: unset;
+            margin-left: $s03;
+        }
     }
 
     @media only screen and (max-width: $largeDevice) {
