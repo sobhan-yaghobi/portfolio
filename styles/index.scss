@@ -3,7 +3,7 @@
 
 body {
     color: var(--text-color);
-    background-color: var(--bg-color);
+    background-color: $light-color;
     position: relative;
 }
 
@@ -11,6 +11,9 @@ body {
     width: 100%;
     height: 4rem;
     padding: 0 $xl9;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: $glass-light-color;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -203,9 +206,8 @@ body {
 #landing {
     width: 100%;
     margin-top: 4rem;
-    height: calc(100vh - 4rem);
+    height: calc(100dvh - 4rem);
     background-color: $light-color;
-    overflow: hidden;
     display: flex;
 
     & > div {
@@ -304,6 +306,7 @@ body {
             }
         }
         .landing__right--desc {
+            width: 80%;
             font-size: $s08;
             font-weight: 600;
             text-align: justify;
@@ -335,6 +338,73 @@ body {
     }
 
     img {
-        height: 100%;
+        height: 95%;
+    }
+    html[data-lang="en"] & {
+    }
+
+    @media only screen and (max-width: $largeDevice) {
+        .landing__right {
+            padding-right: $xl5;
+
+            .landing__right--wrapper-title {
+                .landing__right--title {
+                    font-size: $xl5;
+                    line-height: $xl6;
+                }
+            }
+        }
+    }
+    @media only screen and (max-width: $mediumDevice) {
+        & {
+            flex-flow: wrap column-reverse;
+            justify-content: space-between;
+        }
+        & > div {
+            width: 100%;
+        }
+
+        .landing__left {
+            height: 40%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .landing__right {
+            height: 60%;
+            padding-right: unset;
+            padding-bottom: $xl;
+            align-items: center;
+            text-align: center;
+            overflow: hidden;
+            gap: $xl;
+
+            .landing__right--svg:nth-child(1) {
+                top: 10%;
+            }
+
+            .landing__right--wrapper-title {
+                .landing__right--title {
+                    font-size: $xl4;
+                    line-height: $xl5;
+                }
+                .landing__right--wrapper-title__svg {
+                    top: -20%;
+                    left: -3%;
+                }
+            }
+
+            .landing__right--desc {
+                text-align: inherit;
+            }
+            .landing__right--go-to-skills {
+                width: unset;
+            }
+        }
+        img {
+            width: 80%;
+            height: auto;
+        }
     }
 }
