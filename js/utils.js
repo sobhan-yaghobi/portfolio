@@ -20,16 +20,22 @@ export const changeThemeAction = (mode) => {
 };
 
 export const changeLangAction = (lang) => {
+    const languageText = document.querySelector(".menu-quick_access__language__text");
+    const updataLangInDom = (lang) => {
+        languageText.innerHTML = lang;
+        removeClassName(".menu-quick_access__language_button", "active");
+    };
     if (typeof lang !== "undefined") {
         htmlDoc().setAttribute("data-lang", lang === fa ? fa : en);
+        updataLangInDom(lang === fa ? fa : en);
     } else {
         htmlDoc().setAttribute("data-lang", language() === en ? fa : en);
+        updataLangInDom(language() === en ? fa : en);
     }
 };
 
 export const toggleActiveButton = (elemName) => {
     const mainElem = document.querySelector(elemName);
-    console.log("mainElem", mainElem);
     if (typeof mainElem !== "undefined") {
         mainElem.addEventListener("click", () => {
             console.log("click");
@@ -39,3 +45,5 @@ export const toggleActiveButton = (elemName) => {
         });
     }
 };
+
+export const removeClassName = (elemName, className) => document.querySelector(elemName).classList.remove(className);

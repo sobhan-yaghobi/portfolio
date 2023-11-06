@@ -64,6 +64,10 @@ body {
         opacity: 0;
         visibility: hidden;
 
+        & > .menu-list__item {
+            cursor: pointer;
+        }
+
         .menu-list__dropdown_wrapper {
             width: 94%;
             display: grid;
@@ -76,8 +80,7 @@ body {
         }
 
         .menu-list__dropdown {
-            padding: unset;
-            border: unset;
+            padding: 0 $s06;
             min-height: 0;
             border-radius: 12px;
             backdrop-filter: blur(16px) saturate(180%);
