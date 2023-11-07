@@ -129,3 +129,14 @@ a {
         color: $green-color;
     }
 }
+
+.paddingSide {
+    padding: 0 $xl9;
+
+    @media only screen and (max-width: $largeDevice) {
+        padding: 0 $xl5;
+    }
+    @media only screen and (max-width: $mediumDevice) {
+        padding: 0 $xl;
+    }
+}

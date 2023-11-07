@@ -20,6 +20,7 @@ export const changeThemeAction = (mode) => {
 };
 
 export const changeLangAction = (lang) => {
+    const body = document.body;
     const languageText = document.querySelector(".menu-quick_access__language__text");
     const updataLangInDom = (lang) => {
         languageText.innerHTML = lang;
@@ -32,6 +33,9 @@ export const changeLangAction = (lang) => {
         htmlDoc().setAttribute("data-lang", language() === en ? fa : en);
         updataLangInDom(language() === en ? fa : en);
     }
+    language() === fa
+        ? body.classList.add("flip-horizental__active")
+        : body.classList.remove("flip-horizental__active");
 };
 
 export const toggleActiveButton = (elemName) => {
