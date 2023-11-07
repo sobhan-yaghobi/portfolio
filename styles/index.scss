@@ -377,6 +377,8 @@ body {
     }
     @media only screen and (max-width: $mediumDevice) {
         & {
+            height: unset;
+            max-height: unset;
             flex-flow: wrap column-reverse;
             justify-content: space-between;
         }
@@ -388,6 +390,9 @@ body {
             height: 40%;
             display: flex;
             justify-content: center;
+            img {
+                height: 14rem;
+            }
         }
 
         .landing__right {
@@ -468,6 +473,31 @@ body {
         h1 {
             font-size: $xl4;
             margin-bottom: $sm;
+        }
+    }
+    @media only screen and (max-width: $largeDevice) {
+    }
+    @media only screen and (max-width: $mediumDevice) {
+        margin-top: $xl6;
+        text-align: center;
+        height: unset;
+        align-items: center;
+        flex-flow: column-reverse;
+
+        & > div {
+            width: 100%;
+        }
+
+        .aboutMe__right {
+            .aboutMe__right--title {
+                margin: $xl 0;
+            }
+        }
+
+        .aboutMe__left {
+            img {
+                height: 14rem;
+            }
         }
     }
 }
