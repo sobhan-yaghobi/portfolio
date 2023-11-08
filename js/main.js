@@ -10,7 +10,7 @@ import {
     toggleActiveButton,
     removeClassName,
 } from "./utils";
-import { menu, landing, aboutMe } from "./data";
+import { menu, landing, aboutMe, skills } from "./data";
 const languageList = document.querySelector(".menu-quick_access__language__list");
 
 const renderMenu = () => {
@@ -45,9 +45,14 @@ const renderLanding = () => {
 
 const renderAboutMe = () => {
     const aboutMeRightSideElm = document.querySelector(".aboutMe__right");
-
     aboutMeRightSideElm.children.item(0).innerHTML = aboutMe[language()].title;
     aboutMeRightSideElm.children.item(1).innerHTML = aboutMe[language()].desc;
+};
+
+const renderSkills = () => {
+    const skillsRightSide = document.querySelector(".skills__right");
+    skillsRightSide.children.item(0).innerHTML = skills[language()].title;
+    skillsRightSide.children.item(1).innerHTML = skills[language()].desc;
 };
 
 //% --- Events
@@ -62,10 +67,12 @@ languageList.addEventListener("click", (e) => {
     renderMenu();
     renderLanding();
     renderAboutMe();
+    renderSkills();
 });
 
 window.addEventListener("DOMContentLoaded", () => {
     renderMenu();
     renderLanding();
     renderAboutMe();
+    renderSkills();
 });

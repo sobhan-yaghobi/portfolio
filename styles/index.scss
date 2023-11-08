@@ -538,6 +538,10 @@ body {
             align-items: center;
             justify-content: center;
 
+            body:not(.flip-horizental__active) & {
+                left: 10%;
+            }
+
             .skills__left--icon {
                 width: $xl5;
                 height: $xl5;
@@ -585,44 +589,78 @@ body {
                 left: 15%;
             }
         }
+
+        img {
+            body:not(.flip-horizental__active) & {
+                @extend .flip-horizental;
+            }
+        }
+    }
+
+    .skills__right_packages_wrapper {
+        display: flex;
+        flex-flow: row wrap;
+        padding: $xl 0;
+        gap: $s05;
+
+        .skills__right_package {
+            padding: $s05 $s09;
+            border-radius: $sm;
+            font-weight: 600;
+            background: linear-gradient(145deg, #ffffff, #dddeda);
+            box-shadow: $s01 $s01 $s04 #d0d2ce;
+        }
+
+        .package_html {
+            color: #e96228;
+        }
+        .package_css {
+            color: #2962e9;
+        }
+        .package_sass {
+            color: #c76494;
+        }
+        .package_javascript {
+            color: #efd81d;
+        }
+        .package_typescript {
+            color: #2f74c0;
+        }
+        .package_react {
+            color: #5ed3f3;
+        }
+        .package_react_redux {
+            color: #593d87;
+        }
+        .package_react_query {
+            color: #ff4155;
+        }
+        .package_axios {
+            color: #5a29e4;
+        }
+        .package_tailwind {
+            color: #1abdb9;
+        }
+        .package_bootstrap {
+            color: #8714f2;
+        }
+        .package_react_hook_form {
+            color: #ec5990;
+        }
+        .package_zod {
+            color: #274d82;
+        }
+        .package_ant_design {
+            color: #28c6ff;
+        }
+        .package_framer_motion {
+            color: #e62e8e;
+        }
+        .package_figma {
+            color: #09c97f;
+        }
+        .package_git {
+            color: #fb4f29;
+        }
     }
 }
-
-// #skills {
-//     @extend .paddingSide;
-//     height: calc(100vh - 4rem);
-//     display: flex;
-//     align-items: center;
-
-//     & > div {
-//         width: 50%;
-//         height: 100%;
-//         position: relative;
-//     }
-
-//     .skills__right {
-//         display: flex;
-//         justify-content: flex-start;
-//         flex-flow: column;
-
-//         h1 {
-//             font-size: $xl4;
-//             margin-bottom: $sm;
-//         }
-//     }
-
-//     .skills__left {
-//         .skills__left--icon.typescript_icon {
-//             width: $xl5;
-//             height: $xl5;
-//             top: 1rem;
-//             right: 5rem;
-//             position: absolute;
-//             backdrop-filter: blur(16px) saturate(180%);
-//             -webkit-backdrop-filter: blur(16px) saturate(180%);
-//             background-color: rgba(17, 25, 40, 0.75);
-//             border-radius: 12px;
-//             border: 1px solid rgba(255, 255, 255, 0.125);
-//         }
-//     }
-// }
