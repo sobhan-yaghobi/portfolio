@@ -2,10 +2,22 @@
 
 .landing__right--svg:is(.circle-svg) {
     animation: AnimateUpAndDown linear calc(60s / var(--i)) infinite alternate-reverse;
+    -webkit-animation: AnimateUpAndDown linear calc(60s / var(--i)) infinite alternate-reverse;
 }
 
 .landing__right--svg:is(.polygon-svg) {
     animation: AnimateRotate linear calc(100s / var(--i)) infinite alternate-reverse;
+    -webkit-animation: AnimateRotate linear calc(100s / var(--i)) infinite alternate-reverse;
+}
+
+.skills__left_icons_wrapper {
+    animation: slideAnimate 100s infinite linear;
+    -webkit-animation: slideAnimate 100s infinite linear;
+}
+
+.skills__left--icon {
+    animation: slideAnimateReverse 100s infinite linear;
+    -webkit-animation: slideAnimateReverse 100s infinite linear;
 }
 
 @keyframes AnimateUpAndDown {
@@ -29,5 +41,22 @@
     }
     100% {
         transform: rotate(200deg);
+    }
+}
+
+@keyframes slideAnimate {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes slideAnimateReverse {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(-360deg);
     }
 }
