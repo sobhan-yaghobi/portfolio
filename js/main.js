@@ -51,8 +51,15 @@ const renderAboutMe = () => {
 
 const renderSkills = () => {
     const skillsRightSide = document.querySelector(".skills__right");
+    const skillsListElm = document.querySelector(".skills__right_packages_wrapper");
     skillsRightSide.children.item(0).innerHTML = skills[language()].title;
     skillsRightSide.children.item(1).innerHTML = skills[language()].desc;
+    if (!Boolean(skillsListElm.innerHTML)) {
+        const skillsItems = skills.skillsList.map(
+            (item) => `<p class="skills__right_package package_${item.title}">${item.title.replaceAll("_", " ")}</p>`
+        );
+        skillsListElm.innerHTML = skillsItems.join(" ");
+    }
 };
 
 //% --- Events
