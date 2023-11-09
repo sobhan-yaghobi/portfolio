@@ -115,11 +115,11 @@ html[data-theme="light"] {
     border-color: $green-color;
 }
 
-svg.fill:not(.stroke) {
+.fill {
     fill: $dark-color;
 }
 
-svg.stroke {
+.stroke {
     stroke: $dark-color;
 }
 
