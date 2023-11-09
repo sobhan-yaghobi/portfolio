@@ -56,7 +56,10 @@ const renderSkills = () => {
     skillsRightSide.children.item(1).innerHTML = skills[language()].desc;
     if (!Boolean(skillsListElm.innerHTML)) {
         const skillsItems = skills.skillsList.map(
-            (item) => `<p class="skills__right_package package_${item.title}">${item.title.replaceAll("_", " ")}</p>`
+            (item) =>
+                `<p style="--package-color : ${item.color}" class="skills__right_package package_${
+                    item.title
+                }">${item.title.replaceAll("_", " ")}</p>`
         );
         skillsListElm.innerHTML = skillsItems.join(" ");
     }
