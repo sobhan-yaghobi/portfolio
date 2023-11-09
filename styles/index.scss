@@ -441,6 +441,7 @@ body {
 
 #aboutMe {
     height: calc(100vh - 4rem);
+    min-height: calc(100vh - 4rem);
     @extend .paddingSide;
     display: flex;
     flex-flow: row-reverse;
@@ -472,10 +473,10 @@ body {
             margin-bottom: $sm;
         }
     }
+
     @media only screen and (max-width: $mediumDevice) {
         margin-top: $xl6;
         text-align: center;
-        height: unset;
         align-items: center;
         flex-flow: column-reverse;
 
@@ -490,8 +491,9 @@ body {
         }
 
         .aboutMe__left {
+            height: 40%;
             img {
-                height: 14rem;
+                height: 100%;
             }
         }
     }
@@ -500,6 +502,7 @@ body {
 #skills {
     @extend .paddingSide;
     height: calc(100vh - 4rem);
+    // min-height: calc(100vh - 4rem);
     display: flex;
     align-items: center;
 
@@ -525,7 +528,6 @@ body {
         .skills__left_icons_wrapper {
             width: 16rem;
             height: 16rem;
-            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -599,6 +601,7 @@ body {
         gap: $s05;
 
         .skills__right_package {
+            cursor: pointer;
             padding: $s05 $s09;
             color: var(--package-color);
             border-radius: $sm;
@@ -622,10 +625,12 @@ body {
         }
 
         & > div {
+            height: 50%;
             width: 100%;
         }
 
         .skills__left {
+            height: 40%;
             img {
                 width: auto;
                 height: 100%;
