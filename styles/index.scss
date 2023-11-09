@@ -10,6 +10,7 @@ body {
 #menu {
     width: 100%;
     height: 4rem;
+    max-height: 4rem;
     @extend .paddingSide;
     backdrop-filter: blur(16px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
@@ -200,9 +201,8 @@ body {
 
 #landing {
     width: 100%;
-    margin-top: 4rem;
-    height: calc(100dvh - 4rem);
-    max-height: 100vh;
+    padding-top: 4rem;
+    height: 100vh;
     background-color: $light-color;
     display: flex;
 
@@ -227,7 +227,6 @@ body {
         display: flex;
         flex-flow: column;
         justify-content: center;
-        gap: $s08;
         position: relative;
         background-color: transparent;
         z-index: 1;
@@ -274,7 +273,7 @@ body {
             right: 100%;
         }
         .landing__right--svg:nth-child(8) {
-            top: 90%;
+            top: 85%;
             right: 40%;
         }
 
@@ -309,6 +308,7 @@ body {
         }
         .landing__right--desc {
             width: 80%;
+            margin: $xl 0;
             font-size: $s08;
             font-weight: 600;
             text-align: justify;
@@ -377,32 +377,29 @@ body {
     }
     @media only screen and (max-width: $mediumDevice) {
         & {
-            height: unset;
-            max-height: unset;
             flex-flow: wrap column-reverse;
             justify-content: space-between;
+            overflow: hidden;
+            padding-bottom: 4rem;
         }
         & > div {
             width: 100%;
+            height: 50%;
         }
 
         .landing__left {
-            height: 40%;
             display: flex;
             justify-content: center;
             img {
-                height: 14rem;
+                height: 100%;
             }
         }
 
         .landing__right {
-            height: 60%;
-            padding: $lg !important;
+            padding: 0 $lg !important;
             justify-content: space-around;
             align-items: center;
             text-align: center;
-            overflow: hidden;
-            gap: $xl;
 
             .landing__right--svg:nth-child(1) {
                 top: 10%;
@@ -429,7 +426,7 @@ body {
                 text-align: inherit;
             }
             .landing__right--go-to-skills {
-                padding: $lg 0;
+                padding: $s08 0;
                 width: 100%;
             }
             .landing__right--scroll-down-wrapper {
