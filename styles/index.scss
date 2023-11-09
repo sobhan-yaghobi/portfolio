@@ -475,8 +475,6 @@ body {
             margin-bottom: $sm;
         }
     }
-    @media only screen and (max-width: $largeDevice) {
-    }
     @media only screen and (max-width: $mediumDevice) {
         margin-top: $xl6;
         text-align: center;
@@ -528,15 +526,15 @@ body {
     .skills__left {
         overflow: hidden;
         .skills__left_icons_wrapper {
-            width: 50%;
+            width: 16rem;
+            height: 16rem;
             border-radius: 50%;
-            height: 50%;
-            position: absolute;
-            top: 35%;
-            left: 35%;
             display: flex;
             align-items: center;
             justify-content: center;
+            position: absolute;
+            top: 35%;
+            left: 35%;
 
             body:not(.flip-horizental__active) & {
                 left: 10%;
@@ -589,8 +587,8 @@ body {
                 left: 15%;
             }
         }
-
         img {
+            width: 100%;
             body:not(.flip-horizental__active) & {
                 @extend .flip-horizental;
             }
@@ -661,6 +659,36 @@ body {
         }
         .package_git {
             color: #fb4f29;
+        }
+    }
+
+    @media only screen and (max-width: $largeDevice) {
+        .skills__left {
+            .skills__left_icons_wrapper {
+                display: none;
+            }
+        }
+    }
+    @media only screen and (max-width: $mediumDevice) {
+        & {
+            flex-flow: column-reverse;
+            text-align: center;
+        }
+
+        & > div {
+            width: 100%;
+        }
+
+        .skills__left {
+            img {
+                width: auto;
+                height: 100%;
+            }
+        }
+
+        .skills__right_packages_wrapper {
+            align-items: center;
+            justify-content: center;
         }
     }
 }
