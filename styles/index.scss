@@ -14,13 +14,11 @@ body {
 }
 
 #menu {
+    @extend .paddingSide;
     width: 100%;
     height: $menuHeight;
     max-height: $menuHeight;
-    @extend .paddingSide;
-    backdrop-filter: blur(16px) saturate(180%);
-    -webkit-backdrop-filter: blur(16px) saturate(180%);
-    background-color: $glass-light-color;
+    @include glass(16px, $glass-light-color);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -93,9 +91,7 @@ body {
             padding: 0 $s06;
             min-height: 0;
             border-radius: 12px;
-            backdrop-filter: blur(16px) saturate(180%);
-            -webkit-backdrop-filter: blur(16px) saturate(180%);
-            background-color: rgba(255, 255, 255, 0.75);
+            @include glass(16px, rgba(255, 255, 255, 0.75));
             flex-flow: column;
             align-items: flex-start;
         }
@@ -145,9 +141,7 @@ body {
                 border: 1px solid rgba(209, 213, 219, 0.3);
                 border-radius: 12px;
                 clip-path: inset(0% 50% 100% 50% round 10px);
-                backdrop-filter: blur(16px) saturate(180%);
-                -webkit-backdrop-filter: blur(16px) saturate(180%);
-                background-color: rgba(255, 255, 255, 0.75);
+                @include glass(16px, rgba(255, 255, 255, 0.75));
                 overflow: hidden;
                 display: flex;
                 flex-flow: column;
@@ -244,42 +238,28 @@ body {
         }
 
         .landing__right--svg:nth-child(1) {
-            top: 1%;
-            right: 30%;
+            @include setPosition(1%, 30%);
         }
         .landing__right--svg:nth-child(2) {
-            width: $xl3;
-            height: $xl3;
-            top: 20%;
-            right: 5%;
+            @include setPositionAndSize(20%, 5%, $xl3, $xl3);
         }
         .landing__right--svg:nth-child(3) {
-            top: 45%;
-            right: 10%;
+            @include setPosition(45%, 10%);
         }
         .landing__right--svg:nth-child(4) {
-            width: $xl3;
-            height: $xl3;
-            top: 10%;
-            right: 90%;
+            @include setPositionAndSize(10%, 90%, $xl3, $xl3);
         }
         .landing__right--svg:nth-child(5) {
-            top: 80%;
-            right: 90%;
+            @include setPosition(80%, 90%);
         }
         .landing__right--svg:nth-child(6) {
-            width: $xl;
-            height: $xl;
-            top: 10%;
-            right: 15%;
+            @include setPositionAndSize(10%, 15%, $xl, $xl);
         }
         .landing__right--svg:nth-child(7) {
-            top: 45%;
-            right: 100%;
+            @include setPosition(45%, 100%);
         }
         .landing__right--svg:nth-child(8) {
-            top: 85%;
-            right: 40%;
+            @include setPosition(85%, 40%);
         }
 
         .landing__right--info-card {
@@ -294,11 +274,8 @@ body {
         .landing__right--wrapper-title {
             position: relative;
             .landing__right--wrapper-title__svg {
-                width: $xl8;
-                height: $xl8;
                 position: absolute;
-                top: -12%;
-                left: 23%;
+                @include setPositionAndSize(-12%, 23%, $xl8, $xl8);
 
                 :has(.flip-horizental__active) & {
                     @extend .flip-horizental;
@@ -360,8 +337,7 @@ body {
             }
             .landing__right--wrapper-title {
                 .landing__right--wrapper-title__svg {
-                    top: -22%;
-                    left: 72%;
+                    @include setPosition(-22%, 72%);
                 }
             }
         }
@@ -404,7 +380,7 @@ body {
             text-align: center;
 
             .landing__right--svg:nth-child(1) {
-                top: 10%;
+                @include setPosition(10%, 60%);
             }
 
             .landing__right--wrapper-title {
@@ -418,8 +394,7 @@ body {
                     }
                 }
                 .landing__right--wrapper-title__svg {
-                    top: -20%;
-                    left: -3%;
+                    @include setPosition(-20%, -3%);
                 }
             }
 
@@ -542,8 +517,7 @@ body {
             align-items: center;
             justify-content: center;
             position: absolute;
-            top: 35%;
-            left: 35%;
+            @include setPosition(35%, 35%);
 
             body:not(.flip-horizental__active) & {
                 left: 10%;
@@ -555,9 +529,7 @@ body {
                 padding: $s02;
                 border-radius: $lg;
                 border: 1px solid $glass-light-color;
-                backdrop-filter: blur(16px) saturate(180%);
-                -webkit-backdrop-filter: blur(16px) saturate(180%);
-                background-color: $glass-light-color;
+                @include glass(16px, $glass-light-color);
                 position: absolute;
             }
             .bootstrap_icon {
@@ -696,8 +668,7 @@ body {
     .projects__box {
         min-width: $projectBoxWidth;
         height: 25rem;
-        margin: 0 $lg;
-        margin-bottom: $xl;
+        margin: 0 $lg $xl $lg;
         padding: $s03;
         border-radius: $xl;
         overflow: hidden;

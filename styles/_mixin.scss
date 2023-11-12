@@ -12,3 +12,21 @@
         }
     }
 }
+
+@mixin glass($Blur, $backGroundColor) {
+    backdrop-filter: blur($Blur) saturate(180%);
+    -webkit-backdrop-filter: blur($Blur) saturate(180%);
+    background-color: $backGroundColor;
+}
+
+@mixin setPosition($top, $left) {
+    top: $top;
+    left: $left;
+}
+
+@mixin setPositionAndSize($top, $left, $width, $height) {
+    width: $width;
+    height: $height;
+    top: $top;
+    left: $left;
+}
