@@ -33,9 +33,15 @@ $xl7: 4.5rem;
 $xl8: 6rem;
 $xl9: 8rem;
 //% ===
+$projectBoxWidth : 20.521rem ;
+//% ===
 $largeDevice: 992px;
 $mediumDevice: 768px;
 $smallDevice: 600px;
+//% ===
+$fullPageHeight: 100vh;
+$menuHeight: 4rem;
+$currentHeight: calc($fullPageHeight - $menuHeight);
 
 html[data-lang="en"] {
     text-align: left;

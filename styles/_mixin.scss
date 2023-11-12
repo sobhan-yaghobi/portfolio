@@ -1,0 +1,14 @@
+@import "default";
+@import "animation";
+
+@mixin showButton($left, $right) {
+    &:hover {
+        & > .projects__box_button_wrapper_text {
+            grid-template-columns: 1fr;
+            .projects__box_button_text {
+                margin: 0 $right 0 $left;
+                font-weight: 500 !important;
+            }
+        }
+    }
+}

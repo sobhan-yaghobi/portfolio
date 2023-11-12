@@ -1,16 +1,22 @@
 @import "default";
 @import "animation";
+@import "mixin";
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     color: var(--text-color);
     background-color: $light-color;
     position: relative;
+    padding-top: $menuHeight;
 }
 
 #menu {
     width: 100%;
-    height: 4rem;
-    max-height: 4rem;
+    height: $menuHeight;
+    max-height: $menuHeight;
     @extend .paddingSide;
     backdrop-filter: blur(16px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
@@ -201,8 +207,7 @@ body {
 
 #landing {
     width: 100%;
-    padding-top: 4rem;
-    height: calc(100vh - 4rem);
+    height: $currentHeight;
     background-color: $light-color;
     display: flex;
 
@@ -377,13 +382,12 @@ body {
     @media only screen and (max-width: $mediumDevice) {
         & {
             height: unset;
-            min-height: calc(100vh - 4rem);
+            min-height: $currentHeight;
             flex-flow: wrap column-reverse;
             justify-content: flex-end;
         }
         & > div {
             width: 100%;
-            height: 50%;
         }
 
         .landing__left {
@@ -394,7 +398,6 @@ body {
         .landing__right {
             overflow-x: hidden;
             min-height: 45vh;
-            // background-color: red;
             padding: 0 $lg !important;
             justify-content: space-around;
             align-items: center;
@@ -444,7 +447,7 @@ body {
 
 #aboutMe {
     @extend .paddingSide;
-    min-height: 100vh;
+    min-height: $currentHeight;
     display: flex;
     align-items: center;
     flex-flow: row-reverse;
@@ -478,7 +481,7 @@ body {
     }
 
     @media only screen and (max-width: $mediumDevice) {
-        margin-top: $xl6;
+        margin-top: $xl2;
         text-align: center;
         align-items: center;
         justify-content: center;
@@ -504,9 +507,8 @@ body {
 }
 
 #skills {
-    width: 100%;
     @extend .paddingSide;
-    min-height: calc(100vh - 4rem);
+    min-height: $currentHeight;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, auto);
@@ -674,7 +676,7 @@ body {
 
 #projects {
     @extend .paddingSide;
-    min-height: 100vh;
+    min-height: $fullPageHeight;
     display: flex;
     justify-content: center;
     flex-flow: column;
@@ -692,6 +694,7 @@ body {
     }
 
     .projects__box {
+        min-width: $projectBoxWidth;
         height: 25rem;
         margin: 0 $lg;
         margin-bottom: $xl;
@@ -744,6 +747,10 @@ body {
             font-weight: bold;
         }
 
+        .projects__box_desc {
+            font-weight: 500;
+        }
+
         .projects__box_wrapper_button {
             height: 20%;
             margin-top: $s09;
@@ -767,19 +774,7 @@ body {
                 border-radius: $xs;
                 display: flex;
                 align-items: center;
-
-                &:hover {
-                    & > .projects__box_button_wrapper_text {
-                        grid-template-columns: 1fr;
-                        .projects__box_button_text {
-                            margin-right: $s03;
-                            :has(.flip-horizental__active) & {
-                                margin-right: unset;
-                                margin-left: $s03;
-                            }
-                        }
-                    }
-                }
+                @include showButton($s03, 0);
 
                 .projects__box_button_wrapper_text {
                     overflow: hidden;
@@ -805,6 +800,13 @@ body {
                     height: $xl3;
                 }
             }
+
+            :has(.flip-horizental__active) .projects__box_button,
+            .projects__box_button:is(.reverse) {
+                flex-flow: row-reverse;
+
+                @include showButton(0, $s03);
+            }
         }
     }
 
@@ -814,6 +816,9 @@ body {
         }
     }
     @media only screen and (max-width: $mediumDevice) {
+        & {
+            margin: $xl9 0;
+        }
         .projects__box_wrapper {
             grid-template-columns: repeat(1, auto);
         }

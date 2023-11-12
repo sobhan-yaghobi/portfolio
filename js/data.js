@@ -276,3 +276,106 @@ export const skills = {
         { title: "git", color: "#fb4f29" },
     ],
 };
+
+export const projects = {
+    fa: {
+        title: "نمونه کارهای من",
+        projects: [
+            {
+                title: "1 تایتل نمونه کار من",
+                desc: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و تولید سادگی نامفهوم از صنعت                 با استفاده",
+                buttons: {
+                    github: {
+                        link: "",
+                        text: "برو به گیت هاب",
+                    },
+                    seeProject: {
+                        link: "",
+                        text: "مشاهده پروژه",
+                    },
+                    moreInfo: "اطلاعات بیشتر",
+                },
+            },
+            {
+                title: "1 تایتل نمونه کار من",
+                desc: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و تولید سادگی نامفهوم از صنعت                 با استفاده",
+                buttons: {
+                    github: {
+                        link: "",
+                        text: "برو به گیت هاب",
+                    },
+                    seeProject: {
+                        link: "",
+                        text: "مشاهده پروژه",
+                    },
+                    moreInfo: "اطلاعات بیشتر",
+                },
+            },
+            {
+                title: "1 تایتل نمونه کار من",
+                desc: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و تولید سادگی نامفهوم از صنعت                 با استفاده",
+                buttons: {
+                    github: {
+                        link: "",
+                        text: "برو به گیت هاب",
+                    },
+                    seeProject: {
+                        link: "",
+                        text: "مشاهده پروژه",
+                    },
+                    moreInfo: "اطلاعات بیشتر",
+                },
+            },
+        ],
+    },
+    en: {
+        title: "my porjects",
+        projects: [
+            {
+                title: "my project test title 1",
+                desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo natus recusandae magnam, ab sit consequatur culpa corporis consectetur facere",
+                buttons: {
+                    github: {
+                        link: "",
+                        text: "go to github",
+                    },
+                    seeProject: {
+                        link: "",
+                        text: "see project",
+                    },
+                    moreInfo: "more info",
+                },
+            },
+            {
+                title: "my project test title 1",
+                desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo natus recusandae magnam, ab sit consequatur culpa corporis consectetur facere",
+                buttons: {
+                    github: {
+                        link: "",
+                        text: "go to github",
+                    },
+                    seeProject: {
+                        link: "",
+                        text: "see project",
+                    },
+                    moreInfo: "more info",
+                },
+            },
+            {
+                title: "my project test title 1",
+                desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo natus recusandae magnam, ab sit consequatur culpa corporis consectetur facere",
+                buttons: {
+                    github: {
+                        link: "",
+                        text: "go to github",
+                    },
+                    seeProject: {
+                        link: "",
+                        text: "see project",
+                    },
+                    moreInfo: "more info",
+                },
+            },
+        ],
+    },
+};
