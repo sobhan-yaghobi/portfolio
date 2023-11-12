@@ -123,6 +123,10 @@ html[data-theme="light"] {
     stroke: $dark-color;
 }
 
+p {
+    font-weight: 600;
+}
+
 a {
     color: $dark-color;
     &:hover {
@@ -143,4 +147,8 @@ a {
 
 img {
     user-select: none;
+    max-height: var(--max-height);
+    @media only screen and (max-width: $mediumDevice) {
+        max-height: var(--max-height_M_Device);
+    }
 }

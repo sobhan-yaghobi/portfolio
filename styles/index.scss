@@ -202,7 +202,7 @@ body {
 #landing {
     width: 100%;
     padding-top: 4rem;
-    height: 100vh;
+    height: calc(100vh - 4rem);
     background-color: $light-color;
     display: flex;
 
@@ -310,7 +310,6 @@ body {
             width: 80%;
             margin: $xl 0;
             font-size: $s08;
-            font-weight: 600;
             text-align: justify;
         }
         .landing__right--go-to-skills {
@@ -377,10 +376,10 @@ body {
     }
     @media only screen and (max-width: $mediumDevice) {
         & {
+            height: unset;
+            min-height: calc(100vh - 4rem);
             flex-flow: wrap column-reverse;
-            justify-content: space-between;
-            overflow: hidden;
-            padding-bottom: 4rem;
+            justify-content: flex-end;
         }
         & > div {
             width: 100%;
@@ -390,12 +389,12 @@ body {
         .landing__left {
             display: flex;
             justify-content: center;
-            img {
-                height: 100%;
-            }
         }
 
         .landing__right {
+            overflow-x: hidden;
+            min-height: 45vh;
+            // background-color: red;
             padding: 0 $lg !important;
             justify-content: space-around;
             align-items: center;
@@ -428,6 +427,10 @@ body {
             .landing__right--go-to-skills {
                 padding: $s08 0;
                 width: 100%;
+                box-shadow: unset;
+                &:hover {
+                    box-shadow: unset;
+                }
             }
             .landing__right--scroll-down-wrapper {
                 display: none;
@@ -440,10 +443,10 @@ body {
 }
 
 #aboutMe {
-    height: calc(100vh - 4rem);
-    min-height: calc(100vh - 4rem);
     @extend .paddingSide;
+    min-height: 100vh;
     display: flex;
+    align-items: center;
     flex-flow: row-reverse;
 
     & > div {
@@ -478,6 +481,7 @@ body {
         margin-top: $xl6;
         text-align: center;
         align-items: center;
+        justify-content: center;
         flex-flow: column-reverse;
 
         & > div {
@@ -500,19 +504,21 @@ body {
 }
 
 #skills {
+    width: 100%;
     @extend .paddingSide;
-    height: calc(100vh - 4rem);
-    // min-height: calc(100vh - 4rem);
-    display: flex;
-    align-items: center;
+    min-height: calc(100vh - 4rem);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
 
     & > div {
-        width: 50%;
+        width: 100%;
         height: 100%;
         position: relative;
     }
 
     .skills__right {
+        grid-row: 1 / 2;
         display: flex;
         justify-content: flex-start;
         flex-flow: column;
@@ -524,6 +530,8 @@ body {
     }
 
     .skills__left {
+        grid-column: 2 / 3;
+        grid-row: 1 / 3;
         overflow: hidden;
         .skills__left_icons_wrapper {
             width: 16rem;
@@ -595,12 +603,15 @@ body {
     }
 
     .skills__right_packages_wrapper {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
         display: flex;
         flex-flow: row wrap;
         padding: $xl 0;
         gap: $s05;
 
         .skills__right_package {
+            height: fit-content;
             cursor: pointer;
             padding: $s05 $s09;
             color: var(--package-color);
@@ -612,28 +623,45 @@ body {
     }
 
     @media only screen and (max-width: $largeDevice) {
+        .skills__right {
+            .skills__right-desc {
+                height: 100%;
+            }
+        }
         .skills__left {
+            grid-row: 1 / 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             .skills__left_icons_wrapper {
                 display: none;
             }
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        .skills__right_packages_wrapper {
+            grid-column: 1 / 3;
+            height: fit-content;
         }
     }
     @media only screen and (max-width: $mediumDevice) {
         & {
-            flex-flow: column-reverse;
+            display: flex;
+            flex-flow: column;
             text-align: center;
         }
 
         & > div {
-            height: 50%;
             width: 100%;
         }
 
         .skills__left {
             height: 40%;
+            overflow: unset;
             img {
                 width: auto;
-                height: 100%;
             }
         }
 
@@ -646,9 +674,9 @@ body {
 
 #projects {
     @extend .paddingSide;
-    height: calc(100vh - 4rem);
-    min-height: calc(100vh - 4rem);
+    min-height: 100vh;
     display: flex;
+    justify-content: center;
     flex-flow: column;
 
     h1 {
@@ -660,7 +688,7 @@ body {
         width: 100%;
         min-height: fit-content;
         display: grid;
-        grid-template-columns: auto auto auto;
+        grid-template-columns: repeat(3, auto);
     }
 
     .projects__box {
@@ -777,6 +805,17 @@ body {
                     height: $xl3;
                 }
             }
+        }
+    }
+
+    @media only screen and (max-width: $largeDevice) {
+        .projects__box_wrapper {
+            grid-template-columns: repeat(2, auto);
+        }
+    }
+    @media only screen and (max-width: $mediumDevice) {
+        .projects__box_wrapper {
+            grid-template-columns: repeat(1, auto);
         }
     }
 }
