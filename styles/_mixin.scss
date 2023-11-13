@@ -7,6 +7,9 @@
             grid-template-columns: 1fr;
             .projects__box_button_text {
                 margin: 0 $right 0 $left;
+                html[data-lang="en"] & {
+                    margin: 0 $left 0 $right !important;
+                }
                 font-weight: 500 !important;
             }
         }

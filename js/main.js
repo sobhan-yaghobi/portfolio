@@ -11,6 +11,7 @@ import {
     removeClassName,
 } from "./utils";
 import { menu, landing, aboutMe, skills, projects } from "./data";
+
 const languageList = document.querySelector(".menu-quick_access__language__list");
 
 const renderMenu = () => {
@@ -50,14 +51,14 @@ const renderAboutMe = () => {
 };
 
 const renderSkills = () => {
-    const skillsRightSide = document.querySelector(".skills__right");
-    const skillsListElm = document.querySelector(".skills__right_packages_wrapper");
+    const skillsRightSide = document.querySelector(".skills__right_top_top");
+    const skillsListElm = document.querySelector(".skills__both_bottom");
     skillsRightSide.children.item(0).innerHTML = skills[language()].title;
     skillsRightSide.children.item(1).innerHTML = skills[language()].desc;
     if (!Boolean(skillsListElm.innerHTML)) {
         const skillsItems = skills.skillsList.map(
             (item) =>
-                `<p style="--package-color : ${item.color}" class="skills__right_package package_${
+                `<p style="--package-color : ${item.color}" class="skills__right_top_top_package package_${
                     item.title
                 }">${item.title.replaceAll("_", " ")}</p>`
         );
@@ -82,7 +83,7 @@ const renderProjects = () => {
             <div class="projects__box_wrapper_button">
                 <button class="projects__box_button reverse">
                     <div class="projects__box_button_wrapper_text">
-                        <p class="projects__box_button_text">${project.buttons.moreInfo}</p>
+                        <p class="projects__box_button_text">${project.buttons.seeProject.text}</p>
                     </div>
 
                     <svg
@@ -117,9 +118,11 @@ const renderProjects = () => {
                             ></path>
                         </svg>
                     </button>
-                    <button class="projects__box_button">
+                    <button class="projects__box_button" onClick="showDetailProject('${
+                        project.buttons.moreInfo.text
+                    }')">
                         <div class="projects__box_button_wrapper_text">
-                            <span class="projects__box_button_text">${project.buttons.seeProject.text}</span>
+                            <span class="projects__box_button_text">${project.buttons.moreInfo.title}</span>
                         </div>
                         <svg
                             width="24"
@@ -149,6 +152,20 @@ const renderProjects = () => {
     projectWrapperElm.innerHTML = projectHtmlTemplate.join(" ");
 };
 
+const showDetailProject = (mainValue) => {
+    const modalWrapper = document.querySelector("#modalWrapper");
+    const isModalActive = modalWrapper.classList.contains("active");
+    if (isModalActive) {
+        modalWrapper.classList.remove("active");
+    } else {
+        modalWrapper.classList.add("active");
+    }
+    renderModalContent(mainValue);
+};
+
+const renderModalContent = (value) =>
+    typeof value !== "undefined" ? (document.querySelector(".modal_box__modal_content").innerHTML = value) : null;
+
 //% --- Events
 
 toggleActiveButton("#toggle-menu-mobile");
@@ -172,3 +189,5 @@ window.addEventListener("DOMContentLoaded", () => {
     renderSkills();
     renderProjects();
 });
+
+window.showDetailProject = showDetailProject;

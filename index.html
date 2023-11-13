@@ -20,6 +20,23 @@
     </head>
     <!-- //& ELEMENT CODES START -->
     <body class="flip-horizental__active">
+        <div id="modalWrapper" class="modal-wrapper">
+            <div class="modal_background"></div>
+            <div class="modal_box">
+                <button class="modal_box__close_btn" onclick="showDetailProject()">
+                    <svg
+                        width="18"
+                        class="close_btn__svg stroke"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path d="M5 5L19 19M5.00003 19L12 12L19 5" stroke-width="2.5" stroke-linecap="round" />
+                    </svg>
+                </button>
+                <div class="modal_box__modal_content"></div>
+            </div>
+        </div>
         <menu id="menu" class="menu">
             <ul class="menu-list desktop"></ul>
             <ul class="menu-list mobile">
@@ -145,28 +162,33 @@
             </div>
         </section>
         <section id="skills" class="skills">
-            <!-- skills__right_top_top
-skills__left_top_top
-skills__both_bottom -->
-            <div class="skills__left">
+            <div class="skills__left_top_top">
                 <img src="/images/my-skills.png" style="--max-height_M_Device: 20rem" alt="" />
-                <div class="skills__left_icons_wrapper">
-                    <img class="skills__left--icon bootstrap_icon" src="/icon/bootstrap.svg" alt="bootstrap" />
-                    <img class="skills__left--icon css_icon" src="/icon/css.svg" alt="css" />
-                    <img class="skills__left--icon html_icon" src="/icon/html.svg" alt="html" />
-                    <img class="skills__left--icon javascript_icon" src="/icon/javascript.svg" alt="javascript" />
-                    <img class="skills__left--icon react_icon" src="/icon/react.svg" alt="react" />
-                    <img class="skills__left--icon redux_icon" src="/icon/redux.svg" alt="redux" />
-                    <img class="skills__left--icon tailwind_icon" src="/icon/tailwind.svg" alt="tailwind" />
-                    <img class="skills__left--icon typescript_icon" src="/icon/typescript.svg" alt="typescript" />
+                <div class="skills__left_top_top_icons_wrapper">
+                    <img class="skills__left_top_top--icon bootstrap_icon" src="/icon/bootstrap.svg" alt="bootstrap" />
+                    <img class="skills__left_top_top--icon css_icon" src="/icon/css.svg" alt="css" />
+                    <img class="skills__left_top_top--icon html_icon" src="/icon/html.svg" alt="html" />
+                    <img
+                        class="skills__left_top_top--icon javascript_icon"
+                        src="/icon/javascript.svg"
+                        alt="javascript"
+                    />
+                    <img class="skills__left_top_top--icon react_icon" src="/icon/react.svg" alt="react" />
+                    <img class="skills__left_top_top--icon redux_icon" src="/icon/redux.svg" alt="redux" />
+                    <img class="skills__left_top_top--icon tailwind_icon" src="/icon/tailwind.svg" alt="tailwind" />
+                    <img
+                        class="skills__left_top_top--icon typescript_icon"
+                        src="/icon/typescript.svg"
+                        alt="typescript"
+                    />
                 </div>
             </div>
-            <div class="skills__right">
-                <h1 class="skills__right-title"></h1>
-                <p class="skills__right-desc"></p>
+            <div class="skills__right_top_top">
+                <h1 class="skills__right_top_top-title"></h1>
+                <p class="skills__right_top_top-desc"></p>
             </div>
 
-            <div class="skills__right_packages_wrapper"></div>
+            <div class="skills__both_bottom"></div>
         </section>
         <section id="projects" class="projects">
             <h1 class="projects__title">نمونه کار من</h1>

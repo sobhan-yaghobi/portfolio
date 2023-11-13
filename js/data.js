@@ -293,7 +293,10 @@ export const projects = {
                         link: "",
                         text: "مشاهده پروژه",
                     },
-                    moreInfo: "اطلاعات بیشتر",
+                    moreInfo: {
+                        title: "اطلاعات بیشتر",
+                        text: "لومر ایپسام 1",
+                    },
                 },
             },
             {
@@ -308,7 +311,10 @@ export const projects = {
                         link: "",
                         text: "مشاهده پروژه",
                     },
-                    moreInfo: "اطلاعات بیشتر",
+                    moreInfo: {
+                        title: "اطلاعات بیشتر",
+                        text: "2 لومر ایپسام",
+                    },
                 },
             },
             {
@@ -323,7 +329,10 @@ export const projects = {
                         link: "",
                         text: "مشاهده پروژه",
                     },
-                    moreInfo: "اطلاعات بیشتر",
+                    moreInfo: {
+                        title: "اطلاعات بیشتر",
+                        text: "لومر ایپسام 3",
+                    },
                 },
             },
         ],
@@ -343,7 +352,10 @@ export const projects = {
                         link: "",
                         text: "see project",
                     },
-                    moreInfo: "more info",
+                    moreInfo: {
+                        title: "more info",
+                        text: "lorem inpsum 1",
+                    },
                 },
             },
             {
@@ -358,7 +370,10 @@ export const projects = {
                         link: "",
                         text: "see project",
                     },
-                    moreInfo: "more info",
+                    moreInfo: {
+                        title: "more info",
+                        text: "lorem inpsum 2",
+                    },
                 },
             },
             {
@@ -373,7 +388,10 @@ export const projects = {
                         link: "",
                         text: "see project",
                     },
-                    moreInfo: "more info",
+                    moreInfo: {
+                        title: "more info",
+                        text: "lorem inpsum 3",
+                    },
                 },
             },
         ],

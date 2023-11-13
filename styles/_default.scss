@@ -33,7 +33,7 @@ $xl7: 4.5rem;
 $xl8: 6rem;
 $xl9: 8rem;
 //% ===
-$projectBoxWidth : 20.521rem ;
+$projectBoxWidth: 20.521rem;
 //% ===
 $largeDevice: 992px;
 $mediumDevice: 768px;
@@ -123,6 +123,10 @@ html[data-theme="light"] {
 
 .fill {
     fill: $dark-color;
+
+    &:is(.white) {
+        fill: $light-color;
+    }
 }
 
 .stroke {
