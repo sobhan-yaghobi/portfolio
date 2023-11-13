@@ -678,6 +678,7 @@ body {
             10px -10px 20px #ffffff;
         display: flex;
         flex-flow: column;
+        justify-content: space-between;
 
         &:hover {
             .projects__box_wrapper_img {
@@ -860,6 +861,18 @@ body {
         .modal_box__modal_content {
             height: 100%;
             overflow-y: auto;
+        }
+    }
+
+    @media only screen and (max-width: $largeDevice) {
+        .modal_box {
+            width: 55%;
+            height: 40%;
+        }
+    }
+    @media only screen and (max-width: $mediumDevice) {
+        .modal_box {
+            width: 90%;
         }
     }
 }
