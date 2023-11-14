@@ -166,6 +166,24 @@ const showDetailProject = (mainValue) => {
 const renderModalContent = (value) =>
     typeof value !== "undefined" ? (document.querySelector(".modal_box__modal_content").innerHTML = value) : null;
 
+const inputEventsHandler = () => {
+    const boxInputs = document.querySelectorAll(".box_input");
+    const activeAction = (elem) => elem.classList.add("active");
+    const diActiveAction = (elem) => elem.classList.remove("active");
+
+    // const input = document.querySelector("input");
+
+    boxInputs.forEach((boxInput) => {
+        //& boxInput => firstChild is Label And seccend is Input
+        const input = boxInput.children.item(1);
+        const placeholderElm = boxInput.children.item(0);
+        console.log("placeholderElm", placeholderElm);
+        console.log("input", input);
+
+        input.addEventListener("focus", () => placeholderElm.classList.add("active"));
+        input.addEventListener("blur", () => (!input.value.length ? diActiveAction(placeholderElm) : null));
+    });
+};
 //% --- Events
 
 toggleActiveButton("#toggle-menu-mobile");
@@ -188,6 +206,7 @@ window.addEventListener("DOMContentLoaded", () => {
     renderAboutMe();
     renderSkills();
     renderProjects();
+    inputEventsHandler();
 });
 
 window.showDetailProject = showDetailProject;

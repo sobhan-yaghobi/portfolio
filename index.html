@@ -21,7 +21,7 @@
     <!-- //& ELEMENT CODES START -->
     <body class="flip-horizental__active">
         <div id="modalWrapper" class="modal-wrapper">
-            <div class="modal_background"></div>
+            <div class="modal_background" onclick="showDetailProject()"></div>
             <div class="modal_box">
                 <button class="modal_box__close_btn" onclick="showDetailProject()">
                     <svg
@@ -154,7 +154,7 @@
         </section>
         <section id="aboutMe" class="aboutMe">
             <div class="aboutMe__right">
-                <h1 class="aboutMe__right--title"></h1>
+                <h1 class="aboutMe__right--title title"></h1>
                 <p class="aboutMe__right--desc"></p>
             </div>
             <div class="aboutMe__left">
@@ -184,15 +184,39 @@
                 </div>
             </div>
             <div class="skills__right_top_top">
-                <h1 class="skills__right_top_top-title"></h1>
+                <h1 class="skills__right_top_top-title title"></h1>
                 <p class="skills__right_top_top-desc"></p>
             </div>
 
             <div class="skills__both_bottom"></div>
         </section>
         <section id="projects" class="projects">
-            <h1 class="projects__title">نمونه کار من</h1>
+            <h1 class="projects__title title">نمونه کار من</h1>
             <div class="projects__box_wrapper" id="projectsWrapper"></div>
+        </section>
+        <section id="contactMe" class="contactMe">
+            <div class="contactMe__right">
+                <h1 class="title">ارتباط با من</h1>
+                <p class="contactMe__desc">
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و تولید سادگی نامفهوم از صنعت با استفاده
+                </p>
+                <form class="contactMe__form">
+                    <div class="box_input">
+                        <label class="box_input__placeholder" for="box_input_name">نام</label>
+                        <input id="box_input_name" class="box_input__field" type="text" required />
+                    </div>
+                    <div class="box_input">
+                        <label class="box_input__placeholder" for="box_input_email">ایمیل</label>
+                        <input id="box_input_email" class="box_input__field" type="email" required />
+                    </div>
+                    <div class="box_input">
+                        <label class="box_input__placeholder" for="box_input_message">پیام شما</label>
+                        <textarea id="box_input_message" class="box_input__textarea_field"></textarea>
+                    </div>
+                    <button class="contactMe__send_btn">ارسال</button>
+                </form>
+            </div>
+            <div class="contactMe__left">left</div>
         </section>
     </body>
     <!-- //& ELEMENT CODES END -->

@@ -449,11 +449,6 @@ body {
     .aboutMe__right {
         justify-content: center;
         flex-flow: column;
-
-        h1 {
-            font-size: $xl4;
-            margin-bottom: $sm;
-        }
     }
 
     @media only screen and (max-width: $mediumDevice) {
@@ -500,11 +495,6 @@ body {
         display: flex;
         justify-content: flex-start;
         flex-flow: column;
-
-        h1 {
-            font-size: $xl4;
-            margin-bottom: $sm;
-        }
     }
 
     .skills__left_top_top {
@@ -654,11 +644,6 @@ body {
     justify-content: center;
     flex-flow: column;
 
-    h1 {
-        font-size: $xl4;
-        margin-bottom: $sm;
-    }
-
     .projects__box_wrapper {
         width: 100%;
         min-height: fit-content;
@@ -798,6 +783,85 @@ body {
 
         .projects__box {
             margin: 0 0 $xl 0;
+        }
+    }
+}
+
+#contactMe {
+    @extend .paddingSide;
+    height: $currentHeight;
+    display: flex;
+
+    & > div {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-flow: column;
+        padding: $sm;
+    }
+
+    .contactMe__right {
+        .contactMe__form {
+            width: 100%;
+            height: 100%;
+
+            .box_input {
+                width: 100%;
+                margin-bottom: $xl;
+                display: flex;
+                flex-flow: column;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+
+                &:first-child {
+                    margin-top: $s05;
+                }
+
+                .box_input__field,
+                .box_input__textarea_field {
+                    width: 100%;
+                    padding: $s05;
+                    border: $s01 solid $gray-color;
+                    border-radius: $s05;
+                    resize: vertical;
+                }
+
+                .box_input__textarea_field {
+                    max-height: $xl9;
+                }
+
+                .box_input__placeholder {
+                    font-size: $s08;
+                    position: absolute;
+                    top: $s05;
+                    right: $s05;
+                    transition: all 400ms ease-in-out;
+                }
+
+                .box_input__placeholder:is(.active) {
+                    padding-inline: $s05;
+                    background-color: $light-color;
+                    transform: translateY(-$s06);
+                    top: 0;
+                    right: $s04 * 3;
+                }
+            }
+
+            .contactMe__send_btn {
+                cursor: pointer;
+                width: 100%;
+                padding: $s05;
+                border-radius: $s05;
+                border: $s01 solid $gray-color;
+                opacity: 0.6;
+                transition: all 300ms;
+
+                &:hover {
+                    background-color: $gray-color;
+                    opacity: 1;
+                }
+            }
         }
     }
 }
