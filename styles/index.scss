@@ -801,10 +801,9 @@ body {
     }
 
     .contactMe__right {
-        justify-content: space-evenly;
         .contactMe__form {
+            margin-top: $xl;
             width: 100%;
-            height: 55%;
             display: flex;
             flex-flow: column;
             justify-content: space-evenly;
@@ -832,6 +831,7 @@ body {
                 }
 
                 .box_input__textarea_field {
+                    min-height: $xl5;
                     max-height: $xl9;
                 }
 
@@ -862,13 +862,13 @@ body {
     }
 
     .contactMe__left {
-        padding: $xl6 ($xl6 * 2) $xl6 0;
+        padding: 0 ($xl6 * 2) $xl6 0;
 
         .contactMe__left__info_box {
             color: $light-color;
             width: 100%;
-            height: 100%;
             padding: $lg;
+            min-height: 70%;
             border-radius: $lg;
             box-shadow: 20px 20px 60px #d0d2ce, -20px -20px 60px #ffffff;
             background-color: $green-color;
@@ -881,10 +881,11 @@ body {
                 height: 100%;
                 display: flex;
                 flex-flow: column;
-                justify-content: space-evenly;
+                justify-content: flex-start;
 
                 .info_box__item {
                     display: flex;
+                    margin-bottom: $xl;
                     align-items: center;
                     justify-content: flex-start;
                     gap: $s08;
@@ -903,12 +904,61 @@ body {
                 display: flex;
                 gap: $sm;
 
+                .info_social__item {
+                    cursor: pointer;
+                    padding: $s02;
+                    border-radius: $s04;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    @include glass(16px, #ffffff8c);
+                    transition: all 430ms linear;
+
+                    &:hover {
+                        transform: scale(1.05);
+                        box-shadow: 0 $s04 $s06 $dark-color;
+                    }
+                }
+
                 .info_social_item__svg {
                     width: $xl4;
                     height: $xl4;
                 }
             }
         }
+    }
+
+    @media only screen and (max-width: $largeDevice) {
+        & {
+            height: unset;
+            min-height: $currentHeight;
+            flex-flow: column-reverse;
+        }
+
+        & > div {
+            width: 100%;
+        }
+
+        .contactMe__right {
+            .contactMe__form {
+                .box_input {
+                    .box_input__textarea_field {
+                        min-height: $xl9;
+                    }
+                }
+            }
+        }
+
+        .contactMe__left {
+            padding: 0;
+            padding-bottom: $xl;
+
+            .contactMe__left__info_box {
+                box-shadow: unset;
+            }
+        }
+    }
+    @media only screen and (max-width: $mediumDevice) {
     }
 }
 
