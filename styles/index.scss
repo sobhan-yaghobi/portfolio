@@ -797,13 +797,17 @@ body {
         height: 100%;
         display: flex;
         flex-flow: column;
-        padding: $sm;
+        padding: $sm 0;
     }
 
     .contactMe__right {
+        justify-content: space-evenly;
         .contactMe__form {
             width: 100%;
-            height: 100%;
+            height: 55%;
+            display: flex;
+            flex-flow: column;
+            justify-content: space-evenly;
 
             .box_input {
                 width: 100%;
@@ -822,7 +826,7 @@ body {
                 .box_input__textarea_field {
                     width: 100%;
                     padding: $s05;
-                    border: $s01 solid $gray-color;
+                    border: $s01 solid $green-color;
                     border-radius: $s05;
                     resize: vertical;
                 }
@@ -849,17 +853,59 @@ body {
             }
 
             .contactMe__send_btn {
-                cursor: pointer;
+                color: $light-color;
                 width: 100%;
-                padding: $s05;
-                border-radius: $s05;
-                border: $s01 solid $gray-color;
-                opacity: 0.6;
-                transition: all 300ms;
+                border-color: $green-color;
+                background-color: $green-color;
+            }
+        }
+    }
 
-                &:hover {
-                    background-color: $gray-color;
-                    opacity: 1;
+    .contactMe__left {
+        padding: $xl6 ($xl6 * 2) $xl6 0;
+
+        .contactMe__left__info_box {
+            color: $light-color;
+            width: 100%;
+            height: 100%;
+            padding: $lg;
+            border-radius: $lg;
+            box-shadow: 20px 20px 60px #d0d2ce, -20px -20px 60px #ffffff;
+            background-color: $green-color;
+            display: flex;
+            flex-flow: column;
+            position: relative;
+            z-index: 3;
+
+            .info_box__list {
+                height: 100%;
+                display: flex;
+                flex-flow: column;
+                justify-content: space-evenly;
+
+                .info_box__item {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    gap: $s08;
+                }
+
+                .info_box_item__svg {
+                    width: $xl3;
+                    height: $xl3;
+                    fill: $green-color;
+                    stroke: $white-color;
+                }
+            }
+
+            .info_social__list {
+                height: 20%;
+                display: flex;
+                gap: $sm;
+
+                .info_social_item__svg {
+                    width: $xl4;
+                    height: $xl4;
                 }
             }
         }
