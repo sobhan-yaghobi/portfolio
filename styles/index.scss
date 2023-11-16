@@ -958,7 +958,26 @@ body {
             }
         }
     }
-    @media only screen and (max-width: $mediumDevice) {
+}
+
+#footer {
+    @extend .paddingSide;
+    padding: $lg 0;
+    text-align: center;
+    font-size: $xs;
+    color: $white-color;
+    background-color: $green-color;
+
+    .c {
+        font-size: $lg;
+        font-weight: 300;
+        width: $lg;
+        height: $lg;
+        text-align: center;
+        line-height: $lg;
+        border: $s01 solid $white-color;
+        border-radius: 50%;
+        display: inline-block;
     }
 }
 
