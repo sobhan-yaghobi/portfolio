@@ -43,25 +43,6 @@ $fullPageHeight: 100vh;
 $menuHeight: 4rem;
 $currentHeight: calc($fullPageHeight - $menuHeight);
 
-html[data-lang="en"] {
-    text-align: left;
-    direction: ltr;
-}
-html[data-lang="fa"] {
-    text-align: right;
-    direction: rtl;
-}
-
-html[data-theme="dark"] {
-    --text-color: #{$white-color};
-    --bg-color: #{$dark-color};
-}
-
-html[data-theme="light"] {
-    --text-color: #{$dark-color};
-    --bg-color: #{$white-color};
-}
-
 .flip-horizental {
     transform: scalex(-1);
 }

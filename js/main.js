@@ -1,15 +1,4 @@
-import {
-    changeThemeAction,
-    language,
-    theme,
-    fa,
-    en,
-    dark,
-    light,
-    changeLangAction,
-    toggleActiveButton,
-    removeClassName,
-} from "./utils";
+import { language, fa, en, changeLangAction, toggleActiveButton, removeClassName } from "./utils";
 import { menu, landing, aboutMe, skills, projects, contactMe, footer } from "./data";
 
 const languageList = document.querySelector(".menu-quick_access__language__list");
