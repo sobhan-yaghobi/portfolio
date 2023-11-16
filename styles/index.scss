@@ -967,6 +967,7 @@ body {
         .contactMe__left {
             padding: 0;
             padding-bottom: $xl;
+            padding: unset !important;
 
             .contactMe__left__info_box {
                 box-shadow: unset;
@@ -994,6 +995,10 @@ body {
         border: $s01 solid $white-color;
         border-radius: 50%;
         display: inline-block;
+    }
+
+    @media only screen and (max-width: $smallDevice) {
+        padding: $lg $xl6;
     }
 }
 
