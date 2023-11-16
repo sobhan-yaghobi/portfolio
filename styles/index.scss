@@ -836,11 +836,17 @@ body {
                 }
 
                 .box_input__placeholder {
+                    width: fit-content;
                     font-size: $s08;
                     position: absolute;
                     top: $s05;
-                    right: $s05;
+                    left: $s05;
                     transition: all 400ms ease-in-out;
+
+                    :has(.flip-horizental__active) & {
+                        left: unset !important;
+                        right: $s05;
+                    }
                 }
 
                 .box_input__placeholder:is(.active) {
@@ -862,7 +868,12 @@ body {
     }
 
     .contactMe__left {
-        padding: 0 ($xl6 * 2) $xl6 0;
+        padding-left: $xl6 * 2;
+
+        :has(.flip-horizental__active) & {
+            padding-left: unset !important;
+            padding-right: $xl6 * 2;
+        }
 
         .contactMe__left__info_box {
             color: $light-color;
@@ -918,6 +929,10 @@ body {
                         transform: scale(1.05);
                         box-shadow: 0 $s04 $s06 $dark-color;
                     }
+                    .info_box_item__text {
+                        direction: ltr;
+                        text-align: left;
+                    }
                 }
 
                 .info_social_item__svg {
@@ -969,6 +984,7 @@ body {
     background-color: $green-color;
 
     .c {
+        margin-inline: $s05;
         font-size: $lg;
         font-weight: 300;
         width: $lg;
