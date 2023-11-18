@@ -5,6 +5,8 @@ export const htmlDoc = () => document.querySelector("html");
 export const language = () => htmlDoc().dataset.lang; //% Fa Or En // Def : En
 export const en = "en";
 export const fa = "fa";
+export const danaFont = "dana";
+export const LufgaFont = "Lufga";
 export let menu = {};
 export let landing = {};
 export let aboutMe = {};
@@ -28,9 +30,10 @@ export const changeLangAction = (lang) => {
     };
     if (typeof lang !== "undefined") {
         htmlDoc().setAttribute("data-lang", lang === fa ? fa : en);
+        htmlDoc().setAttribute("data-font", lang === fa ? danaFont : LufgaFont);
         updataLangInDom(lang === fa ? fa : en);
     } else {
-        htmlDoc().setAttribute("data-lang", language() === en ? fa : en);
+        htmlDoc().setAttribute("data-font", language() === en ? danaFont : LufgaFont);
         updataLangInDom(language() === en ? fa : en);
     }
     language() === fa
@@ -62,6 +65,7 @@ export const getData = async () => {
     })
         .then((res) => res.json())
         .then((data) => {
+            console.log("data", data);
             menu = { ...data[0].menu };
             landing = { ...data[0].landing };
             aboutMe = { ...data[0].aboutMe };

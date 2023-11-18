@@ -43,6 +43,18 @@ $fullPageHeight: 100vh;
 $menuHeight: 4rem;
 $currentHeight: calc($fullPageHeight - $menuHeight);
 
+//Fonts
+$primaryFaFont: "dana";
+$primaryEnFont: "Lufga";
+
+body {
+    color: var(--text-color);
+    background-color: $light-color;
+    position: relative;
+    padding-top: $menuHeight;
+    position: relative;
+}
+
 .flip-horizental {
     transform: scalex(-1);
 }
@@ -81,8 +93,12 @@ $currentHeight: calc($fullPageHeight - $menuHeight);
     }
 }
 
-.button {
+button,
+span {
     font-family: inherit;
+}
+
+.button {
     cursor: pointer;
     width: fit-content;
     padding: $s05 $base;
