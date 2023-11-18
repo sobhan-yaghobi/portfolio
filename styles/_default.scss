@@ -82,6 +82,7 @@ $currentHeight: calc($fullPageHeight - $menuHeight);
 }
 
 .button {
+    font-family: inherit;
     cursor: pointer;
     width: fit-content;
     padding: $s05 $base;

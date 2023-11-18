@@ -1,3 +1,7 @@
+@import "default";
+@import "animation";
+@import "mixin";
+
 @font-face {
     font-family: DanaBold;
     src: url("/font/dana-fanum/dana-fanum\ bold.woff"), url("/font/dana-fanum/dana-fanum\ bold.woff2");
@@ -25,13 +29,28 @@
     transition: all 300ms cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-html[data-lang="en"] {
-    text-align: left;
-    direction: ltr;
-    font-family: Roboto;
+html {
+    scroll-behavior: smooth;
+    &[data-lang="en"] {
+        text-align: left;
+        direction: ltr;
+        font-family: Roboto;
+    }
+    &[data-lang="fa"] {
+        text-align: right;
+        direction: rtl;
+        font-family: Dana;
+    }
 }
-html[data-lang="fa"] {
-    text-align: right;
-    direction: rtl;
-    font-family: Dana;
+
+body {
+    color: var(--text-color);
+    background-color: $light-color;
+    position: relative;
+    padding-top: $menuHeight;
+    position: relative;
+}
+
+span {
+    font-family: inherit;
 }

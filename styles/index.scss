@@ -2,17 +2,6 @@
 @import "animation";
 @import "mixin";
 
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    color: var(--text-color);
-    background-color: $light-color;
-    position: relative;
-    padding-top: $menuHeight;
-    position: relative;
-}
 
 #menu {
     @extend .paddingSide;
@@ -879,7 +868,7 @@ body {
             color: $light-color;
             width: 100%;
             padding: $lg;
-            min-height: 70%;
+            max-height: 70%;
             border-radius: $lg;
             box-shadow: 20px 20px 60px #d0d2ce, -20px -20px 60px #ffffff;
             background-color: $green-color;
@@ -889,7 +878,6 @@ body {
             z-index: 3;
 
             .info_box__list {
-                height: 100%;
                 display: flex;
                 flex-flow: column;
                 justify-content: flex-start;
@@ -911,7 +899,8 @@ body {
             }
 
             .info_social__list {
-                height: 20%;
+                height: 15%;
+                max-height: 45px;
                 display: flex;
                 gap: $sm;
 
@@ -983,18 +972,19 @@ body {
     font-size: $xs;
     color: $white-color;
     background-color: $green-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     .c {
         margin-inline: $s05;
         font-size: $lg;
         font-weight: 300;
-        width: $lg;
-        height: $lg;
+        width: $xl2;
+        height: $xl2;
         text-align: center;
-        line-height: $lg;
         border: $s01 solid $white-color;
         border-radius: 50%;
-        display: inline-block;
     }
 
     @media only screen and (max-width: $smallDevice) {

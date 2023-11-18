@@ -1,5 +1,19 @@
-import { language, fa, en, changeLangAction, toggleActiveButton, removeClassName } from "./utils";
-import { menu, landing, aboutMe, skills, projects, contactMe, footer } from "./data";
+import {
+    language,
+    fa,
+    en,
+    changeLangAction,
+    toggleActiveButton,
+    getData,
+    menu,
+    landing,
+    aboutMe,
+    skills,
+    projects,
+    contactMe,
+    footer,
+} from "./utils";
+// import { menu, landing, aboutMe, skills, projects, contactMe, footer } from "./data";
 
 const languageList = document.querySelector(".menu-quick_access__language__list");
 
@@ -173,7 +187,7 @@ const renderContactMe = () => {
     infoBox.children.item(2).innerHTML = contactMe.socialBox
         .map(
             (item) => `
-        <li class="info_social__item">${item.svg}</li>
+        <li title="${item.text}" class="info_social__item">${item.svg}</li>
     `
         )
         .join(" ");
@@ -202,6 +216,7 @@ const inputEventsHandler = () => {
         input.addEventListener("blur", () => (!input.value.length ? diActiveAction(placeholderElm) : null));
     });
 };
+
 //% --- Events
 
 toggleActiveButton("#toggle-menu-mobile");
@@ -220,7 +235,8 @@ languageList.addEventListener("click", (e) => {
     rednerFooter();
 });
 
-window.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("DOMContentLoaded", async () => {
+    await getData();
     renderMenu();
     renderLanding();
     renderAboutMe();
