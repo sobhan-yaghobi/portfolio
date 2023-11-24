@@ -2,7 +2,6 @@
 @import "animation";
 @import "mixin";
 
-
 #menu {
     @extend .paddingSide;
     width: 100%;
@@ -349,6 +348,7 @@
         & {
             height: unset;
             min-height: $currentHeight;
+            margin-bottom: $xl6;
             flex-flow: wrap column-reverse;
             justify-content: flex-end;
         }
@@ -413,6 +413,7 @@
 #aboutMe {
     @extend .paddingSide;
     min-height: $currentHeight;
+    margin-bottom: $xl6;
     display: flex;
     align-items: center;
     flex-flow: row-reverse;
@@ -442,7 +443,6 @@
 
     @media only screen and (max-width: $mediumDevice) {
         margin-top: $xl2;
-        text-align: center;
         align-items: center;
         justify-content: center;
         flex-flow: column-reverse;
@@ -452,6 +452,7 @@
         }
 
         .aboutMe__right {
+            text-align: justify;
             .aboutMe__right--title {
                 margin: $xl 0;
             }
@@ -604,7 +605,7 @@
         & {
             display: flex;
             flex-flow: column;
-            text-align: center;
+            text-align: justify;
         }
 
         & > div {
@@ -764,7 +765,7 @@
     }
     @media only screen and (max-width: $mediumDevice) {
         & {
-            margin: $xl9 0;
+            margin-top: $xl6;
         }
         .projects__box_wrapper {
             grid-template-columns: repeat(1, auto);
@@ -934,9 +935,10 @@
 
     @media only screen and (max-width: $largeDevice) {
         & {
+            margin: $xl6 0;
             height: unset;
             min-height: $currentHeight;
-            flex-flow: column-reverse;
+            flex-flow: column;
         }
 
         & > div {
@@ -973,18 +975,11 @@
     color: $white-color;
     background-color: $green-color;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
 
-    .c {
+    svg {
         margin-inline: $s05;
-        font-size: $lg;
-        font-weight: 300;
-        width: $xl2;
-        height: $xl2;
-        text-align: center;
-        border: $s01 solid $white-color;
-        border-radius: 50%;
     }
 
     @media only screen and (max-width: $smallDevice) {
