@@ -17,6 +17,20 @@ const config: Config = {
           xl: "3.25rem",
         },
       },
+      animation: {
+        "flip-show": "flip-show 2s cubic-bezier(0, 0, 0.2, 1)",
+        "flip-out": "flip-out 2.5s cubic-bezier(0, 0, 0.2, 1)",
+      },
+      keyframes: {
+        "flip-show": {
+          from: { transform: "translateY(0)", transformOrigin: "50% bottom " },
+          to: { transform: "translateY(120%)", transformOrigin: "50% bottom " },
+        },
+        "flip-out": {
+          from: { transform: "translateY(-120%)", transformOrigin: "50% bottom " },
+          to: { transform: "translateY(0)", transformOrigin: "50% bottom " },
+        },
+      },
     },
   },
   plugins: [require("daisyui")],
@@ -50,7 +64,7 @@ const config: Config = {
     styled: true,
     utils: true,
     prefix: "",
-    logs: true,
+    logs: false,
     themeRoot: ":root",
   },
 }

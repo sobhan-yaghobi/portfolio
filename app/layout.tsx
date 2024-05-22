@@ -3,6 +3,7 @@ import { NextIntlClientProvider } from "next-intl"
 import "./globals.css"
 import Header from "./components/modules/Header"
 import { getLocale, getMessages } from "next-intl/server"
+import { getLangDir } from "rtl-detect"
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,8 +17,9 @@ export default async function RootLayout({
 }>) {
   const locale = await getLocale()
   const messages = await getMessages()
+  const direction = getLangDir(locale)
   return (
-    <html lang={locale} data-theme="dark">
+    <html lang={locale} dir={direction} data-theme="dark">
       <body>
         <NextIntlClientProvider messages={messages}>
           <Header />
