@@ -55,7 +55,7 @@ const config: Config = {
           neutral: "#212121",
           "base-100": "#FFFFFF",
           "base-200": "#F2F2F2",
-          "base-300": "#000000",
+          "base-300": "#f1f1f1",
         },
       },
     ],
