@@ -10,10 +10,21 @@
 
 @layer components {
   .text-gradient-from {
-    @apply bg-gradient-to-b from-neutral-50 to-neutral-50 bg-clip-text text-transparent transition duration-100;
+    @apply bg-gradient-to-b bg-clip-text text-transparent transition duration-100;
   }
-  .text-gradient {
+  [data-theme="dark"] .text-gradient-from {
+    @apply from-neutral to-neutral;
+  }
+
+  [data-theme="dark"] .text-gradient {
     @apply text-gradient-from to-neutral-50/10;
+  }
+
+  [data-theme="light"] .text-gradient-from {
+    @apply from-black to-black;
+  }
+  [data-theme="light"] .text-gradient {
+    @apply text-gradient-from to-black/10;
   }
 
   .center {
@@ -21,7 +32,7 @@
   }
 
   .icon {
-    @apply w-5 h-5 stroke-neutral-50;
+    @apply w-5 h-5 stroke-neutral;
   }
 
   .icon-md {
