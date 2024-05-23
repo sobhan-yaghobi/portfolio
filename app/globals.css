@@ -9,8 +9,11 @@
 }
 
 @layer components {
+  .text-gradient-from {
+    @apply bg-gradient-to-b from-neutral-50 to-neutral-50 bg-clip-text text-transparent transition duration-100;
+  }
   .text-gradient {
-    @apply bg-gradient-to-b from-neutral-50 to-neutral-50/10 bg-clip-text text-transparent;
+    @apply text-gradient-from to-neutral-50/10;
   }
 
   .center {

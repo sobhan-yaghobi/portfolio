@@ -37,8 +37,6 @@ const Search: React.FC = () => {
   }
 
   useEffect(() => {
-    changeHashtagAction()
-    setTimeout(() => changeHashtagAction(), 6000)
     const interval = setInterval(changeHashtagAction, 6000)
     return () => clearInterval(interval)
   }, [])

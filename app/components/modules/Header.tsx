@@ -24,7 +24,7 @@ const Header: React.FC = () => {
         <ul className="flex gap-6">
           {menu.map((item, index) => (
             <li key={index}>
-              <Link href="#" className="text-neutral-50 hover:text-gradient transition">
+              <Link href="#" className="text-gradient-from hover:text-gradient">
                 {item}
               </Link>
             </li>
