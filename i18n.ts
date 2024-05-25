@@ -9,7 +9,7 @@ export default getRequestConfig(async () => {
     locale && locales.includes(locale) ? locale : (process.env.NEXT_PUBLIC_DEF_LANGUAGE as string)
 
   return {
-    locale,
+    locale: mainLocale,
     messages: (await import(`@/messages/${mainLocale}.json`)).default,
   }
 })
