@@ -6,6 +6,7 @@ import ShareButton from "./Share.button"
 import ChangeThemeButton from "./ChangeTheme.button"
 import Search from "./Search"
 import ChangeLangButton from "./ChangeLang.button"
+import Magnetic from "./Magnetic"
 
 const Header: React.FC = () => {
   const t = useTranslations("header")
@@ -23,11 +24,14 @@ const Header: React.FC = () => {
       <div className="h-full flex items-center justify-between">
         <ul className="flex gap-6">
           {menu.map((item, index) => (
-            <li key={index}>
-              <Link href="#" className="text-gradient-from hover:text-gradient">
-                {item}
-              </Link>
-            </li>
+            <Magnetic key={index}>
+              <li>
+                <Link className="relative group" href="#">
+                  {item}
+                  <span className="bg-transparent w-2 h-2 rounded-full top-[150%] left-1/2 -translate-x-1/2 -translate-y-1/2 absolute transition invisible group-hover:bg-primary group-hover:visible"></span>
+                </Link>
+              </li>
+            </Magnetic>
           ))}
         </ul>
         <div className="flex items-center gap-1">
