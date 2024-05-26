@@ -17,13 +17,21 @@ const HeroSection: React.FC = () => {
   useGSAP(
     () => {
       const timeLine = gsap.timeline()
-      timeLine.fromTo(".title", { y: 200, scale: 0.7, opacity: 0 }, { y: 0, scale: 1, opacity: 1 })
+      timeLine
+        .fromTo(".title", { y: 200, scale: 0.7, opacity: 0 }, { y: 0, opacity: 1 })
+        .to(".title", { scale: 1, ease: "circ.in" })
+
       timeLine.fromTo(
         ".row-icon-package",
         { y: -100, opacity: 0 },
         { delay: 0.3, duration: 0.2, ease: "circ", y: 0, opacity: 1, stagger: 0.2 }
       )
       timeLine.fromTo(".circle", { y: "-1000%" }, { y: 0 })
+      timeLine.from(".desc", { opacity: 0 }).to(".desc", {
+        opacity: 1,
+        easing: "power3",
+        duration: 1,
+      })
     },
     { scope: container }
   )
@@ -257,7 +265,7 @@ const HeroSection: React.FC = () => {
         <h1 className="text-gradient text-gradient-from text-4xl text-center whitespace-pre">
           {t("title")}
         </h1>
-        <p className="text-neutral-50/35 w-5/12 text-center mt-4">{t("desc")}</p>
+        <p className="desc text-neutral-50/35 w-5/12 text-center mt-4">{t("desc")}</p>
       </div>
     </div>
   )
