@@ -6,7 +6,7 @@ import gsap from "gsap"
 import { useGSAP } from "@gsap/react"
 import { useTranslations } from "next-intl"
 
-import Magnetic from "../modules/Magnetic"
+import Magnetic from "@components/modules/Magnetic"
 import Image from "next/image"
 
 const HeroSection: React.FC = () => {
@@ -26,7 +26,18 @@ const HeroSection: React.FC = () => {
         { y: -100, opacity: 0 },
         { delay: 0.3, duration: 0.2, ease: "circ", y: 0, opacity: 1, stagger: 0.2 }
       )
-      timeLine.fromTo(".circle", { y: "-1000%" }, { y: 0 })
+      timeLine
+        .fromTo(
+          ".circle",
+          { background: "#fda699", y: "-1000%", filter: "blur(10px)", borderRadius: "50%" },
+          { y: 0 }
+        )
+        .to(".circle", {
+          boxShadow: "0 0 60px 30px #ff9888, 0 0 200px 100px #d98a7e, 0 0 400px 350px #b216b275",
+          filter: "blur(35px)",
+          duration: 1,
+          ease: "circ",
+        })
       timeLine.from(".desc", { opacity: 0 }).to(".desc", {
         opacity: 1,
         easing: "power3",
@@ -44,6 +55,7 @@ const HeroSection: React.FC = () => {
           <Magnetic>
             <Image
               className="icon-package mx-3"
+              priority
               width={50}
               height={50}
               draggable={false}
@@ -54,6 +66,7 @@ const HeroSection: React.FC = () => {
           <Magnetic>
             <Image
               className="icon-package mx-3"
+              priority
               width={50}
               height={50}
               draggable={false}
@@ -64,6 +77,7 @@ const HeroSection: React.FC = () => {
           <Magnetic>
             <Image
               className="icon-package mx-3"
+              priority
               width={50}
               height={50}
               draggable={false}
@@ -74,6 +88,7 @@ const HeroSection: React.FC = () => {
           <Magnetic>
             <Image
               className="icon-package mx-3"
+              priority
               width={50}
               height={50}
               draggable={false}
@@ -84,16 +99,18 @@ const HeroSection: React.FC = () => {
           <Magnetic>
             <Image
               className="icon-package mx-3"
+              priority
               width={50}
               height={50}
               draggable={false}
-              src={"/packages/redux.svg"}
-              alt="redux"
+              src={"/packages/zod.svg"}
+              alt="zod"
             />
           </Magnetic>
           <Magnetic>
             <Image
               className="icon-package mx-3"
+              priority
               width={50}
               height={50}
               draggable={false}
@@ -104,6 +121,7 @@ const HeroSection: React.FC = () => {
           <Magnetic>
             <Image
               className="icon-package mx-3"
+              priority
               width={50}
               height={50}
               draggable={false}
@@ -114,6 +132,7 @@ const HeroSection: React.FC = () => {
           <Magnetic>
             <Image
               className="icon-package mx-3"
+              priority
               width={50}
               height={50}
               draggable={false}
@@ -128,6 +147,7 @@ const HeroSection: React.FC = () => {
           <Magnetic>
             <Image
               className="icon-package mx-3"
+              priority
               width={50}
               height={50}
               draggable={false}
@@ -138,16 +158,19 @@ const HeroSection: React.FC = () => {
           <Magnetic>
             <Image
               className="icon-package mx-3"
+              priority
               width={50}
               height={50}
               draggable={false}
-              src={"/packages/zod.svg"}
-              alt="zod"
+              src={"/packages/redux.svg"}
+              alt="redux"
             />
           </Magnetic>
+
           <Magnetic>
             <Image
               className="icon-package mx-3"
+              priority
               width={50}
               height={50}
               draggable={false}
@@ -158,6 +181,7 @@ const HeroSection: React.FC = () => {
           <Magnetic>
             <Image
               className="icon-package mx-3"
+              priority
               width={50}
               height={50}
               draggable={false}
@@ -168,6 +192,7 @@ const HeroSection: React.FC = () => {
           <Magnetic>
             <Image
               className="icon-package mx-3"
+              priority
               width={50}
               height={50}
               draggable={false}
@@ -178,6 +203,7 @@ const HeroSection: React.FC = () => {
           <Magnetic>
             <Image
               className="icon-package mx-3"
+              priority
               width={50}
               height={50}
               draggable={false}
@@ -192,16 +218,7 @@ const HeroSection: React.FC = () => {
           <Magnetic>
             <Image
               className="icon-package mx-3"
-              width={50}
-              height={50}
-              draggable={false}
-              src={"/packages/firefox.svg"}
-              alt="firefox"
-            />
-          </Magnetic>
-          <Magnetic>
-            <Image
-              className="icon-package mx-3"
+              priority
               width={50}
               height={50}
               draggable={false}
@@ -212,6 +229,18 @@ const HeroSection: React.FC = () => {
           <Magnetic>
             <Image
               className="icon-package mx-3"
+              priority
+              width={50}
+              height={50}
+              draggable={false}
+              src={"/packages/firefox.svg"}
+              alt="firefox"
+            />
+          </Magnetic>
+          <Magnetic>
+            <Image
+              className="icon-package mx-3"
+              priority
               width={50}
               height={50}
               draggable={false}
@@ -222,6 +251,7 @@ const HeroSection: React.FC = () => {
           <Magnetic>
             <Image
               className="icon-package mx-3"
+              priority
               width={50}
               height={50}
               draggable={false}
@@ -236,6 +266,7 @@ const HeroSection: React.FC = () => {
           <Magnetic>
             <Image
               className="icon-package mx-3"
+              priority
               width={50}
               height={50}
               draggable={false}
@@ -246,6 +277,7 @@ const HeroSection: React.FC = () => {
           <Magnetic>
             <Image
               className="icon-package mx-3"
+              priority
               width={50}
               height={50}
               draggable={false}
@@ -257,7 +289,7 @@ const HeroSection: React.FC = () => {
       </div>
 
       {/*//! ---------- Bulb ----------  */}
-      <div className="circle w-10 h-10 absolute -z-10 -top-16 rounded-full" />
+      <div className="circle w-10 h-10 absolute -z-10 -top-0 rounded-full" />
 
       {/*//! ---------- Title ----------  */}
       <div className="title center flex-col mt-4">
