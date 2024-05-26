@@ -30,7 +30,7 @@ export default async function RootLayout({
       <body>
         <NextIntlClientProvider messages={messages}>
           <Header />
-          {children}
+          <div className="container">{children}</div>
         </NextIntlClientProvider>
       </body>
     </html>

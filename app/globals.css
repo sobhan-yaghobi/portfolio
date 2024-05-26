@@ -18,7 +18,7 @@
   }
 
   [data-theme="dark"] .text-gradient {
-    @apply text-gradient-from to-neutral-50/10;
+    @apply text-gradient-from to-neutral-50/40;
   }
 
   [data-theme="light"] .text-gradient-from {
@@ -38,5 +38,14 @@
 
   .icon-md {
     @apply w-10 h-10;
+  }
+
+  .circle {
+    filter: blur(10px);
+    -moz-filter: blur(10px);
+    border-radius: 50%;
+    background-color: rgb(253, 166, 153);
+    box-shadow: 0 0 60px 30px rgb(255, 152, 136), 0 0 200px 100px rgb(217, 138, 126),
+      0 0 400px 350px rgba(178, 22, 178, 0.46);
   }
 }

@@ -24,7 +24,7 @@ const Header: React.FC = () => {
       <div className="h-full flex items-center justify-between">
         <ul className="flex gap-6">
           {menu.map((item, index) => (
-            <Magnetic key={index}>
+            <Magnetic magnetSize={0.1} key={index}>
               <li>
                 <Link className="relative group" href="#">
                   {item}
