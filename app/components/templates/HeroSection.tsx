@@ -294,8 +294,10 @@ const HeroSection: React.FC = () => {
       {/*//! ---------- Title ----------  */}
       <div className="title center flex-col mt-4">
         <div className="bg-neutral w-40 h-40 mb-4 rounded-full"></div>
-        <h1 className="text-gradient text-gradient-from text-4xl text-center whitespace-pre">
-          {t("title")}
+        <h1 className="font-title text-gradient text-gradient-from text-4xl text-center whitespace-pre">
+          {t.rich("title", {
+            important: (chunks) => <span className="oswald text-primary">{chunks}</span>,
+          })}
         </h1>
         <p className="desc text-neutral-50/35 w-5/12 text-center mt-4">{t("desc")}</p>
       </div>
