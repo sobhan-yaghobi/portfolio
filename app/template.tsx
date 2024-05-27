@@ -9,7 +9,7 @@ const template: React.FC<React.PropsWithChildren> = ({ children }) => {
   }, [])
   return (
     <div>
-      <div id="banner" className="w-full min-h-screen bg-background fixed top-0 left-0 z-50"></div>
+      <div id="banner" className="w-full min-h-screen bg-[#0f0616] fixed top-0 left-0 z-50"></div>
       <div>{children}</div>
     </div>
   )
