@@ -5,6 +5,9 @@ import { useLocale, useTranslations } from "next-intl"
 import { getLangDir } from "rtl-detect"
 
 import { SearchIcon } from "lucide-react"
+import { useGSAP } from "@gsap/react"
+import gsap from "gsap"
+import { random } from "@/utils/utils.function"
 
 const Search: React.FC = () => {
   const locale = useLocale()
@@ -27,14 +30,22 @@ const Search: React.FC = () => {
   }
 
   const changeHashtagAction = () => {
-    setMainHashtag({
-      message: hashtags.at(Math.floor(Math.random() * hashtags.length)) as string,
-      show: true,
+    setMainHashtag((prev) => {
+      const getRandomMessage = () => hashtags.at(random(0, hashtags.length)) as string
+      const randomMessage = getRandomMessage()
+      const message = randomMessage.includes(prev.message) ? getRandomMessage() : randomMessage
+      return { message, show: true }
     })
     setTimeout(() => {
       setMainHashtag((prev) => ({ ...prev, show: false }))
     }, 5000)
   }
+
+  useGSAP(() => {
+    mainHashtag.show
+      ? gsap.fromTo(".main-hashtag", { y: -100 }, { y: 0 })
+      : gsap.fromTo(".main-hashtag", { y: 0 }, { y: 100 })
+  }, [mainHashtag.show])
 
   useEffect(() => {
     const interval = setInterval(changeHashtagAction, 6000)
@@ -50,15 +61,9 @@ const Search: React.FC = () => {
       <SearchIcon className={`icon absolute ${direction === "rtl" ? "right-3" : "left-3"}`} />
       <input type="text" className="grow" onChange={changeInputAction} />
       {isPlaceholder ? (
-        <div className="h-full text-xs opacity-50 -z-10 flex items-center gap-1 absolute overflow-hidden">
+        <div className="h-full text-xs text-neutral-500 -z-10 flex items-center gap-1 absolute overflow-hidden">
           <span>{t("placeholder")}</span>
-          <span
-            className={`overflow-visible ${
-              mainHashtag.show ? "animate-flip-out" : "animate-flip-show"
-            }`}
-          >
-            {mainHashtag.message}
-          </span>
+          <span className={`main-hashtag overflow-visible`}>{mainHashtag.message}</span>
         </div>
       ) : null}
     </label>
