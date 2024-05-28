@@ -2,30 +2,70 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  @font-face {
+    font-family: "dana-fat";
+    src: url("../public/font/dana/woff/dana-fat.woff");
+  }
+
+  @font-face {
+    font-family: "iran-sans";
+    src: url("../public/font/iran-sans/woff/iran-sans.woff");
+  }
+
+  @font-face {
+    font-family: "roboto";
+    src: url("../public/font/roboto/woff/roboto-med.woff");
+  }
+
+  @font-face {
+    font-family: "oswald-bold";
+    src: url("../public/font/oswald/woff/oswald-bold.woff");
+  }
+
+  html {
+    font-family: "roboto";
+  }
+  html:lang("fa") {
+    font-family: "iran-sans";
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
-    /* color: #; */
+  }
+  .dana-fat {
+    font-family: "dana-fat";
+  }
+  .iran-sans {
+    font-family: "iran-sans";
+  }
+  .roboto {
+    font-family: "roboto";
+  }
+  .oswald-bold {
+    font-family: "oswald-bold";
+  }
+
+  [lang="fa"] .font-title {
+    font-family: "dana-fat";
+  }
+
+  [lang="en"] .font-title {
+    font-family: "oswald-bold";
   }
 }
 
 @layer components {
-  .text-gradient-from {
-    @apply bg-gradient-to-b bg-clip-text text-transparent transition duration-100;
+  .text-gradient {
+    @apply bg-gradient-to-br bg-clip-text text-transparent transition duration-100;
   }
-  [data-theme="dark"] .text-gradient-from {
-    @apply from-neutral to-neutral;
-  }
-
   [data-theme="dark"] .text-gradient {
-    @apply text-gradient-from to-neutral-50/40;
-  }
-
-  [data-theme="light"] .text-gradient-from {
-    @apply from-black to-black;
+    @apply from-neutral to-neutral-500;
   }
   [data-theme="light"] .text-gradient {
-    @apply text-gradient-from to-black/10;
+    @apply from-black to-black;
   }
 
   .center {

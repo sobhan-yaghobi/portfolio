@@ -1,11 +1,12 @@
 "use client"
 
-import { gsapAnimation } from "@/utils/utils.animation"
+import { animatePageIn } from "@/utils/utils.animation"
+import { useGSAP } from "@gsap/react"
 import React, { useEffect } from "react"
 
 const template: React.FC<React.PropsWithChildren> = ({ children }) => {
-  useEffect(() => {
-    gsapAnimation.animatePageIn()
+  useGSAP(() => {
+    animatePageIn()
   }, [])
   return (
     <div>

@@ -22,7 +22,7 @@ const Gsap: React.FC<React.PropsWithChildren<GsapProps>> = ({
   children,
 }) => {
   const mainAnimation = gsapAnimation[animation]
-  useGSAP(() => mainAnimation(target, duration, delay), dep ? dep : [])
+  useGSAP(() => mainAnimation({ target, duration, delay }), dep ? dep : [])
   return <>{children}</>
 }
 
