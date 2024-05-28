@@ -1,51 +1,20 @@
 "use client"
 
 import React, { useRef } from "react"
-import gsap from "gsap"
 
 import { useGSAP } from "@gsap/react"
 import { useTranslations } from "next-intl"
 
 import Magnetic from "@components/modules/Magnetic"
 import Image from "next/image"
+import { animateLanding } from "@/utils/utils.animation"
 
 const HeroSection: React.FC = () => {
   const t = useTranslations("heroSection")
   const container = useRef<HTMLDivElement>(null)
 
   //! ---------- Animation Action
-  useGSAP(
-    () => {
-      const timeLine = gsap.timeline()
-      timeLine
-        .fromTo(".title", { y: 200, scale: 0.7, opacity: 0 }, { y: 0, opacity: 1 })
-        .to(".title", { scale: 1, ease: "circ.in" })
-
-      timeLine.fromTo(
-        ".row-icon-package",
-        { y: -100, opacity: 0 },
-        { delay: 0.3, duration: 0.2, ease: "circ", y: 0, opacity: 1, stagger: 0.2 }
-      )
-      timeLine
-        .fromTo(
-          ".circle",
-          { background: "#fda699", y: "-1000%", filter: "blur(10px)", borderRadius: "50%" },
-          { y: 0 }
-        )
-        .to(".circle", {
-          boxShadow: "0 0 60px 30px #ff9888, 0 0 200px 100px #d98a7e, 0 0 400px 350px #b216b275",
-          filter: "blur(35px)",
-          duration: 1,
-          ease: "circ",
-        })
-      timeLine.from(".desc", { opacity: 0 }).to(".desc", {
-        opacity: 1,
-        easing: "power3",
-        duration: 1,
-      })
-    },
-    { scope: container }
-  )
+  useGSAP(() => animateLanding(), { scope: container })
   return (
     <div ref={container} className="center flex-col">
       {/*//! ---------- Icon Packages Container  */}
@@ -143,7 +112,7 @@ const HeroSection: React.FC = () => {
         </div>
 
         {/*//! ---------- Row 2  */}
-        <div className="row-icon-package flex flex-row-reverse my-6">
+        <div className="row-icon-package flex flex-row my-6">
           <Magnetic>
             <Image
               className="icon-package mx-3"
@@ -262,7 +231,7 @@ const HeroSection: React.FC = () => {
         </div>
 
         {/*//! ---------- Row 4  */}
-        <div className="row-icon-package flex flex-row-reverse mt-6">
+        <div className="row-icon-package flex flex-row mt-6">
           <Magnetic>
             <Image
               className="icon-package mx-3"
@@ -293,7 +262,7 @@ const HeroSection: React.FC = () => {
 
       {/*//! ---------- Title ----------  */}
       <div className="title center flex-col mt-4">
-        <div className="bg-neutral w-40 h-40 mb-4 rounded-full"></div>
+        <div className="bg-neutral w-40 h-40 mb-4 rounded-full" />
         <h1 className="font-title text-gradient text-gradient-from text-4xl text-center whitespace-pre">
           {t.rich("title", {
             important: (chunks) => <span className="oswald-bold text-primary">{chunks}</span>,
@@ -301,6 +270,7 @@ const HeroSection: React.FC = () => {
         </h1>
         <p className="desc text-neutral-50/35 w-5/12 text-center mt-4">{t("desc")}</p>
       </div>
+      <div className="h-screen"></div>
     </div>
   )
 }
