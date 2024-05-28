@@ -56,11 +56,12 @@ export const animatePageOut = (href: string, router: AppRouterInstance) => {
 
 export const animateLanding = () => {
   const tl = gsap.timeline({ delay: 0.3 })
-  tl.fromTo(".title", { opacity: 0, y: 200 }, { duration: 2, ease: "power4", opacity: 1, y: 0 })
+  tl.fromTo(".title", { opacity: 0, y: 200 }, { duration: 1.5, opacity: 1, y: 0 })
   tl.fromTo(
     ".icon-package",
     { scale: 0 },
-    { duration: 0.2, ease: "power1", scale: 1, stagger: 0.1 }
+    { duration: 0.2, ease: "power1", scale: 1, stagger: 0.05 },
+    "-=0.2"
   )
   tl.fromTo(
     ".circle",

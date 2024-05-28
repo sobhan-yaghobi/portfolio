@@ -22,7 +22,7 @@ const Header: React.FC = () => {
 
   return (
     <header className="h-20 w-full container z-40 relative">
-      <Animation target={".wrapper"} animation="fadeInUp" duration={0.5}>
+      <Animation target={".wrapper"} animation="fadeInUp" duration={1.5}>
         <div className="wrapper h-full flex items-center justify-between">
           <ul className="flex gap-6">
             {menu.map((item, index) => (
