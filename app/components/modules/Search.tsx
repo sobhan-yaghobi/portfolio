@@ -61,7 +61,7 @@ const Search: React.FC = () => {
       <SearchIcon className={`icon absolute ${direction === "rtl" ? "right-3" : "left-3"}`} />
       <input type="text" className="grow" onChange={changeInputAction} />
       {isPlaceholder ? (
-        <div className="h-full text-xs text-neutral-500 -z-10 flex items-center gap-1 absolute overflow-hidden">
+        <div className="h-full text-xs text-white/50 -z-10 flex items-center gap-1 absolute overflow-hidden">
           <span>{t("placeholder")}</span>
           <span className={`main-hashtag overflow-visible`}>{mainHashtag.message}</span>
         </div>
