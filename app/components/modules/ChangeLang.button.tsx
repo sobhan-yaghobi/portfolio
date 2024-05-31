@@ -25,7 +25,7 @@ const ChangeLangButton = () => {
         <li onClick={() => localChangeAction("en")} className="tooltip">
           <a>English</a>
         </li>
-        <li onClick={() => localChangeAction("fa")} className="tooltip">
+        <li onClick={() => localChangeAction("fa")} className="tooltip iran-sans">
           <a>فارسی</a>
         </li>
       </ul>

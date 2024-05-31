@@ -16,7 +16,7 @@ const HeroSection: React.FC = () => {
   //! ---------- Animation Action
   useGSAP(() => animateLanding(), { scope: container })
   return (
-    <div ref={container} className="center flex-col">
+    <div ref={container} className="center flex-col max-lg:hidden">
       {/*//! ---------- Icon Packages Container  */}
       <div className="w-fit center flex-col relative *:select-none">
         {/*//! ---------- Row 1  */}

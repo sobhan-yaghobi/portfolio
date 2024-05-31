@@ -8,7 +8,7 @@ import ScrollTrigger from "gsap/ScrollTrigger"
 
 import "./globals.css"
 
-import Header from "./components/modules/Header"
+import Header from "./components/modules/Header/Header"
 
 export const metadata: Metadata = {
   title: "Create Next App",
