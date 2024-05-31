@@ -20,7 +20,7 @@ const HeroSection: React.FC = () => {
       {/*//! ---------- Icon Packages Container  */}
       <div className="w-fit center flex-col relative *:select-none">
         {/*//! ---------- Row 1  */}
-        <div className="row-icon-package flex flex-row-reverse">
+        <div className="row-icon-package flex flex-row-reverse relative z-10">
           <Magnetic>
             <Image
               className="icon-package mx-3"
@@ -258,7 +258,7 @@ const HeroSection: React.FC = () => {
       </div>
 
       {/*//! ---------- Bulb ----------  */}
-      <div className="circle w-10 h-10 absolute -z-10 -top-0 rounded-full" />
+      <div className="circle w-10 h-10 absolute z-0 -top-0 rounded-full" />
 
       {/*//! ---------- Title ----------  */}
       <div className="title center flex-col mt-4">
