@@ -18,9 +18,9 @@ const HeroSection: React.FC = () => {
   return (
     <div ref={container} className="center flex-col max-lg:hidden">
       {/*//! ---------- Icon Packages Container  */}
-      <div className="w-fit center flex-col relative *:select-none">
+      <div className="w-fit center flex-col relative *:select-none z-10">
         {/*//! ---------- Row 1  */}
-        <div className="row-icon-package flex flex-row-reverse relative z-10">
+        <div className="row-icon-package flex flex-row-reverse">
           <Magnetic>
             <Image
               className="icon-package mx-3"
