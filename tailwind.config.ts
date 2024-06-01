@@ -10,7 +10,6 @@ const config: Config = {
     extend: {
       colors: {
         background: "var(--primary-background)",
-        icon: "var(--icon-color)",
       },
       container: {
         center: true,
@@ -29,15 +28,13 @@ const config: Config = {
       {
         light: {
           ...require("daisyui/src/theming/themes")["light"],
-          "--primary-background": "#fff5ee",
-          "--icon-color": "#262626",
+          background: "#fff5ee",
         },
       },
       {
         dark: {
           ...require("daisyui/src/theming/themes")["dark"],
-          "--primary-background": "#0f0616",
-          "--icon-color": "#d4d4d4",
+          background: "#0f0616",
         },
       },
     ],

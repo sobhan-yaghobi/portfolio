@@ -42,7 +42,7 @@ const MobileNavbar: React.FC<MobileNavbarProps> = ({ menuList }) => {
               className="drawer-overlay"
             ></label>
             <ul className="menu p-4 max-w-full w-80 min-h-full bg-base-200 text-base-content">
-              <div className="flex items-center justify-end">
+              <div className="flex items-center justify-end mb-3">
                 <ChangeThemeButton className="btn-outline ml-3" />
                 <label
                   htmlFor="navbar-drawer"

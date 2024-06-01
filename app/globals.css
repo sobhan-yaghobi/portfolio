@@ -30,10 +30,6 @@
     font-family: "iran-sans";
   }
 
-  body {
-    background-color: theme("colors.background");
-  }
-
   ::-webkit-scrollbar {
     width: 2rem;
     height: 2rem;
@@ -90,10 +86,14 @@
   }
 
   .icon {
-    @apply w-5 h-5 stroke-icon;
+    @apply w-5 h-5;
   }
 
   .icon-md {
     @apply w-10 h-10;
+  }
+
+  .btn:hover {
+    /* @apply; */
   }
 }
