@@ -79,7 +79,7 @@
     @apply bg-gradient-to-tl bg-clip-text text-transparent transition duration-100;
   }
   [data-theme="dark"] .text-gradient {
-    @apply from-neutral to-neutral-500;
+    @apply from-neutral to-neutral-400;
   }
   [data-theme="light"] .text-gradient {
     @apply from-black to-black;
@@ -90,7 +90,7 @@
   }
 
   .icon {
-    @apply w-5 h-5 stroke-neutral;
+    @apply w-5 h-5 stroke-icon;
   }
 
   .icon-md {
