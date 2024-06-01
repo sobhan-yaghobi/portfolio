@@ -258,11 +258,11 @@ const HeroSection: React.FC = () => {
       </div>
 
       {/*//! ---------- Bulb ----------  */}
-      <div className="circle w-10 h-10 absolute z-0 -top-0 rounded-full" />
+      <div className="circle size-10 absolute z-0 -top-0 rounded-full" />
 
       {/*//! ---------- Title ----------  */}
       <div className="title center flex-col mt-4">
-        <div className="bg-neutral w-40 h-40 mb-4 rounded-full" />
+        <div className="bg-neutral size-40 mb-4 rounded-full" />
         <h1 className="font-title text-gradient text-gradient-from text-4xl text-center whitespace-pre">
           {t.rich("title", {
             important: (chunks) => <span className="oswald-bold text-primary">{chunks}</span>,

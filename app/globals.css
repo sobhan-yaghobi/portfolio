@@ -86,11 +86,11 @@
   }
 
   .icon {
-    @apply w-5 h-5;
+    @apply size-5;
   }
 
   .icon-md {
-    @apply w-10 h-10;
+    @apply size-10;
   }
 
   .btn:hover {

@@ -19,7 +19,7 @@ const DesktopNavbar: React.FC<DesktopNavbarProps> = ({ menuList }) => {
             <li>
               <Link className="relative group" href="#">
                 {item}
-                <span className="bg-transparent w-2 h-2 rounded-full top-[150%] left-1/2 -translate-x-1/2 -translate-y-1/2 absolute transition invisible group-hover:bg-primary group-hover:visible"></span>
+                <span className="bg-transparent size-2 rounded-full top-[150%] left-1/2 -translate-x-1/2 -translate-y-1/2 absolute transition invisible group-hover:bg-primary group-hover:visible"></span>
               </Link>
             </li>
           </Magnetic>
