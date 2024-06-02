@@ -8,6 +8,7 @@ import ShareButton from "../Share.button"
 import ChangeLangButton from "../ChangeLang.button"
 import ChangeThemeButton from "../ChangeTheme.button"
 import Link from "next/link"
+import Search from "../Search"
 
 type MobileNavbarProps = {
   menuList: string[]
@@ -42,7 +43,7 @@ const MobileNavbar: React.FC<MobileNavbarProps> = ({ menuList }) => {
               className="drawer-overlay"
             ></label>
             <ul className="menu p-4 max-w-full w-80 min-h-full bg-base-200 text-base-content">
-              <div className="flex items-center justify-end mb-3">
+              <div className="flex items-center justify-end">
                 <ChangeThemeButton className="btn-outline ml-3" />
                 <label
                   htmlFor="navbar-drawer"
@@ -51,6 +52,9 @@ const MobileNavbar: React.FC<MobileNavbarProps> = ({ menuList }) => {
                 >
                   <X className="icon" />
                 </label>
+              </div>
+              <div className="my-3">
+                <Search />
               </div>
               {menuList.map((item, index) => (
                 <li key={index} className="">
