@@ -55,13 +55,13 @@ export const animatePageOut = (href: string, router: AppRouterInstance) => {
 }
 
 export const animateLanding = () => {
-  const tl = gsap.timeline({ delay: 0.3 })
+  const tl = gsap.timeline({ delay: 0.2 })
   tl.fromTo("#title", { opacity: 0, y: 200 }, { duration: 1.5, opacity: 1, y: 0 })
   tl.fromTo(
     ".icon-package",
     { scale: 0 },
-    { duration: 0.2, ease: "power1", scale: 1, stagger: 0.05 },
-    "-=0.2"
+    { duration: 0.25, ease: "power1", scale: 1, stagger: 0.07 },
+    "+=.6"
   )
   tl.fromTo(
     "#circle",
@@ -73,10 +73,18 @@ export const animateLanding = () => {
     boxShadow: "0 0 60px 30px #ff9888, 0 0 200px 100px #d98a7e, 0 0 400px 350px #b216b275",
     filter: "blur(35px)",
   })
-  tl.from("#desc", { opacity: 0, y: 10 }).to("#desc", {
-    duration: 1,
-    ease: "power1",
-    opacity: 1,
-    y: 0,
-  })
+  tl.from("#desc", { opacity: 0, y: 10 })
+    .to("#desc", {
+      duration: 0.3,
+      ease: "power1",
+      opacity: 1,
+      y: 0,
+    })
+    .fromTo(
+      "#quick-access-button .access-button",
+      { y: 100 },
+      { duration: 1, ease: "bounce.in", y: 0, stagger: 0.05 },
+      "-=1.2"
+    )
+    .fromTo("#quick-access-button #split", { opacity: 0 }, { opacity: 1 }, "-=.3")
 }

@@ -1,14 +1,17 @@
 "use client"
 
 import React, { useRef } from "react"
+import { animateLanding } from "@/utils/utils.animation"
 
 import { useGSAP } from "@gsap/react"
 import { useTranslations } from "next-intl"
 
+import { CircleUser } from "lucide-react"
+
 import Magnetic from "@components/modules/Magnetic"
 import Image from "next/image"
-import { animateLanding } from "@/utils/utils.animation"
 import Title from "../modules/Title"
+import ContactMeButton from "./ContactMe.button"
 
 const HeroSection: React.FC = () => {
   const t = useTranslations("heroSection")
@@ -257,7 +260,6 @@ const HeroSection: React.FC = () => {
           </Magnetic>
         </div>
       </div>
-
       {/*//! ---------- Bulb ----------  */}
       <div id="circle" className="size-10 absolute z-0 -top-0 rounded-full" />
 
@@ -274,6 +276,17 @@ const HeroSection: React.FC = () => {
         <p id="desc" className="px-10 text-center opacity-50 mt-4 md:px-24 lg:px-56 xl:px-80">
           {t("desc")}
         </p>
+      </div>
+
+      <div id="quick-access-button" className="h-fit flex items-center my-12 overflow-hidden">
+        <div className="access-button">
+          <ContactMeButton />
+        </div>
+        <div id="split" className="divider divider-horizontal mx-1.5" />
+        <button className="access-button btn btn-ghost">
+          <CircleUser className="icon" />
+          {t("quickAccessButton.cv")}
+        </button>
       </div>
     </div>
   )
