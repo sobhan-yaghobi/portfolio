@@ -93,7 +93,11 @@
     @apply size-10;
   }
 
-  .btn:hover {
-    /* @apply; */
+  .title-md *:first-child {
+    @apply w-full font-title text-lg sm:text-xl md:text-2xl lg:text-3xl;
+  }
+
+  .title-lg *:first-child {
+    @apply w-full font-title text-2xl sm:text-3xl md:text-4xl;
   }
 }

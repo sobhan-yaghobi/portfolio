@@ -8,6 +8,7 @@ import { useTranslations } from "next-intl"
 import Magnetic from "@components/modules/Magnetic"
 import Image from "next/image"
 import { animateLanding } from "@/utils/utils.animation"
+import Title from "../modules/Title"
 
 const HeroSection: React.FC = () => {
   const t = useTranslations("heroSection")
@@ -16,9 +17,9 @@ const HeroSection: React.FC = () => {
   //! ---------- Animation Action
   useGSAP(() => animateLanding(), { scope: container })
   return (
-    <div ref={container} className="center flex-col max-lg:hidden">
+    <div ref={container} className="center flex-col">
       {/*//! ---------- Icon Packages Container  */}
-      <div className="w-fit center flex-col relative *:select-none z-10">
+      <div className="w-fit max-w-full center flex-col relative *:select-none z-10 max-md:hidden">
         {/*//! ---------- Row 1  */}
         <div className="row-icon-package flex flex-row-reverse">
           <Magnetic>
@@ -258,17 +259,21 @@ const HeroSection: React.FC = () => {
       </div>
 
       {/*//! ---------- Bulb ----------  */}
-      <div className="circle size-10 absolute z-0 -top-0 rounded-full" />
+      <div id="circle" className="size-10 absolute z-0 -top-0 rounded-full" />
 
       {/*//! ---------- Title ----------  */}
-      <div className="title center flex-col mt-4">
+      <div id="title" className="center flex-col mt-4">
         <div className="bg-neutral size-40 mb-4 rounded-full" />
-        <h1 className="font-title text-gradient text-gradient-from text-4xl text-center whitespace-pre">
-          {t.rich("title", {
-            important: (chunks) => <span className="oswald-bold text-primary">{chunks}</span>,
-          })}
-        </h1>
-        <p className="desc text-neutral-50/35 w-5/12 text-center mt-4">{t("desc")}</p>
+        <Title size="lg" className="text-center lg:whitespace-pre">
+          <h1>
+            {t.rich("title", {
+              important: (chunks) => <span className="oswald-bold text-primary">{chunks}</span>,
+            })}
+          </h1>
+        </Title>
+        <p id="desc" className="px-10 text-center opacity-50 mt-4 md:px-24 lg:px-56 xl:px-80">
+          {t("desc")}
+        </p>
       </div>
       <div className="h-screen"></div>
     </div>
