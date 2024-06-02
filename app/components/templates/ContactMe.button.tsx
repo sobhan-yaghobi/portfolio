@@ -1,17 +1,20 @@
 "use client"
 
+import React from "react"
 import { isUserUseMobile } from "@/utils/utils.function"
-import { ClipboardCheck, Dock, Phone } from "lucide-react"
-import Link from "next/link"
+
 import { useEffect, useState } from "react"
 import { useTranslations } from "use-intl"
 
-const ContactMeButton = () => {
-  const phoneNumber = "09396007232"
-  const [isMobile, setIsMobile] = useState(false)
-  const t = useTranslations("heroSection")
-  const [isClipboard, setIsClipboard] = useState(false)
+import { ClipboardCheck, Phone } from "lucide-react"
 
+import Link from "next/link"
+
+const ContactMeButton: React.FC = () => {
+  const phoneNumber = "09396007232"
+  const t = useTranslations("heroSection")
+  const [isMobile, setIsMobile] = useState(false)
+  const [isClipboard, setIsClipboard] = useState(false)
   const saveClipboardAction = async () => {
     await window.navigator.clipboard.writeText(phoneNumber)
     setIsClipboard(true)
