@@ -275,7 +275,6 @@ const HeroSection: React.FC = () => {
           {t("desc")}
         </p>
       </div>
-      <div className="h-screen"></div>
     </div>
   )
 }
