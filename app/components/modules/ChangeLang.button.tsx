@@ -1,12 +1,16 @@
 "use client"
 
 import React from "react"
+import { cn } from "@/utils/utils.function"
+
+import { useRouter } from "next/navigation"
+import { useLocale } from "next-intl"
 
 import { Languages } from "lucide-react"
-import { useRouter } from "next/navigation"
 
 const ChangeLangButton = () => {
   const router = useRouter()
+  const locale = useLocale()
   const localChangeAction = (type: string) => {
     const cookie = document.cookie
     const isLangSame = cookie.substring(cookie.indexOf("=") + 1, cookie.length)
@@ -16,18 +20,29 @@ const ChangeLangButton = () => {
     }
     return
   }
+
+  const langList = [
+    { id: 1, name: "English", value: "en" },
+    { id: 2, name: "فارسی", value: "fa", className: "iran-sans" },
+  ]
   return (
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost btn-sm">
         <Languages className="icon" />
       </div>
       <ul tabIndex={0} className="dropdown-content menu menu-sm bg-base-300 mt-3 rounded-box">
-        <li onClick={() => localChangeAction("en")} className="tooltip">
-          <a>English</a>
-        </li>
-        <li onClick={() => localChangeAction("fa")} className="tooltip iran-sans">
-          <a>فارسی</a>
-        </li>
+        {langList.map((lang) => (
+          <li
+            key={lang.id}
+            onClick={() => localChangeAction(lang.value)}
+            className={cn(
+              `tooltip ${lang.value === locale && "bg-neutral-500/30 rounded-md"}`,
+              lang.className
+            )}
+          >
+            <a>{lang.name}</a>
+          </li>
+        ))}
       </ul>
     </div>
   )
