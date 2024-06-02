@@ -273,7 +273,7 @@ const HeroSection: React.FC = () => {
             })}
           </h1>
         </Title>
-        <p id="desc" className="px-10 text-center opacity-50 mt-4 md:px-24 lg:px-56 xl:px-80">
+        <p id="desc" className="px-5 w-full text-center opacity-50 mt-4 md:px-24 lg:px-56 xl:px-80">
           {t("desc")}
         </p>
       </div>
