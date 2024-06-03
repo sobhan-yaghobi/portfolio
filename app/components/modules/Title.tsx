@@ -3,7 +3,7 @@ import React from "react"
 
 type TitleProps = {
   className?: string
-  size: "md" | "lg"
+  size?: "md" | "lg"
 }
 
 const Title: React.FC<React.PropsWithChildren<TitleProps>> = ({ children, className, size }) => {
