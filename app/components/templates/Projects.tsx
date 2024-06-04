@@ -5,7 +5,7 @@ import ProjectCard from "../modules/Project.card"
 const Projects: React.FC = () => {
   return (
     <>
-      <div className="mt-20" />
+      <div className="mt-40" />
       <Title size="lg" className="text-center">
         <h2>Projects</h2>
       </Title>
