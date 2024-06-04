@@ -3,13 +3,13 @@ import React from "react"
 
 const ProjectCard = () => {
   return (
-    <div className="card w-64 h-96 bg-base-100 shadow-xl">
-      <figure className="py-2">
+    <div className="card w-80 max-w-full h-96 bg-base-100 shadow-xl sm:w-64">
+      <figure className="p-2">
         <Image
           width={300}
           height={300}
           src="/image/b46d5511f8b5c3b9711087d76cee70b1.jpg"
-          className="size-60 object-center rounded-xl"
+          className="w-full h-full min-size-60 object-cover rounded-xl"
           alt="project-image"
         />
       </figure>
@@ -20,7 +20,7 @@ const ProjectCard = () => {
           <p>Lorem.</p>
         </div>
         <div className="flex gap-3">
-          <button className="btn btn-sm btn-primary flex-1">view project</button>
+          <button className="btn btn-sm btn-primary flex-1">view source</button>
           <button className="btn btn-sm flex-1">see project</button>
         </div>
       </div>
