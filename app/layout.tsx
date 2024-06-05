@@ -11,6 +11,7 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 import "./globals.css"
 
 import Header from "./components/modules/Header/Header"
+import Footer from "./components/modules/Footer/Footer"
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -33,6 +34,7 @@ export default async function RootLayout({
         <NextIntlClientProvider messages={messages}>
           <Header />
           <div className="container">{children}</div>
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>
