@@ -5,6 +5,14 @@ import { useGSAP } from "@gsap/react"
 
 import { animatePageIn } from "@/utils/utils.animation"
 
+import { gsap } from "gsap"
+
+import { Flip } from "gsap/Flip"
+import ScrollTrigger from "gsap/ScrollTrigger"
+import { ScrollToPlugin } from "gsap/ScrollToPlugin"
+
+gsap.registerPlugin(useGSAP, Flip, ScrollTrigger, ScrollToPlugin)
+
 const template: React.FC<React.PropsWithChildren> = ({ children }) => {
   let smoother = useRef<HTMLDivElement>(null)
 
