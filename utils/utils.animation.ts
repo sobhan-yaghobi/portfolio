@@ -86,7 +86,6 @@ export const animateLanding = () => {
       scrollTrigger: {
         trigger: "#desc",
         start: "top 100%",
-        markers: true,
       },
     })
 
