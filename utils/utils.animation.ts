@@ -85,7 +85,7 @@ export const animateLanding = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: "#desc",
-        start: "top 100%",
+        start: "top 90%",
       },
     })
 
