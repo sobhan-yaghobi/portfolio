@@ -7,6 +7,7 @@ import "./globals.css"
 
 import Header from "./components/modules/Header/Header"
 import Footer from "./components/modules/Footer/Footer"
+import ScrollSmooth from "./components/templates/ScrollSmooth"
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -25,9 +26,11 @@ export default async function RootLayout({
     <html lang={locale} dir={direction} data-theme="dark">
       <body>
         <NextIntlClientProvider messages={messages}>
-          <Header />
-          <div className="container">{children}</div>
-          <Footer />
+          <ScrollSmooth>
+            <Header />
+            <div className="container">{children}</div>
+            <Footer />
+          </ScrollSmooth>
         </NextIntlClientProvider>
       </body>
     </html>
