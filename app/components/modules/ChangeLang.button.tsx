@@ -23,7 +23,7 @@ const ChangeLangButton = () => {
 
   const langList = [
     { id: 1, name: "English", value: "en" },
-    { id: 2, name: "فارسی", value: "fa", className: "iran-sans" },
+    { id: 2, name: "فارسی", value: "fa", className: "font-iran-sans" },
   ]
   return (
     <div className="dropdown">

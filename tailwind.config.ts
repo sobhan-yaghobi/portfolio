@@ -8,6 +8,12 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        dana: "dana",
+        "iran-sans": "iran-sans",
+        oswald: "oswald",
+        roboto: "roboto",
+      },
       colors: {
         background: "var(--primary-background)",
       },

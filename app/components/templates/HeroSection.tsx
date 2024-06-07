@@ -269,7 +269,9 @@ const HeroSection: React.FC = () => {
         <Title size="lg" className="text-center lg:whitespace-pre">
           <h1>
             {t.rich("title", {
-              important: (chunks) => <span className="oswald-bold text-primary">{chunks}</span>,
+              important: (chunks) => (
+                <span className="font-oswald font-bold text-primary">{chunks}</span>
+              ),
             })}
           </h1>
         </Title>

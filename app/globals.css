@@ -4,7 +4,8 @@
 
 @layer base {
   @font-face {
-    font-family: "dana-extra-black";
+    font-family: "dana";
+    font-weight: 900;
     src: url("../public/font/dana/woff/dana-extra-black.woff");
   }
 
@@ -14,13 +15,20 @@
   }
 
   @font-face {
-    font-family: "roboto";
-    src: url("../public/font/roboto/woff/roboto-med.woff");
+    font-family: "oswald";
+    font-weight: 900;
+    src: url("../public/font/oswald/woff/oswald-bold.woff");
   }
 
   @font-face {
-    font-family: "oswald-bold";
-    src: url("../public/font/oswald/woff/oswald-bold.woff");
+    font-family: "roboto";
+    font-weight: 400;
+    src: url("../public/font/roboto/woff/roboto-regular.woff");
+  }
+  @font-face {
+    font-family: "roboto";
+    font-weight: 500;
+    src: url("../public/font/roboto/woff/roboto-med.woff");
   }
 
   html {
@@ -48,25 +56,15 @@
   .text-balance {
     text-wrap: balance;
   }
-  .dana-extra-black {
-    font-family: "dana-extra-black";
-  }
-  .iran-sans {
-    font-family: "iran-sans";
-  }
-  .roboto {
-    font-family: "roboto";
-  }
-  .oswald-bold {
-    font-family: "oswald-bold";
-  }
 
   [lang="fa"] .font-title {
-    font-family: "dana-extra-black";
+    font-family: "dana";
+    font-weight: 900;
   }
 
   [lang="en"] .font-title {
-    font-family: "oswald-bold";
+    font-family: "oswald";
+    font-weight: 900;
   }
 }
 
@@ -83,6 +81,10 @@
 
   .center {
     @apply flex items-center justify-center;
+  }
+
+  .icon-sm {
+    @apply size-4;
   }
 
   .icon {
