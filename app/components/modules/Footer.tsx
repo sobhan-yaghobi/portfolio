@@ -1,6 +1,9 @@
 import React from "react"
+
+import { AtSign } from "lucide-react"
+
 import SocialFollowBox, { SocialFollowBoxProps } from "./SocialFollowBox"
-import { AtSign, PhoneCall } from "lucide-react"
+import CopyToClipboard from "./CopyToClipboard"
 
 const socialFollowItems: SocialFollowBoxProps[] = [
   {
@@ -10,16 +13,12 @@ const socialFollowItems: SocialFollowBoxProps[] = [
     logoSrc: "/image/telegram.png",
     backImgSrc: "/image/telegram-background.png",
     badgeWrapper: (
-      <>
+      <CopyToClipboard value="@sobhan_yaghobii">
         <p className="badge badge-sm py-3 gap-1">
           <AtSign className="icon-sm" />
           sobhan_yaghobii
         </p>
-        <p className="badge badge-sm py-3 gap-1">
-          <PhoneCall className="icon-sm" />
-          +98 923 218 5041
-        </p>
-      </>
+      </CopyToClipboard>
     ),
   },
   {
@@ -29,12 +28,12 @@ const socialFollowItems: SocialFollowBoxProps[] = [
     logoSrc: "/image/instagram.png",
     backImgSrc: "/image/instagram-background.png",
     badgeWrapper: (
-      <>
+      <CopyToClipboard value="sobhan__ya">
         <p className="badge badge-sm py-3 gap-1">
           <AtSign className="icon-sm" />
           sobhan__ya
         </p>
-      </>
+      </CopyToClipboard>
     ),
   },
   {
@@ -43,7 +42,14 @@ const socialFollowItems: SocialFollowBoxProps[] = [
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, dicta.",
     logoSrc: "/packages/github.svg",
     backImgSrc: "/image/github-background.png",
-    badgeWrapper: <></>,
+    badgeWrapper: (
+      <CopyToClipboard value="sobhan-yaghobi">
+        <p className="badge badge-sm py-3 gap-1">
+          <AtSign className="icon-sm" />
+          sobhan-yaghobi
+        </p>
+      </CopyToClipboard>
+    ),
   },
   {
     id: "4",
@@ -51,7 +57,14 @@ const socialFollowItems: SocialFollowBoxProps[] = [
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, dicta.",
     logoSrc: "/image/linkedin.png",
     backImgSrc: "/image/linkedin-background.png",
-    badgeWrapper: <></>,
+    badgeWrapper: (
+      <CopyToClipboard value="sobhan yaghobi">
+        <p className="badge badge-sm py-3 gap-1">
+          <AtSign className="icon-sm" />
+          sobhan yaghobi
+        </p>
+      </CopyToClipboard>
+    ),
   },
 ]
 

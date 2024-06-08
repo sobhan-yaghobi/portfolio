@@ -1,7 +1,9 @@
-import { cn } from "@/utils/utils.function"
-import { ArrowRight, AtSign, PhoneCall } from "lucide-react"
-import Image from "next/image"
 import React, { ReactNode } from "react"
+import { cn } from "@/utils/utils.function"
+
+import { ArrowRight } from "lucide-react"
+
+import Image from "next/image"
 
 export type SocialFollowBoxProps = {
   id: string
@@ -59,7 +61,7 @@ const SocialFollowBox: React.FC<SocialFollowBoxProps> = ({
           <p className="text-sm flex-1">{desc}</p>
           <div className="flex *:gap-1 justify-between">
             <div className="flex flex-1 flex-wrap">{badgeWrapper}</div>
-            <button className="btn btn-xs">
+            <button className="btn btn-xs rounded-full">
               <ArrowRight className="icon-sm" />
             </button>
           </div>
