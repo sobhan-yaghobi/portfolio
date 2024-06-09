@@ -1,5 +1,6 @@
 import React from "react"
 import Title from "../modules/Title"
+import { Check } from "lucide-react"
 
 const AboutMe: React.FC = () => {
   return (
@@ -12,10 +13,14 @@ const AboutMe: React.FC = () => {
           porro, dolores ea nostrum reprehenderit ipsum laboriosam quidem.
         </h4>
       </Title>
-      <ul className="timeline timeline-vertical my-12">
+      <ul className="timeline timeline-snap-icon timeline-vertical max-md:timeline-compact my-12">
         <li>
-          <div className="timeline-start timeline-box mx-3">
-            First
+          <Check className="timeline-middle bg-primary rounded-full" />
+          <div className="timeline-start md:text-end mx-3 mb-10">
+            <time className="italic">the beginning</time>
+            <Title className="my-2">
+              <h3>First</h3>
+            </Title>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, impedit laboriosam minima
               quo dolor dolores natus cupiditate explicabo delectus ratione quaerat sed iure
@@ -24,46 +29,66 @@ const AboutMe: React.FC = () => {
           </div>
           <hr className="bg-primary" />
         </li>
+
         <li>
-          <hr className="bg-primary" />
-          <div className="timeline-end timeline-box mx-3">
-            Two
+          <Check className="timeline-middle bg-primary rounded-full" />
+          <div className="timeline-end mx-3 mb-10">
+            <time className="italic">the beginning</time>
+            <Title className="my-2">
+              <h3>First</h3>
+            </Title>
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe aspernatur assumenda
-              nemo voluptatibus, vero illum ipsum rerum. Illum delectus praesentium illo, expedita
-              in voluptates fugiat quas quis, ullam, quasi exercitationem veniam deleniti accusamus
-              cumque? Facere vel quibusdam consequuntur necessitatibus! Cum consequatur perferendis
-              ipsa harum recusandae quaerat esse? Impedit molestias fugiat quia nulla facilis
-              corporis ea culpa minima libero, eum, saepe obcaecati blanditiis architecto eaque.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, impedit laboriosam minima
+              quo dolor dolores natus cupiditate explicabo delectus ratione quaerat sed iure
+              accusamus obcaecati voluptatibus veniam eos sequi neque?
             </p>
           </div>
           <hr className="bg-primary" />
         </li>
+
         <li>
-          <hr className="bg-primary" />
-          <div className="timeline-start timeline-box mx-3">
-            Three
+          <Check className="timeline-middle bg-primary rounded-full" />
+          <div className="timeline-start md:text-end mx-3 mb-10">
+            <time className="italic">the beginning</time>
+            <Title className="my-2">
+              <h3>First</h3>
+            </Title>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit facilis id dolorem
-              omnis. Culpa illo sequi maiores repellat nisi facilis dolorum molestias nobis id
-              reprehenderit sint nesciunt tempora explicabo officia minima quisquam numquam aperiam
-              tempore, eveniet distinctio ex obcaecati laudantium. Placeat omnis dolore repudiandae
-              suscipit fuga quia ut iusto officiis dolor, facilis soluta dolorum aperiam beatae
-              quibusdam porro voluptatem, autem ipsa sed minus maiores quidem cum. Quo, eos
-              voluptatum. Inventore.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, impedit laboriosam minima
+              quo dolor dolores natus cupiditate explicabo delectus ratione quaerat sed iure
+              accusamus obcaecati voluptatibus veniam eos sequi neque?
             </p>
           </div>
           <hr className="bg-primary" />
         </li>
+
         <li>
-          <hr className="bg-primary" />
-          <div className="timeline-end timeline-box mx-3">
-            Two
+          <Check className="timeline-middle bg-primary rounded-full" />
+          <div className="timeline-end mx-3 mb-10">
+            <time className="italic">the beginning</time>
+            <Title className="my-2">
+              <h3>First</h3>
+            </Title>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas suscipit reiciendis,
-              consequatur deleniti quam ex repudiandae cumque dolore dolores nobis, perspiciatis,
-              eveniet alias. Eveniet iure commodi dignissimos, minima, quidem numquam, ipsum
-              consectetur a ipsa nobis ratione vero assumenda debitis odit.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, impedit laboriosam minima
+              quo dolor dolores natus cupiditate explicabo delectus ratione quaerat sed iure
+              accusamus obcaecati voluptatibus veniam eos sequi neque?
+            </p>
+          </div>
+          <hr className="bg-primary" />
+        </li>
+
+        <li>
+          <Check className="timeline-middle bg-primary rounded-full" />
+          <div className="timeline-start md:text-end mx-3 mb-10">
+            <time className="italic">the beginning</time>
+            <Title className="my-2">
+              <h3>First</h3>
+            </Title>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, impedit laboriosam minima
+              quo dolor dolores natus cupiditate explicabo delectus ratione quaerat sed iure
+              accusamus obcaecati voluptatibus veniam eos sequi neque?
             </p>
           </div>
         </li>
