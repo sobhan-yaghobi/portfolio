@@ -147,8 +147,8 @@ const HeroSection: React.FC = () => {
               width={50}
               height={50}
               draggable={false}
-              src={"/packages/materialUi.svg"}
-              alt="materialUi"
+              src={"/packages/material-ui.svg"}
+              alt="material-ui"
             />
           </Magnetic>
           <Magnetic>
@@ -180,8 +180,8 @@ const HeroSection: React.FC = () => {
               width={50}
               height={50}
               draggable={false}
-              src={"/packages/nextJs.svg"}
-              alt="nextJs"
+              src={"/packages/next-js.svg"}
+              alt="next-js"
             />
           </Magnetic>
         </div>
