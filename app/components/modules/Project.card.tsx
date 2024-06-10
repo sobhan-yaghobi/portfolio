@@ -3,7 +3,7 @@ import React from "react"
 
 const ProjectCard = () => {
   return (
-    <div className="card w-80 max-w-full h-96 bg-base-100 shadow-xl sm:w-64">
+    <div className="card max-w-full h-96 bg-base-100 shadow-xl sm:w-64 lg:w-full">
       <figure className="p-2">
         <Image
           width={300}
