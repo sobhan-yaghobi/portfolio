@@ -8,7 +8,7 @@ const AboutMe: React.FC = () => {
       <div className="mt-40" />
       <Title size="lg" className="text-center">
         <h2>About Me</h2>
-        <h4 className="w-4/12 text-sm inline-block mt-3">
+        <h4 className="w-10/12 text-sm inline-block mt-3 md:w-8/12 lg:w-4/12">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias quis dicta saepe
           porro, dolores ea nostrum reprehenderit ipsum laboriosam quidem.
         </h4>
