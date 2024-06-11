@@ -94,4 +94,9 @@
   .title-lg *:first-child {
     @apply w-full font-title text-2xl sm:text-3xl md:text-4xl;
   }
+
+  .outline-active {
+    background-color: var(--fallback-b1, oklch(var(--bc) / var(--tw-bg-opacity)));
+    color: var(--fallback-b1, oklch(var(--b1) / var(--tw-text-opacity)));
+  }
 }
