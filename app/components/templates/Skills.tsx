@@ -15,7 +15,7 @@ const skills = [
     src: "/packages/html.svg",
     content: (
       <>
-        <p>
+        <p id="HTML">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis necessitatibus eum
           delectus sequi consequuntur dicta, itaque placeat maxime temporibus accusamus provident
           corporis quisquam dolore repudiandae enim omnis laboriosam voluptatem corrupti.
@@ -165,21 +165,23 @@ const Skills = () => {
       <Title size="lg" className="text-center">
         <h2>Skills</h2>
       </Title>
-      <div className="grid grid-cols-2 my-12">
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 my-12">
         <ul className="flex flex-wrap gap-3">
           {skills.map((item) => (
             <li key={item.id}>
-              <button
-                className={`btn ${
-                  item.id === mainSkill?.id
-                    ? "outline-active hover:outline-active"
-                    : "hover:outline-active"
-                }`}
-                onClick={() => setMainSkill(item)}
-              >
-                <Image className="icon" width={30} height={30} src={item.src} alt={item.name} />
-                {item.name}
-              </button>
+              <Link href={`#${item.name}`}>
+                <button
+                  className={`btn ${
+                    item.id === mainSkill?.id
+                      ? "outline-active hover:outline-active"
+                      : "hover:outline-active"
+                  }`}
+                  onClick={() => setMainSkill(item)}
+                >
+                  <Image className="icon" width={30} height={30} src={item.src} alt={item.name} />
+                  {item.name}
+                </button>
+              </Link>
             </li>
           ))}
         </ul>

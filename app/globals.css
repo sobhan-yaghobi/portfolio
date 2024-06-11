@@ -37,6 +37,7 @@
   }
 
   html {
+    scroll-behavior: smooth;
     font-family: "roboto";
   }
   html:lang("fa") {
