@@ -100,4 +100,11 @@
     background-color: var(--fallback-b1, oklch(var(--bc) / var(--tw-bg-opacity)));
     color: var(--fallback-b1, oklch(var(--b1) / var(--tw-text-opacity)));
   }
+
+  .bg-card {
+    background-color: oklch(var(--btn-color, var(--b2)));
+  }
+  .color-card {
+    color: var(--fallback-bc, oklch(var(--bc) / var(--tw-text-opacity)));
+  }
 }
