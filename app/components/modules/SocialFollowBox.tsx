@@ -48,7 +48,7 @@ const SocialFollowBox: React.FC<SocialFollowBoxProps> = ({
           />
         ))}
       </div>
-      <div className="bg-card *:color-card w-full h-full px-3 pb-2 pt-7 rounded-t-3xl relative z-10">
+      <div className="bg-color *:bg-color-content w-full h-full px-3 pb-2 pt-7 rounded-t-3xl relative z-10">
         <Image
           className="rounded-full absolute -top-6 left-3"
           width={48}
