@@ -9,7 +9,7 @@ const Projects: React.FC = () => {
       <Title size="lg" className="text-center">
         <h2>Projects</h2>
       </Title>
-      <div className="grid place-items-center grid-cols-1 gap-10 my-12 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <div className="flex overflow-x-auto gap-10 my-12 lg:grid lg:grid-cols-3 xl:grid-cols-4">
         <ProjectCard />
         <ProjectCard />
         <ProjectCard />
