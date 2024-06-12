@@ -1,9 +1,11 @@
 import React from "react"
 
-import { AtSign } from "lucide-react"
+import { AtSign, Mail } from "lucide-react"
 
 import SocialFollowBox, { SocialFollowBoxProps } from "./SocialFollowBox"
 import CopyToClipboard from "./CopyToClipboard"
+import Link from "next/link"
+import ContactMeButton from "../templates/ContactMe.button"
 
 const socialFollowItems: SocialFollowBoxProps[] = [
   {
@@ -76,10 +78,19 @@ const Footer: React.FC = () => {
           <SocialFollowBox key={item.id} {...item} />
         ))}
       </div>
-      <div className="footer items-center p-4 bg-neutral text-neutral-content">
+      <div className="footer items-center p-4 bg-color text-neutral-content">
         <aside className="items-center grid-flow-col">
           <p>Copyright © 2024 - All right reserved</p>
         </aside>
+        <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
+          <Link href={"mailto:sobhan.yaghobi.work@gmail.com"}>
+            <button className="btn btn-ghost">
+              <Mail className="icon" />
+              sobhan.yaghobi.work@gmail.com
+            </button>
+          </Link>
+          <ContactMeButton className="btn-ghost" text="+98 9396007232" />
+        </nav>
       </div>
     </footer>
   )

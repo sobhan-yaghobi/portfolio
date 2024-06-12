@@ -9,8 +9,14 @@ import { useTranslations } from "use-intl"
 import { ClipboardCheck, Phone } from "lucide-react"
 
 import Link from "next/link"
+import { cn } from "@/lib/utils"
 
-const ContactMeButton: React.FC = () => {
+type ContactMeButtonProps = {
+  className?: string
+  text?: string
+}
+
+const ContactMeButton: React.FC<ContactMeButtonProps> = ({ className, text }) => {
   const phoneNumber = "09396007232"
   const t = useTranslations("heroSection")
   const [isMobile, setIsMobile] = useState(false)
@@ -29,12 +35,16 @@ const ContactMeButton: React.FC = () => {
   }, [])
 
   return isMobile ? (
-    <Link className="btn btn-primary" href={`tel:${phoneNumber}`}>
-      {t("quickAccessButton.contact")}
+    <Link className={cn("btn btn-primary", className)} href={`tel:${phoneNumber}`}>
+      {text ? text : t("quickAccessButton.contact")}
       <Phone className="icon" />
     </Link>
   ) : (
-    <button disabled={isClipboard} onClick={saveClipboardAction} className="btn btn-primary">
+    <button
+      disabled={isClipboard}
+      onClick={saveClipboardAction}
+      className={cn("btn btn-primary", className)}
+    >
       {isClipboard ? (
         <>
           {t("quickAccessButton.contactSaveSuccess")}
@@ -42,7 +52,7 @@ const ContactMeButton: React.FC = () => {
         </>
       ) : (
         <>
-          {t("quickAccessButton.contact")}
+          {text ? text : t("quickAccessButton.contact")}
           <Phone className="icon" />
         </>
       )}
