@@ -4,7 +4,7 @@ import React from "react"
 
 const ExperienceAndArticleCard = () => {
   return (
-    <div className="card flex-1 min-w-80 h-[450px] bg-base-100 shadow-xl">
+    <div className="card flex-1 min-w-72 max-w-full h-[470px] bg-base-100 shadow-xl">
       <figure className="h-3/6 p-2 relative center overflow-visible">
         <Image
           width={300}
@@ -37,7 +37,7 @@ const ExperienceAndArticleCard = () => {
             className="input input-md input-bordered flex-1"
           />
           <button className="btn">
-            <Send />
+            <Send className="icon" />
           </button>
         </div>
       </div>
