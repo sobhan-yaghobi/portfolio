@@ -36,7 +36,7 @@ const SocialFollowBox: React.FC<SocialFollowBoxProps> = ({
   const mainBackImgClassNames = backImgClassNames || defaultBackImgClassNames
   return (
     <div className="w-96 max-w-full min-h-48 pt-10 shadow-xl rounded-3xl overflow-hidden relative">
-      <div className="bg-background w-full h-16 glass absolute top-0 left-0">
+      <div className="glass w-full h-16 absolute top-0 left-0 !backdrop-blur-0">
         {mainBackImgClassNames.map((className, index) => (
           <Image
             key={index}
