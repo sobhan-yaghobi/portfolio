@@ -92,12 +92,12 @@ const Footer: React.FC = () => {
         </aside>
         <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
           <Link href={"mailto:sobhan.yaghobi.work@gmail.com"}>
-            <button className="btn btn-ghost">
+            <button className="btn btn-ghost font-normal">
               <Mail className="icon" />
               sobhan.yaghobi.work@gmail.com
             </button>
           </Link>
-          <ContactMeButton className="btn-ghost" text="+98 9396007232" />
+          <ContactMeButton className="btn-ghost font-normal" text="+98 9396007232" />
         </nav>
       </div>
     </footer>
