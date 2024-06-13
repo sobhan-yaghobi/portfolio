@@ -4,7 +4,7 @@ import React from "react"
 
 const ExperienceAndArticleCard = () => {
   return (
-    <div className="card flex-1 min-w-72 h-[450px] bg-base-100 shadow-xl">
+    <div className="card flex-1 min-w-80 h-[450px] bg-base-100 shadow-xl">
       <figure className="h-3/6 p-2 relative center overflow-visible">
         <Image
           width={300}
@@ -14,11 +14,11 @@ const ExperienceAndArticleCard = () => {
           alt="project-image"
         />
         <div className="w-full flex justify-evenly absolute -bottom-4">
-          <p className="h-12 px-4 center gap-2 rounded-lg glass cursor-default">
+          <p className={`h-12 px-4 center gap-2 rounded-lg glass cursor-default`}>
             <Heart className="icon" />
             32.2K
           </p>
-          <p className="h-12 px-4 center gap-2 rounded-lg glass cursor-default">
+          <p className={`h-12 px-4 center gap-2 rounded-lg glass cursor-default`}>
             <MessageSquareText className="icon" />
             1.4K
           </p>

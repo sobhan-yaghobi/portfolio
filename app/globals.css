@@ -107,4 +107,19 @@
     background-color: var(--fallback-b1, oklch(var(--bc) / var(--tw-bg-opacity)));
     color: var(--fallback-b1, oklch(var(--b1) / var(--tw-text-opacity)));
   }
+
+  .glass {
+    backdrop-filter: blur(10px);
+    background-color: transparent;
+    background-image: linear-gradient(
+        135deg,
+        rgb(255 255 255 / var(--glass-opacity, 30%)) 0%,
+        rgb(0 0 0 / 0%) 100%
+      ),
+      linear-gradient(
+        var(--glass-reflex-degree, 100deg),
+        rgb(255 255 255 / var(--glass-reflex-opacity, 10%)) 25%,
+        rgb(0 0 0 / 0%) 25%
+      );
+  }
 }
