@@ -1,11 +1,12 @@
 import React from "react"
 
-import { AtSign, Mail } from "lucide-react"
+import { ArrowUp, AtSign, Mail } from "lucide-react"
 
 import SocialFollowBox, { SocialFollowBoxProps } from "./SocialFollowBox"
 import CopyToClipboard from "./CopyToClipboard"
 import Link from "next/link"
 import ContactMeButton from "../templates/ContactMe.button"
+import ScrollTo from "./ScrollTo"
 
 const socialFollowItems: SocialFollowBoxProps[] = [
   {
@@ -72,8 +73,15 @@ const socialFollowItems: SocialFollowBoxProps[] = [
 
 const Footer: React.FC = () => {
   return (
-    <footer className="mt-40">
-      <div className="grid grid-cols-4 gap-3 p-3">
+    <footer>
+      <div className="center mb-3 mt-36">
+        <ScrollTo scrollTo={"header"} duration={0.5}>
+          <button className="btn">
+            <ArrowUp />
+          </button>
+        </ScrollTo>
+      </div>
+      <div className="grid grid-cols-4 gap-3 pb-3 container">
         {socialFollowItems.map((item) => (
           <SocialFollowBox key={item.id} {...item} />
         ))}
