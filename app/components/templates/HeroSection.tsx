@@ -12,6 +12,7 @@ import Magnetic from "@components/modules/Magnetic"
 import Image from "next/image"
 import Title from "../modules/Title"
 import ContactMeButton from "./ContactMe.button"
+import StarAnimation from "./Star.animation"
 
 const HeroSection: React.FC = () => {
   const t = useTranslations("heroSection")
@@ -290,6 +291,7 @@ const HeroSection: React.FC = () => {
           {t("quickAccessButton.cv")}
         </button>
       </div>
+      <StarAnimation />
     </div>
   )
 }

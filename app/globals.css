@@ -126,4 +126,8 @@
   #liner {
     background-image: linear-gradient(to bottom, #2f283a, #0f0616 60%);
   }
+
+  .star {
+    @apply w-1 h-4 bg-white/30 center absolute after:w-4 after:h-1 after:bg-white/30 after:absolute;
+  }
 }
