@@ -32,10 +32,12 @@ const AboutMeLanding = () => {
           </button>
         </Link>
         <div id="split" className="divider divider-horizontal mx-1.5" />
-        <button className="access-button btn btn-ghost">
-          <FolderDown className="icon" />
-          download
-        </button>
+        <Link href={"/cv"}>
+          <button className="access-button btn btn-ghost">
+            <FolderDown className="icon" />
+            download
+          </button>
+        </Link>
       </div>
     </div>
   )

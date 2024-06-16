@@ -5,8 +5,6 @@ import { getLangDir } from "rtl-detect"
 
 import "./globals.css"
 
-import Header from "../components/modules/Header/Header"
-import Footer from "../components/modules/Footer"
 import ScrollSmooth from "../components/templates/ScrollSmooth"
 import { Toaster } from "@/components/ui/toaster"
 
@@ -23,15 +21,14 @@ export default async function RootLayout({
   const locale = await getLocale()
   const messages = await getMessages()
   const direction = getLangDir(locale)
+
   return (
     <html lang={locale} dir={direction} data-theme="dark">
       <body>
         <NextIntlClientProvider messages={messages}>
           <ScrollSmooth>
-            <Header />
-            <div className="container">{children}</div>
+            {children}
             <Toaster />
-            <Footer />
           </ScrollSmooth>
         </NextIntlClientProvider>
       </body>
