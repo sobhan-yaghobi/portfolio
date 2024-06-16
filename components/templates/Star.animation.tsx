@@ -49,7 +49,7 @@ const StarAnimation: React.FC<StarAnimationProps> = ({ delay }) => {
     },
   ]
   return (
-    <div className="absolute w-full h-screen overflow-hidden top-0 left-0">
+    <div className="absolute w-full h-screen overflow-hidden top-0 left-0 -z-10">
       {recArray.map((item) =>
         Array(item.count)
           .fill("")
