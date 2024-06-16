@@ -1,6 +1,6 @@
 import React from "react"
 import { useTranslations } from "next-intl"
-import Animation from "@components/modules/Animation"
+import Animation from "@/components/modules/Animation"
 import DesktopNavbar from "./DesktopNavbar"
 import MobileNavbar from "./MobileNavbar"
 

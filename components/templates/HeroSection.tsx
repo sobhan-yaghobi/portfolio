@@ -8,7 +8,7 @@ import { useTranslations } from "next-intl"
 
 import { CircleUser } from "lucide-react"
 
-import Magnetic from "@components/modules/Magnetic"
+import Magnetic from "@/components/modules/Magnetic"
 import Image from "next/image"
 import Title from "../modules/Title"
 import ContactMeButton from "./ContactMe.button"

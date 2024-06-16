@@ -4,6 +4,7 @@ import StarAnimation from "./Star.animation"
 import Title from "../modules/Title"
 
 import { FileText, FolderDown } from "lucide-react"
+import Link from "next/link"
 
 const AboutMeLanding = () => {
   return (
@@ -14,7 +15,7 @@ const AboutMeLanding = () => {
           <h1>ABOUT ME</h1>
         </Title>
         {/* <Title className="pt-20 *:!text-9xl tracking-wide">
-      <h1>مهارت ها</h1>
+      <h1>در باره من</h1>
     </Title> */}
         <div className="bg-gradient-to-tr from-primary to-secondary w-72 h-52 rounded-full absolute -z-10 -top-1 blur-3xl" />
       </div>
@@ -24,10 +25,12 @@ const AboutMeLanding = () => {
         fugiat perferendis animi repudiandae quam ratione ad. Architecto?
       </p>
       <div id="quick-access-button" className="h-fit flex items-center my-12 overflow-hidden">
-        <button className="btn btn-primary">
-          read online
-          <FileText className="icon" />
-        </button>
+        <Link href={"/cv"}>
+          <button className="btn btn-primary">
+            read online
+            <FileText className="icon" />
+          </button>
+        </Link>
         <div id="split" className="divider divider-horizontal mx-1.5" />
         <button className="access-button btn btn-ghost">
           <FolderDown className="icon" />

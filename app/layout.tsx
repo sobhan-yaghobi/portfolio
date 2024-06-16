@@ -5,9 +5,9 @@ import { getLangDir } from "rtl-detect"
 
 import "./globals.css"
 
-import Header from "./components/modules/Header/Header"
-import Footer from "./components/modules/Footer"
-import ScrollSmooth from "./components/templates/ScrollSmooth"
+import Header from "../components/modules/Header/Header"
+import Footer from "../components/modules/Footer"
+import ScrollSmooth from "../components/templates/ScrollSmooth"
 import { Toaster } from "@/components/ui/toaster"
 
 export const metadata: Metadata = {

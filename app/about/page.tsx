@@ -1,8 +1,8 @@
 import React from "react"
 
-import AboutMeLanding from "../components/templates/AboutMeLanding"
-import AboutSection from "../components/templates/AboutMeSection"
-import Skills from "../components/templates/Skills"
+import AboutMeLanding from "../../components/templates/AboutMeLanding"
+import AboutSection from "../../components/templates/AboutMeSection"
+import Skills from "../../components/templates/Skills"
 
 const page: React.FC = () => {
   return (
