@@ -14,9 +14,7 @@ const config: Config = {
         oswald: "oswald",
         roboto: "roboto",
       },
-      colors: {
-        background: "var(--primary-background)",
-      },
+      colors: {},
       container: {
         center: true,
         padding: {

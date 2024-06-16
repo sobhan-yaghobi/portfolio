@@ -5,7 +5,11 @@ import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
 import { random } from "@/utils/utils.function"
 
-const StarAnimation = () => {
+type StarAnimationProps = {
+  delay?: gsap.TweenValue
+}
+
+const StarAnimation: React.FC<StarAnimationProps> = ({ delay }) => {
   const [windowSize, setWindowSize] = useState({ width: 0, height: 0 })
   useGSAP(() => {
     const { innerHeight, innerWidth } = window
@@ -17,7 +21,7 @@ const StarAnimation = () => {
         elem,
         { opacity: 0, scale: elem.style.scale },
         {
-          delay: 5,
+          delay: delay,
           opacity: 1,
           repeat: -1,
           duration: elem.dataset.duration,

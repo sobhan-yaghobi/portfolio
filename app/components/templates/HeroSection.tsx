@@ -291,7 +291,7 @@ const HeroSection: React.FC = () => {
           {t("quickAccessButton.cv")}
         </button>
       </div>
-      <StarAnimation />
+      <StarAnimation delay={4} />
     </div>
   )
 }
