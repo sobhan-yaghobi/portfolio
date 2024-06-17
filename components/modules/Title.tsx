@@ -3,11 +3,20 @@ import React from "react"
 
 type TitleProps = {
   className?: string
-  size?: "md" | "lg"
+  size?: "sm" | "md" | "lg"
 }
 
 const Title: React.FC<React.PropsWithChildren<TitleProps>> = ({ children, className, size }) => {
-  return <div className={cn(size === "lg" ? "title-lg" : "title-md", className)}>{children}</div>
+  return (
+    <div
+      className={cn(
+        size === "sm" ? "title-sm" : size === "lg" ? "title-lg" : "title-md",
+        className
+      )}
+    >
+      {children}
+    </div>
+  )
 }
 
 export default Title
