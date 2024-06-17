@@ -1,12 +1,12 @@
 import React from "react"
 
-import { ArrowUp, AtSign, Mail } from "lucide-react"
+import { ArrowUp, AtSign } from "lucide-react"
 
 import SocialFollowBox, { SocialFollowBoxProps } from "./SocialFollowBox"
 import CopyToClipboard from "./CopyToClipboard"
-import Link from "next/link"
 import ContactMeButton from "../templates/ContactMe.button"
 import ScrollTo from "./ScrollTo"
+import Email from "./Email"
 
 const socialFollowItems: SocialFollowBoxProps[] = [
   {
@@ -91,12 +91,7 @@ const Footer: React.FC = () => {
           <p>Copyright © 2024 - All right reserved</p>
         </aside>
         <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
-          <Link href={"mailto:sobhan.yaghobi.work@gmail.com"}>
-            <button className="btn btn-ghost font-normal">
-              <Mail className="icon" />
-              sobhan.yaghobi.work@gmail.com
-            </button>
-          </Link>
+          <Email className="btn btn-ghost font-normal" />
           <ContactMeButton className="btn-ghost font-normal" text="+98 9396007232" />
         </nav>
       </div>
