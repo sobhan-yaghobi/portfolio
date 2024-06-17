@@ -1,6 +1,6 @@
 "use client"
 
-import React from "react"
+import React, { Fragment } from "react"
 import { isUserUseMobile } from "@/utils/utils.function"
 
 import { useEffect, useState } from "react"
@@ -13,11 +13,11 @@ import { cn } from "@/lib/utils"
 
 type ContactMeButtonProps = {
   className?: string
-  text?: string
+  text?: "PHONE" | string
 }
 
 const ContactMeButton: React.FC<ContactMeButtonProps> = ({ className, text }) => {
-  const phoneNumber = "09396007232"
+  const phoneNumber = "+98 9396007232"
   const t = useTranslations("heroSection")
   const [isMobile, setIsMobile] = useState(false)
   const [isClipboard, setIsClipboard] = useState(false)
@@ -34,16 +34,23 @@ const ContactMeButton: React.FC<ContactMeButtonProps> = ({ className, text }) =>
     setIsMobile(isUserUseMobile(userAgent))
   }, [])
 
+  const Text =
+    typeof text !== "undefined" && text === "PHONE"
+      ? phoneNumber
+      : typeof text === "string"
+      ? text
+      : t("quickAccessButton.contact")
+
   return isMobile ? (
-    <Link className={cn("btn btn-primary", className)} href={`tel:${phoneNumber}`}>
-      {text ? text : t("quickAccessButton.contact")}
+    <Link className={cn("flex items-center gap-2", className)} href={`tel:${phoneNumber}`}>
+      <span>{Text}</span>
       <Phone className="icon" />
     </Link>
   ) : (
     <button
       disabled={isClipboard}
       onClick={saveClipboardAction}
-      className={cn("btn btn-primary", className)}
+      className={cn("flex items-center gap-2", className)}
     >
       {isClipboard ? (
         <>
@@ -52,7 +59,7 @@ const ContactMeButton: React.FC<ContactMeButtonProps> = ({ className, text }) =>
         </>
       ) : (
         <>
-          {text ? text : t("quickAccessButton.contact")}
+          <span>{Text}</span>
           <Phone className="icon" />
         </>
       )}

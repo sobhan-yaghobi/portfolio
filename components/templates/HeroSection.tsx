@@ -283,7 +283,7 @@ const HeroSection: React.FC = () => {
 
       <div id="quick-access-button" className="h-fit flex items-center my-12 overflow-hidden">
         <div className="access-button">
-          <ContactMeButton />
+          <ContactMeButton className="btn btn-primary" />
         </div>
         <div id="split" className="divider divider-horizontal mx-1.5" />
         <button className="access-button btn btn-ghost">
