@@ -1,10 +1,10 @@
 "use client"
 
 import React, { useRef } from "react"
-import { animateLanding } from "@/utils/utils.animation"
-
 import { useGSAP } from "@gsap/react"
 import { useTranslations } from "next-intl"
+
+import { animateLanding } from "@/utils/utils.animation"
 
 import { CircleUser } from "lucide-react"
 
@@ -14,16 +14,17 @@ import Title from "../modules/Title"
 import ContactMeButton from "./ContactMe.button"
 import StarAnimation from "./Star.animation"
 
-const HeroSection: React.FC = () => {
+const HomeLanding: React.FC = () => {
   const t = useTranslations("heroSection")
   const container = useRef<HTMLDivElement>(null)
 
   //! ---------- Animation Action
   useGSAP(() => animateLanding(), { scope: container })
+
   return (
     <div ref={container} className="center flex-col">
       {/*//! ---------- Icon Packages Container  */}
-      <div className="w-fit max-w-full center flex-col relative *:select-none z-10 max-md:hidden">
+      <div className="w-fit max-w-full center flex-col relative z-10 *:select-none max-md:hidden">
         {/*//! ---------- Row 1  */}
         <div className="row-icon-package flex flex-row-reverse">
           <Magnetic>
@@ -117,7 +118,7 @@ const HeroSection: React.FC = () => {
         </div>
 
         {/*//! ---------- Row 2  */}
-        <div className="row-icon-package flex flex-row my-6">
+        <div className="row-icon-package my-6 flex flex-row">
           <Magnetic>
             <Image
               className="icon-package mx-3"
@@ -236,7 +237,7 @@ const HeroSection: React.FC = () => {
         </div>
 
         {/*//! ---------- Row 4  */}
-        <div className="row-icon-package flex flex-row mt-6">
+        <div className="row-icon-package mt-6 flex flex-row">
           <Magnetic>
             <Image
               className="icon-package mx-3"
@@ -262,9 +263,9 @@ const HeroSection: React.FC = () => {
         </div>
       </div>
       {/*//! ---------- Bulb ----------  */}
-      <div id="circle" className="size-10 absolute z-0 -top-0 rounded-full" />
+      <div id="circle" className="size-10 rounded-full absolute z-0 -top-0" />
 
-      {/*//! ---------- Title ----------  */}
+      {/*//! ---------- Title & Desc ----------  */}
       <div id="title" className="center flex-col mt-4">
         <div className="bg-neutral size-40 mb-4 rounded-full" />
         <Title size="lg" className="text-center lg:whitespace-pre">
@@ -276,11 +277,12 @@ const HeroSection: React.FC = () => {
             })}
           </h1>
         </Title>
-        <p id="desc" className="px-5 w-full text-center opacity-50 mt-4 md:px-24 lg:px-56 xl:px-80">
+        <p id="desc" className="w-full text-center px-5 mt-4 opacity-50 md:px-24 lg:px-56 xl:px-80">
           {t("desc")}
         </p>
       </div>
 
+      {/*//! ---------- Quick Access Buttons ----------  */}
       <div id="quick-access-button" className="h-fit flex items-center my-12 overflow-hidden">
         <div className="access-button">
           <ContactMeButton className="btn btn-primary" />
@@ -291,9 +293,10 @@ const HeroSection: React.FC = () => {
           {t("quickAccessButton.cv")}
         </button>
       </div>
+
       <StarAnimation delay={4} />
     </div>
   )
 }
 
-export default HeroSection
+export default HomeLanding

@@ -1,12 +1,12 @@
 import AboutMe from "@/components/templates/AboutMe"
 import ExperienceAndArticle from "@/components/templates/ExperienceAndArticle"
-import HeroSection from "@/components/templates/HeroSection"
+import HomeLanding from "@/components/templates/HomeLanding"
 import Projects from "@/components/templates/Projects"
 
 export default function Home() {
   return (
     <>
-      <HeroSection />
+      <HomeLanding />
       <Projects />
       <AboutMe />
       <ExperienceAndArticle />
