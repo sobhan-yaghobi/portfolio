@@ -37,7 +37,6 @@
   }
 
   html {
-    /* scroll-behavior: smooth; */
     font-family: "roboto";
   }
   html:lang("fa") {
@@ -105,6 +104,10 @@
 
   .title-lg *:first-child {
     @apply w-full font-title text-2xl sm:text-3xl md:text-4xl;
+  }
+
+  .title-xl *:first-child {
+    @apply w-full font-title text-4xl sm:text-6xl md:text-8xl;
   }
 
   .outline-active {
