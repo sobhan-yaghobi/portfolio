@@ -92,7 +92,7 @@ const Footer: React.FC = () => {
         </aside>
         <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
           <Email className="btn btn-ghost font-normal" />
-          <ContactMeButton className="btn-ghost font-normal" text="+98 9396007232" />
+          <ContactMeButton className="btn btn-ghost font-normal" text="PHONE" />
         </nav>
       </div>
     </footer>
