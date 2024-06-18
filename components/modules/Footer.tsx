@@ -16,7 +16,7 @@ const socialFollowItems: SocialFollowBoxProps[] = [
     logoSrc: "/image/telegram.png",
     backImgSrc: "/image/telegram-background.png",
     badgeWrapper: (
-      <CopyToClipboard value="@sobhan_yaghobii">
+      <CopyToClipboard type="toast" value="@sobhan_yaghobii">
         <p className="badge badge-sm py-3 gap-1">
           <AtSign className="icon-sm" />
           sobhan_yaghobii
@@ -31,7 +31,7 @@ const socialFollowItems: SocialFollowBoxProps[] = [
     logoSrc: "/image/instagram.png",
     backImgSrc: "/image/instagram-background.png",
     badgeWrapper: (
-      <CopyToClipboard value="sobhan__ya">
+      <CopyToClipboard type="toast" value="sobhan__ya">
         <p className="badge badge-sm py-3 gap-1">
           <AtSign className="icon-sm" />
           sobhan__ya
@@ -46,7 +46,7 @@ const socialFollowItems: SocialFollowBoxProps[] = [
     logoSrc: "/packages/github.svg",
     backImgSrc: "/image/github-background.png",
     badgeWrapper: (
-      <CopyToClipboard value="sobhan-yaghobi">
+      <CopyToClipboard type="toast" value="sobhan-yaghobi">
         <p className="badge badge-sm py-3 gap-1">
           <AtSign className="icon-sm" />
           sobhan-yaghobi
@@ -61,7 +61,7 @@ const socialFollowItems: SocialFollowBoxProps[] = [
     logoSrc: "/image/linkedin.png",
     backImgSrc: "/image/linkedin-background.png",
     badgeWrapper: (
-      <CopyToClipboard value="sobhan yaghobi">
+      <CopyToClipboard type="toast" value="sobhan yaghobi">
         <p className="badge badge-sm py-3 gap-1">
           <AtSign className="icon-sm" />
           sobhan yaghobi
@@ -92,7 +92,7 @@ const Footer: React.FC = () => {
         </aside>
         <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
           <Email className="btn btn-ghost font-normal" />
-          <ContactMeButton className="btn btn-ghost font-normal" text="PHONE" />
+          <ContactMeButton className="btn btn-ghost font-normal" value="_PHONE" />
         </nav>
       </div>
     </footer>
