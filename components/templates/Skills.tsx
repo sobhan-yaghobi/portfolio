@@ -1,12 +1,13 @@
 "use client"
 
 import React, { useState } from "react"
+import { v4 as uuid } from "uuid"
+
+import { ArrowUpRight } from "lucide-react"
+
 import Title from "../modules/Title"
 import Image from "next/image"
-
-import { v4 as uuid } from "uuid"
 import Link from "next/link"
-import { ArrowUpRight } from "lucide-react"
 
 const skills = [
   {
@@ -165,7 +166,7 @@ const Skills = () => {
       <Title size="lg" className="text-center">
         <h2>Skills</h2>
       </Title>
-      <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 my-12">
+      <div className="my-12 grid grid-cols-1 gap-6 lg:grid-cols-2">
         <ul className="flex flex-wrap gap-3">
           {skills.map((item) => (
             <li key={item.id}>
