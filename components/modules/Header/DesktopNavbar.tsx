@@ -12,7 +12,7 @@ type DesktopNavbarProps = {
 
 const DesktopNavbar: React.FC<DesktopNavbarProps> = ({ menuList }) => {
   return (
-    <nav className="hidden h-full !justify-between lg:center">
+    <nav className="h-full hidden !justify-between lg:center">
       <ul className="flex gap-6">
         {menuList.map((item, index) => (
           <Magnetic magnetSize={0.1} key={index}>
