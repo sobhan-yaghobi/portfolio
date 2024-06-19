@@ -13,7 +13,7 @@ const Projects: React.FC = () => {
           necessitatibus harum. Voluptatibus, harum.
         </h3>
       </Title>
-      <div className="flex gap-10 my-12 lg:grid lg:grid-cols-3 xl:grid-cols-4 max-lg:overflow-x-auto">
+      <div className="my-12 flex gap-10 lg:grid lg:grid-cols-3 xl:grid-cols-4 max-lg:overflow-x-auto">
         <ProjectCard />
         <ProjectCard />
         <ProjectCard />
