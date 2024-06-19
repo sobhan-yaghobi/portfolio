@@ -30,7 +30,7 @@ const page: React.FC = () => {
               <span>Iran , Khorasan Razavi, Mashhad</span>
             </li>
             <li className="flex items-center gap-2">
-              <ContactMeButton className="flex-row-reverse *:stroke-primary" text="PHONE" />
+              <ContactMeButton className="flex-row-reverse *:stroke-primary" value="_PHONE" />
             </li>
           </ul>
         </div>
