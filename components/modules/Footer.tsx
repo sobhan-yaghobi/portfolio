@@ -81,7 +81,7 @@ const Footer: React.FC = () => {
           </button>
         </ScrollTo>
       </div>
-      <div className="container pb-3 grid grid-cols-4 gap-3">
+      <div className="container pb-3 grid grid-cols-2 grid-rows-2 gap-3 lg:grid-cols-4">
         {socialFollowItems.map((item) => (
           <SocialFollowBox key={item.id} {...item} />
         ))}

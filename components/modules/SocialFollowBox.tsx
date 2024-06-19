@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react"
 import { cn } from "@/utils/utils.function"
 
-import { ArrowRight } from "lucide-react"
+import { ArrowUpRight } from "lucide-react"
 
 import Image from "next/image"
 
@@ -62,7 +62,7 @@ const SocialFollowBox: React.FC<SocialFollowBoxProps> = ({
           <div className="flex *:gap-1 justify-between">
             <div className="flex flex-1 flex-wrap">{badgeWrapper}</div>
             <button className="btn btn-xs rounded-full">
-              <ArrowRight className="icon-sm" />
+              <ArrowUpRight className="icon-sm" />
             </button>
           </div>
         </div>
