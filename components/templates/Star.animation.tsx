@@ -41,15 +41,15 @@ const StarAnimation: React.FC<StarAnimationProps> = ({ delay }) => {
     {
       count: 50,
       direction: "T",
-      left: { min: 0, max: windowSize.width },
-      top: { min: 0, max: windowSize.height / 2 },
+      left: { min: 0, max: 100 },
+      top: { min: 0, max: 50 },
     },
 
     {
       count: 50,
       direction: "B",
-      left: { min: 0, max: windowSize.width },
-      top: { min: windowSize.height / 2, max: windowSize.height },
+      left: { min: 0, max: 100 },
+      top: { min: 50, max: 100 },
     },
   ]
   return (
@@ -63,8 +63,8 @@ const StarAnimation: React.FC<StarAnimationProps> = ({ delay }) => {
               data-duration={random(5, 10)}
               className={`star -z-10 blur-sm ${item.direction}`}
               style={{
-                left: random(item.left.min, item.left.max),
-                top: random(item.top.min, item.top.max),
+                left: `${random(item.left.min, item.left.max)}%`,
+                top: `${random(item.top.min, item.top.max)}%`,
                 scale: random(0.3, 0.5),
               }}
             />
