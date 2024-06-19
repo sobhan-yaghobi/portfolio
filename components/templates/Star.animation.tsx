@@ -12,6 +12,10 @@ type StarAnimationProps = {
 const StarAnimation: React.FC<StarAnimationProps> = ({ delay }) => {
   const [windowSize, setWindowSize] = useState({ width: 0, height: 0 })
   useGSAP(() => {
+    animationAction()
+  })
+
+  const animationAction = () => {
     const { innerHeight, innerWidth } = window
     setWindowSize({ width: innerWidth, height: innerHeight })
 
@@ -31,7 +35,7 @@ const StarAnimation: React.FC<StarAnimationProps> = ({ delay }) => {
         }
       )
     )
-  }, [])
+  }
 
   const recArray = [
     {
