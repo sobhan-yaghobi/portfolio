@@ -1,11 +1,13 @@
-import { Heart, MessageSquareText, Send } from "lucide-react"
-import Image from "next/image"
 import React from "react"
+
+import { Heart, MessageSquareText, Send } from "lucide-react"
+
+import Image from "next/image"
 
 const ExperienceAndArticleCard = () => {
   return (
-    <div className="card flex-1 min-w-72 max-w-full h-[470px] bg-base-100 shadow-xl">
-      <figure className="h-3/6 p-2 relative center overflow-visible">
+    <div className="card bg-base-100 min-w-72 max-w-full h-[470px] flex-1 shadow-xl">
+      <figure className="h-3/6 p-2 center relative overflow-visible">
         <Image
           width={300}
           height={300}
@@ -14,11 +16,11 @@ const ExperienceAndArticleCard = () => {
           alt="project-image"
         />
         <div className="w-full flex justify-evenly absolute -bottom-4">
-          <p className={`h-12 px-4 center gap-2 rounded-lg glass cursor-default`}>
+          <p className={`glass h-12 px-4 center gap-2 rounded-lg cursor-default`}>
             <Heart className="icon" />
             32.2K
           </p>
-          <p className={`h-12 px-4 center gap-2 rounded-lg glass cursor-default`}>
+          <p className={`glass h-12 px-4 center gap-2 rounded-lg cursor-default`}>
             <MessageSquareText className="icon" />
             1.4K
           </p>
