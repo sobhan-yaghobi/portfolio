@@ -20,8 +20,8 @@ const AboutSection = () => {
     })
   }, [])
   return (
-    <>
-      <div className="flex mt-40 max-lg:flex-col max-xl:text-center max-xl:items-center overflow-x-hidden">
+    <section>
+      <div className="flex max-lg:flex-col max-xl:text-center max-xl:items-center overflow-x-hidden">
         <div className="flex flex-col gap-6 flex-1 [&>p]:text-justify max-xl:[&>p]:text-center xl:px-6">
           <Title size="lg">
             <h4>Lorem ipsum dolor sit amet consectetur.</h4>
@@ -95,7 +95,7 @@ const AboutSection = () => {
           />
         </section>
       </div>
-    </>
+    </section>
   )
 }
 

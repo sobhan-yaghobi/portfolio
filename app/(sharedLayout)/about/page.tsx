@@ -8,10 +8,13 @@ const page: React.FC = () => {
   return (
     <>
       <AboutMeLanding />
+      <div className="mb-40" />
+
       <AboutSection />
-      <div className="mt-40">
-        <Skills />
-      </div>
+      <div className="mb-40" />
+
+      <Skills />
+      <div className="mb-40" />
     </>
   )
 }

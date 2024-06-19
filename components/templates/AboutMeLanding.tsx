@@ -8,7 +8,7 @@ import Title from "../modules/Title"
 
 const AboutMeLanding = () => {
   return (
-    <div className="flex flex-col items-center">
+    <section className="flex flex-col items-center">
       <StarAnimation />
 
       <div id="liner" className="size-96 mt-12 center relative rounded-full text-nowrap">
@@ -43,7 +43,7 @@ const AboutMeLanding = () => {
           </button>
         </Link>
       </div>
-    </div>
+    </section>
   )
 }
 
