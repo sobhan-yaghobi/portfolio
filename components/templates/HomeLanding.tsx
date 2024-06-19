@@ -13,6 +13,7 @@ import Image from "next/image"
 import Title from "../modules/Title"
 import ContactMeButton from "./ContactMe.button"
 import StarAnimation from "./Star.animation"
+import Link from "next/link"
 
 const HomeLanding: React.FC = () => {
   const t = useTranslations("heroSection")
@@ -286,10 +287,12 @@ const HomeLanding: React.FC = () => {
           <ContactMeButton className="btn btn-primary" />
         </div>
         <div id="split" className="divider divider-horizontal mx-1.5" />
-        <button className="access-button btn btn-ghost">
-          <CircleUser className="icon" />
-          {t("quickAccessButton.cv")}
-        </button>
+        <Link href={"/about"}>
+          <button className="access-button btn btn-ghost">
+            <CircleUser className="icon" />
+            {t("quickAccessButton.cv")}
+          </button>
+        </Link>
       </div>
       <StarAnimation delay={4} />
     </section>
