@@ -22,7 +22,7 @@ const HomeLanding: React.FC = () => {
   useGSAP(() => animateLanding(), { scope: container })
 
   return (
-    <div ref={container} className="center flex-col">
+    <section ref={container} className="center flex-col">
       {/*//! ---------- Icon Packages Container  */}
       <div className="w-fit max-w-full center flex-col relative z-10 *:select-none max-md:hidden">
         {/*//! ---------- Row 1  */}
@@ -292,7 +292,7 @@ const HomeLanding: React.FC = () => {
         </button>
       </div>
       <StarAnimation delay={4} />
-    </div>
+    </section>
   )
 }
 

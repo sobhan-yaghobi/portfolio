@@ -4,8 +4,7 @@ import { Check } from "lucide-react"
 
 const TechnicalGrowth: React.FC = () => {
   return (
-    <>
-      <div className="mt-40" />
+    <section>
       <Title size="lg" className="text-center">
         <h2>Technical Growth</h2>
         <h4 className="w-10/12 text-sm inline-block mt-3 md:w-8/12 lg:w-4/12">
@@ -93,7 +92,7 @@ const TechnicalGrowth: React.FC = () => {
           </div>
         </li>
       </ul>
-    </>
+    </section>
   )
 }
 

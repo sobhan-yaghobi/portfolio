@@ -4,8 +4,7 @@ import ExperienceAndArticleCard from "../modules/ExperienceAndArticle.card"
 
 const ExperienceAndArticle = () => {
   return (
-    <>
-      <div className="mt-40" />
+    <section>
       <Title size="lg" className="text-center">
         <h2>Experience & Article</h2>
         <h4 className="w-10/12 text-sm inline-block mt-3 md:w-8/12 lg:w-4/12">
@@ -20,7 +19,7 @@ const ExperienceAndArticle = () => {
             <ExperienceAndArticleCard key={index} />
           ))}
       </div>
-    </>
+    </section>
   )
 }
 

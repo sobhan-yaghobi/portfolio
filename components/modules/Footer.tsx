@@ -74,14 +74,14 @@ const socialFollowItems: SocialFollowBoxProps[] = [
 const Footer: React.FC = () => {
   return (
     <footer>
-      <div className="center mb-3 mt-36">
+      <div className="mb-3 center">
         <ScrollTo scrollTo={"header"} duration={0.5}>
           <button className="btn">
             <ArrowUp />
           </button>
         </ScrollTo>
       </div>
-      <div className="grid grid-cols-4 gap-3 pb-3 container">
+      <div className="container pb-3 grid grid-cols-4 gap-3">
         {socialFollowItems.map((item) => (
           <SocialFollowBox key={item.id} {...item} />
         ))}
