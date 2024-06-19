@@ -264,7 +264,6 @@ const HomeLanding: React.FC = () => {
       </div>
       {/*//! ---------- Bulb ----------  */}
       <div id="circle" className="size-10 rounded-full absolute z-0 -top-0" />
-
       {/*//! ---------- Title & Desc ----------  */}
       <div id="title" className="center flex-col mt-4">
         <div className="bg-neutral size-40 mb-4 rounded-full" />
@@ -281,7 +280,6 @@ const HomeLanding: React.FC = () => {
           {t("desc")}
         </p>
       </div>
-
       {/*//! ---------- Quick Access Buttons ----------  */}
       <div id="quick-access-button" className="h-fit flex items-center my-12 overflow-hidden">
         <div className="access-button">
@@ -293,7 +291,6 @@ const HomeLanding: React.FC = () => {
           {t("quickAccessButton.cv")}
         </button>
       </div>
-
       <StarAnimation delay={4} />
     </div>
   )
