@@ -23,7 +23,7 @@ const MobileNavbar: React.FC<MobileNavbarProps> = ({ menuList }) => {
         <ChangeLangButton />
       </div>
       <div>
-        <div dir="rtl" className={`drawer`}>
+        <aside dir="rtl" className={`drawer`}>
           <input
             id="navbar-drawer"
             type="checkbox"
@@ -42,7 +42,7 @@ const MobileNavbar: React.FC<MobileNavbarProps> = ({ menuList }) => {
               aria-label="close sidebar"
               className="drawer-overlay"
             ></label>
-            <ul className="menu p-4 max-w-full w-80 min-h-full bg-base-200 text-base-content">
+            <ul className="menu bg-base-200 max-w-full w-80 min-h-full text-base-content p-4">
               <div className="flex items-center justify-end">
                 <ChangeThemeButton className="btn-outline ml-3" />
                 <label
@@ -65,7 +65,7 @@ const MobileNavbar: React.FC<MobileNavbarProps> = ({ menuList }) => {
               ))}
             </ul>
           </div>
-        </div>
+        </aside>
       </div>
     </div>
   )

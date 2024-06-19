@@ -27,7 +27,7 @@ const DesktopNavbar: React.FC<DesktopNavbarProps> = ({ menuList }) => {
       </ul>
       <div className="flex items-center gap-1">
         <Search />
-        <ShareButton />
+        <ShareButton rtl />
         <ChangeLangButton />
         <ChangeThemeButton />
       </div>
