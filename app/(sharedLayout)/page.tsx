@@ -1,4 +1,4 @@
-import AboutMe from "@/components/templates/AboutMe"
+import TechnicalGrowth from "@/components/templates/TechnicalGrowth"
 import ExperienceAndArticle from "@/components/templates/ExperienceAndArticle"
 import HomeLanding from "@/components/templates/HomeLanding"
 import Projects from "@/components/templates/Projects"
@@ -8,7 +8,7 @@ export default function Home() {
     <>
       <HomeLanding />
       <Projects />
-      <AboutMe />
+      <TechnicalGrowth />
       <ExperienceAndArticle />
     </>
   )
