@@ -22,7 +22,7 @@ const QuickAccessArticleSide = () => {
   return (
     <>
       <div className="bg-base-200 rounded-xl">
-        <CopyToClipboard type="text" value="blog url" className="btn w-full btn-outline">
+        <CopyToClipboard type="text" value="blog url" className="btn w-full outline-active">
           <SquareArrowOutUpRight className="icon" />
           Quick Share
         </CopyToClipboard>
