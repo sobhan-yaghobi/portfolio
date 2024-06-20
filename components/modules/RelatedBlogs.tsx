@@ -9,9 +9,9 @@ import Image from "next/image"
 const RelatedBlogs: React.FC = () => {
   return (
     <div>
-      <Title size="md" className="mb-3 flex items-center">
-        <LibraryBig className="icon-md mr-1 stroke-primary" />
+      <Title size="md" isIcon className="mb-3">
         <h3>Related Blogs</h3>
+        <LibraryBig className="icon-md mr-1 stroke-primary" />
       </Title>
       <div className="grid grid-cols-4 gap-3">
         {Array(8)

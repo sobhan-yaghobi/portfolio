@@ -7,9 +7,9 @@ const CommentBlog: React.FC = () => {
   return (
     <div>
       <div className="flex items-center">
-        <Title size="md" className="mb-3 flex items-center">
-          <MessageCircle className="icon-md mr-1 stroke-primary" />
+        <Title size="md" isIcon className="mb-3">
           <h3>Comments</h3>
+          <MessageCircle className="icon-md mr-1 stroke-primary" />
         </Title>
         <button className="btn btn-primary">
           <MessageSquareDiffIcon className="icons" />

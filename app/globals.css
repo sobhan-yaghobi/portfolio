@@ -94,20 +94,20 @@
     @apply size-10;
   }
 
-  .title-sm:first-child {
-    @apply w-full font-title text-base sm:text-lg md:text-xl lg:text-2xl;
+  .title-sm *:first-child {
+    @apply font-title text-base sm:text-lg md:text-xl lg:text-2xl;
   }
 
-  .title-md:first-child {
-    @apply w-full font-title text-lg sm:text-xl md:text-2xl lg:text-3xl;
+  .title-md *:first-child {
+    @apply font-title text-lg sm:text-xl md:text-2xl lg:text-3xl;
   }
 
-  .title-lg:first-child {
-    @apply w-full font-title text-2xl sm:text-3xl md:text-4xl;
+  .title-lg *:first-child {
+    @apply font-title text-2xl sm:text-3xl md:text-4xl;
   }
 
-  .title-xl:first-child {
-    @apply w-full font-title text-4xl sm:text-6xl md:text-8xl;
+  .title-xl *:first-child {
+    @apply font-title text-4xl sm:text-6xl md:text-8xl;
   }
 
   .outline-active {
