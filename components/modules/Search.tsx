@@ -19,7 +19,7 @@ const Search: React.FC = () => {
       <SearchIcon className={`icon absolute rtl:right-3 ltr:left-3`} />
       <input
         type="text"
-        className="grow placeholder:opacity-50"
+        className="grow placeholder:opacity-80"
         placeholder={t("placeholder") + " " + getRandomHashtag}
       />
     </label>
