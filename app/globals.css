@@ -114,6 +114,11 @@
     background-color: var(--fallback-b1, oklch(var(--bc) / var(--tw-bg-opacity)));
     color: var(--fallback-b1, oklch(var(--b1) / var(--tw-text-opacity)));
   }
+  .outline-active:hover {
+    color: unset;
+    background-color: unset;
+    border: solid 0.1rem var(--fallback-b1, oklch(var(--bc) / var(--tw-bg-opacity)));
+  }
 
   .glass {
     backdrop-filter: blur(10px);
