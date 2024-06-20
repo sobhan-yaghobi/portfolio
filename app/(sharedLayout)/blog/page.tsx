@@ -1,5 +1,6 @@
 import Article from "@/components/modules/Article"
 import QuickAccessArticleSide from "@/components/modules/QuickAccessArticleSide"
+import RelatedBlogs from "@/components/modules/RelatedBlogs"
 import React from "react"
 
 const page = () => {
@@ -13,6 +14,9 @@ const page = () => {
           <QuickAccessArticleSide />
         </section>
       </div>
+      <section className="bg-base-200 p-6 mt-6 col-span-4 rounded-xl">
+        <RelatedBlogs />
+      </section>
       <div className="mb-40" />
     </>
   )
