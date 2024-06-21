@@ -31,7 +31,9 @@ const QuickAccessArticleSide = () => {
         <h3>HeadLines</h3>
         <ul className="steps steps-vertical">
           {headlines?.map((headline, index) => (
-            <li className={`step ${index <= length && "step-primary"}`}>{headline.textContent}</li>
+            <li className={`step ${index <= length && "step-primary"}`}>
+              <span className="truncate">{headline.textContent}</span>
+            </li>
           ))}
         </ul>
       </div>

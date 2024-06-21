@@ -8,10 +8,10 @@ const page = () => {
   return (
     <>
       <div className="min-h-screen grid grid-cols-4 gap-6">
-        <article className="bg-base-200 p-6 col-span-3 rounded-xl [&>*]:mt-6 first:[&>*]:mt-0">
+        <article className="bg-base-200 p-6 col-span-4 rounded-xl [&>*]:mt-6 first:[&>*]:mt-0 xl:col-span-3">
           <Article />
         </article>
-        <section className="h-fit col-span-1 sticky top-6 [&>*]:p-6 [&>*]:mt-6 first:[&>*]:mt-0">
+        <section className="h-fit max-xl:hidden col-span-1 sticky top-6 [&>*]:p-6 [&>*]:mt-6 first:[&>*]:mt-0">
           <QuickAccessArticleSide />
         </section>
       </div>

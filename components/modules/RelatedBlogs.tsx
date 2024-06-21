@@ -13,13 +13,13 @@ const RelatedBlogs: React.FC = () => {
         <h3>Related Blogs</h3>
         <LibraryBig className="icon-md mr-1 stroke-primary" />
       </Title>
-      <div className="grid grid-cols-4 gap-3">
+      <div className="flex gap-3 max-lg:overflow-x-auto lg:grid lg:grid-cols-3 xl:grid-cols-4">
         {Array(8)
           .fill("")
           .map((_, index) => (
             <Link key={index} href={"/"}>
               <div className="card card-side bg-base-100 max-w-80 gap-3 p-3 shadow-xl">
-                <figure className="w-6/12 overflow-hidden">
+                <figure className="w-36 overflow-hidden">
                   <Image
                     width={150}
                     height={100}
