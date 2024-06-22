@@ -1,7 +1,7 @@
 "use client"
 
 import React from "react"
-import { random } from "@/utils/utils.function"
+import { random } from "@/utils/function"
 
 import { useTranslations } from "next-intl"
 

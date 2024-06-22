@@ -1,7 +1,7 @@
 "use client"
 
 import React from "react"
-import { cn } from "@/utils/utils.function"
+import { cn } from "@/utils/function"
 
 import { useRouter } from "next/navigation"
 import { useLocale } from "next-intl"
