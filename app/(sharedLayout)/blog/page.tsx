@@ -1,6 +1,6 @@
 import Article from "@/components/modules/Article"
 import CommentBlog from "@/components/modules/CommentBlog"
-import QuickAccessArticleSide from "@/components/modules/QuickAccessArticleSide"
+import QuickAccessArticleSide from "@/components/modules/QuickAccessArticleSide/QuickAccessArticleSide"
 import RelatedBlogs from "@/components/modules/RelatedBlogs"
 import React from "react"
 
@@ -8,9 +8,15 @@ const page = () => {
   return (
     <>
       <div className="min-h-screen grid grid-cols-4 gap-6">
-        <article className="bg-base-200 p-6 col-span-4 rounded-xl [&>*]:mt-6 first:[&>*]:mt-0 xl:col-span-3">
-          <Article />
-        </article>
+        <section className="col-span-4 relative xl:col-span-3">
+          <QuickAccessArticleSide mobile />
+          <article
+            id="article"
+            className="bg-base-200 w-full p-6 rounded-xl [&>*]:text-justify [&>*]:mt-6 first:[&>*]:mt-0"
+          >
+            <Article />
+          </article>
+        </section>
         <section className="h-fit max-xl:hidden col-span-1 sticky top-6 [&>*]:p-6 [&>*]:mt-6 first:[&>*]:mt-0">
           <QuickAccessArticleSide />
         </section>

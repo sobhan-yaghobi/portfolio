@@ -9,12 +9,15 @@ import { ClipboardCheck } from "lucide-react"
 
 type CopyToClipboardProps = {
   value: string
-  successMessage?: string
+  successMessage?: string | false
   className?: string
 } & ({ type: "toast"; message?: string } | { type: "text"; element?: ReactNode })
 
 const CopyToClipboard: React.FC<React.PropsWithChildren<CopyToClipboardProps>> = ({ ...props }) => {
-  const successText = props.successMessage || "saved to clipboard !"
+  const successText =
+    typeof props.successMessage === "boolean" && !props.successMessage
+      ? ""
+      : props.successMessage || "saved to clipboard !"
   const { toast } = useToast()
   const [isClipboard, setIsClipboard] = useState(false)
   const MainElement = props.type === "text" ? "button" : "div"
@@ -39,7 +42,7 @@ const CopyToClipboard: React.FC<React.PropsWithChildren<CopyToClipboardProps>> =
   return (
     <MainElement
       disabled={props.type === "text" && isClipboard}
-      className={cn("cursor-pointer", props.className)}
+      className={cn("cursor-pointer w-fit", props.className)}
       title="click to copy"
       onClick={copyToClipboardAction}
     >
@@ -59,7 +62,7 @@ const CopyToClipboard: React.FC<React.PropsWithChildren<CopyToClipboardProps>> =
 const Text: React.FC<{ message: string }> = ({ message }) => (
   <>
     <ClipboardCheck className="icon" />
-    {message}
+    {message && <span className="truncate flex-1">{message}</span>}
   </>
 )
 

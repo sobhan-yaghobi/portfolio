@@ -1,6 +1,6 @@
 import { create } from "zustand"
 
-type ArticleStoreType = {
+export type ArticleStoreType = {
   headlines: Array<HTMLHeadingElement> | null
   setHeadLines: (headlines: ArticleStoreType["headlines"]) => void
 
