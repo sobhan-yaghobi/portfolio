@@ -1,4 +1,4 @@
-import { cn } from "@/utils/utils.function"
+import { cn } from "@/utils/function"
 import React from "react"
 
 type TitleProps = {

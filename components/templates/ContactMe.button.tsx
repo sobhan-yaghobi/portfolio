@@ -1,7 +1,7 @@
 "use client"
 
 import React from "react"
-import { isUserUseMobile } from "@/utils/utils.function"
+import { isUserUseMobile } from "@/utils/function"
 
 import { useEffect, useState } from "react"
 import { useTranslations } from "use-intl"

@@ -4,7 +4,7 @@ import React, { useRef } from "react"
 import { useGSAP } from "@gsap/react"
 import { useTranslations } from "next-intl"
 
-import { animateLanding } from "@/utils/utils.animation"
+import { animateLanding } from "@/utils/animation"
 
 import { CircleUser } from "lucide-react"
 

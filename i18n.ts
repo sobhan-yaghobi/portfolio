@@ -1,4 +1,4 @@
-import { locales } from "@/utils/utils.variable"
+import { locales } from "@/utils/variable"
 import { getRequestConfig } from "next-intl/server"
 import { cookies } from "next/headers"
 

@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react"
-import { cn } from "@/utils/utils.function"
+import { cn } from "@/utils/function"
 
 import { ArrowUpRight } from "lucide-react"
 
