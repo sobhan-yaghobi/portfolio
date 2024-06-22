@@ -56,7 +56,7 @@ const SocialFollowBox: React.FC<SocialFollowBoxProps> = ({
           src={logoSrc}
           alt="telegram"
         />
-        <div id="header" className="text-black h-full flex flex-col gap-2 justify-between">
+        <div id="header" className="h-full flex flex-col gap-2 justify-between">
           <h5 className="text-xl font-title">{title}</h5>
           <p className="text-sm flex-1">{desc}</p>
           <div className="flex *:gap-1 justify-between">

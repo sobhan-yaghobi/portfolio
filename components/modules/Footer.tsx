@@ -86,7 +86,7 @@ const Footer: React.FC = () => {
           <SocialFollowBox key={item.id} {...item} />
         ))}
       </div>
-      <div className="footer bg-neutral text-neutral-content p-4 flex-col-reverse items-center max-lg:footer-center">
+      <div className="footer bg-color *:bg-color-content dark:text-neutral-content p-4 flex-col-reverse items-center relative z-20 max-lg:footer-center">
         <aside className="items-center grid-flow-col">
           <svg
             width="36"
