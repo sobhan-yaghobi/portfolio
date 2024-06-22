@@ -4,11 +4,11 @@ import React, { useState } from "react"
 
 import { MenuIcon, X } from "lucide-react"
 
-import ShareButton from "../Share.button"
-import ChangeLangButton from "../ChangeLang.button"
-import ChangeThemeButton from "../ChangeTheme.button"
+import ShareButton from "../../modules/Share.button"
+import ChangeLangButton from "../../modules/ChangeLang.button"
+import ChangeThemeButton from "../../modules/ChangeTheme.button"
 import Link from "next/link"
-import Search from "../Search"
+import Search from "../../modules/Search"
 
 type MobileNavbarProps = {
   menuList: string[]

@@ -1,10 +1,10 @@
 import React from "react"
-import Magnetic from "../Magnetic"
+import Magnetic from "../../modules/Magnetic"
 import Link from "next/link"
-import Search from "../Search"
-import ShareButton from "../Share.button"
-import ChangeLangButton from "../ChangeLang.button"
-import ChangeThemeButton from "../ChangeTheme.button"
+import Search from "../../modules/Search"
+import ShareButton from "../../modules/Share.button"
+import ChangeLangButton from "../../modules/ChangeLang.button"
+import ChangeThemeButton from "../../modules/ChangeTheme.button"
 
 type DesktopNavbarProps = {
   menuList: string[]
