@@ -2,11 +2,11 @@ import React from "react"
 
 import { ArrowUp, AtSign } from "lucide-react"
 
-import SocialFollowBox, { SocialFollowBoxProps } from "./SocialFollowBox"
-import CopyToClipboard from "./CopyToClipboard"
+import SocialFollowBox, { SocialFollowBoxProps } from "@/components/modules/SocialFollowBox"
+import CopyToClipboard from "@/components/modules/CopyToClipboard"
 import ContactMeButton from "../templates/ContactMe.button"
-import ScrollTo from "./ScrollTo"
-import Email from "./Email"
+import ScrollTo from "@/components/modules/ScrollTo"
+import Email from "@/components/modules/Email"
 
 const socialFollowItems: SocialFollowBoxProps[] = [
   {
