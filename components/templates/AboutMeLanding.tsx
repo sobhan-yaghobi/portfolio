@@ -12,7 +12,7 @@ const AboutMeLanding = () => {
       <StarAnimation />
 
       <div id="liner" className="size-96 mt-12 center relative rounded-full text-nowrap">
-        <Title size="xl" className="pt-12">
+        <Title size="xl" className="w-auto pt-12">
           <h1 className="tracking-[.5em]">
             ABOUT M<span className="tracking-normal">E</span>
           </h1>
