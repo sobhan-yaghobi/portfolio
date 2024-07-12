@@ -267,7 +267,14 @@ const HomeLanding: React.FC = () => {
       <div id="circle" className="size-10 rounded-full absolute z-0 -top-0" />
       {/*//! ---------- Title & Desc ----------  */}
       <div id="title" className="center flex-col mt-4">
-        <div className="bg-neutral size-40 mb-4 rounded-full" />
+        <Image
+          width={200}
+          height={200}
+          className="bg-neutral size-40 mb-4 rounded-full object-cover"
+          draggable={false}
+          src={"/image/prof.jpg"}
+          alt="profile"
+        />
         <Title size="lg" className="text-center lg:whitespace-pre">
           <h1>
             {t.rich("title", {
