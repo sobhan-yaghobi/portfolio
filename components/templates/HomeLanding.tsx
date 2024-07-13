@@ -16,7 +16,7 @@ import StarAnimation from "./Star.animation"
 import Link from "next/link"
 
 const HomeLanding: React.FC = () => {
-  const t = useTranslations("heroSection")
+  const t = useTranslations()
   const container = useRef<HTMLDivElement>(null)
 
   //! ---------- Animation Action
@@ -277,7 +277,7 @@ const HomeLanding: React.FC = () => {
         />
         <Title size="lg" className="text-center lg:whitespace-pre">
           <h1>
-            {t.rich("title", {
+            {t.rich("heroSection.title", {
               important: (chunks) => (
                 <span className="font-oswald font-bold text-primary">{chunks}</span>
               ),
@@ -285,7 +285,7 @@ const HomeLanding: React.FC = () => {
           </h1>
         </Title>
         <p id="desc" className="w-full text-center px-5 mt-4 opacity-50 md:px-24 lg:px-56 xl:px-80">
-          {t("desc")}
+          {t("heroSection.desc")}
         </p>
       </div>
       {/*//! ---------- Quick Access Buttons ----------  */}
@@ -297,7 +297,7 @@ const HomeLanding: React.FC = () => {
         <Link href={"/about"}>
           <button className="access-button btn btn-ghost">
             <CircleUser className="icon" />
-            {t("quickAccessButton.cv")}
+            {t("utils.cv")}
           </button>
         </Link>
       </div>

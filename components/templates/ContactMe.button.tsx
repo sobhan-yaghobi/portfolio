@@ -19,7 +19,7 @@ type ContactMeButtonProps = {
 
 const ContactMeButton: React.FC<ContactMeButtonProps> = ({ className, value }) => {
   const phoneNumber = "+98 939 600 7232"
-  const t = useTranslations("heroSection")
+  const t = useTranslations("utils")
   const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
@@ -32,7 +32,7 @@ const ContactMeButton: React.FC<ContactMeButtonProps> = ({ className, value }) =
       ? phoneNumber
       : typeof value === "string"
       ? value
-      : t("quickAccessButton.contact")
+      : t("contact")
 
   if (isMobile) {
     return (
