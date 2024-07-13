@@ -18,7 +18,7 @@ type ContactMeButtonProps = {
 }
 
 const ContactMeButton: React.FC<ContactMeButtonProps> = ({ className, value }) => {
-  const phoneNumber = "+98 9396007232"
+  const phoneNumber = "+98 939 600 7232"
   const t = useTranslations("heroSection")
   const [isMobile, setIsMobile] = useState(false)
 
