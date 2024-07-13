@@ -4,98 +4,144 @@ import Email from "@/components/modules/Email"
 import Title from "@/components/modules/Title"
 import ContactMeButton from "@/components/templates/ContactMe.button"
 
-import { MapPin } from "lucide-react"
+import { GraduationCap, MapPin } from "lucide-react"
+import Image from "next/image"
+import ChangeLangButton from "@/components/modules/ChangeLang.button"
+import { random } from "@/utils/function"
+import { ProjectCvCard } from "@/components/modules/Project.card"
 
 const page: React.FC = () => {
   return (
-    <div className="px-60 py-12">
-      <div className="bg-black/50 w-full p-12 rounded-xl relative overflow-hidden">
-        <div className="w-full h-52 flex absolute -top-10 -translate-x-1/2 left-1/2 -z-10">
-          <div className="bg-primary w-full h-96 blur-3xl rounded-full"></div>
-          <div className="bg-primary w-full h-52 blur-3xl absolute" />
-          <div className="bg-primary w-full h-96 blur-3xl rounded-full"></div>
-        </div>
-        <div className="flex items-center justify-between flex-col gap-6">
-          <div className="size-60 bg-neutral rounded-full" />
-          <Title size="lg">
-            <h1>Sobhan Yaghobi</h1>
-          </Title>
-          <p className="btn btn-primary">Front End Developer</p>
-          <ul className="w-full mt-3 flex justify-between items-center">
-            <li className="flex items-center gap-2">
-              <Email className="*:stroke-primary" />
-            </li>
-            <li className="flex items-center gap-2">
-              <MapPin className="icon stroke-primary" />
-              <span>Iran , Khorasan Razavi, Mashhad</span>
-            </li>
-            <li className="flex items-center gap-2">
-              <ContactMeButton className="flex-row-reverse *:stroke-primary" value="_PHONE" />
-            </li>
-          </ul>
-        </div>
-        <div className="divider" />
-        <div className="flex">
-          <div className="w-1/2 *:text-sm [&>*]:mt-12">
-            <section>
-              <Title size="sm">
-                <h3>About Me</h3>
-              </Title>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima, quae fuga tenetur
-                numquam sapiente eum temporibus harum saepe. Voluptatem distinctio nemo esse,
-                reiciendis ex iusto impedit corrupti alias explicabo blanditiis.
-              </p>
-            </section>
-            <section>
-              <Title size="sm">
-                <h3>Education</h3>
-              </Title>
-              <b>Lorem, ipsum.</b>
-              <p>Lorem ipsum dolor sit amet.</p>
-            </section>
-            <section>
-              <Title size="sm">
-                <h3>Experience</h3>
-              </Title>
-
-              <div className="mt-3">
-                <h5 className="text-base font-bold">Title 1</h5>
-                <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi nulla dicta,
-                  minima ipsam maiores sed! Excepturi unde recusandae porro distinctio aspernatur
-                  eius, corporis iste, laudantium delectus dolor ipsum fugit? Recusandae!
-                </p>
-              </div>
-              <div className="mt-3">
-                <h5 className="text-base font-bold">Title 1</h5>
-                <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi nulla dicta,
-                  minima ipsam maiores sed! Excepturi unde recusandae porro distinctio aspernatur
-                  eius, corporis iste, laudantium delectus dolor ipsum fugit? Recusandae!
-                </p>
-              </div>
-            </section>
+    <div>
+      <div className="px-52 py-12 relative">
+        <div className="bg-black/50 w-full p-12 rounded-xl relative overflow-hidden">
+          <div className="w-full h-52 flex absolute -top-10 -translate-x-1/2 left-1/2 -z-10">
+            <div className="bg-primary w-full h-96 blur-3xl rounded-full"></div>
+            <div className="bg-primary w-full h-52 blur-3xl absolute" />
+            <div className="bg-primary w-full h-96 blur-3xl rounded-full"></div>
           </div>
-          <div className="divider divider-horizontal" />
-          <div className="w-1/2 *:text-sm [&>*]:mt-12">
-            <section className="[&>*]:mt-6">
-              <Title size="sm">
-                <h3>Skills & Tools</h3>
-              </Title>
-              <div className="[&>*]:mt-1">
-                <h5 className="text-base font-bold">Designing Softwares</h5>
+          <div className="flex items-center justify-between flex-col gap-6">
+            <div className="" />
+            <Image
+              width={300}
+              height={300}
+              className="size-60 bg-neutral rounded-full object-cover"
+              src={"/image/prof.jpg"}
+              alt="profile"
+            />
+            <Title size="lg" className="text-center">
+              <h1>Sobhan Yaghobi</h1>
+            </Title>
+            <p className="btn btn-primary">Front End Developer</p>
+            <ul className="w-full mt-3 flex justify-between items-center">
+              <li className="flex items-center gap-2">
+                <Email className="*:stroke-primary" />
+              </li>
+              <li className="flex items-center gap-2">
+                <MapPin className="icon stroke-primary" />
+                <span>Iran , Khorasan Razavi, Mashhad</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <ContactMeButton className="flex-row-reverse *:stroke-primary" value="_PHONE" />
+              </li>
+            </ul>
+          </div>
+          <div className="divider" />
+          <div className="flex">
+            <div className="w-1/2 *:text-sm [&>*]:mt-12">
+              <section className="[&>*]:ml-3 [&>*]:mt-3 first:[&>*]:ml-0">
+                <Title size="sm">
+                  <h3>About Me</h3>
+                </Title>
+                <p>
+                  Hello, I am Sobhan Yaghobi, a Front-End programmer with a love for the world of
+                  coding, design and the web. I love new things and creating interesting projects.
+                  When it comes to coding and technical projects. I always find time to enjoy life
+                  and follow my hobbies such as exercising and studying (I need to increase my study
+                  time). Combining personal life with a profession that I am interested in is the
+                  best way to achieve success and job satisfaction. I always tried to balance
+                  between the two and enjoy both.
+                </p>
+              </section>
+
+              <section>
+                <Title size="sm">
+                  <h3>Education</h3>
+                </Title>
                 <ul>
-                  {["Figma"].map((item, index) => (
-                    <li key={index} className="badge badge-lg">
-                      {item}
+                  <li className="flex items-center justify-between [&>div]:p-3">
+                    <div className="flex-1">
+                      <b>Network and software</b>
+                      <p>diploma - Dr. Ali Shariati Conservatory - neyshabour</p>
+                    </div>
+                    <div>
+                      <p>2021 - 2024</p>
+                      <p className="bg-white/30 p-1 rounded-md">
+                        Average <b>18.77</b>
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+              </section>
+
+              <section className="[&>*]:ml-3 [&>*]:mt-3 first:[&>*]:ml-0">
+                <Title size="sm">
+                  <h3>Soft Skills</h3>
+                </Title>
+                <ul className="[&>*]:mt-3 first:[&>*]:mt-0">
+                  {[
+                    "flexibility",
+                    "good listener",
+                    "team work",
+                    "Perseverance",
+                    "Training",
+                    "sense of humor",
+                  ].map((item, index) => (
+                    <li key={index} className="flex">
+                      <span className="text-base">{item}</span>
+                      <div className="rating flex flex-1 gap-1 justify-end">
+                        {Array(6)
+                          .fill("")
+                          .map((_, index) => (
+                            <input
+                              key={index}
+                              type="radio"
+                              name={`${item}-rating-1`}
+                              className="mask mask-circle"
+                              defaultChecked={random(1, 6, true) === index ? true : false}
+                              disabled
+                            />
+                          ))}
+                      </div>
                     </li>
                   ))}
                 </ul>
-              </div>
+              </section>
+            </div>
 
-              <div className="[&>*]:mt-1">
-                <h5 className="text-base font-bold">Languages</h5>
+            <div className="divider divider-horizontal" />
+
+            <div className="w-1/2 *:text-sm [&>*]:mt-12">
+              <section className="[&>*]:ml-3 [&>*]:mt-6 first:[&>*]:ml-0">
+                <Title size="sm">
+                  <h3>Technical skills</h3>
+                </Title>
+
+                {Array(20, 40, 50, 80, 100, 100, 90, 50).map((item, index) => (
+                  <div key={index}>
+                    <h5 className="text-base font-bold mr-3">Title {index + 1}</h5>
+                    <div className="flex-1 relative">
+                      <span>between 2 & 1 year</span>
+                      <progress
+                        className="progress progress-primary h-5 mt-1"
+                        value={item}
+                        max="100"
+                        aria-label={`${item}`}
+                      />
+                    </div>
+                  </div>
+                ))}
+
                 <ul className="flex flex-wrap gap-2">
                   {[
                     "Javascript",
@@ -119,8 +165,23 @@ const page: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-              </div>
-            </section>
+              </section>
+
+              <section className="[&>*]:mt-6">
+                <Title size="sm">
+                  <h3>Projects</h3>
+                </Title>
+                <ul>
+                  <li>
+                    <ProjectCvCard />
+                  </li>
+
+                  <li>
+                    <ProjectCvCard />
+                  </li>
+                </ul>
+              </section>
+            </div>
           </div>
         </div>
       </div>

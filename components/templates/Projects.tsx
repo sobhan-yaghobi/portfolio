@@ -2,7 +2,7 @@ import React from "react"
 import Title from "../modules/Title"
 import ProjectCard from "../modules/Project.card"
 
-const Projects: React.FC = () => {
+const Projects: React.FC = async () => {
   return (
     <section>
       <Title size="lg" className="text-center">
@@ -13,14 +13,11 @@ const Projects: React.FC = () => {
         </h3>
       </Title>
       <div className="my-12 flex gap-10 max-lg:overflow-x-auto lg:grid lg:grid-cols-3 xl:grid-cols-4">
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
+        {Array(4)
+          .fill("")
+          .map((_, index) => (
+            <ProjectCard key={index} />
+          ))}
       </div>
     </section>
   )
