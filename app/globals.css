@@ -65,6 +65,14 @@
   .bg-color-content {
     color: var(--fallback-bc, oklch(var(--bc) / var(--tw-text-opacity)));
   }
+
+  .dir-left {
+    direction: ltr;
+  }
+
+  .dir-right {
+    direction: rtl;
+  }
 }
 
 @layer components {

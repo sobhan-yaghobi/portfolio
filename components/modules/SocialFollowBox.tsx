@@ -4,6 +4,7 @@ import { cn } from "@/utils/function"
 import { ArrowUpRight } from "lucide-react"
 
 import Image from "next/image"
+import CopyToClipboard from "./CopyToClipboard"
 
 export type SocialFollowBoxProps = {
   id: string
@@ -11,8 +12,10 @@ export type SocialFollowBoxProps = {
   backImgClassNames?: string[]
   logoSrc: string
   title: string
+  subtitle: string
   desc: string
   badgeWrapper: ReactNode
+  className?: string
 }
 
 const defaultBackImgClassNames = [
@@ -30,8 +33,10 @@ const SocialFollowBox: React.FC<SocialFollowBoxProps> = ({
   backImgClassNames,
   logoSrc,
   title,
+  subtitle,
   desc,
   badgeWrapper,
+  className,
 }) => {
   const mainBackImgClassNames = backImgClassNames || defaultBackImgClassNames
   return (
@@ -57,13 +62,13 @@ const SocialFollowBox: React.FC<SocialFollowBoxProps> = ({
           alt="telegram"
         />
         <div id="header" className="h-full flex flex-col gap-2 justify-between">
-          <h5 className="text-xl font-title">{title}</h5>
+          <div>
+            <h5 className="text-xl font-title">{title}</h5>
+            <h6 className="font-bold stat-title">{subtitle}</h6>
+          </div>
           <p className="text-sm flex-1">{desc}</p>
           <div className="flex *:gap-1 justify-between">
-            <div className="flex flex-1 flex-wrap">{badgeWrapper}</div>
-            <button className="btn btn-xs rounded-full">
-              <ArrowUpRight className="icon-sm" />
-            </button>
+            <div className={cn("flex flex-1 justify-between", className)}>{badgeWrapper}</div>
           </div>
         </div>
       </div>

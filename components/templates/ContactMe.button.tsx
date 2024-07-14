@@ -48,7 +48,7 @@ const ContactMeButton: React.FC<ContactMeButtonProps> = ({ className, value }) =
       value={phoneNumber}
       className={cn("flex items-center gap-2", className)}
     >
-      <span>{text}</span>
+      <span className="dir-left">{text}</span>
       <Phone className="icon" />
     </CopyToClipboard>
   )

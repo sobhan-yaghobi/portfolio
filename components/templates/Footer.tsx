@@ -7,71 +7,77 @@ import CopyToClipboard from "@/components/modules/CopyToClipboard"
 import ContactMeButton from "../templates/ContactMe.button"
 import ScrollTo from "@/components/modules/ScrollTo"
 import Email from "@/components/modules/Email"
+import { getTranslations } from "next-intl/server"
 
-const socialFollowItems: SocialFollowBoxProps[] = [
-  {
-    id: "1",
-    title: "Telegram",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, dicta.",
-    logoSrc: "/image/telegram.png",
-    backImgSrc: "/image/telegram-background.png",
-    badgeWrapper: (
-      <CopyToClipboard type="toast" value="@sobhan_yaghobii">
-        <p className="badge badge-sm py-3 gap-1">
-          <AtSign className="icon-sm" />
-          sobhan_yaghobii
-        </p>
-      </CopyToClipboard>
-    ),
-  },
-  {
-    id: "2",
-    title: "Instagram",
-    desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis repellendus commodi debitis reiciendis, architecto non sequi obcaecati assumenda labore ducimus?",
-    logoSrc: "/image/instagram.png",
-    backImgSrc: "/image/instagram-background.png",
-    badgeWrapper: (
-      <CopyToClipboard type="toast" value="sobhan__ya">
-        <p className="badge badge-sm py-3 gap-1">
-          <AtSign className="icon-sm" />
-          sobhan__ya
-        </p>
-      </CopyToClipboard>
-    ),
-  },
-  {
-    id: "3",
-    title: "Github",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, dicta.",
-    logoSrc: "/packages/github.svg",
-    backImgSrc: "/image/github-background.png",
-    badgeWrapper: (
-      <CopyToClipboard type="toast" value="sobhan-yaghobi">
-        <p className="badge badge-sm py-3 gap-1">
-          <AtSign className="icon-sm" />
-          sobhan-yaghobi
-        </p>
-      </CopyToClipboard>
-    ),
-  },
-  {
-    id: "4",
-    title: "Linkedin",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, dicta.",
-    logoSrc: "/image/linkedin.png",
-    backImgSrc: "/image/linkedin-background.png",
-    badgeWrapper: (
-      <CopyToClipboard type="toast" value="sobhan yaghobi">
-        <p className="badge badge-sm py-3 gap-1">
-          <AtSign className="icon-sm" />
-          sobhan yaghobi
-        </p>
-      </CopyToClipboard>
-    ),
-  },
-]
-
-const Footer: React.FC = () => {
+const Footer: React.FC = async () => {
+  const t = await getTranslations("social")
+  const s = "telegram.title"
+  const socialFollowItems: SocialFollowBoxProps[] = [
+    {
+      id: "1",
+      title: t(s),
+      subtitle: t("telegram.subtitle"),
+      desc: t("telegram.desc"),
+      logoSrc: "/image/telegram.png",
+      backImgSrc: "/image/telegram-background.png",
+      badgeWrapper: (
+        <CopyToClipboard type="toast" value="@sobhan_yaghobii">
+          <p className="badge badge-sm py-3 gap-1">
+            <AtSign className="icon-sm" />
+            sobhan_yaghobii
+          </p>
+        </CopyToClipboard>
+      ),
+    },
+    {
+      id: "2",
+      title: t("instagram.title"),
+      subtitle: t("instagram.subtitle"),
+      desc: t("instagram.desc"),
+      logoSrc: "/image/instagram.png",
+      backImgSrc: "/image/instagram-background.png",
+      badgeWrapper: (
+        <CopyToClipboard type="toast" value="sobhan__ya">
+          <p className="badge badge-sm py-3 gap-1">
+            <AtSign className="icon-sm" />
+            sobhan__ya
+          </p>
+        </CopyToClipboard>
+      ),
+    },
+    {
+      id: "3",
+      title: t("github.title"),
+      subtitle: t("github.subtitle"),
+      desc: t("github.desc"),
+      logoSrc: "/packages/github.svg",
+      backImgSrc: "/image/github-background.png",
+      badgeWrapper: (
+        <CopyToClipboard type="toast" value="sobhan-yaghobi">
+          <p className="badge badge-sm py-3 gap-1">
+            <AtSign className="icon-sm" />
+            sobhan-yaghobi
+          </p>
+        </CopyToClipboard>
+      ),
+    },
+    {
+      id: "4",
+      title: t("linkedin.title"),
+      subtitle: t("linkedin.subtitle"),
+      desc: t("linkedin.desc"),
+      logoSrc: "/image/linkedin.png",
+      backImgSrc: "/image/linkedin-background.png",
+      badgeWrapper: (
+        <CopyToClipboard type="toast" value="sobhan yaghobi">
+          <p className="badge badge-sm py-3 gap-1">
+            <AtSign className="icon-sm" />
+            sobhan yaghobi
+          </p>
+        </CopyToClipboard>
+      ),
+    },
+  ]
   return (
     <footer>
       <div className="mb-3 center">
