@@ -7,7 +7,7 @@ import { getTranslations } from "next-intl/server"
 const Projects: React.FC = async () => {
   const t = await getTranslations()
   return (
-    <section>
+    <section id="projects">
       <Title size="lg" className="text-center">
         <h2>{t("header.item.projects")}</h2>
         <h3 className="w-10/12 text-sm mt-3 inline-block md:w-8/12 lg:w-4/12">

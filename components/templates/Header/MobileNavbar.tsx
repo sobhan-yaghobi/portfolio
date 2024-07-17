@@ -9,13 +9,15 @@ import ChangeLangButton from "../../modules/ChangeLang.button"
 import ChangeThemeButton from "../../modules/ChangeTheme.button"
 import Link from "next/link"
 import Search from "../../modules/Search"
+import { useTranslations } from "next-intl"
 
 type MobileNavbarProps = {
-  menuList: string[]
+  menuList: { href: string; title: string; isSoon: boolean }[]
 }
 
 const MobileNavbar: React.FC<MobileNavbarProps> = ({ menuList }) => {
   const [isMenu, setIsMenu] = useState(false)
+  const t = useTranslations("utils")
   return (
     <div dir="ltr" className="mobile w-full h-full center justify-between lg:hidden">
       <div className="flex">
@@ -57,9 +59,14 @@ const MobileNavbar: React.FC<MobileNavbarProps> = ({ menuList }) => {
                 <Search />
               </div>
               {menuList.map((item, index) => (
-                <li key={index} className="">
-                  <Link className="relative group" href="#">
-                    {item}
+                <li key={index} className="indicator">
+                  {item.isSoon && (
+                    <span className="indicator-item badge badge-primary badge-sm -top-1">
+                      {t("soon")}
+                    </span>
+                  )}
+                  <Link className="relative group" href={item.href}>
+                    {item.title}
                   </Link>
                 </li>
               ))}

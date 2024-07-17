@@ -7,12 +7,12 @@ import MobileNavbar from "./MobileNavbar"
 const Header: React.FC = () => {
   const t = useTranslations("header")
   const menu = [
-    t("item.home"),
-    t("item.projects"),
-    t("item.about"),
-    t("item.skills"),
-    t("item.experience"),
-    t("item.contact"),
+    { href: "/", title: t("item.home"), isSoon: false },
+    { href: "/#projects", title: t("item.projects"), isSoon: false },
+    { href: "/about", title: t("item.about"), isSoon: false },
+    { href: "/about#skills", title: t("item.skills"), isSoon: false },
+    { href: "/", title: t("item.experience"), isSoon: true },
+    { href: "/", title: t("item.contact"), isSoon: true },
   ]
 
   return (

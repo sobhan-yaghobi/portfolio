@@ -162,7 +162,7 @@ const Skills = () => {
   const [mainSkill, setMainSkill] = useState(skills.at(0))
   return (
     <>
-      <div className="mt-40" />
+      <div className="mt-40" id="skills" />
       <Title size="lg" className="text-center">
         <h2>Skills</h2>
       </Title>
