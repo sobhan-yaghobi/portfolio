@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --light-background: #fff5ee;
+  --dark-background: #0f0616;
+}
+
 @layer base {
   @font-face {
     font-family: "dana";
@@ -113,6 +118,10 @@
     @apply font-title text-4xl sm:text-6xl md:text-8xl;
   }
 
+  .title-xxl *:first-child {
+    @apply font-title text-7xl sm:text-8xl md:text-9xl;
+  }
+
   .outline-active {
     background-color: var(--fallback-b1, oklch(var(--bc) / var(--tw-bg-opacity)));
     color: var(--fallback-b1, oklch(var(--b1) / var(--tw-text-opacity)));
@@ -145,7 +154,7 @@
     background-image: linear-gradient(
       to bottom,
       theme("colors.base-200"),
-      theme("colors.base-300") 60%
+      var(--light-background) 60%
     );
   }
 

@@ -3,7 +3,7 @@ import React from "react"
 
 type TitleProps = {
   className?: string
-  size?: "sm" | "md" | "lg" | "xl"
+  size?: "sm" | "md" | "lg" | "xl" | "xxl"
   isIcon?: boolean
 }
 
@@ -16,7 +16,9 @@ const Title: React.FC<React.PropsWithChildren<TitleProps>> = ({
   return (
     <div
       className={cn(
-        size === "xl"
+        size === "xxl"
+          ? "title-xxl"
+          : size === "xl"
           ? "title-xl"
           : size === "lg"
           ? "title-lg"

@@ -14,7 +14,6 @@ const config: Config = {
         oswald: "oswald",
         roboto: "roboto",
       },
-      colors: {},
       container: {
         center: true,
         padding: {
@@ -49,13 +48,13 @@ const config: Config = {
       {
         light: {
           ...require("daisyui/src/theming/themes")["light"],
-          background: "#fff5ee",
+          background: "var(--light-background)",
         },
       },
       {
         dark: {
           ...require("daisyui/src/theming/themes")["dark"],
-          background: "#0f0616",
+          background: "var(--dark-background)",
         },
       },
     ],

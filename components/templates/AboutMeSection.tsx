@@ -1,12 +1,14 @@
 "use client"
 
 import React from "react"
+import t from "@/messages/fa.json"
 import Title from "../modules/Title"
 import Image from "next/image"
 import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
 
 const AboutSection = () => {
+  const { title, desc } = t.about.me
   useGSAP(() => {
     let images = gsap.utils.toArray("#horizontal .content")
 
@@ -24,26 +26,9 @@ const AboutSection = () => {
       <div className="flex max-lg:flex-col max-xl:text-center max-xl:items-center overflow-x-hidden">
         <div className="flex flex-col gap-6 flex-1 overflow-hidden [&>p]:text-justify max-xl:[&>p]:text-center xl:px-6">
           <Title size="lg">
-            <h4>Lorem ipsum dolor sit amet consectetur.</h4>
+            <h4>{title}</h4>
           </Title>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, minima nisi! Sit
-            tempora quidem dolorem optio itaque. Suscipit dicta magni similique id? Exercitationem
-            veniam reiciendis porro, tempora quae iusto laborum. Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Tempore, minima nisi! Sit tempora quidem dolorem optio
-            itaque. Suscipit dicta magni similique id? Exercitationem veniam reiciendis porro,
-            tempora quae iusto laborum.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore enim corporis at eos
-            reprehenderit sequi non velit, nemo, beatae exercitationem facere? Tenetur optio eius
-            aut nisi? Quibusdam pariatur quos delectus.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore enim corporis at eos
-            reprehenderit sequi non velit, nemo, beatae exercitationem facere? Tenetur optio eius
-            aut nisi? Quibusdam pariatur quos delectus.
-          </p>
+          <p dangerouslySetInnerHTML={{ __html: desc }} />
         </div>
 
         <Image
