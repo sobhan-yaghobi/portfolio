@@ -1,18 +1,18 @@
 import React from "react"
+import t from "@/messages/fa.json"
+
 import Magnetic from "../../modules/Magnetic"
 import Link from "next/link"
 import Search from "../../modules/Search"
 import ShareButton from "../../modules/Share.button"
-import ChangeLangButton from "../../modules/ChangeLang.button"
 import ChangeThemeButton from "../../modules/ChangeTheme.button"
-import { useTranslations } from "next-intl"
 
 type DesktopNavbarProps = {
   menuList: { href: string; title: string; isSoon: boolean }[]
 }
 
 const DesktopNavbar: React.FC<DesktopNavbarProps> = ({ menuList }) => {
-  const t = useTranslations("utils")
+  const { utils } = t
   return (
     <nav className="h-full hidden !justify-between lg:center">
       <ul className="flex gap-6">
@@ -21,7 +21,7 @@ const DesktopNavbar: React.FC<DesktopNavbarProps> = ({ menuList }) => {
             <li className="indicator">
               {item.isSoon && (
                 <span className="indicator-item badge badge-primary badge-sm -top-1">
-                  {t("soon")}
+                  {utils.soon}
                 </span>
               )}
               <Link className="relative group" href={item.href}>
@@ -35,7 +35,6 @@ const DesktopNavbar: React.FC<DesktopNavbarProps> = ({ menuList }) => {
       <div className="flex items-center gap-1">
         <Search />
         <ShareButton rtl />
-        <ChangeLangButton />
         <ChangeThemeButton />
       </div>
     </nav>

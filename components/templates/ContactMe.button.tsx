@@ -1,10 +1,10 @@
 "use client"
 
 import React from "react"
+import t from "@/messages/fa.json"
 import { isUserUseMobile } from "@/utils/function"
 
 import { useEffect, useState } from "react"
-import { useTranslations } from "use-intl"
 
 import { Phone } from "lucide-react"
 
@@ -19,7 +19,7 @@ type ContactMeButtonProps = {
 
 const ContactMeButton: React.FC<ContactMeButtonProps> = ({ className, value }) => {
   const phoneNumber = "+98 939 600 7232"
-  const t = useTranslations("utils")
+  const { utils } = t
   const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
@@ -32,7 +32,7 @@ const ContactMeButton: React.FC<ContactMeButtonProps> = ({ className, value }) =
       ? phoneNumber
       : typeof value === "string"
       ? value
-      : t("contact")
+      : utils.contact
 
   if (isMobile) {
     return (

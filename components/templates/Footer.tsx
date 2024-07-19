@@ -1,4 +1,5 @@
 import React from "react"
+import t from "@/messages/fa.json"
 
 import { ArrowUp, AtSign } from "lucide-react"
 
@@ -7,17 +8,15 @@ import CopyToClipboard from "@/components/modules/CopyToClipboard"
 import ContactMeButton from "../templates/ContactMe.button"
 import ScrollTo from "@/components/modules/ScrollTo"
 import Email from "@/components/modules/Email"
-import { getTranslations } from "next-intl/server"
 
 const Footer: React.FC = async () => {
-  const t = await getTranslations("social")
-  const s = "telegram.title"
+  const { social } = t
   const socialFollowItems: SocialFollowBoxProps[] = [
     {
       id: "1",
-      title: t(s),
-      subtitle: t("telegram.subtitle"),
-      desc: t("telegram.desc"),
+      title: social.telegram.title,
+      subtitle: social.telegram.subtitle,
+      desc: social.telegram.desc,
       logoSrc: "/image/telegram.png",
       backImgSrc: "/image/telegram-background.png",
       badgeWrapper: (
@@ -31,9 +30,9 @@ const Footer: React.FC = async () => {
     },
     {
       id: "2",
-      title: t("instagram.title"),
-      subtitle: t("instagram.subtitle"),
-      desc: t("instagram.desc"),
+      title: social.instagram.title,
+      subtitle: social.instagram.subtitle,
+      desc: social.instagram.desc,
       logoSrc: "/image/instagram.png",
       backImgSrc: "/image/instagram-background.png",
       badgeWrapper: (
@@ -47,9 +46,9 @@ const Footer: React.FC = async () => {
     },
     {
       id: "3",
-      title: t("github.title"),
-      subtitle: t("github.subtitle"),
-      desc: t("github.desc"),
+      title: social.github.title,
+      subtitle: social.github.subtitle,
+      desc: social.github.desc,
       logoSrc: "/packages/github.svg",
       backImgSrc: "/image/github-background.png",
       badgeWrapper: (
@@ -63,9 +62,9 @@ const Footer: React.FC = async () => {
     },
     {
       id: "4",
-      title: t("linkedin.title"),
-      subtitle: t("linkedin.subtitle"),
-      desc: t("linkedin.desc"),
+      title: social.linkedin.title,
+      subtitle: social.linkedin.subtitle,
+      desc: social.linkedin.desc,
       logoSrc: "/image/linkedin.png",
       backImgSrc: "/image/linkedin-background.png",
       badgeWrapper: (

@@ -2,9 +2,9 @@
 
 import React, { useRef } from "react"
 import { useGSAP } from "@gsap/react"
-import { useTranslations } from "next-intl"
-
+import t from "@/messages/fa.json"
 import { animateLanding } from "@/utils/animation"
+import "../../app/globals.css"
 
 import { CircleUser } from "lucide-react"
 
@@ -16,8 +16,11 @@ import StarAnimation from "./Star.animation"
 import Link from "next/link"
 
 const HomeLanding: React.FC = () => {
-  const t = useTranslations()
   const container = useRef<HTMLDivElement>(null)
+  const titleText = t.heroSection.title.replace(
+    /[Nn][Ee][Xx][Tt] [Jj][Ss]/g,
+    `<span class="highlight-title">Next js</span>`
+  )
 
   //! ---------- Animation Action
   useGSAP(() => animateLanding(), { scope: container })
@@ -276,16 +279,10 @@ const HomeLanding: React.FC = () => {
           alt="profile"
         />
         <Title size="lg" className="text-center lg:whitespace-pre">
-          <h1>
-            {t.rich("heroSection.title", {
-              important: (chunks) => (
-                <span className="font-oswald font-bold text-primary">{chunks}</span>
-              ),
-            })}
-          </h1>
+          <h1 dangerouslySetInnerHTML={{ __html: titleText }}></h1>
         </Title>
         <p id="desc" className="w-full text-center px-5 mt-4 opacity-50 md:px-24 lg:px-56 xl:px-80">
-          {t("heroSection.desc")}
+          {t.heroSection.desc}
         </p>
       </div>
       {/*//! ---------- Quick Access Buttons ----------  */}
@@ -297,7 +294,7 @@ const HomeLanding: React.FC = () => {
         <Link href={"/about"}>
           <button className="access-button btn btn-ghost">
             <CircleUser className="icon" />
-            {t("utils.cv")}
+            {t.utils.cv}
           </button>
         </Link>
       </div>

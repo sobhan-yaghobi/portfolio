@@ -1,18 +1,19 @@
 import React from "react"
-import { useTranslations } from "next-intl"
+import t from "@/messages/fa.json"
+
 import Animation from "@/components/modules/Animation"
 import DesktopNavbar from "./DesktopNavbar"
 import MobileNavbar from "./MobileNavbar"
 
 const Header: React.FC = () => {
-  const t = useTranslations("header")
+  const { header } = t
   const menu = [
-    { href: "/", title: t("item.home"), isSoon: false },
-    { href: "/#projects", title: t("item.projects"), isSoon: false },
-    { href: "/about", title: t("item.about"), isSoon: false },
-    { href: "/about#skills", title: t("item.skills"), isSoon: false },
-    { href: "/", title: t("item.experience"), isSoon: true },
-    { href: "/", title: t("item.contact"), isSoon: true },
+    { href: "/", title: header.item.home, isSoon: false },
+    { href: "/#projects", title: header.item.projects, isSoon: false },
+    { href: "/about", title: header.item.about, isSoon: false },
+    { href: "/about#skills", title: header.item.skills, isSoon: false },
+    { href: "/", title: header.item.experience, isSoon: true },
+    { href: "/", title: header.item.contact, isSoon: true },
   ]
 
   return (

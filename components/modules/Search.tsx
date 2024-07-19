@@ -2,25 +2,25 @@
 
 import React from "react"
 import { random } from "@/utils/function"
-
-import { useTranslations } from "next-intl"
+import t from "@/messages/fa.json"
 
 import { SearchIcon } from "lucide-react"
 
 const Search: React.FC = () => {
-  const t = useTranslations("header.search")
-  const hashtags = [t("hashtag.exper"), t("hashtag.project"), t("hashtag.skills")]
+  const { hashtag, placeholder } = t.header.search
+
+  const hashtags = [hashtag.experience, hashtag.project, hashtag.skills]
   const getRandomHashtag = hashtags.at(random(0, hashtags.length))
 
   return (
     <label
-      className={`input input-bordered input-sm bg-transparent flex items-center relative rtl:pr-11 ltr:pl-11`}
+      className={`input input-bordered input-sm bg-transparent flex items-center relative pr-11`}
     >
-      <SearchIcon className={`icon absolute rtl:right-3 ltr:left-3`} />
+      <SearchIcon className={`icon absolute right-3`} />
       <input
         type="text"
         className="grow placeholder:opacity-80"
-        placeholder={t("placeholder") + " " + getRandomHashtag}
+        placeholder={placeholder + " " + getRandomHashtag}
       />
     </label>
   )

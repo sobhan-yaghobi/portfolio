@@ -1,15 +1,14 @@
 "use client"
 
 import React, { useState } from "react"
+import t from "@/messages/fa.json"
 
 import { MenuIcon, X } from "lucide-react"
 
 import ShareButton from "../../modules/Share.button"
-import ChangeLangButton from "../../modules/ChangeLang.button"
 import ChangeThemeButton from "../../modules/ChangeTheme.button"
 import Link from "next/link"
 import Search from "../../modules/Search"
-import { useTranslations } from "next-intl"
 
 type MobileNavbarProps = {
   menuList: { href: string; title: string; isSoon: boolean }[]
@@ -17,12 +16,11 @@ type MobileNavbarProps = {
 
 const MobileNavbar: React.FC<MobileNavbarProps> = ({ menuList }) => {
   const [isMenu, setIsMenu] = useState(false)
-  const t = useTranslations("utils")
+  const { utils } = t
   return (
     <div dir="ltr" className="mobile w-full h-full center justify-between lg:hidden">
       <div className="flex">
         <ShareButton />
-        <ChangeLangButton />
       </div>
       <div>
         <aside dir="rtl" className={`drawer`}>
@@ -62,7 +60,7 @@ const MobileNavbar: React.FC<MobileNavbarProps> = ({ menuList }) => {
                 <li key={index} className="indicator">
                   {item.isSoon && (
                     <span className="indicator-item badge badge-primary badge-sm -top-1">
-                      {t("soon")}
+                      {utils.soon}
                     </span>
                   )}
                   <Link className="relative group" href={item.href}>

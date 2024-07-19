@@ -37,9 +37,6 @@
   }
 
   html {
-    font-family: "roboto";
-  }
-  html:lang("fa") {
     font-family: "iran-sans";
   }
 }
@@ -49,13 +46,8 @@
     text-wrap: balance;
   }
 
-  [lang="fa"] .font-title {
+  .font-title {
     font-family: "dana";
-    font-weight: 900;
-  }
-
-  [lang="en"] .font-title {
-    font-family: "oswald";
     font-weight: 900;
   }
 
@@ -76,6 +68,9 @@
 }
 
 @layer components {
+  .highlight-title {
+    @apply font-oswald font-bold text-primary;
+  }
   .text-gradient {
     @apply bg-gradient-to-tl bg-clip-text text-transparent transition duration-100;
   }

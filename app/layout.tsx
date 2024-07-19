@@ -1,7 +1,4 @@
 import type { Metadata } from "next"
-import { NextIntlClientProvider } from "next-intl"
-import { getLocale, getMessages } from "next-intl/server"
-import { getLangDir } from "rtl-detect"
 
 import "./globals.css"
 
@@ -18,19 +15,13 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
-  const locale = await getLocale()
-  const messages = await getMessages()
-  const direction = getLangDir(locale)
-
   return (
-    <html lang={locale} dir={direction} data-theme="dark">
+    <html dir="rtl" lang="fa" data-theme="dark">
       <body>
-        <NextIntlClientProvider messages={messages}>
-          <ScrollSmooth>
-            {children}
-            <Toaster />
-          </ScrollSmooth>
-        </NextIntlClientProvider>
+        <ScrollSmooth>
+          {children}
+          <Toaster />
+        </ScrollSmooth>
       </body>
     </html>
   )
