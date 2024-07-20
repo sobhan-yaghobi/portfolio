@@ -2,6 +2,7 @@
 
 import React, { useState } from "react"
 import { v4 as uuid } from "uuid"
+import t from "@/messages/fa.json"
 
 import { ArrowUpRight } from "lucide-react"
 
@@ -164,9 +165,10 @@ const Skills = () => {
     <>
       <div className="mt-40" id="skills" />
       <Title size="lg" className="text-center">
-        <h2>Skills</h2>
+        <h2>{t.header.item.skills}</h2>
       </Title>
       <div className="my-12 grid grid-cols-1 gap-6 lg:grid-cols-2">
+        <nav>{mainSkill?.content}</nav>
         <ul className="flex flex-wrap gap-3">
           {skills.map((item) => (
             <li key={item.id}>
@@ -186,7 +188,6 @@ const Skills = () => {
             </li>
           ))}
         </ul>
-        <nav>{mainSkill?.content}</nav>
       </div>
     </>
   )
