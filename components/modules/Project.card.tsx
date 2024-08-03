@@ -1,14 +1,23 @@
+import { TypeProject } from "@/lib/types/project.type"
 import Image from "next/image"
 import React from "react"
 
-const ProjectCard = () => {
+const ProjectCard: React.FC<TypeProject> = ({
+  id,
+  image,
+  title,
+  link,
+  source,
+  description,
+  skillList,
+}) => {
   return (
     <div className="card bg-base-100 flex-1 min-w-72 max-w-full h-96 shadow-xl">
       <figure className="p-2">
         <Image
           width={300}
           height={300}
-          src="/image/b46d5511f8b5c3b9711087d76cee70b1.jpg"
+          src={image}
           className="w-full h-full min-size-60 object-cover rounded-xl"
           alt="project-image"
         />

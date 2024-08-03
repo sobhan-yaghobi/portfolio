@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react"
 import { Moon, Sun } from "lucide-react"
-import { cn } from "@/utils/function"
+import { cn } from "@/lib/utils"
 
 type ChangeThemeButtonProps = {
   className?: string
