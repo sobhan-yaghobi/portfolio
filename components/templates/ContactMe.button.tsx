@@ -2,7 +2,7 @@
 
 import React from "react"
 import t from "@/messages/fa.json"
-import { isUserUseMobile } from "@/utils/function"
+import { isUserUseMobile } from "@/lib/utils"
 
 import { useEffect, useState } from "react"
 

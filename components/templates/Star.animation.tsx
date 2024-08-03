@@ -3,7 +3,7 @@
 import React, { useState } from "react"
 import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
-import { random } from "@/utils/function"
+import { random } from "@/lib/utils"
 
 type StarAnimationProps = {
   delay?: gsap.TweenValue

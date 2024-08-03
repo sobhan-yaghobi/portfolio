@@ -3,7 +3,7 @@
 import React from "react"
 
 import { useGSAP } from "@gsap/react"
-import { animation, delay, duration, gsapAnimation, target } from "@/utils/animation"
+import { animation, delay, duration, gsapAnimation, target } from "@/lib/animation"
 
 type GsapProps = {
   target: target

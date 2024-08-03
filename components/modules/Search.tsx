@@ -1,7 +1,7 @@
 "use client"
 
 import React from "react"
-import { random } from "@/utils/function"
+import { random } from "@/lib/utils"
 import t from "@/messages/fa.json"
 
 import { SearchIcon } from "lucide-react"

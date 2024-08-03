@@ -3,7 +3,7 @@
 import React, { useRef } from "react"
 import { useGSAP } from "@gsap/react"
 import t from "@/messages/fa.json"
-import { animateLanding } from "@/utils/animation"
+import { animateLanding } from "@/lib/animation"
 import "../../app/globals.css"
 
 import { CircleUser } from "lucide-react"
