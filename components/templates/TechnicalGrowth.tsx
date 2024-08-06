@@ -1,12 +1,16 @@
 import React from "react"
 import t from "@/messages/fa.json"
+import { isEven } from "@/lib/utils"
+import { getTechnicalGrowthList } from "@/lib/fetcher/technicalGrowth"
 
 import { Check } from "lucide-react"
 
 import Title from "../modules/Title"
 
 const TechnicalGrowth: React.FC = async () => {
-  return (
+  const technicalGrowthList = await getTechnicalGrowthList()
+
+  return technicalGrowthList.length ? (
     <section>
       <Title size="lg" className="text-center">
         <h2>{t.home.technicalGrowth.title}</h2>
@@ -15,67 +19,26 @@ const TechnicalGrowth: React.FC = async () => {
         </h4>
       </Title>
       <ul className="timeline timeline-snap-icon timeline-vertical max-md:timeline-compact my-12">
-        <li>
-          <Check className="timeline-middle bg-primary rounded-full" />
-          <div className="timeline-start md:text-end mx-3 mb-10">
-            <time className="italic">{t.home.technicalGrowth.timeline.one.subtitle}</time>
-            <Title className="my-2">
-              <h3>{t.home.technicalGrowth.timeline.one.title}</h3>
-            </Title>
-            <p>{t.home.technicalGrowth.timeline.one.desc}</p>
-          </div>
-          <hr className="bg-primary" />
-        </li>
-
-        <li>
-          <Check className="timeline-middle bg-primary rounded-full" />
-          <div className="timeline-end mx-3 mb-10">
-            <time className="italic">{t.home.technicalGrowth.timeline.two.subtitle}</time>
-            <Title className="my-2">
-              <h3>{t.home.technicalGrowth.timeline.two.title}</h3>
-            </Title>
-            <p>{t.home.technicalGrowth.timeline.two.desc}</p>
-          </div>
-          <hr className="bg-primary" />
-        </li>
-
-        <li>
-          <Check className="timeline-middle bg-primary rounded-full" />
-          <div className="timeline-start md:text-end mx-3 mb-10">
-            <time className="italic">{t.home.technicalGrowth.timeline.three.subtitle}</time>
-            <Title className="my-2">
-              <h3>{t.home.technicalGrowth.timeline.three.title}</h3>
-            </Title>
-            <p>{t.home.technicalGrowth.timeline.three.desc}</p>
-          </div>
-          <hr className="bg-primary" />
-        </li>
-
-        <li>
-          <Check className="timeline-middle bg-primary rounded-full" />
-          <div className="timeline-end mx-3 mb-10">
-            <time className="italic">{t.home.technicalGrowth.timeline.four.subtitle}</time>
-            <Title className="my-2">
-              <h3>{t.home.technicalGrowth.timeline.four.title}</h3>
-            </Title>
-            <p>{t.home.technicalGrowth.timeline.four.desc}</p>
-          </div>
-          <hr className="bg-primary" />
-        </li>
-
-        <li>
-          <Check className="timeline-middle bg-primary rounded-full" />
-          <div className="timeline-start md:text-end mx-3 mb-10">
-            <time className="italic">{t.home.technicalGrowth.timeline.five.subtitle}</time>
-            <Title className="my-2">
-              <h3>{t.home.technicalGrowth.timeline.five.title}</h3>
-            </Title>
-            <p>{t.home.technicalGrowth.timeline.five.desc}</p>
-          </div>
-        </li>
+        {technicalGrowthList.map((technicalGrowth, index) => (
+          <li key={technicalGrowth.id}>
+            <Check className="timeline-middle bg-primary rounded-full" />
+            <div
+              className={`${
+                isEven(index) ? "timeline-start" : "timeline-end"
+              } md:text-end mx-3 mb-10`}
+            >
+              <time className="italic">{technicalGrowth.subtitle}</time>
+              <Title className="my-2">
+                <h3>{technicalGrowth.title}</h3>
+              </Title>
+              <p>{technicalGrowth.description}</p>
+            </div>
+            {index + 1 !== technicalGrowthList.length && <hr className="bg-primary" />}
+          </li>
+        ))}
       </ul>
     </section>
-  )
+  ) : null
 }
 
 export default TechnicalGrowth

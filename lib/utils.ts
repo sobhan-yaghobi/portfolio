@@ -18,3 +18,5 @@ export const isUserUseMobile = (userAgent: string) =>
 
 export const getWords = (sentence: string, wordsNumber: number) =>
   sentence.split(" ").slice(0, wordsNumber).join(" ")
+
+export const isEven = (number: number) => number % 2 === 0
