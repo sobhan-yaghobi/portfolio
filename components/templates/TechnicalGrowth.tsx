@@ -24,8 +24,8 @@ const TechnicalGrowth: React.FC = async () => {
             <Check className="timeline-middle bg-primary rounded-full" />
             <div
               className={`${
-                isEven(index) ? "timeline-start" : "timeline-end"
-              } md:text-end mx-3 mb-10`}
+                isEven(index) ? "timeline-start md:text-end" : "timeline-end"
+              } mx-3 mb-10`}
             >
               <time className="italic">{technicalGrowth.subtitle}</time>
               <Title className="my-2">
