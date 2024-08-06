@@ -1,15 +1,12 @@
 import React from "react"
 import t from "@/messages/fa.json"
+import { getProjectList } from "@/lib/fetcher/project"
 
 import Title from "../modules/Title"
 import ProjectCard from "../modules/Project.card"
-import { env } from "process"
-import { TypeProject } from "@/lib/types/project.type"
 
 const Projects: React.FC = async () => {
-  const projectList = (await fetch(`${env.NEXT_PUBLIC_API_URL}/project`, {
-    next: { revalidate: 60 },
-  }).then((res) => res.json())) as TypeProject[]
+  const projectList = await getProjectList()
 
   return projectList.length ? (
     <>
