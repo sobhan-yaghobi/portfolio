@@ -15,3 +15,6 @@ export const isUserUseMobile = (userAgent: string) =>
   )
     ? true
     : false
+
+export const getWords = (sentence: string, wordsNumber: number) =>
+  sentence.split(" ").slice(0, wordsNumber).join(" ")
