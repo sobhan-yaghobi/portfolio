@@ -6,5 +6,5 @@ export type TypeSkill = {
   image: string
   link: string
   description: string
-  projectList: TypeProject[]
+  projectList?: TypeProject[]
 }

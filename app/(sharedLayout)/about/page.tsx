@@ -1,10 +1,12 @@
 import React from "react"
+import { getSkillList } from "@/lib/fetcher/skill"
 
 import AboutMeLanding from "@/components/templates/AboutMeLanding"
 import AboutSection from "@/components/templates/AboutMeSection"
 import Skills from "@/components/templates/Skills"
 
-const page: React.FC = () => {
+const page: React.FC = async () => {
+  const skillList = await getSkillList()
   return (
     <>
       <AboutMeLanding />
@@ -13,7 +15,7 @@ const page: React.FC = () => {
       <AboutSection />
       <div className="mb-40" />
 
-      <Skills />
+      <Skills skillList={skillList} />
       <div className="mb-40" />
     </>
   )

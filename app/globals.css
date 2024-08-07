@@ -129,7 +129,7 @@
   .outline-active:hover {
     color: unset;
     background-color: unset;
-    border: solid 0.1rem var(--fallback-b1, oklch(var(--bc) / var(--tw-bg-opacity)));
+    border: solid 2px var(--fallback-b1, oklch(var(--bc) / var(--tw-bg-opacity)));
   }
 
   .glass {
