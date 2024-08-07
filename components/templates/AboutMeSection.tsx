@@ -23,8 +23,8 @@ const AboutSection = () => {
   }, [])
   return (
     <section>
-      <div className="flex max-lg:flex-col max-xl:text-center max-xl:items-center overflow-x-hidden">
-        <div className="flex flex-col gap-6 flex-1 overflow-hidden [&>p]:text-justify max-xl:[&>p]:text-center xl:px-6">
+      <div className="py-3 flex max-lg:flex-col max-xl:text-center max-xl:items-center overflow-x-hidden">
+        <div className="flex flex-col gap-6 flex-1 [&>p]:text-justify max-xl:[&>p]:text-center xl:px-6">
           <Title size="lg">
             <h4>{title}</h4>
           </Title>
