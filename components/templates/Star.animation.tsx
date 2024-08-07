@@ -23,7 +23,7 @@ const StarAnimation: React.FC<StarAnimationProps> = ({ delay }) => {
     elements.forEach((elem) =>
       gsap.fromTo(
         elem,
-        { opacity: 0, scale: elem.style.scale },
+        { opacity: 0 },
         {
           delay: delay,
           opacity: 1,
@@ -39,14 +39,14 @@ const StarAnimation: React.FC<StarAnimationProps> = ({ delay }) => {
 
   const recArray = [
     {
-      count: 50,
+      count: 30,
       direction: "T",
       left: { min: 0, max: 100 },
       top: { min: 0, max: 50 },
     },
 
     {
-      count: 50,
+      count: 30,
       direction: "B",
       left: { min: 0, max: 100 },
       top: { min: 50, max: 100 },
@@ -61,11 +61,10 @@ const StarAnimation: React.FC<StarAnimationProps> = ({ delay }) => {
             <div
               key={index}
               data-duration={random(5, 10)}
-              className={`star -z-10 blur-sm ${item.direction}`}
+              className={`star ${item.direction}`}
               style={{
                 left: `${random(item.left.min, item.left.max)}%`,
                 top: `${random(item.top.min, item.top.max)}%`,
-                scale: random(0.3, 0.5),
               }}
             />
           ))

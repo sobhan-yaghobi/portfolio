@@ -159,6 +159,7 @@
   }
 
   .star {
-    @apply w-1 h-4 bg-white/30 center absolute after:w-4 after:h-1 after:bg-white/30 after:absolute;
+    @apply bg-white size-0.5 rounded-full -z-10 absolute;
+    filter: blur(1.5px);
   }
 }
