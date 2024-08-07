@@ -6,7 +6,7 @@ import Image from "next/image"
 
 const ExperienceAndArticleCard = () => {
   return (
-    <div className="card bg-base-100 min-w-72 max-w-full h-[470px] flex-1 shadow-xl">
+    <div className="card bg-base-200 min-w-72 max-w-full h-[470px] flex-1 shadow-xl">
       <figure className="h-3/6 p-2 center relative overflow-visible">
         <Image
           width={300}
@@ -36,7 +36,7 @@ const ExperienceAndArticleCard = () => {
           <input
             type="text"
             placeholder="leave a comment ..."
-            className="input input-md input-bordered flex-1"
+            className="input input-md input-bordered bg-transparent flex-1"
           />
           <button className="btn">
             <Send className="icon" />
