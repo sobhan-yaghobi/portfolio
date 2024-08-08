@@ -18,7 +18,7 @@ const Header: React.FC = () => {
 
   return (
     <header className="h-20 w-full z-40 relative">
-      <AnimateElement className="h-full container" animation="fadeInUp" duration={1.5}>
+      <AnimateElement className="h-full container" selectedAnimationName="fadeInUp" duration={1.5}>
         <DesktopNavbar menuList={menu} />
         <MobileNavbar menuList={menu} />
       </AnimateElement>

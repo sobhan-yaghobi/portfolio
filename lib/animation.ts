@@ -1,26 +1,6 @@
 import gsap from "gsap"
 import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.shared-runtime"
 
-//! ---------- Public Animations ----------
-
-export type target = gsap.TweenTarget
-export type duration = number
-export type delay = number
-
-export type animation = keyof typeof gsapAnimation
-
-type TypeFadeInUp = { target: target; duration?: duration; delay?: delay }
-
-export const gsapAnimation = {
-  fadeInUp: ({ target, delay, duration }: TypeFadeInUp) => {
-    gsap.fromTo(
-      target,
-      { y: -50, opacity: 0 },
-      { y: 0, opacity: 1, ...(duration && { duration }), ...(delay && { delay }) }
-    )
-  },
-}
-
 //! ---------- Custom Animations ----------
 
 export const animatePageIn = () => {

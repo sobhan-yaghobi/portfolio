@@ -3,27 +3,26 @@
 import React, { useRef } from "react"
 
 import { useGSAP } from "@gsap/react"
-import { animation, delay, duration, gsapAnimation } from "@/lib/animation"
+import { TypeAnimationList, TypeAnimationUtilParam } from "@/lib/types/animation"
+import { animationList } from "@/lib/animation/utils"
 
 type TypeAnimateElementProps = {
-  duration?: duration
-  delay?: delay
-  animation: animation
   className?: string
-}
+  selectedAnimationName: TypeAnimationList
+} & Omit<TypeAnimationUtilParam, "target">
 
 const AnimateElement: React.FC<React.PropsWithChildren<TypeAnimateElementProps>> = ({
   duration,
   delay,
-  animation,
   children,
+  selectedAnimationName,
   className,
 }) => {
   const elementRef = useRef<HTMLDivElement>(null)
-  const mainAnimation = gsapAnimation[animation]
+  const selectedAnimation = animationList[selectedAnimationName]
 
   useGSAP(() => {
-    if (elementRef.current) mainAnimation({ target: elementRef.current, duration, delay })
+    if (elementRef.current) selectedAnimation({ target: elementRef.current, duration, delay })
   }, [])
 
   return (
