@@ -8,7 +8,7 @@ import Link from "next/link"
 const ButtonList: React.FC = () => {
   const { seeMyCv } = faMessages.utils
   return (
-    <div id="landing-button-list" className="h-fit my-12 flex items-center overflow-hidden">
+    <div id="landing-button-list" className="h-fit my-6 flex items-center overflow-hidden">
       <div className="access-button">
         <ContactMeButton className="btn btn-primary" />
       </div>

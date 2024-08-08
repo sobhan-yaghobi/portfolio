@@ -4,7 +4,7 @@ import "@/app/globals.css"
 
 import React, { useRef } from "react"
 import { useGSAP } from "@gsap/react"
-import { landingAnimate } from "@/lib/animation/homePage"
+import { landingAnimate } from "@/lib/animation/HomeLanding"
 
 import PackageList from "./PackageList"
 import ContentLanding from "./Content"

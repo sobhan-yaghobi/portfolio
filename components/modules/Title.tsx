@@ -2,12 +2,14 @@ import { cn } from "@/lib/utils"
 import React from "react"
 
 type TitleProps = {
+  id?: string
   className?: string
   size?: "sm" | "md" | "lg" | "xl" | "xxl"
   isIcon?: boolean
 }
 
 const Title: React.FC<React.PropsWithChildren<TitleProps>> = ({
+  id,
   children,
   className,
   size,
@@ -15,6 +17,7 @@ const Title: React.FC<React.PropsWithChildren<TitleProps>> = ({
 }) => {
   return (
     <div
+      id={id}
       className={cn(
         size === "xxl"
           ? "title-xxl"

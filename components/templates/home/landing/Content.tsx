@@ -12,8 +12,9 @@ const ContentLanding: React.FC = () => {
   )
   return (
     <>
-      <div id="landing-content-wrapper" className="center flex-col mt-12">
+      <div id="landing-content-wrapper" className="center flex-col lg:mt-12">
         <Image
+          id="landing-profile"
           width={200}
           height={200}
           className="bg-neutral size-40 mb-4 rounded-full object-cover"
@@ -22,13 +23,13 @@ const ContentLanding: React.FC = () => {
           alt="profile"
         />
 
-        <Title size="lg" className="text-center lg:whitespace-pre">
-          <h1 dangerouslySetInnerHTML={{ __html: titleText }}></h1>
+        <Title id="landing-title" size="lg" className="text-center lg:whitespace-pre">
+          <h1 dangerouslySetInnerHTML={{ __html: titleText }} />
         </Title>
 
         <p
           id="landing-description"
-          className="w-full text-center px-5 mt-4 opacity-50 md:px-24 lg:px-56 xl:px-80"
+          className="w-full text-center px-5 my-6 opacity-50 md:px-24 lg:px-56 xl:px-80"
         >
           {desc}
         </p>
