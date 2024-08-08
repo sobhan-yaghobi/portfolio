@@ -3,37 +3,6 @@ import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.share
 
 //! ---------- Custom Animations ----------
 
-export const animatePageIn = () => {
-  const banner = document.querySelector("#banner")
-
-  if (banner) {
-    const tl = gsap.timeline()
-
-    tl.set([banner], {
-      yPercent: 0,
-    }).to([banner], {
-      yPercent: 100,
-      stagger: 0.2,
-    })
-  }
-}
-
-export const animatePageOut = (href: string, router: AppRouterInstance) => {
-  const banner = document.querySelector("#banner")
-
-  if (banner) {
-    const tl = gsap.timeline()
-    tl.set([banner], {
-      yPercent: -100,
-    }).to([banner], {
-      y: 0,
-      onComplete: () => {
-        router.push(href)
-      },
-    })
-  }
-}
-
 export const animateLanding = () => {
   const sectionOne = () => {
     const tl = gsap.timeline({ delay: 0.2 })

@@ -1,11 +1,11 @@
 "use client"
 
 import React, { useRef } from "react"
-import { useGSAP } from "@gsap/react"
 import { gsap } from "gsap"
 import { Flip } from "gsap/Flip"
+import { useGSAP } from "@gsap/react"
 import ScrollTrigger from "gsap/ScrollTrigger"
-import { animatePageIn } from "@/lib/animation"
+import { pageInAnimate } from "@/lib/animation/pageTransition"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 
 gsap.registerPlugin(useGSAP, Flip, ScrollTrigger, ScrollToPlugin)
@@ -15,11 +15,11 @@ const template: React.FC<React.PropsWithChildren> = ({ children }) => {
 
   useGSAP(() => {
     window.scrollTo(0, 0)
-    animatePageIn()
+    pageInAnimate()
   }, [])
   return (
     <div>
-      <div id="banner" className="bg-[#0f0616] w-full min-h-screen fixed top-0 left-0 z-50"></div>
+      <div id="banner" className="bg-black w-full min-h-screen fixed top-0 left-0 z-50"></div>
       <div ref={smoother}>{children}</div>
     </div>
   )

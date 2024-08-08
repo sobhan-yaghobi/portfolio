@@ -9,7 +9,7 @@ const Header: React.FC = () => {
   const { header } = t
   const menu = [
     { href: "/", title: header.item.home, isSoon: false },
-    { href: "/#projects", title: header.item.projects, isSoon: false },
+    { href: "/#projectList", title: header.item.projects, isSoon: false },
     { href: "/about", title: header.item.about, isSoon: false },
     { href: "/about#skills", title: header.item.skills, isSoon: false },
     { href: "/", title: header.item.experience, isSoon: true },
