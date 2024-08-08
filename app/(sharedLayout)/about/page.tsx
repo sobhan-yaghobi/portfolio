@@ -1,8 +1,8 @@
 import React from "react"
 import { getSkillList } from "@/lib/fetcher/skill"
 
-import AboutMeLanding from "@/components/templates/AboutMeLanding"
-import AboutSection from "@/components/templates/AboutMeSection"
+import AboutMeLanding from "@/components/templates/aboutMe/Landing"
+import LifeGlimpseAndSoftSkills from "@/components/templates/aboutMe/LifeGlimpseAndSoftSkills"
 import Skills from "@/components/templates/Skills"
 
 const page: React.FC = async () => {
@@ -12,7 +12,7 @@ const page: React.FC = async () => {
       <AboutMeLanding />
       <div className="mb-40" />
 
-      <AboutSection />
+      <LifeGlimpseAndSoftSkills />
       <div className="mb-40" />
 
       <Skills skillList={skillList} />

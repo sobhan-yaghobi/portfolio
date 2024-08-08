@@ -1,16 +1,19 @@
 import React from "react"
-import t from "@/messages/fa.json"
+import faMessages from "@/messages/fa.json"
 
-import StarAnimation from "./Star.animation"
+import StarAnimation from "../Star.animation"
 
 import { FileText, FolderDown } from "lucide-react"
-import Link from "next/link"
-import Title from "../modules/Title"
 
-const AboutMeLanding = () => {
-  const { about } = t
+import Link from "next/link"
+import Title from "../../modules/Title"
+
+const Landing: React.FC = () => {
+  const { about } = faMessages
+
   return (
     <section className="flex flex-col items-center">
+      <div className="bg-black size-full absolute top-0 left-0 -z-50"></div>
       <StarAnimation />
 
       <div id="liner" className="size-96 mt-12 center relative rounded-full text-nowrap">
@@ -45,4 +48,4 @@ const AboutMeLanding = () => {
   )
 }
 
-export default AboutMeLanding
+export default Landing

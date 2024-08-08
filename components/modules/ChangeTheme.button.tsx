@@ -1,26 +1,28 @@
 "use client"
 
-import React, { useEffect, useState } from "react"
+import React, { useEffect } from "react"
 import { Moon, Sun } from "lucide-react"
 import { cn } from "@/lib/utils"
+
+import useTheme from "@/hooks/store/useTheme"
 
 type ChangeThemeButtonProps = {
   className?: string
 }
 
 const ChangeThemeButton: React.FC<ChangeThemeButtonProps> = ({ className }) => {
-  const [isLight, setIsLight] = useState(false)
+  const { theme, setTheme } = useTheme()
 
   useEffect(() => {
-    document.querySelector("html")!.setAttribute("data-theme", isLight ? "light" : "dark")
-  }, [isLight])
+    document.querySelector("html")!.setAttribute("data-theme", theme)
+  }, [theme])
   return (
     <label className={cn(`swap swap-rotate btn btn-ghost btn-sm`, className)}>
       <input
         type="checkbox"
         className="theme-controller"
-        checked={isLight}
-        onChange={(e) => setIsLight(Boolean(e.target.checked))}
+        checked={theme === "light"}
+        onChange={(e) => setTheme(e.target.checked ? "light" : "dark")}
       />
       <Sun className="icon swap-off" />
       <Moon className="icon swap-on" />

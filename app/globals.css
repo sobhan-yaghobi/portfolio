@@ -175,7 +175,7 @@
   }
 
   .star {
-    @apply bg-white size-0.5 rounded-full -z-10 absolute;
-    filter: blur(1.5px);
+    @apply bg-white size-1 rounded-full -z-10 absolute;
+    filter: blur(1px);
   }
 }

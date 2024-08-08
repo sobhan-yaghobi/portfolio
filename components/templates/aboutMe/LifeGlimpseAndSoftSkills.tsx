@@ -2,12 +2,12 @@
 
 import React from "react"
 import t from "@/messages/fa.json"
-import Title from "../modules/Title"
+import Title from "../../modules/Title"
 import Image from "next/image"
 import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
 
-const AboutSection = () => {
+const LifeGlimpseAndSoftSkills = () => {
   const { title, desc } = t.about.me
   useGSAP(() => {
     let images = gsap.utils.toArray("#horizontal .content")
@@ -21,6 +21,7 @@ const AboutSection = () => {
       },
     })
   }, [])
+
   return (
     <section>
       <div className="py-3 flex max-lg:flex-col max-xl:text-center max-xl:items-center overflow-x-hidden">
@@ -85,4 +86,4 @@ const AboutSection = () => {
   )
 }
 
-export default AboutSection
+export default LifeGlimpseAndSoftSkills
