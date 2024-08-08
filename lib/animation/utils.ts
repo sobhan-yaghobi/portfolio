@@ -1,5 +1,5 @@
 import gsap from "gsap"
-import { TypeAnimationListParams, TypeAnimationUtilParam } from "../types/animation"
+import { TypeAnimationUtilParam } from "../types/animation"
 
 const fadeInUpAnimate = ({ target, duration, delay }: TypeAnimationUtilParam) => {
   gsap.fromTo(
