@@ -1,5 +1,7 @@
 import gsap from "gsap"
 import { TypeAnimationUtilParam } from "../types/animation"
+import { projectAnimate } from "./projectList"
+import { landingAnimate as homeLandingAnimate } from "./homeLanding"
 
 const fadeInUpAnimate = ({ target, duration, delay }: TypeAnimationUtilParam) => {
   gsap.fromTo(
@@ -11,4 +13,6 @@ const fadeInUpAnimate = ({ target, duration, delay }: TypeAnimationUtilParam) =>
 
 export const animationList = {
   fadeInUp: fadeInUpAnimate,
+  animateHomeLanding: homeLandingAnimate,
+  animateProjectList: projectAnimate,
 }

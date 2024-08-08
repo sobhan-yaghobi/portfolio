@@ -1,15 +1,20 @@
 import Landing from "@/components/templates/home/landing/Landing"
-import Projects from "@/components/templates/Projects"
+import ProjectList from "@/components/templates/ProjectList"
 import TechnicalGrowth from "@/components/templates/TechnicalGrowth"
 import ExperienceAndArticle from "@/components/templates/ExperienceAndArticle"
+import AnimateElement from "@/components/modules/AnimateElement"
 
 export default function Home() {
   return (
     <>
-      <Landing />
+      <AnimateElement selectedAnimationName="animateHomeLanding">
+        <Landing />
+      </AnimateElement>
       <div className="mb-40" />
 
-      <Projects />
+      <AnimateElement selectedAnimationName="animateProjectList">
+        <ProjectList />
+      </AnimateElement>
       <div className="mb-40" />
 
       <TechnicalGrowth />
