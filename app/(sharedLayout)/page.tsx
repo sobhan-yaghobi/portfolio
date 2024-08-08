@@ -1,4 +1,4 @@
-import HomeLanding from "@/components/templates/HomeLanding"
+import Landing from "@/components/templates/home/landing/Landing"
 import Projects from "@/components/templates/Projects"
 import TechnicalGrowth from "@/components/templates/TechnicalGrowth"
 import ExperienceAndArticle from "@/components/templates/ExperienceAndArticle"
@@ -6,7 +6,7 @@ import ExperienceAndArticle from "@/components/templates/ExperienceAndArticle"
 export default function Home() {
   return (
     <>
-      <HomeLanding />
+      <Landing />
       <div className="mb-40" />
 
       <Projects />
