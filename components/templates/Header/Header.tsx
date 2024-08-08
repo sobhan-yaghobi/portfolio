@@ -1,7 +1,7 @@
 import React from "react"
 import t from "@/messages/fa.json"
 
-import Animation from "@/components/modules/Animation"
+import AnimateElement from "@/components/modules/AnimateElement"
 import DesktopNavbar from "./DesktopNavbar"
 import MobileNavbar from "./MobileNavbar"
 
@@ -18,12 +18,10 @@ const Header: React.FC = () => {
 
   return (
     <header className="h-20 w-full z-40 relative">
-      <Animation target={".wrapper"} animation="fadeInUp" duration={1.5}>
-        <div className="wrapper h-full container">
-          <DesktopNavbar menuList={menu} />
-          <MobileNavbar menuList={menu} />
-        </div>
-      </Animation>
+      <AnimateElement className="h-full container" animation="fadeInUp" duration={1.5}>
+        <DesktopNavbar menuList={menu} />
+        <MobileNavbar menuList={menu} />
+      </AnimateElement>
     </header>
   )
 }

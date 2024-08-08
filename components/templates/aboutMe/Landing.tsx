@@ -13,7 +13,6 @@ const Landing: React.FC = () => {
 
   return (
     <section className="flex flex-col items-center">
-      <div className="bg-black size-full absolute top-0 left-0 -z-50"></div>
       <StarAnimation />
 
       <div id="liner" className="size-96 mt-12 center relative rounded-full text-nowrap">

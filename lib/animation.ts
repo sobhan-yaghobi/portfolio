@@ -3,7 +3,7 @@ import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.share
 
 //! ---------- Public Animations ----------
 
-export type target = string | React.MutableRefObject<any>
+export type target = gsap.TweenTarget
 export type duration = number
 export type delay = number
 
