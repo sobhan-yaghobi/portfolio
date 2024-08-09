@@ -16,7 +16,11 @@ export const landingAnimate = () => {
 const animateDesktopLandingPartOne = () => {
   const tl = gsap.timeline({ delay: 1 })
 
-  tl.fromTo("#landing-content-wrapper", { opacity: 0, y: 200 }, { duration: 1, opacity: 1, y: 0 })
+  tl.fromTo(
+    "#landing-content-wrapper",
+    { opacity: 0, scale: 0.8, y: 200 },
+    { duration: 1, opacity: 1, scale: 1, y: 0 }
+  )
 
   tl.fromTo(
     ".icon-package",

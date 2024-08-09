@@ -163,10 +163,10 @@
     }
   }
 
-  [data-theme="dark"] #liner {
+  [data-theme="dark"] .liner {
     background-image: linear-gradient(to bottom, #2f283a, #0f0616 60%);
   }
-  [data-theme="light"] #liner {
+  [data-theme="light"] .liner {
     background-image: linear-gradient(
       to bottom,
       theme("colors.base-200"),

@@ -17,7 +17,8 @@ type SkillsProps = {
 
 const Skills: React.FC<SkillsProps> = ({ skillList }) => {
   const [mainSkill, setMainSkill] = useState<TypeSkill>(skillList.at(0) || ({} as TypeSkill))
-  return (
+
+  return skillList.length ? (
     <>
       <div className="mt-40" id="skills" />
       <Title size="lg" className="text-center">
@@ -42,7 +43,7 @@ const Skills: React.FC<SkillsProps> = ({ skillList }) => {
           </Link>
         </nav>
         <ul className="flex flex-wrap gap-3">
-          {skillList.map((skill) => (
+          {skillList?.map((skill) => (
             <li key={skill.id}>
               <Link href={`#${skill.name}`}>
                 <button
@@ -68,7 +69,7 @@ const Skills: React.FC<SkillsProps> = ({ skillList }) => {
         </ul>
       </div>
     </>
-  )
+  ) : null
 }
 
 export default Skills

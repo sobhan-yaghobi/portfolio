@@ -29,7 +29,7 @@ const ContentLanding: React.FC = () => {
 
         <p
           id="landing-description"
-          className="w-full text-center px-5 my-6 opacity-50 md:px-24 lg:px-56 xl:px-80"
+          className="w-full text-center px-5 my-6 md:px-24 lg:px-56 xl:px-80"
         >
           {desc}
         </p>
