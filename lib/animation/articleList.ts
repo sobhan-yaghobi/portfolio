@@ -1,7 +1,7 @@
 import gsap from "gsap"
 import { createTimeline } from "./utils"
 
-export const animateArticleListAnimate = () => {
+export const articleListAnimate = () => {
   const timeLine = createTimeline("#article-list", "-50%")
 
   timeLine

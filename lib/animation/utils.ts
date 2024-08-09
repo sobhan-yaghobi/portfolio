@@ -4,7 +4,7 @@ import { projectAnimate } from "./projectList"
 import { landingAnimate as homeLandingAnimate } from "./homeLanding"
 import { technicalGrowthListAnimate } from "./technicalGrowthList"
 import { TypeTimeLine } from "../types/utils"
-import { animateArticleListAnimate } from "./articleList"
+import { articleListAnimate } from "./articleList"
 
 const fadeInUpAnimate = ({ target, duration, delay }: TypeAnimationUtilParam) => {
   gsap.fromTo(
@@ -19,7 +19,7 @@ export const animationList = {
   animateHomeLanding: homeLandingAnimate,
   animateProjectList: projectAnimate,
   animateTechnicalGrowthList: technicalGrowthListAnimate,
-  animateArticleList: animateArticleListAnimate,
+  animateArticleList: articleListAnimate,
 }
 
 export const createTimeline = (trigger: gsap.DOMTarget, start: string): TypeTimeLine =>
