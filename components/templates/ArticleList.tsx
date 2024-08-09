@@ -14,7 +14,7 @@ const ArticleList = async () => {
           {article.desc}
         </h4>
       </Title>
-      <div className="my-12 flex gap-10 max-lg:overflow-x-auto lg:grid lg:grid-cols-3 xl:grid-cols-4">
+      <div className="my-12 flex gap-10 overflow-hidden max-lg:overflow-x-auto lg:grid lg:grid-cols-3 xl:grid-cols-4">
         {Array(4)
           .fill("")
           .map((_, index) => (
