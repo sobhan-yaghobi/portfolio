@@ -19,32 +19,15 @@ const Skills: React.FC<SkillsProps> = ({ skillList }) => {
   const [mainSkill, setMainSkill] = useState<TypeSkill>(skillList.at(0) || ({} as TypeSkill))
 
   return skillList.length ? (
-    <>
+    <section id="skill-list">
       <div className="mt-40" id="skills" />
       <Title size="lg" className="text-center">
-        <h2>{t.header.item.skills}</h2>
+        <h2 className="skill-list-title-child">{t.header.item.skills}</h2>
       </Title>
       <div className="my-12 grid grid-cols-1 gap-6 lg:grid-cols-2">
-        <nav>
-          <p id={mainSkill.name}>{mainSkill.description}</p>
-          <div className="my-3">
-            <h3 className="text-xl font-dana">در پروژه های زیر استفاده شده</h3>
-            <ul className="mt-2 flex flex-wrap gap-6">
-              {mainSkill?.projectList?.map((project) => (
-                <Link href={project.source}>
-                  <li className="btn btn-link px-0">{project.title}</li>
-                </Link>
-              ))}
-            </ul>
-          </div>
-          <Link href={mainSkill.link} className="btn">
-            Read More
-            <ArrowUpRight className="icon" />
-          </Link>
-        </nav>
         <ul className="flex flex-wrap gap-3">
           {skillList?.map((skill) => (
-            <li key={skill.id}>
+            <li className="skill-item" key={skill.id}>
               <Link href={`#${skill.name}`}>
                 <button
                   className={`btn border-2 ${
@@ -67,8 +50,25 @@ const Skills: React.FC<SkillsProps> = ({ skillList }) => {
             </li>
           ))}
         </ul>
+        <nav id="main-skill-content">
+          <p id={mainSkill.name}>{mainSkill.description}</p>
+          <div className="my-3">
+            <h3 className="text-xl font-dana">در پروژه های زیر استفاده شده</h3>
+            <ul className="mt-2 flex flex-wrap gap-6">
+              {mainSkill?.projectList?.map((project) => (
+                <Link href={project.source}>
+                  <li className="btn btn-link px-0">{project.title}</li>
+                </Link>
+              ))}
+            </ul>
+          </div>
+          <Link href={mainSkill.link} className="btn">
+            Read More
+            <ArrowUpRight className="icon" />
+          </Link>
+        </nav>
       </div>
-    </>
+    </section>
   ) : null
 }
 

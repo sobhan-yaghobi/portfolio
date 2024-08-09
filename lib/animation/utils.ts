@@ -7,6 +7,7 @@ import { TypeTimeLine } from "../types/utils"
 import { articleListAnimate } from "./articleList"
 import { aboutMeLandingAnimate } from "./aboutMeLanding"
 import { lifeGlimpseAndSoftSkillsAnimate } from "./lifeGlimpseAndSoftSkills"
+import { skillListAnimate } from "./skillList"
 
 const fadeInUpAnimate = ({ target, duration, delay }: TypeAnimationUtilParam) => {
   gsap.fromTo(
@@ -24,6 +25,7 @@ export const animationList = {
   animateArticleList: articleListAnimate,
   animateAboutMeLanding: aboutMeLandingAnimate,
   animateLifeGlimpseAndSoftSkills: lifeGlimpseAndSoftSkillsAnimate,
+  animateSkillList: skillListAnimate,
 }
 
 export const createTimeline = (

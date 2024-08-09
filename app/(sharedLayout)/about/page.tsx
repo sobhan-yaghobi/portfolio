@@ -4,7 +4,7 @@ import { getSkillList } from "@/lib/fetcher/skill"
 import AnimateElement from "@/components/modules/AnimateElement"
 import Landing from "@/components/templates/aboutMe/landing/Landing"
 import LifeGlimpseAndSoftSkills from "@/components/templates/aboutMe/LifeGlimpseAndSoftSkills"
-import Skills from "@/components/templates/Skills"
+import SkillList from "@/components/templates/SkillList"
 
 const page: React.FC = async () => {
   const skillList = await getSkillList()
@@ -20,7 +20,9 @@ const page: React.FC = async () => {
       </AnimateElement>
       <div className="mb-40" />
 
-      <Skills skillList={skillList} />
+      <AnimateElement selectedAnimationName="animateSkillList">
+        <SkillList skillList={skillList} />
+      </AnimateElement>
       <div className="mb-40" />
     </>
   )

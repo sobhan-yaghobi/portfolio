@@ -35,7 +35,7 @@ const LifeGlimpseAndSoftSkills = () => {
       <div
         id="horizontal"
         dir="ltr"
-        className="mt-12 pt-12 w-full overflow-x-hidden flex gap-10 md:hidden [&>section]:h-96 [&>section]:w-fit [&>section]:shrink-0"
+        className="mt-12 pt-12 w-full overflow-hidden flex gap-10 md:hidden [&>section]:h-96 [&>section]:w-fit [&>section]:shrink-0"
       >
         <section className="content">
           <Image
