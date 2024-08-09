@@ -15,7 +15,9 @@ const page: React.FC = async () => {
       </AnimateElement>
       <div className="mb-40" />
 
-      <LifeGlimpseAndSoftSkills />
+      <AnimateElement selectedAnimationName="animateLifeGlimpseAndSoftSkills">
+        <LifeGlimpseAndSoftSkills />
+      </AnimateElement>
       <div className="mb-40" />
 
       <Skills skillList={skillList} />

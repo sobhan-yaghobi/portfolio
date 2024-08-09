@@ -1,38 +1,30 @@
-"use client"
-
 import React from "react"
 import t from "@/messages/fa.json"
+
 import Title from "../../modules/Title"
 import Image from "next/image"
-import { useGSAP } from "@gsap/react"
-import gsap from "gsap"
 
 const LifeGlimpseAndSoftSkills = () => {
-  const { title, desc } = t.about.me
-  useGSAP(() => {
-    let images = gsap.utils.toArray("#horizontal .content")
-
-    gsap.to(images, {
-      xPercent: -100 * (images.length - 1),
-      scrollTrigger: {
-        trigger: "#horizontal",
-        pin: true,
-        scrub: 1,
-      },
-    })
-  }, [])
+  const { title, description } = t.about.me
 
   return (
-    <section>
-      <div className="py-3 flex max-lg:flex-col max-xl:text-center max-xl:items-center overflow-x-hidden">
-        <div className="flex flex-col gap-6 flex-1 [&>p]:text-justify max-xl:[&>p]:text-center xl:px-6">
-          <Title size="lg">
+    <section id="life-glimpse-and-soft-skills">
+      <div className="py-3 flex overflow-hidden max-lg:flex-col max-xl:text-center max-xl:items-center overflow-x-hidden">
+        <div
+          id="life-glimpse-and-soft-skills-content"
+          className="flex flex-col gap-6 flex-1 [&>p]:text-justify max-xl:[&>p]:text-center xl:px-6"
+        >
+          <Title className="life-glimpse-and-soft-skills-content-child" size="lg">
             <h4>{title}</h4>
           </Title>
-          <p dangerouslySetInnerHTML={{ __html: desc }} />
+          <p
+            className="life-glimpse-and-soft-skills-content-child"
+            dangerouslySetInnerHTML={{ __html: description }}
+          />
         </div>
 
         <Image
+          id="image-soft-skills-desktop"
           width={600}
           height={600}
           src={"/image/aboutMe.png"}
