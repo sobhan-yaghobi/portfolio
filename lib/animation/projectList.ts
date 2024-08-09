@@ -5,7 +5,6 @@ export const projectAnimate = () => {
     scrollTrigger: {
       trigger: "#project-list",
       start: "-50%",
-      markers: true,
     },
   })
   tl.fromTo(

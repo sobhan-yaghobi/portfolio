@@ -17,7 +17,7 @@ const ProjectList: React.FC = async () => {
             {t.home.projects.desc}
           </h3>
         </Title>
-        <div className="my-12 flex gap-10 max-lg:overflow-x-auto lg:grid lg:grid-cols-3 xl:grid-cols-4">
+        <div className="my-12 flex gap-10 max-lg:overflow-x-auto lg:grid lg:grid-cols-3 xl:grid-cols-4 overflow-hidden">
           {projectList?.map((project) => (
             <div className="project-card" key={project.id}>
               <ProjectCard {...project} />
