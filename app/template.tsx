@@ -14,7 +14,6 @@ const template: React.FC<React.PropsWithChildren> = ({ children }) => {
   let smoother = useRef<HTMLDivElement>(null)
 
   useGSAP(() => {
-    window.scrollTo(0, 0)
     pageInAnimate()
   }, [])
   return (
