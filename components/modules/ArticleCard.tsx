@@ -4,7 +4,7 @@ import { Heart, MessageSquareText, Send } from "lucide-react"
 
 import Image from "next/image"
 
-const ExperienceAndArticleCard = () => {
+const ArticleCard = () => {
   return (
     <div className="card bg-base-200 min-w-72 max-w-full h-[470px] flex-1 shadow-xl">
       <figure className="h-3/6 p-2 center relative overflow-visible">
@@ -47,4 +47,4 @@ const ExperienceAndArticleCard = () => {
   )
 }
 
-export default ExperienceAndArticleCard
+export default ArticleCard
