@@ -11,7 +11,7 @@ const DesktopTemplate: React.FC<DesktopTemplateProps> = ({ headlineList, headlin
   return (
     <>
       <div className="bg-base-200 rounded-xl">
-        <CopyToClipboard type="text" value="article url" className="btn w-full outline-active">
+        <CopyToClipboard value="article url" className="btn w-full outline-active">
           <SquareArrowOutUpRight className="icon" />
           اشتراک گذاری
         </CopyToClipboard>

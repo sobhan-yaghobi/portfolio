@@ -20,7 +20,7 @@ const Footer: React.FC = async () => {
       logoSrc: "/image/telegram.png",
       backImgSrc: "/image/telegram-background.png",
       badgeWrapper: (
-        <CopyToClipboard type="toast" value="@sobhan_yaghobii">
+        <CopyToClipboard value="@sobhan_yaghobii">
           <p className="badge badge-sm py-3 gap-1">
             <AtSign className="icon-sm" />
             sobhan_yaghobii
@@ -36,7 +36,7 @@ const Footer: React.FC = async () => {
       logoSrc: "/image/instagram.png",
       backImgSrc: "/image/instagram-background.png",
       badgeWrapper: (
-        <CopyToClipboard type="toast" value="sobhan__ya">
+        <CopyToClipboard value="sobhan__ya">
           <p className="badge badge-sm py-3 gap-1">
             <AtSign className="icon-sm" />
             sobhan__ya
@@ -52,7 +52,7 @@ const Footer: React.FC = async () => {
       logoSrc: "/packages/github.svg",
       backImgSrc: "/image/github-background.png",
       badgeWrapper: (
-        <CopyToClipboard type="toast" value="sobhan-yaghobi">
+        <CopyToClipboard value="sobhan-yaghobi">
           <p className="badge badge-sm py-3 gap-1">
             <AtSign className="icon-sm" />
             sobhan-yaghobi
@@ -68,7 +68,7 @@ const Footer: React.FC = async () => {
       logoSrc: "/image/linkedin.png",
       backImgSrc: "/image/linkedin-background.png",
       badgeWrapper: (
-        <CopyToClipboard type="toast" value="sobhan yaghobi">
+        <CopyToClipboard value="sobhan yaghobi">
           <p className="badge badge-sm py-3 gap-1">
             <AtSign className="icon-sm" />
             sobhan yaghobi

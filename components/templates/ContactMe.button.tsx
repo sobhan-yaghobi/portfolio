@@ -43,11 +43,7 @@ const ContactMeButton: React.FC<ContactMeButtonProps> = ({ className, value }) =
     )
   }
   return (
-    <CopyToClipboard
-      type="text"
-      value={phoneNumber}
-      className={cn("flex items-center gap-2", className)}
-    >
+    <CopyToClipboard value={phoneNumber} className={cn("flex items-center gap-2", className)}>
       <span className="dir-left">{text}</span>
       <Phone className="icon" />
     </CopyToClipboard>
