@@ -37,3 +37,10 @@ export type TypeSocialFollowBoxProps = {
   badgeWrapper: ReactNode
   className?: string
 }
+
+export type TypeTitleProps = {
+  id?: string
+  className?: string
+  size?: "sm" | "md" | "lg" | "xl" | "xxl"
+  isIcon?: boolean
+}

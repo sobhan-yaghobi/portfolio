@@ -1,14 +1,8 @@
+import { TypeTitleProps } from "@/lib/types/utils"
 import { cn } from "@/lib/utils"
 import React from "react"
 
-type TitleProps = {
-  id?: string
-  className?: string
-  size?: "sm" | "md" | "lg" | "xl" | "xxl"
-  isIcon?: boolean
-}
-
-const Title: React.FC<React.PropsWithChildren<TitleProps>> = ({
+const Title: React.FC<React.PropsWithChildren<TypeTitleProps>> = ({
   id,
   children,
   className,
