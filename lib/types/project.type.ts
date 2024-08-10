@@ -9,3 +9,16 @@ export type TypeProject = {
   description: string
   skillList: TypeSkill[]
 }
+
+export type TypeProjectCardProps = TypeProject
+
+export type TypeProjectCardTitleProps = Pick<TypeProject, "title">
+
+export type TypeProjectCardButtonListProps = Pick<TypeProject, "link" | "source">
+
+export type TypeProjectCardButtonDialogProps = { modalId: string }
+
+export type TypeProjectCardDialogProps = {
+  project: Pick<TypeProject, "title" | "description" | "link" | "source">
+  modalId: string
+}

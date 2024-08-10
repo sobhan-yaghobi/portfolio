@@ -7,7 +7,7 @@ import Image from "next/image"
 import Email from "@/components/modules/Email"
 import Title from "@/components/modules/Title"
 import ContactMeButton from "@/components/templates/ContactMe.button"
-import { ProjectCvCard } from "@/components/modules/Project.card"
+import ProjectCard from "@/components/modules/projectCard/ProjectCardForCv"
 
 const page: React.FC = () => {
   return (
@@ -171,11 +171,11 @@ const page: React.FC = () => {
               </Title>
               <ul>
                 <li>
-                  <ProjectCvCard />
+                  <ProjectCard />
                 </li>
 
                 <li>
-                  <ProjectCvCard />
+                  <ProjectCard />
                 </li>
               </ul>
             </section>

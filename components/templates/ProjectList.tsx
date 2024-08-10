@@ -3,7 +3,7 @@ import t from "@/messages/fa.json"
 import { getProjectList } from "@/lib/fetcher/project"
 
 import Title from "../modules/Title"
-import ProjectCard from "../modules/Project.card"
+import ProjectCard from "../modules/projectCard/ProjectCard"
 
 const ProjectList: React.FC = async () => {
   const projectList = await getProjectList()
