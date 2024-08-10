@@ -15,3 +15,8 @@ export type TypeAnimationUtilParam = {
   duration?: TypeDuration
   delay?: TypeDelay
 }
+
+export type TypeAnimateElementProps = {
+  className?: string
+  selectedAnimationName: TypeAnimationList
+} & Omit<TypeAnimationUtilParam, "target">

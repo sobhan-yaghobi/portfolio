@@ -1,15 +1,11 @@
 "use client"
 
 import React, { useRef } from "react"
-
 import { useGSAP } from "@gsap/react"
-import { TypeAnimationList, TypeAnimationUtilParam } from "@/lib/types/animation"
-import { animationList } from "@/lib/animation/utils"
 
-type TypeAnimateElementProps = {
-  className?: string
-  selectedAnimationName: TypeAnimationList
-} & Omit<TypeAnimationUtilParam, "target">
+import { TypeAnimateElementProps } from "@/lib/types/animation"
+
+import { animationList } from "@/lib/animation/utils"
 
 const AnimateElement: React.FC<React.PropsWithChildren<TypeAnimateElementProps>> = ({
   duration,

@@ -9,6 +9,12 @@ import { aboutMeLandingAnimate } from "./aboutMeLanding"
 import { lifeGlimpseAndSoftSkillsAnimate } from "./lifeGlimpseAndSoftSkills"
 import { skillListAnimate } from "./skillList"
 
+export const createTimeline = (
+  trigger?: gsap.DOMTarget,
+  start?: string | number,
+  end?: string | number
+): TypeTimeLine => gsap.timeline({ scrollTrigger: { trigger, start, end } })
+
 const fadeInUpAnimate = ({ target, duration, delay }: TypeAnimationUtilParam) => {
   gsap.fromTo(
     target,
@@ -27,9 +33,3 @@ export const animationList = {
   animateLifeGlimpseAndSoftSkills: lifeGlimpseAndSoftSkillsAnimate,
   animateSkillList: skillListAnimate,
 }
-
-export const createTimeline = (
-  trigger?: gsap.DOMTarget,
-  start?: string | number,
-  end?: string | number
-): TypeTimeLine => gsap.timeline({ scrollTrigger: { trigger, start, end } })
