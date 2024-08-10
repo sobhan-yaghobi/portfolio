@@ -6,7 +6,7 @@ import t from "@/messages/fa.json"
 import { MenuIcon, X } from "lucide-react"
 
 import ShareButton from "../../modules/Share.button"
-import ChangeThemeButton from "../../modules/ChangeTheme.button"
+import ChangeThemeButton from "../../modules/ChangeThemeButton"
 import Link from "next/link"
 import Search from "../../modules/Search"
 

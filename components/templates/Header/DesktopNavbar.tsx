@@ -5,7 +5,7 @@ import Magnetic from "../../modules/Magnetic"
 import Link from "next/link"
 import Search from "../../modules/Search"
 import ShareButton from "../../modules/Share.button"
-import ChangeThemeButton from "../../modules/ChangeTheme.button"
+import ChangeThemeButton from "../../modules/ChangeThemeButton"
 
 type DesktopNavbarProps = {
   menuList: { href: string; title: string; isSoon: boolean }[]

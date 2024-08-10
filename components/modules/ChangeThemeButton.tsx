@@ -1,21 +1,20 @@
 "use client"
 
-import React, { useEffect } from "react"
-import { Moon, Sun } from "lucide-react"
+import React, { useLayoutEffect } from "react"
+import useTheme from "@/hooks/store/useTheme"
 import { cn } from "@/lib/utils"
 
-import useTheme from "@/hooks/store/useTheme"
+import { ChangeThemeButtonProps } from "@/lib/types/utils"
 
-type ChangeThemeButtonProps = {
-  className?: string
-}
+import { Moon, Sun } from "lucide-react"
 
 const ChangeThemeButton: React.FC<ChangeThemeButtonProps> = ({ className }) => {
   const { theme, setTheme } = useTheme()
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     document.querySelector("html")!.setAttribute("data-theme", theme)
   }, [theme])
+
   return (
     <label className={cn(`swap swap-rotate btn btn-ghost btn-sm`, className)}>
       <input
