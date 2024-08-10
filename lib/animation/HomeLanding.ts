@@ -94,8 +94,7 @@ const animateButtonList = (tl: gsap.core.Timeline) => {
       ease: "bounce.in",
       y: 0,
       stagger: 0.05,
-    },
-    "-=.5"
+    }
   )
 
   tl.fromTo(
