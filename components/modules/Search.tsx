@@ -1,28 +1,38 @@
 "use client"
 
-import React from "react"
-import { random } from "@/lib/utils"
-import t from "@/messages/fa.json"
+import React, { useState } from "react"
+import faMessages from "@/messages/fa.json"
 
 import { SearchIcon } from "lucide-react"
 
 const Search: React.FC = () => {
-  const { hashtag, placeholder } = t.header.search
+  const { utils, header } = faMessages
+  const hashtagList = [
+    header.search.hashtag.experience,
+    header.search.hashtag.project,
+    header.search.hashtag.skills,
+  ]
 
-  const hashtags = [hashtag.experience, hashtag.project, hashtag.skills]
-  const getRandomHashtag = hashtags.at(random(0, hashtags.length))
+  const [mainHashtag, setMainHashtag] = useState(hashtagList.at(0))
 
   return (
-    <label
-      className={`input input-bordered input-sm bg-transparent flex items-center relative pr-11`}
-    >
-      <SearchIcon className={`icon absolute right-3`} />
-      <input
-        type="text"
-        className="grow placeholder:opacity-80"
-        placeholder={placeholder + " " + getRandomHashtag}
-      />
-    </label>
+    <div className="relative">
+      <span className="indicator-item badge badge-primary badge-sm absolute -right-3 -top-5">
+        {utils.soon}
+      </span>
+      <label
+        className={`input input-bordered input-sm bg-transparent flex items-center relative pr-11`}
+      >
+        <button className="absolute right-3">
+          <SearchIcon className="icon" />
+        </button>
+        <input
+          type="text"
+          className="grow placeholder:opacity-80"
+          placeholder={`${header.search.placeholder} ${mainHashtag}`}
+        />
+      </label>
+    </div>
   )
 }
 
