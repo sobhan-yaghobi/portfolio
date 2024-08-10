@@ -1,11 +1,18 @@
 import React from "react"
-import t from "@/messages/fa.json"
+import faMessages from "@/messages/fa.json"
 
 import Title from "../../modules/Title"
 import Image from "next/image"
 
-const LifeGlimpseAndSoftSkills = () => {
-  const { title, description } = t.about.me
+const softSkillSrcImageList = [
+  "/image/T-mobile.png",
+  "/image/C-mobile.png",
+  "/image/D-mobile.png",
+  "/image/R-mobile.png",
+]
+
+const LifeGlimpseAndSoftSkills: React.FC = () => {
+  const { title, description } = faMessages.about.me
 
   return (
     <section id="life-glimpse-and-soft-skills">
@@ -37,42 +44,17 @@ const LifeGlimpseAndSoftSkills = () => {
         dir="ltr"
         className="mt-12 pt-12 w-full overflow-hidden flex gap-10 md:hidden [&>section]:h-96 [&>section]:w-fit [&>section]:shrink-0"
       >
-        <section className="content">
-          <Image
-            className="about-me-image h-96 w-fit"
-            width={200}
-            height={300}
-            src={"/image/T-mobile.png"}
-            alt="about-me-image"
-          />
-        </section>
-        <section className="content">
-          <Image
-            className="about-me-image h-96 w-fit"
-            width={200}
-            height={300}
-            src={"/image/C-mobile.png"}
-            alt="about-me-image"
-          />
-        </section>
-        <section className="content">
-          <Image
-            className="about-me-image h-96 w-fit"
-            width={200}
-            height={300}
-            src={"/image/D-mobile.png"}
-            alt="about-me-image"
-          />
-        </section>
-        <section className="content">
-          <Image
-            className="about-me-image h-96 w-fit"
-            width={200}
-            height={300}
-            src={"/image/R-mobile.png"}
-            alt="about-me-image"
-          />
-        </section>
+        {softSkillSrcImageList.map((imageSrc, index) => (
+          <section className="content" key={index}>
+            <Image
+              className="about-me-image h-96 w-fit"
+              width={200}
+              height={300}
+              src={imageSrc}
+              alt="about-me-image"
+            />
+          </section>
+        ))}
       </div>
     </section>
   )
