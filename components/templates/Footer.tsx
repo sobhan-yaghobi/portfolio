@@ -80,10 +80,8 @@ const Footer: React.FC = async () => {
   return (
     <footer>
       <div className="mb-3 center">
-        <ScrollTo scrollTo={"header"} duration={0.5}>
-          <button className="btn">
-            <ArrowUp />
-          </button>
+        <ScrollTo className="btn" scrollToElement={"header"}>
+          <ArrowUp />
         </ScrollTo>
       </div>
       <div className="container pb-3 grid grid-cols-2 max-lg:grid-rows-2 gap-3 lg:grid-cols-4">

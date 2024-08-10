@@ -19,3 +19,9 @@ export type TypeMagneticProps = {
   children: ReactElement
   magnetSize?: number
 }
+
+export type TypeScrollToProps = {
+  scrollToElement: string | number
+  duration?: gsap.TweenValue
+  className?: string
+}

@@ -3,17 +3,22 @@
 import gsap from "gsap"
 import React from "react"
 
-type ScrollToProps = { scrollTo: string | number; duration?: gsap.TweenValue }
+import { TypeScrollToProps } from "@/lib/types/utils"
 
-const ScrollTo: React.FC<React.PropsWithChildren<ScrollToProps>> = ({
+const ScrollTo: React.FC<React.PropsWithChildren<TypeScrollToProps>> = ({
   children,
-  scrollTo,
+  scrollToElement,
   duration = 1,
+  className,
 }) => {
-  const scrollToAction = () => {
-    gsap.to(window, { scrollTo, duration })
+  const scrollTo = () => {
+    gsap.to(window, { scrollTo: scrollToElement, duration })
   }
-  return <div onClick={scrollToAction}>{children}</div>
+  return (
+    <button className={className} onClick={scrollTo}>
+      {children}
+    </button>
+  )
 }
 
 export default ScrollTo
