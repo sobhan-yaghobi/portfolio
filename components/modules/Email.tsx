@@ -1,14 +1,13 @@
 import React from "react"
-import Link from "next/link"
-
-import { Mail } from "lucide-react"
 import { cn } from "@/lib/utils"
 
-type EmailProps = {
-  className?: string
-}
+import { TypeEmailProps } from "@/lib/types/utils"
 
-const Email: React.FC<EmailProps> = ({ className }) => {
+import { Mail } from "lucide-react"
+
+import Link from "next/link"
+
+const Email: React.FC<TypeEmailProps> = ({ className }) => {
   return (
     <Link href={"mailto:sobhan.yaghobi.work@gmail.com"}>
       <button className={cn("flex items-center gap-2", className)}>
