@@ -1,3 +1,5 @@
+import { ReactElement } from "react"
+
 export type TypeTimeLine = gsap.core.Timeline
 
 export type ChangeThemeButtonProps = {
@@ -11,4 +13,9 @@ export type TypeCopyToClipboardProps = {
 
 export type TypeEmailProps = {
   className?: string
+}
+
+export type TypeMagneticProps = {
+  children: ReactElement
+  magnetSize?: number
 }
