@@ -1,19 +1,9 @@
-import React, { ReactNode } from "react"
+import React from "react"
 import { cn } from "@/lib/utils"
 
-import Image from "next/image"
+import { TypeSocialFollowBoxProps } from "@/lib/types/utils"
 
-export type SocialFollowBoxProps = {
-  id: string
-  backImgSrc: string
-  backImgClassNames?: string[]
-  logoSrc: string
-  title: string
-  subtitle: string
-  desc: string
-  badgeWrapper: ReactNode
-  className?: string
-}
+import Image from "next/image"
 
 const defaultBackImgClassNames = [
   "size-12 -top-5 -right-2",
@@ -25,7 +15,7 @@ const defaultBackImgClassNames = [
   "size-3 top-6 right-28",
 ]
 
-const SocialFollowBox: React.FC<SocialFollowBoxProps> = ({
+const SocialFollowBox: React.FC<TypeSocialFollowBoxProps> = ({
   backImgSrc,
   backImgClassNames,
   logoSrc,

@@ -1,4 +1,4 @@
-import { ReactElement } from "react"
+import { ReactElement, ReactNode } from "react"
 
 export type TypeTimeLine = gsap.core.Timeline
 
@@ -23,5 +23,17 @@ export type TypeMagneticProps = {
 export type TypeScrollToProps = {
   scrollToElement: string | number
   duration?: gsap.TweenValue
+  className?: string
+}
+
+export type TypeSocialFollowBoxProps = {
+  id: string
+  backImgSrc: string
+  backImgClassNames?: string[]
+  logoSrc: string
+  title: string
+  subtitle: string
+  desc: string
+  badgeWrapper: ReactNode
   className?: string
 }
