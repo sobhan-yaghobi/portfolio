@@ -1,19 +1,19 @@
 import { create } from "zustand"
 
 export type ArticleStoreType = {
-  headlines: Array<HTMLHeadingElement> | null
-  setHeadLines: (headlines: ArticleStoreType["headlines"]) => void
+  headlineList: Array<HTMLHeadingElement> | null
+  setHeadLineList: (headlineList: ArticleStoreType["headlineList"]) => void
 
-  activeTitle: HTMLHeadElement | null
-  setActiveTitle: (title: ArticleStoreType["activeTitle"]) => void
+  activeHeadline: HTMLHeadElement | null
+  setActiveHeadline: (title: ArticleStoreType["activeHeadline"]) => void
 }
 
 const useArticle = create<ArticleStoreType>((set) => ({
-  headlines: null,
-  setHeadLines: (headlines) => set((prevState) => ({ ...prevState, headlines })),
+  headlineList: null,
+  setHeadLineList: (headlineList) => set((prevState) => ({ ...prevState, headlineList })),
 
-  activeTitle: null,
-  setActiveTitle: (activeTitle) => set((prevState) => ({ ...prevState, activeTitle })),
+  activeHeadline: null,
+  setActiveHeadline: (activeHeadline) => set((prevState) => ({ ...prevState, activeHeadline })),
 }))
 
 export default useArticle

@@ -1,29 +1,26 @@
 "use client"
 
-import { ArticleStoreType } from "@/hooks/store/useArticle"
 import React from "react"
-import CopyToClipboard from "../CopyToClipboard"
+import { DesktopTemplateProps } from "@/lib/types/article"
+
 import { SquareArrowOutUpRight } from "lucide-react"
 
-type DesktopTemplateProps = {
-  headlines: ArticleStoreType["headlines"]
-  length: number
-}
+import CopyToClipboard from "../CopyToClipboard"
 
-const DesktopTemplate: React.FC<DesktopTemplateProps> = ({ headlines, length }) => {
+const DesktopTemplate: React.FC<DesktopTemplateProps> = ({ headlineList, headlineReadLength }) => {
   return (
     <>
       <div className="bg-base-200 rounded-xl">
-        <CopyToClipboard type="text" value="blog url" className="btn w-full outline-active">
+        <CopyToClipboard type="text" value="article url" className="btn w-full outline-active">
           <SquareArrowOutUpRight className="icon" />
-          Quick Share
+          اشتراک گذاری
         </CopyToClipboard>
       </div>
       <div className="bg-base-200 rounded-xl">
-        <h3>HeadLines</h3>
+        <h3>سر تیترها</h3>
         <ul className="steps steps-vertical">
-          {headlines?.map((headline, index) => (
-            <li className={`step ${index <= length && "step-primary"}`}>
+          {headlineList?.map((headline, index) => (
+            <li className={`step ${index < headlineReadLength && "step-primary"}`}>
               <span className="truncate">{headline.textContent}</span>
             </li>
           ))}

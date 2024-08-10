@@ -1,42 +1,46 @@
 "use client"
 
-import Image from "next/image"
-import React, { useEffect, useLayoutEffect } from "react"
-import Title from "./Title"
+import React, { useEffect } from "react"
 import useArticle from "@/hooks/store/useArticle"
 
+import Title from "./Title"
+import Image from "next/image"
+
 const Article: React.FC = () => {
-  const { headlines, setHeadLines, setActiveTitle } = useArticle()
-  useLayoutEffect(() => {
-    const headTitleElements = document.querySelectorAll("h2")
-    setHeadLines(Array.from(headTitleElements))
-    setActiveTitle(headTitleElements[0])
-  }, [])
+  const { headlineList, setHeadLineList, setActiveHeadline, activeHeadline } = useArticle()
+
   useEffect(() => {
-    if (typeof headlines !== null && typeof headlines !== "undefined") {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveTitle(entry.target as HTMLHeadElement)
-          }
-        })
-      })
+    const headlineElementList = document.querySelectorAll("h2")
+    setHeadLineList(Array.from(headlineElementList))
+    setActiveHeadline(activeHeadline)
+  }, [])
 
-      const elementsToObserve = document.querySelectorAll("article h2")
+  useEffect(() => {
+    observeHandler()
+  }, [headlineList])
 
-      elementsToObserve.forEach((element) => {
-        observer.observe(element)
+  const observeHandler = () => {
+    if (typeof headlineList === null && typeof headlineList === "undefined") return undefined
+
+    const observer = new IntersectionObserver((entries) =>
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) setActiveHeadline(entry.target as HTMLHeadElement)
       })
-    }
-  }, [headlines])
+    )
+
+    const elementsToObserve = document.querySelectorAll("article h2")
+
+    elementsToObserve.forEach((element) => observer.observe(element))
+  }
+
   return (
     <>
       <figure className="bg-base-100 max-h-[500px] center rounded-lg overflow-hidden">
         <Image
           width={1000}
           height={500}
-          src={"/image/blog.jpg"}
-          alt="blog-image"
+          src={"/image/article.jpg"}
+          alt="article-image"
           className="object-cover"
         />
       </figure>

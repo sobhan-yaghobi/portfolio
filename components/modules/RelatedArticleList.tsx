@@ -1,16 +1,16 @@
 import React from "react"
 
-import { Book, Calendar, LibraryBig } from "lucide-react"
+import { Calendar, LibraryBig } from "lucide-react"
 
 import Link from "next/link"
 import Title from "./Title"
 import Image from "next/image"
 
-const RelatedBlogs: React.FC = () => {
+const RelatedArticleList: React.FC = () => {
   return (
     <div>
       <Title size="md" isIcon className="mb-3">
-        <h3>Related Blogs</h3>
+        <h3>مقاله های مرتبط</h3>
         <LibraryBig className="icon-md mr-1 stroke-primary" />
       </Title>
       <div className="flex gap-3 max-lg:overflow-x-auto lg:grid lg:grid-cols-3 xl:grid-cols-4">
@@ -23,8 +23,8 @@ const RelatedBlogs: React.FC = () => {
                   <Image
                     width={150}
                     height={100}
-                    src={"/image/blog.jpg"}
-                    alt="blog-box"
+                    src={"/image/article.jpg"}
+                    alt="article-box"
                     className="rounded-lg"
                   />
                 </figure>
@@ -44,4 +44,4 @@ const RelatedBlogs: React.FC = () => {
   )
 }
 
-export default RelatedBlogs
+export default RelatedArticleList

@@ -3,31 +3,40 @@
 import React, { useEffect, useState } from "react"
 import useArticle from "@/hooks/store/useArticle"
 
+import { TypeQuickAccessArticleSideProps } from "@/lib/types/article"
+
 import MobileTemplate from "./MobileTemplate"
 import DesktopTemplate from "./DesktopTemplate"
 
-type QuickAccessArticleSideProps = {
-  mobile?: boolean
-}
+const QuickAccessArticleSide: React.FC<TypeQuickAccessArticleSideProps> = ({ isMobile }) => {
+  const [headlineReadLength, setHeadlineReadLength] = useState(0)
+  const { headlineList, activeHeadline } = useArticle()
 
-const QuickAccessArticleSide: React.FC<QuickAccessArticleSideProps> = ({ mobile }) => {
-  const [length, setLenght] = useState(0)
-  const { headlines, activeTitle } = useArticle()
-  useEffect(() => {
-    if (headlines) {
-      const currentElement = headlines.findIndex(
-        (headline) =>
-          headline.textContent?.toLocaleLowerCase() ===
-          activeTitle?.textContent?.toLocaleLowerCase()
-      )
-      setLenght(currentElement)
+  const updateHeadlineReadLength = () => {
+    if (headlineList) {
+      const currentHeadlineIndex =
+        headlineList.findIndex(
+          (headline) =>
+            headline.textContent?.toLocaleLowerCase() ===
+            activeHeadline?.textContent?.toLocaleLowerCase()
+        ) + 1
+
+      setHeadlineReadLength(currentHeadlineIndex)
     }
-  }, [activeTitle])
+  }
 
-  if (mobile)
-    return <MobileTemplate activeTitle={activeTitle} headlines={headlines} length={length} />
+  useEffect(() => updateHeadlineReadLength(), [activeHeadline])
 
-  return <DesktopTemplate headlines={headlines} length={length} />
+  if (isMobile)
+    return (
+      <MobileTemplate
+        activeHeadline={activeHeadline}
+        headlineList={headlineList}
+        headlineReadLength={headlineReadLength}
+      />
+    )
+
+  return <DesktopTemplate headlineList={headlineList} headlineReadLength={headlineReadLength} />
 }
 
 export default QuickAccessArticleSide

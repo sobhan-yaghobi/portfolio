@@ -1,9 +1,11 @@
 import React from "react"
-import Title from "./Title"
+
 import { MessageCircle, MessageSquareDiffIcon } from "lucide-react"
+
+import Title from "./Title"
 import Image from "next/image"
 
-const CommentBlog: React.FC = () => {
+const CommentArticle: React.FC = () => {
   return (
     <div>
       <div className="flex items-center">
@@ -32,4 +34,4 @@ const CommentBlog: React.FC = () => {
   )
 }
 
-export default CommentBlog
+export default CommentArticle
