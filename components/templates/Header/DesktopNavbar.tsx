@@ -4,7 +4,7 @@ import t from "@/messages/fa.json"
 import Magnetic from "../../modules/Magnetic"
 import Link from "next/link"
 import Search from "../../modules/Search"
-import ShareButton from "../../modules/Share.button"
+import ShareButton from "../../modules/ShareButton"
 import ChangeThemeButton from "../../modules/ChangeThemeButton"
 
 type DesktopNavbarProps = {
