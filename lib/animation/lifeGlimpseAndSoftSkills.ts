@@ -4,7 +4,7 @@ import { TypeTimeLine } from "../types/utils"
 
 export const lifeGlimpseAndSoftSkillsAnimate = () => {
   const mm = gsap.matchMedia()
-  const timeLine = createTimeline("#life-glimpse-and-soft-skills", "-50%")
+  const timeLine = createTimeline("#life-glimpse-and-soft-skills", "-90%")
 
   mm.add("(min-width: 768px)", () => {
     animateLifeGlimpseAndSoftSkillsShowUpForDesktop(timeLine)
