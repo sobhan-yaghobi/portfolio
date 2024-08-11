@@ -1,7 +1,9 @@
-import Title from "@/components/modules/Title"
-import Image from "next/image"
+import React from "react"
 
 import faMessages from "@/messages/fa.json"
+
+import Title from "@/components/modules/Title"
+import Image from "next/image"
 
 const ContentLanding: React.FC = () => {
   const { title, desc } = faMessages.heroSection

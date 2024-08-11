@@ -1,3 +1,4 @@
+import React from "react"
 import { isEven } from "@/lib/utils"
 
 import Magnetic from "@/components/modules/Magnetic"
