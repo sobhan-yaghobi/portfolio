@@ -1,17 +1,19 @@
 import React from "react"
-import t from "@/messages/fa.json"
+import faMessages from "@/messages/fa.json"
+
+import { TypeSocialFollowBoxProps } from "@/lib/types/utils"
 
 import { ArrowUp, AtSign } from "lucide-react"
 
-import SocialFollowBox, { SocialFollowBoxProps } from "@/components/modules/SocialFollowBox"
+import SocialFollowBox from "@/components/modules/SocialFollowBox"
 import CopyToClipboard from "@/components/modules/CopyToClipboard"
-import ContactMeButton from "../templates/ContactMe.button"
+import ContactMeButton from "./ContactMeButton"
 import ScrollTo from "@/components/modules/ScrollTo"
 import Email from "@/components/modules/Email"
 
 const Footer: React.FC = async () => {
-  const { social } = t
-  const socialFollowItems: SocialFollowBoxProps[] = [
+  const { social } = faMessages
+  const socialFollowItems: TypeSocialFollowBoxProps[] = [
     {
       id: "1",
       title: social.telegram.title,
@@ -106,7 +108,7 @@ const Footer: React.FC = async () => {
         </aside>
         <nav className="grid-flow-col max-lg:flex max-lg:flex-wrap max-lg:justify-center gap-4 lg:place-self-center lg:justify-self-end">
           <Email className="btn btn-ghost font-normal" />
-          <ContactMeButton className="btn btn-ghost font-normal" value="_PHONE" />
+          <ContactMeButton className="btn btn-ghost font-normal" />
         </nav>
       </div>
     </footer>

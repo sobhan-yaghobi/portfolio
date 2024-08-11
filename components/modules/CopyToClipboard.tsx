@@ -17,12 +17,12 @@ const CopyToClipboard: React.FC<React.PropsWithChildren<TypeCopyToClipboardProps
     await copy(value)
       .then(async () => await successCopyAction())
       .catch(() =>
-        toast({ title: "ذخیره کردن متن در clipboard با مشکل مواجه شد", variant: "destructive" })
+        toast({ title: "ذخیره کردن در clipboard با مشکل مواجه شد", variant: "destructive" })
       )
   }
 
   const successCopyAction = async () => {
-    toast({ title: "متن با موفقیت در clipboard ذخیره شد" })
+    toast({ title: "با موفقیت در clipboard ذخیره شد" })
     setIsCopied(true)
     setTimeout(() => {
       setIsCopied(false)

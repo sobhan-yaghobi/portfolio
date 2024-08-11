@@ -52,3 +52,8 @@ export type TypeIndicatorProps = {
 export type TypeDesktopNavbarProps = {
   menuList: { href: string; title: string; isSoon: boolean }[]
 }
+
+export type TypeContactMeButtonProps = {
+  className?: string
+  value?: string
+}

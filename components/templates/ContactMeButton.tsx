@@ -1,25 +1,19 @@
 "use client"
 
 import React from "react"
-import t from "@/messages/fa.json"
-import { isUserUseMobile } from "@/lib/utils"
-
 import { useEffect, useState } from "react"
+import { isUserUseMobile } from "@/lib/utils"
+import { cn } from "@/lib/utils"
+
+import { TypeContactMeButtonProps } from "@/lib/types/utils"
 
 import { Phone } from "lucide-react"
 
 import Link from "next/link"
-import { cn } from "@/lib/utils"
 import CopyToClipboard from "../modules/CopyToClipboard"
 
-type ContactMeButtonProps = {
-  className?: string
-  value?: "_PHONE" | string
-}
-
-const ContactMeButton: React.FC<ContactMeButtonProps> = ({ className, value }) => {
+const ContactMeButton: React.FC<TypeContactMeButtonProps> = ({ className, value }) => {
   const phoneNumber = "+98 939 600 7232"
-  const { utils } = t
   const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
@@ -27,12 +21,7 @@ const ContactMeButton: React.FC<ContactMeButtonProps> = ({ className, value }) =
     setIsMobile(isUserUseMobile(userAgent))
   }, [])
 
-  const text =
-    typeof value !== "undefined" && value === "_PHONE"
-      ? phoneNumber
-      : typeof value === "string"
-      ? value
-      : utils.contact
+  const text = value || phoneNumber
 
   if (isMobile) {
     return (
@@ -42,6 +31,7 @@ const ContactMeButton: React.FC<ContactMeButtonProps> = ({ className, value }) =
       </Link>
     )
   }
+
   return (
     <CopyToClipboard value={phoneNumber} className={cn("flex items-center gap-2", className)}>
       <span className="dir-left">{text}</span>

@@ -6,7 +6,7 @@ import { MapPin } from "lucide-react"
 import Image from "next/image"
 import Email from "@/components/modules/Email"
 import Title from "@/components/modules/Title"
-import ContactMeButton from "@/components/templates/ContactMe.button"
+import ContactMeButton from "@/components/templates/ContactMeButton"
 import ProjectCard from "@/components/modules/projectCard/ProjectCardForCv"
 
 const page: React.FC = () => {
@@ -40,7 +40,7 @@ const page: React.FC = () => {
               <span>Iran , Khorasan Razavi, Mashhad</span>
             </li>
             <li className="flex items-center gap-2">
-              <ContactMeButton className="flex-row-reverse *:stroke-primary" value="_PHONE" />
+              <ContactMeButton className="flex-row-reverse *:stroke-primary" />
             </li>
           </ul>
         </div>
