@@ -1,11 +1,11 @@
 import React from "react"
-import t from "@/messages/fa.json"
+import faMessages from "@/messages/fa.json"
 
 import Title from "../modules/Title"
 import ArticleCard from "../modules/ArticleCard"
 
-const ArticleList = async () => {
-  const { article } = t.home
+const ArticleList: React.FC = async () => {
+  const { article } = faMessages.home
   return (
     <section id="article-list">
       <Title id="article-list-title-wrapper" size="lg" className="text-center">
