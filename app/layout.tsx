@@ -17,7 +17,7 @@ export default async function RootLayout({
 }>) {
   return (
     <html dir="rtl" lang="fa" data-theme="dark">
-      <body>
+      <body className="overflow-x-hidden">
         <ScrollSmooth>
           {children}
           <Toaster />
