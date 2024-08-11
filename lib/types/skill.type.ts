@@ -8,3 +8,7 @@ export type TypeSkill = {
   description: string
   projectList?: TypeProject[]
 }
+
+export type TypeSkillsProps = {
+  skillList: TypeSkill[]
+}

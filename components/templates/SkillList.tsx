@@ -1,9 +1,9 @@
 "use client"
 
 import React, { useState } from "react"
-import t from "@/messages/fa.json"
+import faMessage from "@/messages/fa.json"
 
-import { TypeSkill } from "@/lib/types/skill.type"
+import { TypeSkill, TypeSkillsProps } from "@/lib/types/skill.type"
 
 import { ArrowUpRight } from "lucide-react"
 
@@ -11,18 +11,15 @@ import Title from "../modules/Title"
 import Link from "next/link"
 import Image from "next/image"
 
-type SkillsProps = {
-  skillList: TypeSkill[]
-}
-
-const Skills: React.FC<SkillsProps> = ({ skillList }) => {
+const Skills: React.FC<TypeSkillsProps> = ({ skillList }) => {
+  const { skills } = faMessage.header.item
   const [mainSkill, setMainSkill] = useState<TypeSkill>(skillList.at(0) || ({} as TypeSkill))
 
   return skillList.length ? (
     <section id="skill-list">
       <div className="mt-40" id="skills" />
       <Title size="lg" className="text-center">
-        <h2 className="skill-list-title-child">{t.header.item.skills}</h2>
+        <h2 className="skill-list-title-child">{skills}</h2>
       </Title>
       <div className="my-12 grid grid-cols-1 gap-6 lg:grid-cols-2">
         <ul className="flex flex-wrap gap-3">
