@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useState } from "react"
-import t from "@/messages/fa.json"
+import faMessages from "@/messages/fa.json"
 
 import { MenuIcon, X } from "lucide-react"
 
@@ -9,6 +9,7 @@ import ShareButton from "../../modules/ShareButton"
 import ChangeThemeButton from "../../modules/ChangeThemeButton"
 import Link from "next/link"
 import Search from "../../modules/Search"
+import Indicator from "@/components/modules/Indicator"
 
 type MobileNavbarProps = {
   menuList: { href: string; title: string; isSoon: boolean }[]
@@ -16,14 +17,15 @@ type MobileNavbarProps = {
 
 const MobileNavbar: React.FC<MobileNavbarProps> = ({ menuList }) => {
   const [isMenu, setIsMenu] = useState(false)
-  const { utils } = t
+  const { utils } = faMessages
+
   return (
-    <div dir="ltr" className="mobile w-full h-full center justify-between lg:hidden">
-      <div className="flex">
+    <div className="mobile w-full h-full center flex-row-reverse justify-between lg:hidden">
+      <div>
         <ShareButton />
       </div>
       <div>
-        <aside dir="rtl" className={`drawer`}>
+        <aside dir="rtl" className="drawer">
           <input
             id="navbar-drawer"
             type="checkbox"
@@ -42,7 +44,7 @@ const MobileNavbar: React.FC<MobileNavbarProps> = ({ menuList }) => {
               aria-label="close sidebar"
               className="drawer-overlay"
             ></label>
-            <ul className="menu bg-base-200 max-w-full w-80 min-h-full text-base-content p-4">
+            <ul className="menu bg-base-200 text-base-content max-w-full w-80 min-h-full p-4">
               <div className="flex items-center justify-end">
                 <ChangeThemeButton className="btn-outline ml-3" />
                 <label
@@ -57,13 +59,9 @@ const MobileNavbar: React.FC<MobileNavbarProps> = ({ menuList }) => {
                 <Search />
               </div>
               {menuList.map((item, index) => (
-                <li key={index} className="indicator">
-                  {item.isSoon && (
-                    <span className="indicator-item badge badge-primary badge-sm -top-1">
-                      {utils.soon}
-                    </span>
-                  )}
-                  <Link className="relative group" href={item.href}>
+                <li onClick={() => setIsMenu(false)} key={index} className="relative w-full mb-2">
+                  {item.isSoon && <Indicator className="-top-1">{utils.soon}</Indicator>}
+                  <Link className="relative group w-full" href={item.href}>
                     {item.title}
                   </Link>
                 </li>

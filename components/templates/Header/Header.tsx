@@ -1,12 +1,12 @@
 import React from "react"
-import t from "@/messages/fa.json"
+import faMessages from "@/messages/fa.json"
 
 import AnimateElement from "@/components/modules/AnimateElement"
 import DesktopNavbar from "./DesktopNavbar"
 import MobileNavbar from "./MobileNavbar"
 
 const Header: React.FC = () => {
-  const { header } = t
+  const { header } = faMessages
   const menu = [
     { href: "/", title: header.item.home, isSoon: false },
     { href: "/#project-list", title: header.item.projects, isSoon: false },

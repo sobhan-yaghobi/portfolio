@@ -44,3 +44,11 @@ export type TypeTitleProps = {
   size?: "sm" | "md" | "lg" | "xl" | "xxl"
   isIcon?: boolean
 }
+
+export type TypeIndicatorProps = {
+  className?: string
+}
+
+export type TypeDesktopNavbarProps = {
+  menuList: { href: string; title: string; isSoon: boolean }[]
+}

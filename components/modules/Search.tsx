@@ -4,6 +4,7 @@ import React, { useState } from "react"
 import faMessages from "@/messages/fa.json"
 
 import { SearchIcon } from "lucide-react"
+import Indicator from "./Indicator"
 
 const Search: React.FC = () => {
   const { utils, header } = faMessages
@@ -17,9 +18,7 @@ const Search: React.FC = () => {
 
   return (
     <div className="relative">
-      <span className="indicator-item badge badge-primary badge-sm absolute -right-3 -top-5">
-        {utils.soon}
-      </span>
+      <Indicator className="-right-3 -top-6">{utils.soon}</Indicator>
       <label
         className={`input input-bordered input-sm bg-transparent flex items-center relative pr-11`}
       >
