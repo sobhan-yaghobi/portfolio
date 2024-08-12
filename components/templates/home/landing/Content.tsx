@@ -1,12 +1,14 @@
 import React from "react"
+import { getProfile } from "@/lib/fetcher/profile"
 
 import faMessages from "@/messages/fa.json"
 
 import Title from "@/components/modules/Title"
 import Image from "next/image"
 
-const ContentLanding: React.FC = () => {
-  const { title, desc } = faMessages.heroSection
+const ContentLanding: React.FC = async () => {
+  const { title } = faMessages.heroSection
+  const profile = await getProfile()
 
   const titleText = title.replace(
     /[Nn][Ee][Xx][Tt] [Jj][Ss]/g,
@@ -21,7 +23,7 @@ const ContentLanding: React.FC = () => {
           height={200}
           className="bg-neutral size-40 mb-4 rounded-full object-cover"
           draggable={false}
-          src={"/image/prof.jpg"}
+          src={profile?.image || ""}
           alt="profile"
         />
 
@@ -33,7 +35,7 @@ const ContentLanding: React.FC = () => {
           id="landing-description"
           className="w-full text-center px-5 my-6 md:px-24 lg:px-56 xl:px-80"
         >
-          {desc}
+          {profile?.bio}
         </p>
       </div>
     </>
