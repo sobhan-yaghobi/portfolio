@@ -4,6 +4,7 @@ import { random } from "gsap"
 import { TypeCvTechnicalSkillProps } from "@/lib/types/cv"
 
 import Title from "../modules/Title"
+import Image from "next/image"
 
 const CvTechnicalSkill: React.FC<TypeCvTechnicalSkillProps> = ({ technicalSkillList }) => {
   return (
@@ -11,42 +12,16 @@ const CvTechnicalSkill: React.FC<TypeCvTechnicalSkillProps> = ({ technicalSkillL
       <Title size="md">
         <h3>مهارت های فنی</h3>
       </Title>
-
-      {technicalSkillList?.map((technicalSkill) => (
-        <div key={technicalSkill.id}>
-          <h5 className="text-base font-bold mr-3">{technicalSkill.name}</h5>
-          <div className="flex-1 relative">
-            <span>{technicalSkill.experienceYearTime}</span>
-            <progress
-              className="progress progress-primary h-5 mt-1"
-              value={70}
-              max="100"
-              aria-label={`${technicalSkill.name}`}
-            />
-          </div>
-        </div>
-      ))}
-
-      <ul className="flex flex-wrap gap-2">
-        {[
-          "Javascript",
-          "Typescript",
-          "React Js",
-          "Next Js",
-          "Zod",
-          "React Hook Form",
-          "Material Ui",
-          "CSS",
-          "SASS",
-          "NPM",
-          "SupaBase",
-          "Vite",
-          "Lodash",
-          "Prisma",
-          "BootStrap",
-        ].map((item, index) => (
-          <li key={index} className="badge badge-lg">
-            {item}
+      <ul>
+        {technicalSkillList?.map((technicalSkill) => (
+          <li key={technicalSkill.id} dir="ltr">
+            <section className="max-h-12 p-2 py-3 rounded-lg flex items-center justify-between hover:bg-color">
+              <div className="flex">
+                <Image height={30} width={30} alt="package-image" src={technicalSkill.image} />
+                <h5 className="text-lg font-iran-sans ml-3">{technicalSkill.name}</h5>
+              </div>
+              <span>{technicalSkill.experienceYearTime}</span>
+            </section>
           </li>
         ))}
       </ul>
