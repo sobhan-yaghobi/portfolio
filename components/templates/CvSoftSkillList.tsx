@@ -11,7 +11,7 @@ const CvSoftSkillList: React.FC<TypeCvSoftSkillListProps> = ({ softSkillList }) 
         <h3>مهارت های نرم</h3>
       </Title>
       <ul className="[&>*]:mt-3 first:[&>*]:mt-0">
-        {softSkillList.map((softSkill) => (
+        {softSkillList?.map((softSkill) => (
           <li key={softSkill.id} className="flex">
             <span className="text-base">{softSkill.name}</span>
             <div className="rating flex flex-1 gap-1 justify-end">

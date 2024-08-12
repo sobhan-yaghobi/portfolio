@@ -7,7 +7,7 @@ export type TypeProject = {
   link: string
   source: string
   description: string
-  skillList: TypeSkill[]
+  technicalSkillList: TypeSkill[]
 }
 
 export type TypeProjectCardProps = TypeProject

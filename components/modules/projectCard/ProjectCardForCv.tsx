@@ -1,7 +1,13 @@
+import { TypeProject } from "@/lib/types/project.type"
 import Image from "next/image"
+import Link from "next/link"
 import React from "react"
 
-const ProjectCardForCv: React.FC = () => {
+type TypeProjectCardForCvProps = {
+  project: TypeProject
+}
+
+const ProjectCardForCv: React.FC<TypeProjectCardForCvProps> = ({ project }) => {
   return (
     <div className="card">
       <div className="card-body px-3 py-2 grid grid-cols-6 gap-3">
@@ -15,37 +21,27 @@ const ProjectCardForCv: React.FC = () => {
           />
         </div>
         <div className="col-span-5 [&>*]:mt-3 first:[&>*]:mt-0">
-          <h3 className="card-title">Hello World</h3>
+          <h3 className="font-dana text-xl">{project.title}</h3>
           <ul className="flex flex-wrap gap-2">
-            {[
-              "Javascript",
-              "Typescript",
-              "React Js",
-              "Next Js",
-              "Zod",
-              "React Hook Form",
-              "Material Ui",
-              "CSS",
-              "SASS",
-              "NPM",
-              "SupaBase",
-              "Vite",
-              "Lodash",
-              "Prisma",
-              "BootStrap",
-            ].map((item, index) => (
-              <li key={index} className="badge badge-sm">
-                {item}
+            {project?.technicalSkillList?.map((skill) => (
+              <li key={skill.id} className="badge badge-sm">
+                {skill.name}
               </li>
             ))}
           </ul>
-          <div>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit eum quis aliquam ad,
-            quaerat iusto voluptatem suscipit quisquam rerum repudiandae adipisci, saepe eos enim
-            eveniet possimus distinctio! Dolores perspiciatis a amet cumque provident harum. Vero
-            fugit iure blanditiis facilis possimus? Exercitationem iste corrupti reprehenderit
-            dolorem harum nam soluta necessitatibus asperiores.
-          </div>
+          <section>
+            {project.link && (
+              <button className="btn btn-sm btn-link">
+                <Link href={project.link}>مشاهده آنلاین</Link>
+              </button>
+            )}
+            {project.source && (
+              <button className="btn btn-sm btn-link">
+                <Link href={project.source}>مشاهده سورس کد</Link>
+              </button>
+            )}
+          </section>
+          <div>{project.description}</div>
         </div>
       </div>
     </div>

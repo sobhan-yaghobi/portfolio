@@ -4,6 +4,7 @@ import { TypeCvProjectListProps } from "@/lib/types/cv"
 
 import Title from "../modules/Title"
 import ProjectCard from "../modules/projectCard/ProjectCard"
+import ProjectCardForCv from "../modules/projectCard/ProjectCardForCv"
 
 const CvProjectList: React.FC<TypeCvProjectListProps> = ({ projectList }) => {
   return (
@@ -13,8 +14,8 @@ const CvProjectList: React.FC<TypeCvProjectListProps> = ({ projectList }) => {
       </Title>
       <ul>
         {projectList?.map((project) => (
-          <li key={project.id}>
-            <ProjectCard key={project.id} {...project} />
+          <li key={project.id} className="mb-12">
+            <ProjectCardForCv key={project.id} project={project} />
           </li>
         ))}
       </ul>

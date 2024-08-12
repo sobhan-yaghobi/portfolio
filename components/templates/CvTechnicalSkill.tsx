@@ -12,14 +12,14 @@ const CvTechnicalSkill: React.FC<TypeCvTechnicalSkillProps> = ({ technicalSkillL
         <h3>مهارت های فنی</h3>
       </Title>
 
-      {technicalSkillList.map((technicalSkill) => (
+      {technicalSkillList?.map((technicalSkill) => (
         <div key={technicalSkill.id}>
           <h5 className="text-base font-bold mr-3">{technicalSkill.name}</h5>
           <div className="flex-1 relative">
             <span>{technicalSkill.experienceYearTime}</span>
             <progress
               className="progress progress-primary h-5 mt-1"
-              value={random(50, 90)}
+              value={70}
               max="100"
               aria-label={`${technicalSkill.name}`}
             />
