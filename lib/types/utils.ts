@@ -35,6 +35,7 @@ export type TypeSocialFollowBoxProps = {
   title: string
   subtitle: string
   desc: string
+  username: string
   badgeWrapper: ReactNode
   className?: string
 }

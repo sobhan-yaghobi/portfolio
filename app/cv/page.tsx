@@ -8,6 +8,7 @@ import CvEducation from "@/components/templates/CvEducation"
 import CvSoftSkillList from "@/components/templates/CvSoftSkillList"
 import CvTechnicalSkill from "@/components/templates/CvTechnicalSkill"
 import CvProjectList from "@/components/templates/CvProjectList"
+import CvSocialMediaList from "@/components/templates/CvSocialMediaList"
 
 const page: React.FC = async () => {
   const profile = await getProfile()
@@ -20,6 +21,7 @@ const page: React.FC = async () => {
         <div className="divider" />
         <div className="flex max-lg:flex-col">
           <div className="w-1/2 *:text-sm [&>*]:mt-12 max-lg:w-full">
+            <CvSocialMediaList />
             <CvAboutMe bio={profile?.bio} />
             <CvEducation />
             <CvSoftSkillList softSkillList={cv.softSkillList} />

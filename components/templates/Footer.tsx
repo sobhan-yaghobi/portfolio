@@ -12,75 +12,79 @@ import ContactMeButton from "./ContactMeButton"
 import ScrollTo from "@/components/modules/ScrollTo"
 import Email from "@/components/modules/Email"
 
+export const socialFollowItems: TypeSocialFollowBoxProps[] = [
+  {
+    id: "1",
+    title: faMessages.social.telegram.title,
+    subtitle: faMessages.social.telegram.subtitle,
+    desc: faMessages.social.telegram.desc,
+    logoSrc: "/image/telegram.png",
+    backImgSrc: "/image/telegram-background.png",
+    username: "@sobhan_yaghobii",
+    badgeWrapper: (
+      <CopyToClipboard value="">
+        <p className="badge badge-sm py-3 gap-1">
+          <AtSign className="icon-sm" />
+          sobhan_yaghobii
+        </p>
+      </CopyToClipboard>
+    ),
+  },
+  {
+    id: "2",
+    title: faMessages.social.instagram.title,
+    subtitle: faMessages.social.instagram.subtitle,
+    desc: faMessages.social.instagram.desc,
+    logoSrc: "/image/instagram.png",
+    backImgSrc: "/image/instagram-background.png",
+    username: "sobhan__ya",
+    badgeWrapper: (
+      <CopyToClipboard value="">
+        <p className="badge badge-sm py-3 gap-1">
+          <AtSign className="icon-sm" />
+          sobhan__ya
+        </p>
+      </CopyToClipboard>
+    ),
+  },
+  {
+    id: "3",
+    title: faMessages.social.github.title,
+    subtitle: faMessages.social.github.subtitle,
+    desc: faMessages.social.github.desc,
+    logoSrc: "/packages/github.svg",
+    backImgSrc: "/image/github-background.png",
+    username: "sobhan-yaghobi",
+    badgeWrapper: (
+      <CopyToClipboard value="sobhan-yaghobi">
+        <p className="badge badge-sm py-3 gap-1">
+          <AtSign className="icon-sm" />
+          sobhan-yaghobi
+        </p>
+      </CopyToClipboard>
+    ),
+  },
+  {
+    id: "4",
+    title: faMessages.social.linkedin.title,
+    subtitle: faMessages.social.linkedin.subtitle,
+    desc: faMessages.social.linkedin.desc,
+    logoSrc: "/image/linkedin.png",
+    backImgSrc: "/image/linkedin-background.png",
+    username: "sobhan yaghobi",
+    badgeWrapper: (
+      <CopyToClipboard value="sobhan yaghobi">
+        <p className="badge badge-sm py-3 gap-1">
+          <AtSign className="icon-sm" />
+          sobhan yaghobi
+        </p>
+      </CopyToClipboard>
+    ),
+  },
+]
+
 const Footer: React.FC = async () => {
-  const { social } = faMessages
   const profile = await getProfile()
-  const socialFollowItems: TypeSocialFollowBoxProps[] = [
-    {
-      id: "1",
-      title: social.telegram.title,
-      subtitle: social.telegram.subtitle,
-      desc: social.telegram.desc,
-      logoSrc: "/image/telegram.png",
-      backImgSrc: "/image/telegram-background.png",
-      badgeWrapper: (
-        <CopyToClipboard value="@sobhan_yaghobii">
-          <p className="badge badge-sm py-3 gap-1">
-            <AtSign className="icon-sm" />
-            sobhan_yaghobii
-          </p>
-        </CopyToClipboard>
-      ),
-    },
-    {
-      id: "2",
-      title: social.instagram.title,
-      subtitle: social.instagram.subtitle,
-      desc: social.instagram.desc,
-      logoSrc: "/image/instagram.png",
-      backImgSrc: "/image/instagram-background.png",
-      badgeWrapper: (
-        <CopyToClipboard value="sobhan__ya">
-          <p className="badge badge-sm py-3 gap-1">
-            <AtSign className="icon-sm" />
-            sobhan__ya
-          </p>
-        </CopyToClipboard>
-      ),
-    },
-    {
-      id: "3",
-      title: social.github.title,
-      subtitle: social.github.subtitle,
-      desc: social.github.desc,
-      logoSrc: "/packages/github.svg",
-      backImgSrc: "/image/github-background.png",
-      badgeWrapper: (
-        <CopyToClipboard value="sobhan-yaghobi">
-          <p className="badge badge-sm py-3 gap-1">
-            <AtSign className="icon-sm" />
-            sobhan-yaghobi
-          </p>
-        </CopyToClipboard>
-      ),
-    },
-    {
-      id: "4",
-      title: social.linkedin.title,
-      subtitle: social.linkedin.subtitle,
-      desc: social.linkedin.desc,
-      logoSrc: "/image/linkedin.png",
-      backImgSrc: "/image/linkedin-background.png",
-      badgeWrapper: (
-        <CopyToClipboard value="sobhan yaghobi">
-          <p className="badge badge-sm py-3 gap-1">
-            <AtSign className="icon-sm" />
-            sobhan yaghobi
-          </p>
-        </CopyToClipboard>
-      ),
-    },
-  ]
   return (
     <footer>
       <div className="mb-3 center">
