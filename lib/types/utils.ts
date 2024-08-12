@@ -12,6 +12,7 @@ export type TypeCopyToClipboardProps = {
 }
 
 export type TypeEmailProps = {
+  email: string
   className?: string
 }
 
@@ -54,6 +55,7 @@ export type TypeDesktopNavbarProps = {
 }
 
 export type TypeContactMeButtonProps = {
+  phoneNumber: string
+  text?: string
   className?: string
-  value?: string
 }

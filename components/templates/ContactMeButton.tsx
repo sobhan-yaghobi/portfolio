@@ -11,9 +11,9 @@ import { Phone } from "lucide-react"
 
 import Link from "next/link"
 import CopyToClipboard from "../modules/CopyToClipboard"
+import { getProfile } from "@/lib/fetcher/profile"
 
-const ContactMeButton: React.FC<TypeContactMeButtonProps> = ({ className, value }) => {
-  const phoneNumber = "+98 939 600 7232"
+const ContactMeButton: React.FC<TypeContactMeButtonProps> = ({ phoneNumber, text, className }) => {
   const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
@@ -21,12 +21,12 @@ const ContactMeButton: React.FC<TypeContactMeButtonProps> = ({ className, value 
     setIsMobile(isUserUseMobile(userAgent))
   }, [])
 
-  const text = value || phoneNumber
+  const MainText = text || phoneNumber
 
   if (isMobile) {
     return (
       <Link className={cn("flex items-center gap-2", className)} href={`tel:${phoneNumber}`}>
-        <span>{text}</span>
+        <span>{MainText}</span>
         <Phone className="icon" />
       </Link>
     )
@@ -34,7 +34,7 @@ const ContactMeButton: React.FC<TypeContactMeButtonProps> = ({ className, value 
 
   return (
     <CopyToClipboard value={phoneNumber} className={cn("flex items-center gap-2", className)}>
-      <span className="dir-left">{text}</span>
+      <span className="dir-left">{MainText}</span>
       <Phone className="icon" />
     </CopyToClipboard>
   )

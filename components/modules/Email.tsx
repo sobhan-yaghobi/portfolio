@@ -7,12 +7,12 @@ import { Mail } from "lucide-react"
 
 import Link from "next/link"
 
-const Email: React.FC<TypeEmailProps> = ({ className }) => {
+const Email: React.FC<TypeEmailProps> = ({ email, className }) => {
   return (
-    <Link href={"mailto:sobhan.yaghobi.work@gmail.com"}>
+    <Link href={`mailto:${email}`}>
       <button className={cn("flex items-center gap-2", className)}>
         <Mail className="icon" />
-        sobhan.yaghobi.work@gmail.com
+        {email}
       </button>
     </Link>
   )
