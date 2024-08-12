@@ -7,6 +7,7 @@ export type TypeSkill = {
   link: string
   description: string
   projectList?: TypeProject[]
+  experienceYearTime: string
 }
 
 export type TypeSkillsProps = {
