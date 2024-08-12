@@ -1,7 +1,8 @@
+import gsap from "gsap"
 import { createTimeline } from "./utils"
 
 export const skillListAnimate = () => {
-  const timeLine = createTimeline("#skill-list", "-50%")
+  const timeLine = createTimeline("#skill-list", "-80%")
   timeLine.fromTo(
     "#skill-list .skill-list-title-child",
     {
@@ -18,7 +19,7 @@ export const skillListAnimate = () => {
       opacity: 0,
       y: 10,
     },
-    { opacity: 1, y: 0, stagger: 0.2 },
+    { opacity: 1, y: 0, stagger: 0.06 },
     "-=.05"
   )
 

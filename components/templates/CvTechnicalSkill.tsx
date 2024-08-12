@@ -1,5 +1,4 @@
 import React from "react"
-import { random } from "gsap"
 
 import { TypeCvTechnicalSkillProps } from "@/lib/types/cv"
 
@@ -14,7 +13,7 @@ const CvTechnicalSkill: React.FC<TypeCvTechnicalSkillProps> = ({ technicalSkillL
       </Title>
       <ul>
         {technicalSkillList?.map((technicalSkill) => (
-          <li key={technicalSkill.id} dir="ltr">
+          <li key={technicalSkill.id} dir="ltr" className="cursor-pointer">
             <section className="max-h-12 p-2 py-3 rounded-lg flex items-center justify-between hover:bg-color">
               <div className="flex">
                 <Image height={30} width={30} alt="package-image" src={technicalSkill.image} />
