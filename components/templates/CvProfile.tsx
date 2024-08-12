@@ -13,9 +13,9 @@ const CvProfile: React.FC<TypeCvProfileProps> = ({ profile }) => {
   return (
     <>
       <div className="w-full h-52 flex absolute -top-10 -translate-x-1/2 left-1/2 -z-10">
-        <div className="bg-primary w-full h-96 blur-3xl rounded-full"></div>
-        <div className="bg-primary w-full h-52 blur-3xl absolute" />
-        <div className="bg-primary w-full h-96 blur-3xl rounded-full"></div>
+        <div className="cv-shape bg-primary w-full h-96 blur-3xl rounded-full"></div>
+        <div className="cv-shape bg-primary w-full h-52 blur-3xl absolute" />
+        <div className="cv-shape bg-primary w-full h-96 blur-3xl rounded-full"></div>
       </div>
       <div className="flex items-center justify-between flex-col gap-6">
         <Image

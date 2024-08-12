@@ -8,6 +8,7 @@ import { articleListAnimate } from "./articleList"
 import { aboutMeLandingAnimate } from "./aboutMeLanding"
 import { lifeGlimpseAndSoftSkillsAnimate } from "./lifeGlimpseAndSoftSkills"
 import { skillListAnimate } from "./skillList"
+import { cvAnimate } from "./cv"
 
 export const createTimeline = (
   trigger?: gsap.DOMTarget,
@@ -32,4 +33,5 @@ export const animationList = {
   animateAboutMeLanding: aboutMeLandingAnimate,
   animateLifeGlimpseAndSoftSkills: lifeGlimpseAndSoftSkillsAnimate,
   animateSkillList: skillListAnimate,
+  animateCv: cvAnimate,
 }
