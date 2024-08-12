@@ -28,3 +28,7 @@ export type TypeCvAboutMeProps = {
 export type TypeCvProfileProps = {
   profile: TypeProfile
 }
+
+export type TypeProjectCardForCvProps = {
+  project: TypeProject
+}

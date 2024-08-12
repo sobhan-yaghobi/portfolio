@@ -1,11 +1,9 @@
-import { TypeProject } from "@/lib/types/project.type"
-import Image from "next/image"
-import Link from "next/link"
 import React from "react"
 
-type TypeProjectCardForCvProps = {
-  project: TypeProject
-}
+import { TypeProjectCardForCvProps } from "@/lib/types/cv"
+
+import Image from "next/image"
+import Link from "next/link"
 
 const ProjectCardForCv: React.FC<TypeProjectCardForCvProps> = ({ project }) => {
   return (
