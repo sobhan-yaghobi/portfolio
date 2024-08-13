@@ -9,7 +9,7 @@ import Link from "next/link"
 
 const Email: React.FC<TypeEmailProps> = ({ email, disableIcon, className }) => {
   return (
-    <Link href={`mailto:${email}`}>
+    <Link dir="ltr" href={`mailto:${email}`}>
       <button className={cn("flex items-center gap-2", className)}>
         {!disableIcon && <Mail className="icon" />}
         {email}

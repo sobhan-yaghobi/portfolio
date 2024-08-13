@@ -42,10 +42,7 @@ const Footer: React.FC = async () => {
             <p className="mt-3">ساخته شده با 🧡 در ایران</p>
           </section>
         </aside>
-        <nav
-          dir="ltr"
-          className="grid-flow-col max-lg:flex max-lg:flex-wrap max-lg:justify-center gap-4 lg:place-self-center lg:justify-self-end"
-        >
+        <nav className="grid-flow-col max-lg:flex max-lg:flex-wrap max-lg:justify-center gap-4 lg:place-self-center lg:justify-self-end">
           <Email email={profile.email} className="btn btn-ghost font-normal" />
           {profile.phone && (
             <ContactMeButton phoneNumber={profile.phone} className="btn btn-ghost font-normal" />

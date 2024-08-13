@@ -29,7 +29,11 @@ const ContactMeButton: React.FC<TypeContactMeButtonProps> = ({
 
   if (isMobile) {
     return (
-      <Link className={cn("flex items-center gap-2", className)} href={`tel:${phoneNumber}`}>
+      <Link
+        dir="ltr"
+        className={cn("flex items-center gap-2", className)}
+        href={`tel:${phoneNumber}`}
+      >
         <span>{MainText}</span>
         {!disableIcon && <Phone className="icon" />}
       </Link>
@@ -38,7 +42,9 @@ const ContactMeButton: React.FC<TypeContactMeButtonProps> = ({
 
   return (
     <CopyToClipboard value={phoneNumber} className={cn("flex items-center gap-2", className)}>
-      <span className="dir-left">{MainText}</span>
+      <span dir="ltr" className="dir-left">
+        {MainText}
+      </span>
       {!disableIcon && <Phone className="icon" />}
     </CopyToClipboard>
   )
