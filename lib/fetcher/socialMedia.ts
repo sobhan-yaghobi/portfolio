@@ -6,8 +6,8 @@ export const getSocialMediaList = async () => {
     const res = await fetch(`${env.NEXT_PUBLIC_API_URL}/socialMedia`, {
       next: { revalidate: 60 },
     })
-    const projectList = (await res.json()) as TypeSocialMedia[]
-    return projectList
+    const socialMediaList = (await res.json()) as TypeSocialMedia[]
+    return socialMediaList
   } catch (error) {
     return [] as TypeSocialMedia[]
   }
