@@ -19,12 +19,12 @@ const ProjectCard: React.FC<TypeProjectCardProps> = ({
   description,
   technicalSkillList,
 }) => {
-  const isModalSupported = description !== getWords(description, 25)
+  const isModalSupported = description !== getWords(description, 35)
 
   return (
-    <div className="card bg-base-200 flex-1 min-w-72 max-w-full h-[450px] shadow-xl">
+    <div className="card bg-base-200 flex-1 min-w-72 max-w-full h-[470px] shadow-xl">
       <figure className="h-52 p-2">
-        <div className="!bg-base-300 w-full h-full min-size-60 flex items-center justify-center rounded-xl overflow-hidden">
+        <div className="!bg-base-300 w-full h-full flex items-center justify-center rounded-xl overflow-hidden">
           <Image
             width={300}
             height={300}
@@ -37,11 +37,11 @@ const ProjectCard: React.FC<TypeProjectCardProps> = ({
       <div className="card-body px-3 py-4 justify-between">
         <ProjectCardTitle title={title} />
         <section className="flex-1">
-          <p className="h-24 overflow-hidden">
-            {getWords(description, 25)}
+          <p className="h-28 text-sm overflow-hidden">
+            {getWords(description, 35)}
             {isModalSupported && <>...</>}
+            {isModalSupported && <ProjectCardButtonDialog modalId={id} />}
           </p>
-          {isModalSupported && <ProjectCardButtonDialog modalId={id} />}
         </section>
         <div className="flex gap-3 [&>*]:flex-1">
           <ProjectCardButtonList link={link} source={source} />
