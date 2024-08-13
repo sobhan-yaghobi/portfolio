@@ -1,4 +1,5 @@
 import { ReactElement, ReactNode } from "react"
+import { TypeSocialMedia } from "./socialMedia"
 
 export type TypeTimeLine = gsap.core.Timeline
 
@@ -28,16 +29,7 @@ export type TypeScrollToProps = {
 }
 
 export type TypeSocialFollowBoxProps = {
-  id: string
-  backImgSrc: string
-  backImgClassNames?: string[]
-  logoSrc: string
-  title: string
-  subtitle: string
-  desc: string
-  username: string
-  badgeWrapper: ReactNode
-  className?: string
+  socialMedia: TypeSocialMedia
 }
 
 export type TypeTitleProps = {

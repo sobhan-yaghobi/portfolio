@@ -1,6 +1,7 @@
 import React from "react"
 import { getCv } from "@/lib/fetcher/cv"
 import { getProfile } from "@/lib/fetcher/profile"
+import { getSocialMediaList } from "@/lib/fetcher/socialMedia"
 
 import CvProfile from "@/components/templates/CvProfile"
 import CvAboutMe from "@/components/templates/CvAboutMe"
@@ -14,6 +15,7 @@ import AnimateElement from "@/components/modules/AnimateElement"
 const page: React.FC = async () => {
   const profile = await getProfile()
   const cv = await getCv()
+  const socialMediaList = await getSocialMediaList()
 
   return (
     <AnimateElement selectedAnimationName="animateCv">
@@ -23,7 +25,7 @@ const page: React.FC = async () => {
           <div className="divider" />
           <div className="flex max-lg:flex-col">
             <div className="w-1/2 *:text-sm [&>*]:mt-12 max-lg:w-full">
-              <CvSocialMediaList />
+              <CvSocialMediaList socialMediaList={socialMediaList} />
               <CvAboutMe bio={profile?.bio} />
               <CvEducation />
               <CvSoftSkillList softSkillList={cv.softSkillList} />

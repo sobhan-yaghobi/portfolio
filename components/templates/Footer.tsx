@@ -1,90 +1,17 @@
 import React from "react"
-import faMessages from "@/messages/fa.json"
 import { getProfile } from "@/lib/fetcher/profile"
+import { getSocialMediaList } from "@/lib/fetcher/socialMedia"
 
-import { TypeSocialFollowBoxProps } from "@/lib/types/utils"
-
-import { ArrowUp, AtSign } from "lucide-react"
+import { ArrowUp } from "lucide-react"
 
 import SocialFollowBox from "@/components/modules/SocialFollowBox"
-import CopyToClipboard from "@/components/modules/CopyToClipboard"
 import ContactMeButton from "./ContactMeButton"
 import ScrollTo from "@/components/modules/ScrollTo"
 import Email from "@/components/modules/Email"
 
-export const socialFollowItems: TypeSocialFollowBoxProps[] = [
-  {
-    id: "1",
-    title: faMessages.social.telegram.title,
-    subtitle: faMessages.social.telegram.subtitle,
-    desc: faMessages.social.telegram.desc,
-    logoSrc: "/image/telegram.png",
-    backImgSrc: "/image/telegram-background.png",
-    username: "@sobhan_yaghobii",
-    badgeWrapper: (
-      <CopyToClipboard value="">
-        <p className="badge badge-sm py-3 gap-1">
-          <AtSign className="icon-sm" />
-          sobhan_yaghobii
-        </p>
-      </CopyToClipboard>
-    ),
-  },
-  {
-    id: "2",
-    title: faMessages.social.instagram.title,
-    subtitle: faMessages.social.instagram.subtitle,
-    desc: faMessages.social.instagram.desc,
-    logoSrc: "/image/instagram.png",
-    backImgSrc: "/image/instagram-background.png",
-    username: "sobhan__ya",
-    badgeWrapper: (
-      <CopyToClipboard value="">
-        <p className="badge badge-sm py-3 gap-1">
-          <AtSign className="icon-sm" />
-          sobhan__ya
-        </p>
-      </CopyToClipboard>
-    ),
-  },
-  {
-    id: "3",
-    title: faMessages.social.github.title,
-    subtitle: faMessages.social.github.subtitle,
-    desc: faMessages.social.github.desc,
-    logoSrc: "/packages/github.svg",
-    backImgSrc: "/image/github-background.png",
-    username: "sobhan-yaghobi",
-    badgeWrapper: (
-      <CopyToClipboard value="sobhan-yaghobi">
-        <p className="badge badge-sm py-3 gap-1">
-          <AtSign className="icon-sm" />
-          sobhan-yaghobi
-        </p>
-      </CopyToClipboard>
-    ),
-  },
-  {
-    id: "4",
-    title: faMessages.social.linkedin.title,
-    subtitle: faMessages.social.linkedin.subtitle,
-    desc: faMessages.social.linkedin.desc,
-    logoSrc: "/image/linkedin.png",
-    backImgSrc: "/image/linkedin-background.png",
-    username: "sobhan yaghobi",
-    badgeWrapper: (
-      <CopyToClipboard value="sobhan yaghobi">
-        <p className="badge badge-sm py-3 gap-1">
-          <AtSign className="icon-sm" />
-          sobhan yaghobi
-        </p>
-      </CopyToClipboard>
-    ),
-  },
-]
-
 const Footer: React.FC = async () => {
   const profile = await getProfile()
+  const socialMediaList = await getSocialMediaList()
   return (
     <footer>
       <div className="mb-3 center">
@@ -93,8 +20,8 @@ const Footer: React.FC = async () => {
         </ScrollTo>
       </div>
       <div className="container pb-3 grid grid-cols-2 max-lg:grid-rows-2 gap-3 lg:grid-cols-4">
-        {socialFollowItems.map((item) => (
-          <SocialFollowBox key={item.id} {...item} />
+        {socialMediaList.map((socialMedia) => (
+          <SocialFollowBox key={socialMedia.id} socialMedia={socialMedia} />
         ))}
       </div>
       <div className="footer bg-color *:bg-color-content dark:text-neutral-content p-4 flex-col-reverse items-center relative z-20 max-lg:footer-center">
