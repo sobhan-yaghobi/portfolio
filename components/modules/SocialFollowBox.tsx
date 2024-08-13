@@ -48,7 +48,7 @@ const SocialFollowBox: React.FC<TypeSocialFollowBoxProps> = ({ socialMedia }) =>
           </div>
           <p className="text-sm flex-1">{socialMedia.description}</p>
           <div className="flex *:gap-1 justify-between">
-            <div className="flex flex-1 justify-between">
+            <div className="flex flex-1 justify-between overflow-x-auto">
               <CopyToClipboard value={socialMedia.username}>
                 <p className="badge badge-sm py-3 gap-1">
                   <AtSign className="icon-sm" />
