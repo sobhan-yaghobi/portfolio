@@ -1,4 +1,3 @@
-import gsap from "gsap"
 import { createTimeline } from "./utils"
 
 export const articleListAnimate = () => {
