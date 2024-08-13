@@ -49,7 +49,10 @@ const ProjectCard: React.FC<TypeProjectCardProps> = ({
       </div>
 
       {isModalSupported && (
-        <ProjectCardDialog project={{ title, description, link, source }} modalId={id} />
+        <ProjectCardDialog
+          project={{ title, description, link, source, technicalSkillList }}
+          modalId={id}
+        />
       )}
     </div>
   )
