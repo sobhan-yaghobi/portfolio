@@ -1,10 +1,12 @@
 import React from "react"
 
+import { TypeArticleCardProps } from "@/lib/types/article"
+
 import { Heart, MessageSquareText, Send } from "lucide-react"
 
 import Image from "next/image"
 
-const ArticleCard: React.FC = () => {
+const ArticleCard: React.FC<TypeArticleCardProps> = ({ article }) => {
   return (
     <div className="card bg-base-200 min-w-72 max-w-full h-[470px] flex-1 shadow-xl">
       <figure className="h-3/6 p-2 center relative overflow-visible">

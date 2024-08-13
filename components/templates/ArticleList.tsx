@@ -3,6 +3,38 @@ import faMessages from "@/messages/fa.json"
 
 import Title from "../modules/Title"
 import ArticleCard from "../modules/ArticleCard"
+import { TypeArticle } from "@/lib/types/article"
+
+const articleList: TypeArticle[] = [
+  {
+    id: "1",
+    title: "سفر به دنیای کد: از علاقه تا تخصص",
+    description:
+      "هر برنامه‌نویس فرانت‌اند از جایی شروع می‌کند؛ برخی با علاقه به طراحی وب، برخی دیگر با عشق به کدنویسی. این مسیر از یادگیری مفاهیم پایه شروع شده و با تلاش، تمرین و تجربه به تخصص تبدیل می‌شود.",
+    image: "/image/article.jpg",
+  },
+  {
+    id: "2",
+    title: "مواجهه با چالش‌ها: رفع مشکلات و یادگیری از اشتباهات",
+    description:
+      "چالش‌ها و باگ‌ها بخش جدایی‌ناپذیر از مسیر هر برنامه‌نویس هستند. حل این مشکلات و یادگیری از اشتباهات، یکی از عوامل مهم در پیشرفت یک برنامه‌نویس فرانت‌اند است.",
+    image: "/image/article.jpg",
+  },
+  {
+    id: "3",
+    title: "تسلط بر ابزارها و فناوری‌ها: از HTML و CSS تا فریم‌ورک‌های مدرن",
+    description:
+      "یکی از نقاط قوت یک متخصص فرانت‌اند، آشنایی و تسلط بر ابزارها و فناوری‌های متعددی مانند HTML، CSS، JavaScript و فریم‌ورک‌های مدرنی چون React و Next.js است.",
+    image: "/image/article.jpg",
+  },
+  {
+    id: "4",
+    title: "همکاری تیمی: نقش برنامه‌نویس فرانت‌اند در پروژه‌های بزرگ",
+    description:
+      "یک برنامه‌نویس فرانت‌اند در پروژه‌های بزرگ نیاز به همکاری و هماهنگی با اعضای دیگر تیم دارد. ارتباط موثر، مدیریت زمان، و تقسیم وظایف از مهارت‌های کلیدی در این نقش است.",
+    image: "/image/article.jpg",
+  },
+]
 
 const ArticleList: React.FC = async () => {
   const { article } = faMessages.home
@@ -15,13 +47,11 @@ const ArticleList: React.FC = async () => {
         </h4>
       </Title>
       <div className="my-12 flex gap-10 overflow-hidden max-lg:overflow-x-auto lg:grid lg:grid-cols-3 xl:grid-cols-4">
-        {Array(4)
-          .fill("")
-          .map((_, index) => (
-            <div className="article-card" key={index}>
-              <ArticleCard key={index} />
-            </div>
-          ))}
+        {articleList.map((article) => (
+          <div className="article-card" key={article.id}>
+            <ArticleCard article={article} />
+          </div>
+        ))}
       </div>
     </section>
   )
