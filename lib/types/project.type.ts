@@ -1,4 +1,4 @@
-import { TypeSkill } from "./skill.type"
+import { TypeTechnicalSkill } from "./technicalSkill.type"
 
 export type TypeProject = {
   id: string
@@ -7,7 +7,7 @@ export type TypeProject = {
   link: string
   source: string
   description: string
-  technicalSkillList: TypeSkill[]
+  technicalSkillList: TypeTechnicalSkill[]
 }
 
 export type TypeProjectCardProps = TypeProject

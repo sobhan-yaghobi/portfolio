@@ -1,10 +1,10 @@
 import { TypeProfile } from "./profile"
 import { TypeProject } from "./project.type"
-import { TypeSkill } from "./skill.type"
+import { TypeTechnicalSkill } from "./technicalSkill.type"
 import { TypeSoftSkill } from "./softSkill.type"
 
 export type TypeCv = {
-  technicalSkillList: TypeSkill[] | undefined
+  technicalSkillList: TypeTechnicalSkill[] | undefined
   softSkillList: TypeSoftSkill[] | undefined
   projectList: TypeProject[] | undefined
 }
@@ -14,7 +14,7 @@ export type TypeCvProjectListProps = {
 }
 
 export type TypeCvTechnicalSkillProps = {
-  technicalSkillList: TypeSkill[] | undefined
+  technicalSkillList: TypeTechnicalSkill[] | undefined
 }
 
 export type TypeCvSoftSkillListProps = {

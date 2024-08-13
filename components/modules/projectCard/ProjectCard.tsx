@@ -17,7 +17,7 @@ const ProjectCard: React.FC<TypeProjectCardProps> = ({
   link,
   source,
   description,
-  skillList,
+  technicalSkillList,
 }) => {
   const isModalSupported = description !== getWords(description, 25)
 

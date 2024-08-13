@@ -3,7 +3,7 @@
 import React, { useState } from "react"
 import faMessage from "@/messages/fa.json"
 
-import { TypeSkill, TypeSkillsProps } from "@/lib/types/skill.type"
+import { TypeTechnicalSkill, TypeTechnicalSkillsProps } from "@/lib/types/technicalSkill.type"
 
 import { ArrowUpRight } from "lucide-react"
 
@@ -11,11 +11,13 @@ import Title from "../modules/Title"
 import Link from "next/link"
 import Image from "next/image"
 
-const Skills: React.FC<TypeSkillsProps> = ({ skillList }) => {
+const Skills: React.FC<TypeTechnicalSkillsProps> = ({ technicalSkillList }) => {
   const { skills } = faMessage.header.item
-  const [mainSkill, setMainSkill] = useState<TypeSkill>(skillList.at(0) || ({} as TypeSkill))
+  const [mainSkill, setMainSkill] = useState<TypeTechnicalSkill>(
+    technicalSkillList.at(0) || ({} as TypeTechnicalSkill)
+  )
 
-  return skillList.length ? (
+  return technicalSkillList.length ? (
     <section id="skill-list">
       <div className="mt-40" id="skills" />
       <Title size="lg" className="text-center">
@@ -23,7 +25,7 @@ const Skills: React.FC<TypeSkillsProps> = ({ skillList }) => {
       </Title>
       <div className="my-12 grid grid-cols-1 gap-6 lg:grid-cols-2">
         <ul className="flex flex-wrap gap-3">
-          {skillList?.map((skill) => (
+          {technicalSkillList?.map((skill) => (
             <li className="skill-item" key={skill.id}>
               <Link href={`#${skill.name}`}>
                 <button

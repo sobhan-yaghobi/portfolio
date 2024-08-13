@@ -1,7 +1,7 @@
 import gsap from "gsap"
 import { createTimeline } from "./utils"
 
-export const skillListAnimate = () => {
+export const technicalSkillListAnimate = () => {
   const timeLine = createTimeline("#skill-list", "-80%")
   timeLine.fromTo(
     "#skill-list .skill-list-title-child",

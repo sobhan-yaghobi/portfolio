@@ -1,6 +1,6 @@
 import { TypeProject } from "./project.type"
 
-export type TypeSkill = {
+export type TypeTechnicalSkill = {
   id: string
   name: string
   image: string
@@ -10,6 +10,6 @@ export type TypeSkill = {
   experienceYearTime: string
 }
 
-export type TypeSkillsProps = {
-  skillList: TypeSkill[]
+export type TypeTechnicalSkillsProps = {
+  technicalSkillList: TypeTechnicalSkill[]
 }

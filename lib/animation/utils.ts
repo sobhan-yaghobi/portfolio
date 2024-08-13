@@ -7,7 +7,7 @@ import { TypeTimeLine } from "../types/utils"
 import { articleListAnimate } from "./articleList"
 import { aboutMeLandingAnimate } from "./aboutMeLanding"
 import { lifeGlimpseAndSoftSkillsAnimate } from "./lifeGlimpseAndSoftSkills"
-import { skillListAnimate } from "./skillList"
+import { technicalSkillListAnimate } from "./technicalSkillList"
 import { cvAnimate } from "./cv"
 
 export const createTimeline = (
@@ -32,6 +32,6 @@ export const animationList = {
   animateArticleList: articleListAnimate,
   animateAboutMeLanding: aboutMeLandingAnimate,
   animateLifeGlimpseAndSoftSkills: lifeGlimpseAndSoftSkillsAnimate,
-  animateSkillList: skillListAnimate,
+  animateTechnicalSkillList: technicalSkillListAnimate,
   animateCv: cvAnimate,
 }
