@@ -6,18 +6,20 @@ import { Heart, MessageSquareText, Send } from "lucide-react"
 
 import Image from "next/image"
 import { getWords } from "@/lib/utils"
+import Indicator from "./Indicator"
 
 const ArticleCard: React.FC<TypeArticleCardProps> = ({ article }) => {
   const isTitleSummary = article.title !== getWords(article.title, 6)
   const isDescriptionSummary = article.description !== getWords(article.description, 20)
   return (
-    <div className="card bg-base-200 min-w-72 max-w-full h-[470px] flex-1 shadow-xl">
+    <div className="card bg-base-200 min-w-72 max-w-full h-[470px] flex-1 shadow-xl relative">
+      <Indicator className="bg-info top-0 left-0">در حال انتشار</Indicator>
       <figure className="h-52 p-2 relative overflow-visible">
         <div className="bg-base-300 size-full flex items-center justify-center rounded-xl overflow-hidden">
           <Image
             width={300}
             height={300}
-            src="/image/article.jpg"
+            src={article.image}
             className="w-full h-full object-cover"
             alt="article-image"
           />
@@ -45,11 +47,12 @@ const ArticleCard: React.FC<TypeArticleCardProps> = ({ article }) => {
         </p>
         <div className="flex items-center justify-between gap-3">
           <input
+            disabled
             type="text"
             placeholder="leave a comment ..."
             className="input input-md input-bordered bg-transparent flex-1"
           />
-          <button className="btn">
+          <button disabled className="btn">
             <Send className="icon" />
           </button>
         </div>

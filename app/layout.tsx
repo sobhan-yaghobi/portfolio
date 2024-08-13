@@ -4,6 +4,7 @@ import "./globals.css"
 
 import ScrollSmooth from "../components/templates/ScrollSmooth"
 import { Toaster } from "@/components/ui/toaster"
+import Head from "next/head"
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,6 +18,13 @@ export default async function RootLayout({
 }>) {
   return (
     <html dir="rtl" lang="fa" data-theme="dark">
+      <head>
+        <title>sobhan yaghobi</title>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        />
+      </head>
       <body className="overflow-x-hidden">
         <ScrollSmooth>
           {children}
