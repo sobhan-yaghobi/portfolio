@@ -7,11 +7,11 @@ import { Mail } from "lucide-react"
 
 import Link from "next/link"
 
-const Email: React.FC<TypeEmailProps> = ({ email, className }) => {
+const Email: React.FC<TypeEmailProps> = ({ email, disableIcon, className }) => {
   return (
     <Link href={`mailto:${email}`}>
       <button className={cn("flex items-center gap-2", className)}>
-        <Mail className="icon" />
+        {!disableIcon && <Mail className="icon" />}
         {email}
       </button>
     </Link>

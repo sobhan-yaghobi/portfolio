@@ -1,7 +1,7 @@
 import React from "react"
 
 import { Share2 } from "lucide-react"
-import SocialLinkList from "./SocialLinkList"
+import SocialLinkItem from "./SocialLinkItem"
 
 const ShareButton: React.FC = () => {
   return (
@@ -11,7 +11,7 @@ const ShareButton: React.FC = () => {
       </button>
       <div className="dropdown-content menu px-0 z-[1]">
         <ul tabIndex={0} className="p-2 shadow bg-base-200 rounded-box min-w-52">
-          <SocialLinkList />
+          <SocialLinkItem />
         </ul>
       </div>
     </div>

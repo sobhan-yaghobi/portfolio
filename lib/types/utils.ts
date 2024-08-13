@@ -14,6 +14,7 @@ export type TypeCopyToClipboardProps = {
 
 export type TypeEmailProps = {
   email: string
+  disableIcon?: boolean
   className?: string
 }
 
@@ -50,5 +51,6 @@ export type TypeDesktopNavbarProps = {
 export type TypeContactMeButtonProps = {
   phoneNumber: string
   text?: string
+  disableIcon?: boolean
   className?: string
 }
