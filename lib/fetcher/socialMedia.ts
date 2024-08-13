@@ -3,9 +3,9 @@ import { TypeSocialMedia } from "../types/socialMedia"
 
 export const getSocialMediaList = async () => {
   try {
-    const res = await fetch(`${env.NEXT_PUBLIC_API_URL}/socialMedia`, {
-      next: { revalidate: 60 },
-    })
+    if (!env.NEXT_PUBLIC_API_URL) return [] as TypeSocialMedia[]
+
+    const res = await fetch(`${env.NEXT_PUBLIC_API_URL}/socialMedia`)
     const socialMediaList = (await res.json()) as TypeSocialMedia[]
     return socialMediaList
   } catch (error) {

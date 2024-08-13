@@ -4,6 +4,7 @@ import faMessages from "@/messages/fa.json"
 import AnimateElement from "@/components/modules/AnimateElement"
 import DesktopNavbar from "./DesktopNavbar"
 import MobileNavbar from "./MobileNavbar"
+import ShareButton from "@/components/modules/ShareButton"
 
 const Header: React.FC = () => {
   const { header } = faMessages
@@ -20,7 +21,7 @@ const Header: React.FC = () => {
     <header className="h-20 w-full z-40 relative">
       <AnimateElement className="h-full container" selectedAnimationName="fadeInUp" duration={1.5}>
         <DesktopNavbar menuList={menu} />
-        <MobileNavbar menuList={menu} />
+        <MobileNavbar menuList={menu} ShareButtonComponent={<ShareButton />} />
       </AnimateElement>
     </header>
   )

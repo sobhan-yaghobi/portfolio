@@ -1,11 +1,10 @@
 "use client"
 
-import React, { useState } from "react"
+import React, { ReactNode, useState } from "react"
 import faMessages from "@/messages/fa.json"
 
 import { MenuIcon, X } from "lucide-react"
 
-import ShareButton from "../../modules/ShareButton"
 import ChangeThemeButton from "../../modules/ChangeThemeButton"
 import Link from "next/link"
 import Search from "../../modules/Search"
@@ -13,17 +12,16 @@ import Indicator from "@/components/modules/Indicator"
 
 type MobileNavbarProps = {
   menuList: { href: string; title: string; isSoon: boolean }[]
+  ShareButtonComponent: ReactNode
 }
 
-const MobileNavbar: React.FC<MobileNavbarProps> = ({ menuList }) => {
+const MobileNavbar: React.FC<MobileNavbarProps> = ({ menuList, ShareButtonComponent }) => {
   const [isMenu, setIsMenu] = useState(false)
   const { utils } = faMessages
 
   return (
     <div className="mobile w-full h-full center flex-row-reverse justify-between lg:hidden">
-      <div>
-        <ShareButton />
-      </div>
+      <div>{ShareButtonComponent}</div>
       <div>
         <aside dir="rtl" className="drawer">
           <input

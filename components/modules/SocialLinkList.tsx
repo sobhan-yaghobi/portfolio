@@ -1,21 +1,31 @@
 import React from "react"
 
-import Link from "next/link"
+import { getProfile } from "@/lib/fetcher/profile"
+import { getSocialMediaList } from "@/lib/fetcher/socialMedia"
 
-const SocialLinkList: React.FC = () => {
+import Link from "next/link"
+import Email from "./Email"
+import ContactMeButton from "../templates/ContactMeButton"
+
+const SocialLinkList: React.FC = async () => {
+  const socialMediaList = await getSocialMediaList()
+  const profile = await getProfile()
+
   return (
     <>
-      {["Github", "Instagram", "Telegram", "Linkedin"].map((item) => (
-        <li key={item}>
-          <Link href={item}>{item}</Link>
+      {socialMediaList.map((socialMedia) => (
+        <li key={socialMedia.id}>
+          <Link href={socialMedia.link}>{socialMedia.title}</Link>
         </li>
       ))}
       <div className="divider h-1 my-2"></div>
+      {profile.phone && (
+        <li dir="ltr">
+          <ContactMeButton phoneNumber={profile.phone} />
+        </li>
+      )}
       <li dir="ltr">
-        <button>+98 939 600 7232</button>
-      </li>
-      <li dir="ltr">
-        <button>sobhan.yaghobi.work@gmail.com</button>
+        <Email email={profile.email} />
       </li>
     </>
   )
