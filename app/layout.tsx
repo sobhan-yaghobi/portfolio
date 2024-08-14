@@ -4,7 +4,6 @@ import "./globals.css"
 
 import ScrollSmooth from "../components/templates/ScrollSmooth"
 import { Toaster } from "@/components/ui/toaster"
-import Head from "next/head"
 
 export const metadata: Metadata = {
   title: "Create Next App",
