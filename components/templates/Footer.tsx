@@ -19,7 +19,7 @@ const Footer: React.FC = async () => {
           <ArrowUp />
         </ScrollTo>
       </div>
-      <div className="container pb-3 grid grid-cols-2 max-lg:grid-rows-2 gap-3 lg:grid-cols-4">
+      <div className="container pb-3 grid grid-cols-1 max-lg:grid-rows-2 gap-3 lg:grid-cols-4">
         {socialMediaList.map((socialMedia) => (
           <SocialFollowBox key={socialMedia.id} socialMedia={socialMedia} />
         ))}

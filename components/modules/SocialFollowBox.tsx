@@ -20,7 +20,7 @@ const backImagePositionClassName = [
 
 const SocialFollowBox: React.FC<TypeSocialFollowBoxProps> = ({ socialMedia }) => {
   return (
-    <div className="w-96 max-w-full min-h-48 pt-10 shadow-xl rounded-3xl overflow-hidden relative">
+    <div className="min-w-96 max-w-full min-h-48 pt-10 shadow-xl rounded-3xl overflow-hidden relative">
       <div className="glass w-full h-16 absolute top-0 left-0 !backdrop-blur-0">
         {backImagePositionClassName.map((className, index) => (
           <Image
