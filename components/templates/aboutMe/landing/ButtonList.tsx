@@ -21,7 +21,12 @@ const ButtonList: React.FC = () => {
 
       <div id="about-me-landing-button-list-split" className="divider divider-horizontal mx-1.5" />
 
-      <Link href={"/cv"}>
+      <Link
+        href={
+          "https://bhnldizjuhewbimjejof.supabase.co/storage/v1/object/public/portfolio/sobhan-yaghobi-cv.pdf"
+        }
+        target="_blank"
+      >
         <button className="access-button btn btn-ghost">
           <FolderDown className="icon" />
           {download}
