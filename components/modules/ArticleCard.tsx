@@ -1,11 +1,11 @@
 import React from "react"
+import { getWords } from "@/lib/utils"
 
 import { TypeArticleCardProps } from "@/lib/types/article"
 
 import { Heart, MessageSquareText, Send } from "lucide-react"
 
 import Image from "next/image"
-import { getWords } from "@/lib/utils"
 import Indicator from "./Indicator"
 
 const ArticleCard: React.FC<TypeArticleCardProps> = ({ article }) => {
@@ -13,9 +13,11 @@ const ArticleCard: React.FC<TypeArticleCardProps> = ({ article }) => {
   const isDescriptionSummary = article.description !== getWords(article.description, 20)
   return (
     <div className="card bg-base-200 min-w-72 max-w-full h-[470px] flex-1 shadow-xl relative">
-      <Indicator className="bg-info top-0 left-0">در حال انتشار</Indicator>
       <figure className="h-52 p-2 relative overflow-visible">
-        <div className="bg-base-300 size-full flex items-center justify-center rounded-xl overflow-hidden">
+        <Indicator className="bg-secondary absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
+          پیش نویس
+        </Indicator>
+        <div className="bg-base-300 size-full flex items-center justify-center rounded-xl overflow-hidden blur-sm relative">
           <Image
             width={300}
             height={300}
