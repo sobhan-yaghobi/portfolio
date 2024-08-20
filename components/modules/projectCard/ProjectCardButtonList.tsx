@@ -24,7 +24,7 @@ export const ProjectCardButtonList: React.FC<TypeProjectCardButtonListProps> = (
       {link && (
         <Link href={link}>
           <button className="size-full btn btn-sm">
-            پروژه
+            مشاهده
             <ArrowUpRight />
           </button>
         </Link>

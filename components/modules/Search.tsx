@@ -18,7 +18,6 @@ const Search: React.FC = () => {
 
   return (
     <div className="relative">
-      <Indicator className="-right-3 -top-6">{utils.soon}</Indicator>
       <label
         className={`input input-bordered input-sm bg-transparent flex items-center relative pr-11`}
       >
