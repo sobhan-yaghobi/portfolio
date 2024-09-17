@@ -18,7 +18,7 @@ const ButtonList: React.FC = async () => {
         )}
       </div>
 
-      <div id="split" className="divider divider-horizontal mx-1.5" />
+      <div id="split" className="divider divider-horizontal w-1 max-md:mx-1.5" />
 
       <Link href={"/about"}>
         <button className="access-button btn btn-ghost">

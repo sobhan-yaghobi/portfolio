@@ -20,7 +20,7 @@ const SocialLinkList: React.FC = async () => {
           </Link>
         </li>
       ))}
-      <div className="divider h-1 my-2"></div>
+      <div className="divider h-1 my-2" />
       {profile.phone && (
         <li dir="ltr">
           <ContactMeButton phoneNumber={profile.phone} disableIcon />
