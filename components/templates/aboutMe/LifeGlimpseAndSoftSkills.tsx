@@ -16,7 +16,7 @@ const LifeGlimpseAndSoftSkills: React.FC = () => {
 
   return (
     <section id="life-glimpse-and-soft-skills">
-      <div className="py-3 flex overflow-hidden max-lg:flex-col max-xl:text-center max-xl:items-center overflow-x-hidden">
+      <div className="w-full py-3 flex overflow-hidden max-lg:flex-col max-xl:text-center max-xl:items-center overflow-x-hidden">
         <div
           id="life-glimpse-and-soft-skills-content"
           className="flex flex-col gap-6 flex-1 [&>p]:text-justify max-xl:[&>p]:text-center xl:px-6"
