@@ -51,16 +51,18 @@ const Skills: React.FC<TypeTechnicalSkillsProps> = ({ technicalSkillList }) => {
         </ul>
         <nav id="main-skill-content">
           <p id={mainSkill.name}>{mainSkill.description}</p>
-          <div className="my-3">
-            <h3 className="text-xl font-dana">در پروژه های زیر استفاده شده</h3>
-            <ul className="mt-2 flex flex-wrap gap-6">
-              {mainSkill?.projectList?.map((project) => (
-                <Link href={project.source}>
-                  <li className="btn btn-link px-0">{project.title}</li>
-                </Link>
-              ))}
-            </ul>
-          </div>
+          {mainSkill?.projectList ? (
+            <div className="my-3">
+              <h3 className="text-xl font-dana">در پروژه های زیر استفاده شده</h3>
+              <ul className="mt-2 flex flex-wrap gap-6">
+                {mainSkill.projectList.map((project) => (
+                  <Link href={project.source}>
+                    <li className="btn btn-link px-0">{project.title}</li>
+                  </Link>
+                ))}
+              </ul>
+            </div>
+          ) : null}
           <Link href={mainSkill.link} className="btn">
             Read More
             <ArrowUpRight className="icon" />
