@@ -1,5 +1,5 @@
 import { env } from "process"
-import { TypeTechnicalSkill } from "../types/technicalSkill.type"
+import { TypeTechnicalSkill } from "../types/TechnicalSkill"
 
 export const getTechnicalSkillList = async () => {
   try {

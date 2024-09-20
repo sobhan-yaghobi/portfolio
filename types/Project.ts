@@ -1,4 +1,4 @@
-import { TypeTechnicalSkill } from "./technicalSkill.type"
+import { TypeTechnicalSkill } from "./TechnicalSkill"
 
 export type TypeProject = {
   id: string

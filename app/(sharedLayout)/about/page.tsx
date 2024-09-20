@@ -1,9 +1,9 @@
 import React from "react"
-import { getTechnicalSkillList } from "@/lib/fetcher/technicalSkill"
+import { getTechnicalSkillList } from "@/services/technicalSkill"
 
 import AnimateElement from "@/components/modules/AnimateElement"
-import Landing from "@/components/templates/aboutMe/landing/Landing"
-import LifeGlimpseAndSoftSkills from "@/components/templates/aboutMe/LifeGlimpseAndSoftSkills"
+import Landing from "@/components/templates/about/landing/Landing"
+import LifeGlimpseAndSoftSkills from "@/components/templates/about/LifeGlimpseAndSoftSkills"
 import TechnicalSkillList from "@/components/templates/TechnicalSkillList"
 
 const page: React.FC = async () => {

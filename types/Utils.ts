@@ -1,5 +1,5 @@
 import { ReactElement, ReactNode } from "react"
-import { TypeSocialMedia } from "./socialMedia"
+import { TypeSocialMedia } from "./SocialMedia"
 
 export type TypeTimeLine = gsap.core.Timeline
 

@@ -1,5 +1,5 @@
 import { env } from "process"
-import { TypeCv } from "../types/cv"
+import { TypeCv } from "../types/Cv"
 
 export const getCv = async () => {
   try {

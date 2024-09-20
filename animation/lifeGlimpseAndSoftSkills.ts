@@ -1,6 +1,6 @@
 import gsap from "gsap"
 import { createTimeline } from "./utils"
-import { TypeTimeLine } from "../types/utils"
+import { TypeTimeLine } from "../types/Utils"
 
 export const lifeGlimpseAndSoftSkillsAnimate = () => {
   const mm = gsap.matchMedia()

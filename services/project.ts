@@ -1,5 +1,5 @@
 import { env } from "process"
-import { TypeProject } from "../types/project.type"
+import { TypeProject } from "../types/Project"
 
 export const getProjectList = async () => {
   try {

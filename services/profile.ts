@@ -1,5 +1,5 @@
 import { env } from "process"
-import { TypeProfile } from "../types/profile"
+import { TypeProfile } from "../types/Profile"
 
 export const getProfile = async () => {
   try {

@@ -1,5 +1,5 @@
 import { env } from "process"
-import { TypeTechnicalGrowth } from "../types/technicalGrowth.type"
+import { TypeTechnicalGrowth } from "../types/TechnicalGrowth"
 
 export const getTechnicalGrowthList = async () => {
   try {

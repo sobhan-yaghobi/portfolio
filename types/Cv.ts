@@ -1,7 +1,7 @@
-import { TypeProfile } from "./profile"
-import { TypeProject } from "./project.type"
-import { TypeTechnicalSkill } from "./technicalSkill.type"
-import { TypeSoftSkill } from "./softSkill.type"
+import { TypeProfile } from "./Profile"
+import { TypeProject } from "./Project"
+import { TypeTechnicalSkill } from "./TechnicalSkill"
+import { TypeSoftSkill } from "./SoftSkill"
 
 export type TypeCv = {
   technicalSkillList: TypeTechnicalSkill[] | undefined

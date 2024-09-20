@@ -1,5 +1,5 @@
 import { env } from "process"
-import { TypeSocialMedia } from "../types/socialMedia"
+import { TypeSocialMedia } from "../types/SocialMedia"
 
 export const getSocialMediaList = async () => {
   try {

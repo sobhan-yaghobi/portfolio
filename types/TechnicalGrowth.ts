@@ -1,4 +1,4 @@
-import { TypeTimeLine } from "./utils"
+import { TypeTimeLine } from "./Utils"
 
 export type TypeTechnicalGrowth = {
   id: string
