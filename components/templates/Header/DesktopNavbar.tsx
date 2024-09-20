@@ -1,7 +1,7 @@
 import React from "react"
 import faMessages from "@/messages/fa.json"
 
-import { TypeDesktopNavbarProps } from "@/lib/types/utils"
+import { TypeDesktopNavbarProps } from "@/types/Utils"
 
 import Magnetic from "../../modules/Magnetic"
 import Link from "next/link"

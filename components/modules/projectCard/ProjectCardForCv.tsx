@@ -1,6 +1,6 @@
 import React from "react"
 
-import { TypeProjectCardForCvProps } from "@/lib/types/cv"
+import { TypeProjectCardForCvProps } from "@/types/Cv"
 
 import Image from "next/image"
 import Link from "next/link"

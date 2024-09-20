@@ -1,6 +1,6 @@
 import React from "react"
 import faMessages from "@/messages/fa.json"
-import { getTechnicalGrowthList } from "@/lib/fetcher/technicalGrowth"
+import { getTechnicalGrowthList } from "@/services/technicalGrowth"
 
 import Title from "../modules/Title"
 import TechnicalGrowthItem from "../modules/TechnicalGrowthItem"

@@ -1,6 +1,6 @@
 import React from "react"
 import faMessages from "@/messages/fa.json"
-import { getProfile } from "@/lib/fetcher/profile"
+import { getProfile } from "@/services/profile"
 
 import { Handshake } from "lucide-react"
 

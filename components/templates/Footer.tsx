@@ -1,10 +1,10 @@
 import React from "react"
-import { getProfile } from "@/lib/fetcher/profile"
-import { getSocialMediaList } from "@/lib/fetcher/socialMedia"
+import { getProfile } from "@/services/profile"
+import { getSocialMediaList } from "@/services/socialMedia"
 
 import { ArrowUp } from "lucide-react"
 
-import SocialFollowBox from "@/components/modules/SocialFollowBox"
+import SocialFollowBox from "@/components/modules/social/SocialFollowBox"
 import ContactMeButton from "./ContactMeButton"
 import ScrollTo from "@/components/modules/ScrollTo"
 import Email from "@/components/modules/Email"

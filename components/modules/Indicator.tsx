@@ -3,7 +3,7 @@
 import React from "react"
 import { cn } from "@/lib/utils"
 
-import { TypeIndicatorProps } from "@/lib/types/utils"
+import { TypeIndicatorProps } from "@/types/Utils"
 import useTheme from "@/hooks/store/useTheme"
 
 const Indicator: React.FC<React.PropsWithChildren<TypeIndicatorProps>> = ({

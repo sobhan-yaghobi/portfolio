@@ -1,4 +1,4 @@
-import { TypeTitleProps } from "@/lib/types/utils"
+import { TypeTitleProps } from "@/types/Utils"
 import { cn } from "@/lib/utils"
 import React from "react"
 

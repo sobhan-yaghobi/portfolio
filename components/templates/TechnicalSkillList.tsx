@@ -3,7 +3,7 @@
 import React, { useState } from "react"
 import faMessage from "@/messages/fa.json"
 
-import { TypeTechnicalSkill, TypeTechnicalSkillsProps } from "@/lib/types/technicalSkill.type"
+import { TypeTechnicalSkill, TypeTechnicalSkillsProps } from "@/types/TechnicalSkill.type"
 
 import { ArrowUpRight } from "lucide-react"
 

@@ -1,8 +1,8 @@
 import React from "react"
 
-import { TypeSocialMedia } from "@/lib/types/socialMedia"
+import { TypeSocialMedia } from "@/types/SocialMedia"
 
-import Title from "../modules/Title"
+import Title from "../../modules/Title"
 import Image from "next/image"
 import Link from "next/link"
 

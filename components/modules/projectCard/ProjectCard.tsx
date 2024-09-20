@@ -3,7 +3,7 @@
 import React from "react"
 import { getWords } from "@/lib/utils"
 
-import { TypeProjectCardProps } from "@/lib/types/project.type"
+import { TypeProjectCardProps } from "@/types/Project.type"
 
 import Image from "next/image"
 import ProjectCardTitle from "./ProjectCardTitle"

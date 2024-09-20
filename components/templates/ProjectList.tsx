@@ -1,6 +1,6 @@
 import React from "react"
 import t from "@/messages/fa.json"
-import { getProjectList } from "@/lib/fetcher/project"
+import { getProjectList } from "@/services/project"
 
 import Title from "../modules/Title"
 import ProjectCard from "../modules/projectCard/ProjectCard"

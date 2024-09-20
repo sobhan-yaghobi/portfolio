@@ -2,9 +2,9 @@
 
 import React, { useRef } from "react"
 import { useGSAP } from "@gsap/react"
-import { magneticAnimate } from "@/lib/animation/magnetic"
+import { magneticAnimate } from "@/animation/magnetic"
 
-import { TypeMagneticProps } from "@/lib/types/utils"
+import { TypeMagneticProps } from "@/types/Utils"
 
 const Magnetic: React.FC<TypeMagneticProps> = ({ children, magnetSize }) => {
   const magnetic = useRef<HTMLElement>(null)

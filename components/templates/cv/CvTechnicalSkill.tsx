@@ -1,8 +1,8 @@
 import React from "react"
 
-import { TypeCvTechnicalSkillProps } from "@/lib/types/cv"
+import { TypeCvTechnicalSkillProps } from "@/types/Cv"
 
-import Title from "../modules/Title"
+import Title from "../../modules/Title"
 import Image from "next/image"
 
 const CvTechnicalSkill: React.FC<TypeCvTechnicalSkillProps> = ({ technicalSkillList }) => {

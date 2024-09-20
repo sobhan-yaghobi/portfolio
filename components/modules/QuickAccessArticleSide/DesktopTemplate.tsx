@@ -1,7 +1,7 @@
 "use client"
 
 import React from "react"
-import { DesktopTemplateProps } from "@/lib/types/article"
+import { DesktopTemplateProps } from "@/types/Article"
 
 import { SquareArrowOutUpRight } from "lucide-react"
 

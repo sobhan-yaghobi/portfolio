@@ -1,7 +1,7 @@
 import React from "react"
 import { getWords } from "@/lib/utils"
 
-import { TypeArticleCardProps } from "@/lib/types/article"
+import { TypeArticleCardProps } from "@/types/Article"
 
 import { Heart, MessageSquareText, Send } from "lucide-react"
 

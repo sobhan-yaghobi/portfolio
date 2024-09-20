@@ -5,7 +5,7 @@ import { useEffect, useState } from "react"
 import { isUserUseMobile } from "@/lib/utils"
 import { cn } from "@/lib/utils"
 
-import { TypeContactMeButtonProps } from "@/lib/types/utils"
+import { TypeContactMeButtonProps } from "@/types/Utils"
 
 import { Phone } from "lucide-react"
 

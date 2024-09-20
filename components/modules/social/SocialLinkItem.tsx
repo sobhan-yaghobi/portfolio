@@ -1,11 +1,11 @@
 import React from "react"
 
-import { getProfile } from "@/lib/fetcher/profile"
-import { getSocialMediaList } from "@/lib/fetcher/socialMedia"
+import { getProfile } from "@/services/profile"
+import { getSocialMediaList } from "@/services/socialMedia"
 
 import Link from "next/link"
-import Email from "./Email"
-import ContactMeButton from "../templates/ContactMeButton"
+import Email from "../Email"
+import ContactMeButton from "../../templates/ContactMeButton"
 
 const SocialLinkList: React.FC = async () => {
   const socialMediaList = await getSocialMediaList()

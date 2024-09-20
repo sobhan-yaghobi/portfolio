@@ -1,13 +1,13 @@
 import React from "react"
 
-import { TypeCvProfileProps } from "@/lib/types/cv"
+import { TypeCvProfileProps } from "@/types/Cv"
 
 import { MapPin } from "lucide-react"
 
 import Image from "next/image"
-import Email from "../modules/Email"
-import Title from "../modules/Title"
-import ContactMeButton from "./ContactMeButton"
+import Email from "../../modules/Email"
+import Title from "../../modules/Title"
+import ContactMeButton from "../ContactMeButton"
 
 const CvProfile: React.FC<TypeCvProfileProps> = ({ profile }) => {
   return (

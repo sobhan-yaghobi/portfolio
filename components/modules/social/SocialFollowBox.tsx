@@ -1,10 +1,10 @@
 import React from "react"
 import { cn } from "@/lib/utils"
 
-import { TypeSocialFollowBoxProps } from "@/lib/types/utils"
+import { TypeSocialFollowBoxProps } from "@/types/Utils"
 
 import Image from "next/image"
-import CopyToClipboard from "./CopyToClipboard"
+import CopyToClipboard from "../CopyToClipboard"
 import { ArrowUpLeft, AtSign } from "lucide-react"
 import Link from "next/link"
 

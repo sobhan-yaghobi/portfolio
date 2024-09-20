@@ -1,8 +1,8 @@
 import React from "react"
 
-import { TypeCvSoftSkillListProps } from "@/lib/types/cv"
+import { TypeCvSoftSkillListProps } from "@/types/Cv"
 
-import Title from "../modules/Title"
+import Title from "../../modules/Title"
 
 const CvSoftSkillList: React.FC<TypeCvSoftSkillListProps> = ({ softSkillList }) => {
   return (

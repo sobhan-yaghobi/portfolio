@@ -3,9 +3,9 @@
 import React, { useRef } from "react"
 import { useGSAP } from "@gsap/react"
 
-import { TypeAnimateElementProps } from "@/lib/types/animation"
+import { TypeAnimateElementProps } from "@/types/Animation"
 
-import { animationList } from "@/lib/animation/utils"
+import { animationList } from "@/animation/utils"
 
 const AnimateElement: React.FC<React.PropsWithChildren<TypeAnimateElementProps>> = ({
   duration,

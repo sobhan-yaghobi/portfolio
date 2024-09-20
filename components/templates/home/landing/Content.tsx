@@ -1,5 +1,5 @@
 import React from "react"
-import { getProfile } from "@/lib/fetcher/profile"
+import { getProfile } from "@/services/profile"
 
 import faMessages from "@/messages/fa.json"
 

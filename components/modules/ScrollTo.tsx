@@ -3,7 +3,7 @@
 import gsap from "gsap"
 import React from "react"
 
-import { TypeScrollToProps } from "@/lib/types/utils"
+import { TypeScrollToProps } from "@/types/Utils"
 
 const ScrollTo: React.FC<React.PropsWithChildren<TypeScrollToProps>> = ({
   children,

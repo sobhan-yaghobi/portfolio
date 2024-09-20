@@ -1,10 +1,10 @@
 import React from "react"
 
-import { TypeCvProjectListProps } from "@/lib/types/cv"
+import { TypeCvProjectListProps } from "@/types/Cv"
 
-import Title from "../modules/Title"
-import ProjectCard from "../modules/projectCard/ProjectCard"
-import ProjectCardForCv from "../modules/projectCard/ProjectCardForCv"
+import Title from "../../modules/Title"
+import ProjectCard from "../../modules/projectCard/ProjectCard"
+import ProjectCardForCv from "../../modules/projectCard/ProjectCardForCv"
 
 const CvProjectList: React.FC<TypeCvProjectListProps> = ({ projectList }) => {
   return (

@@ -1,6 +1,6 @@
 import React from "react"
 
-import { TypeProjectCardTitleProps } from "@/lib/types/project.type"
+import { TypeProjectCardTitleProps } from "@/types/Project.type"
 
 export const ProjectCardTitle: React.FC<TypeProjectCardTitleProps> = ({ title }) => {
   return (

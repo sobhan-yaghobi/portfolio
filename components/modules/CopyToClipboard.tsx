@@ -4,7 +4,7 @@ import React, { useState } from "react"
 import { useToast } from "@/components/ui/use-toast"
 import copy from "clipboard-copy"
 
-import { TypeCopyToClipboardProps } from "@/lib/types/utils"
+import { TypeCopyToClipboardProps } from "@/types/Utils"
 
 const CopyToClipboard: React.FC<React.PropsWithChildren<TypeCopyToClipboardProps>> = ({
   children,

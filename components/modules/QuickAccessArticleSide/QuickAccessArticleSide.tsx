@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react"
 import useArticle from "@/hooks/store/useArticle"
 
-import { TypeQuickAccessArticleSideProps } from "@/lib/types/article"
+import { TypeQuickAccessArticleSideProps } from "@/types/Article"
 
 import MobileTemplate from "./MobileTemplate"
 import DesktopTemplate from "./DesktopTemplate"

@@ -4,7 +4,7 @@ import React, { useLayoutEffect } from "react"
 import useTheme from "@/hooks/store/useTheme"
 import { cn } from "@/lib/utils"
 
-import { ChangeThemeButtonProps } from "@/lib/types/utils"
+import { ChangeThemeButtonProps } from "@/types/Utils"
 
 import { Moon, Sun } from "lucide-react"
 

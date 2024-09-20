@@ -1,8 +1,8 @@
 import React from "react"
 
-import { TypeCvAboutMeProps } from "@/lib/types/cv"
+import { TypeCvAboutMeProps } from "@/types/Cv"
 
-import Title from "../modules/Title"
+import Title from "../../modules/Title"
 
 const CvAboutMe: React.FC<TypeCvAboutMeProps> = ({ bio }) => {
   return (

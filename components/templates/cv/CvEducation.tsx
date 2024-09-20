@@ -1,5 +1,5 @@
 import React from "react"
-import Title from "../modules/Title"
+import Title from "../../modules/Title"
 
 const CvEducation: React.FC = () => {
   return (

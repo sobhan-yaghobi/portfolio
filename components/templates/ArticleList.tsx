@@ -3,7 +3,7 @@ import faMessages from "@/messages/fa.json"
 
 import Title from "../modules/Title"
 import ArticleCard from "../modules/ArticleCard"
-import { TypeArticle } from "@/lib/types/article"
+import { TypeArticle } from "@/types/Article"
 
 const articleList: TypeArticle[] = [
   {

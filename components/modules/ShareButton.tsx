@@ -1,7 +1,7 @@
 import React from "react"
 
 import { Share2 } from "lucide-react"
-import SocialLinkItem from "./SocialLinkItem"
+import SocialLinkItem from "./social/SocialLinkItem"
 
 const ShareButton: React.FC = () => {
   return (
