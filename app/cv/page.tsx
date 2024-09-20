@@ -4,7 +4,7 @@ import { getProfile } from "@/services/profile"
 import { getSocialMediaList } from "@/services/socialMedia"
 
 import CvProfile from "@/components/templates/cv/CvProfile"
-import CvAboutMe from "@/components/templates/CvAboutMe"
+import CvAboutMe from "@/components/templates/cv/CvAboutMe"
 import CvEducation from "@/components/templates/cv/CvEducation"
 import CvSoftSkillList from "@/components/templates/cv/CvSoftSkillList"
 import CvTechnicalSkill from "@/components/templates/cv/CvTechnicalSkill"
