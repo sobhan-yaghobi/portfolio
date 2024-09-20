@@ -2,14 +2,14 @@ import React from "react"
 import faMessages from "@/messages/fa.json"
 import { getProfile } from "@/lib/fetcher/profile"
 
-import { CircleUser } from "lucide-react"
+import { Handshake } from "lucide-react"
 
 import ContactMeButton from "../../ContactMeButton"
 import Link from "next/link"
 
 const ButtonList: React.FC = async () => {
   const profile = await getProfile()
-  const { seeMyCv, contact } = faMessages.utils
+  const { hireMe, contact } = faMessages.utils
   return (
     <div id="landing-button-list" className="h-fit my-6 flex items-center overflow-hidden">
       <div className="access-button">
@@ -22,8 +22,9 @@ const ButtonList: React.FC = async () => {
 
       <Link href={"/about"}>
         <button className="access-button btn btn-ghost">
-          <CircleUser className="icon" />
-          {seeMyCv}
+          {/* <CircleUser className="icon" /> */}
+          <Handshake className="icon" />
+          {hireMe}
         </button>
       </Link>
     </div>
