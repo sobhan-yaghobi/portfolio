@@ -1,7 +1,7 @@
 import React from "react"
 import { getTechnicalSkillList } from "@/services/technicalSkill"
 
-import AnimateElement from "@/components/modules/AnimateElement"
+import AnimateElement from "@/components/modules/Animate/TemplateAnimate"
 import Landing from "@/components/templates/about/landing/Landing"
 import LifeGlimpseAndSoftSkills from "@/components/templates/about/LifeGlimpseAndSoftSkills"
 import TechnicalSkillList from "@/components/templates/TechnicalSkillList"

@@ -3,11 +3,11 @@
 import React, { useRef } from "react"
 import { useGSAP } from "@gsap/react"
 
-import { TypeAnimateElementProps } from "@/types/Animation"
+import { TypeReusableAnimateProps } from "@/types/animation/Reusable"
 
-import { animationList } from "@/animation/utils"
+import { reusableAnimations } from "@/animation/reusable/reusableAnimations"
 
-const AnimateElement: React.FC<React.PropsWithChildren<TypeAnimateElementProps>> = ({
+const ReusableAnimate: React.FC<React.PropsWithChildren<TypeReusableAnimateProps>> = ({
   duration,
   delay,
   children,
@@ -15,7 +15,7 @@ const AnimateElement: React.FC<React.PropsWithChildren<TypeAnimateElementProps>>
   className,
 }) => {
   const elementRef = useRef<HTMLDivElement>(null)
-  const selectedAnimation = animationList[selectedAnimationName]
+  const selectedAnimation = reusableAnimations[selectedAnimationName]
 
   useGSAP(() => {
     if (elementRef.current) selectedAnimation({ target: elementRef.current, duration, delay })
@@ -28,4 +28,4 @@ const AnimateElement: React.FC<React.PropsWithChildren<TypeAnimateElementProps>>
   )
 }
 
-export default AnimateElement
+export default ReusableAnimate

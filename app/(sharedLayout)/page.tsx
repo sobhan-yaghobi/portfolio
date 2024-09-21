@@ -2,7 +2,7 @@ import Landing from "@/components/templates/home/landing/Landing"
 import ProjectList from "@/components/templates/ProjectList"
 import TechnicalGrowth from "@/components/templates/TechnicalGrowthList"
 import ArticleList from "@/components/templates/ArticleList"
-import AnimateElement from "@/components/modules/AnimateElement"
+import AnimateElement from "@/components/modules/Animate/TemplateAnimate"
 
 export default function Home() {
   return (

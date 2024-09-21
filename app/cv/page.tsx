@@ -10,7 +10,7 @@ import CvSoftSkillList from "@/components/templates/cv/CvSoftSkillList"
 import CvTechnicalSkill from "@/components/templates/cv/CvTechnicalSkill"
 import CvProjectList from "@/components/templates/cv/CvProjectList"
 import CvSocialMediaList from "@/components/templates/cv/CvSocialMediaList"
-import AnimateElement from "@/components/modules/AnimateElement"
+import AnimateElement from "@/components/modules/Animate/TemplateAnimate"
 
 const page: React.FC = async () => {
   const profile = await getProfile()

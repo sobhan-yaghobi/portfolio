@@ -4,8 +4,8 @@ import React, { useRef } from "react"
 import { gsap } from "gsap"
 import { Flip } from "gsap/Flip"
 import { useGSAP } from "@gsap/react"
-import ScrollTrigger from "gsap/ScrollTrigger"
-import { pageInAnimate } from "@/animation/pageTransition"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { pageInAnimate } from "@/animation/reusable/pageTransition"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 
 gsap.registerPlugin(useGSAP, Flip, ScrollTrigger, ScrollToPlugin)

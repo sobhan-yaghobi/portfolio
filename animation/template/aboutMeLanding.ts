@@ -1,5 +1,5 @@
 import gsap from "gsap"
-import { createTimeline } from "./utils"
+import { createTimeline } from "../animationUtils"
 
 export const aboutMeLandingAnimate = () => {
   animateAboutMeLandingPartOne()

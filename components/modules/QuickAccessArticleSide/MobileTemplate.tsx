@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useLayoutEffect, useState } from "react"
-import { articlePageAnimate } from "@/animation/articlePage"
+import { articlePageAnimate } from "@/animation/template/articlePage"
 
 import { MobileTemplateProps } from "@/types/Article"
 

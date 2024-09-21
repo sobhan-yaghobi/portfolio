@@ -1,7 +1,7 @@
 "use client"
 
 import React from "react"
-import { pageOutAnimate } from "@/animation/pageTransition"
+import { pageOutAnimate } from "@/animation/reusable/pageTransition"
 
 import { useRouter } from "next/navigation"
 

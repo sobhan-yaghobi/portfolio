@@ -1,12 +1,12 @@
-import { animationList } from "../animation/utils"
+import { reusableAnimations } from "@/animation/reusable/reusableAnimations"
 
 export type TypeTarget = gsap.TweenTarget
 export type TypeDuration = gsap.TweenValue
 export type TypeDelay = gsap.TweenValue
 
-export type TypeAnimationList = keyof typeof animationList
+export type TypeReusableAnimations = keyof typeof reusableAnimations
 
-export type TypeAnimationListParams = {
+export type TypeReusableAnimationParams = {
   [name: string]: (params: TypeAnimationUtilParam) => void
 }
 
@@ -16,7 +16,7 @@ export type TypeAnimationUtilParam = {
   delay?: TypeDelay
 }
 
-export type TypeAnimateElementProps = {
+export type TypeReusableAnimateProps = {
   className?: string
-  selectedAnimationName: TypeAnimationList
+  selectedAnimationName: TypeReusableAnimations
 } & Omit<TypeAnimationUtilParam, "target">

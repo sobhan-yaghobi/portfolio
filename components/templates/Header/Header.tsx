@@ -1,7 +1,7 @@
 import React from "react"
 import faMessages from "@/messages/fa.json"
 
-import AnimateElement from "@/components/modules/AnimateElement"
+import ReusableAnimate from "@/components/modules/Animate/ReusableAnimate"
 import DesktopNavbar from "./DesktopNavbar"
 import MobileNavbar from "./MobileNavbar"
 import ShareButton from "@/components/modules/ShareButton"
@@ -19,10 +19,10 @@ const Header: React.FC = () => {
 
   return (
     <header className="h-20 w-full z-40 relative">
-      <AnimateElement className="h-full container" selectedAnimationName="fadeInUp" duration={1.5}>
+      <ReusableAnimate className="h-full container" selectedAnimationName="fadeInUp" duration={1.5}>
         <DesktopNavbar menuList={menu} />
         <MobileNavbar menuList={menu} ShareButtonComponent={<ShareButton />} />
-      </AnimateElement>
+      </ReusableAnimate>
     </header>
   )
 }

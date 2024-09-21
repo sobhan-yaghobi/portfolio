@@ -1,5 +1,5 @@
 import gsap from "gsap"
-import { createTimeline } from "./utils"
+import { createTimeline } from "../animationUtils"
 
 export const technicalSkillListAnimate = () => {
   const timeLine = createTimeline("#skill-list", "-80%")

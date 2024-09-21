@@ -1,4 +1,4 @@
-import { createTimeline } from "./utils"
+import { createTimeline } from "../animationUtils"
 
 export const articleListAnimate = () => {
   const timeLine = createTimeline("#article-list", "-50%")

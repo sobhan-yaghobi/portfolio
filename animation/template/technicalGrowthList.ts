@@ -1,8 +1,8 @@
 import gsap from "gsap"
-import { createTimeline } from "./utils"
+import { createTimeline } from "../animationUtils"
 
-import { TypeTimeLine } from "../types/Utils"
-import { TypeAnimateTechnicalGrowthElementsParams } from "../types/TechnicalGrowth"
+import { TypeTimeLine } from "../../types/Utils"
+import { TypeAnimateTechnicalGrowthElementsParams } from "../../types/TechnicalGrowth"
 
 const SELECTORS = {
   TECHNICAL_GROWTH: "#technical-growth",

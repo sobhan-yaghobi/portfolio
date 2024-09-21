@@ -2,7 +2,7 @@
 
 import React, { useRef } from "react"
 import { useGSAP } from "@gsap/react"
-import { magneticAnimate } from "@/animation/magnetic"
+import { magneticAnimate } from "@/animation/reusable/magnetic"
 
 import { TypeMagneticProps } from "@/types/Utils"
 
