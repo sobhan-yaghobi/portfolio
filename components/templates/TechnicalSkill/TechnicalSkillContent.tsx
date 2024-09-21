@@ -11,7 +11,7 @@ const TechnicalSkillContent: React.FC = () => {
   const { technicalSkill } = useTechnicalSkill()
 
   return technicalSkill ? (
-    <nav id="main-skill-content" className="overflow-y-auto">
+    <nav id="main-skill-content">
       <p id={technicalSkill.name}>{technicalSkill.description}</p>
       {technicalSkill.projectList?.length ? (
         <div className="mt-3">

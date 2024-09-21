@@ -17,7 +17,7 @@ const TechnicalSkillList: React.FC<TechnicalSkillListProps> = ({ technicalSkills
   }, [technicalSkill])
 
   return (
-    <ul className="h-fit flex flex-wrap gap-3 overflow-y-auto">
+    <ul className="h-fit flex flex-wrap gap-3">
       {technicalSkills?.map((skill) => (
         <li className="skill-item" key={skill.id}>
           <Link className="lg:hidden" href={`#${skill.name}`}>
