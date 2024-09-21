@@ -1,13 +1,13 @@
 import React from "react"
-import { getTechnicalSkillList } from "@/services/technicalSkill"
+import { getTechnicalSkills } from "@/services/technicalSkill"
 
 import AnimateElement from "@/components/modules/Animate/TemplateAnimate"
 import Landing from "@/components/templates/about/landing/Landing"
 import LifeGlimpseAndSoftSkills from "@/components/templates/about/LifeGlimpseAndSoftSkills"
-import TechnicalSkillList from "@/components/templates/TechnicalSkillList"
+import TechnicalSkillList from "@/components/templates/TechnicalSkill/TechnicalSkills"
 
 const page: React.FC = async () => {
-  const technicalSkillList = await getTechnicalSkillList()
+  const technicalSkills = await getTechnicalSkills()
   return (
     <>
       <AnimateElement selectedAnimationName="animateAboutMeLanding">
@@ -21,7 +21,7 @@ const page: React.FC = async () => {
       <div className="mb-40" />
 
       <AnimateElement selectedAnimationName="animateTechnicalSkillList">
-        <TechnicalSkillList technicalSkillList={technicalSkillList} />
+        <TechnicalSkillList technicalSkills={technicalSkills} />
       </AnimateElement>
       <div className="mb-40" />
     </>

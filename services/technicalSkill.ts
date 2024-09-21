@@ -1,7 +1,7 @@
 import { env } from "process"
 import { TypeTechnicalSkill } from "../types/TechnicalSkill"
 
-export const getTechnicalSkillList = async () => {
+export const getTechnicalSkills = async () => {
   try {
     const res = await fetch(`${env.NEXT_PUBLIC_API_URL}/technicalSkill?projectListInclude=true`, {
       next: { revalidate: 60 },

@@ -11,5 +11,14 @@ export type TypeTechnicalSkill = {
 }
 
 export type TypeTechnicalSkillsProps = {
-  technicalSkillList: TypeTechnicalSkill[]
+  technicalSkills: TypeTechnicalSkill[]
+}
+
+export type TechnicalSkillListProps = {
+  technicalSkills: TypeTechnicalSkill[]
+}
+
+export type SkillButtonProps = {
+  skill: TypeTechnicalSkill
+  className?: string
 }
