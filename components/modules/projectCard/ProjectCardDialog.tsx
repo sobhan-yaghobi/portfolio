@@ -1,6 +1,6 @@
 import React from "react"
 
-import { TypeProjectCardButtonDialogProps, TypeProjectCardDialogProps } from "@/types/Project.type"
+import { TypeProjectCardButtonDialogProps, TypeProjectCardDialogProps } from "@/types/Project"
 
 import ProjectCardButtonList from "./ProjectCardButtonList"
 import ProjectCardTitle from "./ProjectCardTitle"

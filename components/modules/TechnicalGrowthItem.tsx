@@ -1,7 +1,7 @@
 import React from "react"
 import { isEven } from "@/lib/utils"
 
-import { TypeTechnicalGrowthItemProps } from "@/types/TechnicalGrowth.type"
+import { TypeTechnicalGrowthItemProps } from "@/types/TechnicalGrowth"
 
 import { Check } from "lucide-react"
 

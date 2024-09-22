@@ -1,6 +1,6 @@
 import React from "react"
 
-import { TypeProjectCardButtonListProps } from "@/types/Project.type"
+import { TypeProjectCardButtonListProps } from "@/types/Project"
 
 import { ArrowUpRight } from "lucide-react"
 
